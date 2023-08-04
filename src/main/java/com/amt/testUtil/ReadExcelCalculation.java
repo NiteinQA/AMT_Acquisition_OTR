@@ -1486,7 +1486,7 @@ public class ReadExcelCalculation extends TestBase {
 	
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B60*B66");
 		}
 		else
 		{

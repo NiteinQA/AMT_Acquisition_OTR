@@ -61,8 +61,8 @@ public class TestBase {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
-			//options.addArguments("force-device-scale-factor=0.67");
-			//options.addArguments("high-dpi-support=0.67");
+			options.addArguments("force-device-scale-factor=0.67");
+			options.addArguments("high-dpi-support=0.67");
 			options.addArguments("disable-infobars");
 
 			driver = new ChromeDriver(options);
@@ -124,7 +124,7 @@ public class TestBase {
 
 
 
-	@AfterClass
+	// @AfterClass
 	public void tearDown() {
 		driver.close();
 		System.out.println("");
