@@ -4906,7 +4906,9 @@ try {
 
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_base_int_rate_input, 30);
 			quote_summary_configuration_base_int_rate_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-			quote_summary_configuration_base_int_rate_input.sendKeys(prop.getProperty("base_rate"));
+			String default_base_rate =  String.valueOf((Double.parseDouble(prop.getProperty("base_rate"))*100));			
+
+			quote_summary_configuration_base_int_rate_input.sendKeys(default_base_rate);
 
 			act.sendKeys(Keys.TAB).build().perform();
 
@@ -5014,6 +5016,14 @@ try {
 			} else {
 				LO.print("Holding Cost after changing Base Int. Rate -  found wrong");
 				System.err.println("Holding Cost after changing Base Int. Rate -  found wrong");
+
+				LO.print("Actual Holding Cost after changing Base Int. Rate - "+holding_cost_total_monthly_holding_cost_from_screen);
+				System.err.println("Actual Holding Cost after changing Base Int. Rate -  "+holding_cost_total_monthly_holding_cost_from_screen);
+	
+				LO.print("Expected Holding Cost after changing Base Int. Rate - "+holding_cost_total_monthly_holding_cost_from_excel);
+				System.err.println("Expected Holding Cost after changing Base Int. Rate -  "+holding_cost_total_monthly_holding_cost_from_excel);
+
+				
 			}
 			// 2
 			if (Difference.of_two_Double_Values(customer_quote_summary_monthly_finance_rental_from_screen,
@@ -5024,6 +5034,13 @@ try {
 			} else {
 				LO.print("Monthly Finance Rental after changing Base Int. Rate -  found wrong");
 				System.err.println("Monthly Finance Rental after changing Base Int. Rate -  found wrong");
+				
+				LO.print("Actual Monthly Finance Rental after changing Base Int. Rate - "+customer_quote_summary_monthly_finance_rental_from_screen);
+				System.err.println("Actual Monthly Finance Rental after changing Base Int. Rate -  "+customer_quote_summary_monthly_finance_rental_from_screen);
+	
+				LO.print("Expected Monthly Finance Rental after changing Base Int. Rate - "+monthlyFinanceRental);
+				System.err.println("Expected Monthly Finance Rental after changing Base Int. Rate -  "+monthlyFinanceRental);
+
 			}
 			// 3
 			if (Difference.of_two_Double_Values(customer_quote_summary_monthly_maint_rental_from_screen,
@@ -5034,6 +5051,13 @@ try {
 			} else {
 				LO.print("Monthly Maint Rental after changing Base Int. Rate -  found wrong");
 				System.err.println("Monthly Maint Rental after changing Base Int. Rate -  found wrong");
+				
+				LO.print("Actual Monthly Maint Rental after changing Base Int. Rate - "+customer_quote_summary_monthly_maint_rental_from_screen);
+				System.err.println("Actual Monthly Maint Rental after changing Base Int. Rate -  "+customer_quote_summary_monthly_maint_rental_from_screen);
+	
+				LO.print("Expected Monthly Maint Rental after changing Base Int. Rate - "+monthlyMaintRental);
+				System.err.println("Expected Monthly Maint Rental after changing Base Int. Rate -  "+monthlyMaintRental);
+
 			}
 			// 4
 			if ((Difference.of_two_Double_Values(financeCharges, customer_quote_summary_finance_charges)) < 0.2) {
@@ -5043,6 +5067,13 @@ try {
 			} else {
 				LO.print("Finance Charges - found wrong");
 				System.err.println("Finance Charges - found wrong");
+				
+				LO.print("Actual Finance Charges after changing Base Int. Rate - "+customer_quote_summary_finance_charges);
+				System.err.println("Actual Finance Charges after changing Base Int. Rate -  "+customer_quote_summary_finance_charges);
+	
+				LO.print("Expected Finance Charges after changing Base Int. Rate - "+financeCharges);
+				System.err.println("Expected Finance Charges after changing Base Int. Rate -  "+financeCharges);
+
 			}
 
 			// 5
@@ -5053,6 +5084,14 @@ try {
 			} else {
 				LO.print("Balance Payable - found wrong");
 				System.err.println("Balance Payable - found wrong");
+				
+				LO.print("Actual Balance Payable after changing Base Int. Rate - "+customer_quote_summary_balance_payable);
+				System.err.println("Actual Balance Payable after changing Base Int. Rate -  "+customer_quote_summary_balance_payable);
+	
+				LO.print("Expected Balance Payable after changing Base Int. Rate - "+balancePayable);
+				System.err.println("Expected Balance Payable after changing Base Int. Rate -  "+balancePayable);
+
+				
 			}
 
 			if (count == 5) {
@@ -5061,7 +5100,9 @@ try {
 
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_base_int_rate_input, 30);
 			quote_summary_configuration_base_int_rate_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-			quote_summary_configuration_base_int_rate_input.sendKeys("prop.getProperty(\"base_rate\")");
+			String default_base_rate =  String.valueOf((Double.parseDouble(prop.getProperty("base_rate"))*100));			
+
+			quote_summary_configuration_base_int_rate_input.sendKeys(default_base_rate);
 
 			act.sendKeys(Keys.TAB).build().perform();
 
@@ -5251,6 +5292,13 @@ try {
 		} else {
 			LO.print("Monthly Finance Rental after changing Customer Base Over Rate -  found wrong");
 			System.err.println("Monthly Finance Rental after changing Customer Base Over Rate -  found wrong");
+			
+			LO.print("Actual Monthly Finance Rental after changing Base Int. Rate - "+customer_quote_summary_monthly_finance_rental_from_screen);
+			System.err.println("Actual Monthly Finance Rental after changing Base Int. Rate -  "+customer_quote_summary_monthly_finance_rental_from_screen);
+
+			LO.print("Expected Monthly Finance Rental after changing Base Int. Rate - "+monthlyFinanceRental);
+			System.err.println("Expected Monthly Finance Rental after changing Base Int. Rate -  "+monthlyFinanceRental);
+
 		}
 		// 2
 		if ((Difference.of_two_Double_Values(financeCharges, customer_quote_summary_finance_charges)) < 0.2) {
@@ -5260,6 +5308,13 @@ try {
 		} else {
 			LO.print("Finance Charges - found wrong");
 			System.err.println("Finance Charges - found wrong");
+			
+			LO.print("Actual Finance Charges after changing Base Int. Rate - "+customer_quote_summary_finance_charges);
+			System.err.println("Actual Finance Charges after changing Base Int. Rate -  "+customer_quote_summary_finance_charges);
+
+			LO.print("Expected Finance Charges after changing Base Int. Rate - "+financeCharges);
+			System.err.println("Expected Finance Charges after changing Base Int. Rate -  "+financeCharges);
+
 		}
 
 		// 3
@@ -5270,6 +5325,14 @@ try {
 		} else {
 			LO.print("Balance Payable - found wrong");
 			System.err.println("Balance Payable - found wrong");
+			
+			LO.print("Actual Balance Payable after changing Base Int. Rate - "+customer_quote_summary_balance_payable);
+			System.err.println("Actual Balance Payable after changing Base Int. Rate -  "+customer_quote_summary_balance_payable);
+
+			LO.print("Expected Balance Payable after changing Base Int. Rate - "+balancePayable);
+			System.err.println("Expected Balance Payable after changing Base Int. Rate -  "+balancePayable);
+
+			
 		}
 
 		if (count == 3) {
@@ -5400,6 +5463,13 @@ try {
 			} else {
 				LO.print("Monthly Maint Rental after changing Maintenance margin -  found wrong");
 				System.err.println("Monthly Maint Rental after changing Maintenance margin -  found wrong");
+				
+				LO.print("Actual Monthly Maint Rental after changing Base Int. Rate - "+customer_quote_summary_monthly_maint_rental_from_screen);
+				System.err.println("Actual Monthly Maint Rental after changing Base Int. Rate -  "+customer_quote_summary_monthly_maint_rental_from_screen);
+	
+				LO.print("Expected Monthly Maint Rental after changing Base Int. Rate - "+monthlyMaintenanceRental);
+				System.err.println("Expected Monthly Maint Rental after changing Base Int. Rate -  "+monthlyMaintenanceRental);
+
 			}
 
 			if (count == 1) {

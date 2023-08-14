@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="3" failed="1" skipped="1">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[<b>Clicked on Quote button </b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Manufacture =FIAT has been selected</b> <br />]]>
+      <![CDATA[<b>Manufacture =AUDI has been selected</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Model range =FIORINO has been selected</b> <br />]]>
+      <![CDATA[<b>Model range =A7 has been selected</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Vehicle has been selected</b> <br />]]>
@@ -26,13 +26,13 @@
       <![CDATA[<b> Customer Contract type option = Contract Purchase (CP) has been selected</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Getting Basic Price- Vehicle value is  =16745.00</b> <br />]]>
+      <![CDATA[<b>Getting Basic Price- Vehicle value is  =46854.17</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Getting Basic Price - Paint  value is  =0.00</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Getting  Basic Price - Options value is   =0.00</b> <br />]]>
+      <![CDATA[<b>Getting  Basic Price - Options value is   =833.33</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Getting Discount- Vehicle value is  =0.00</b> <br />]]>
@@ -65,10 +65,10 @@
       <![CDATA[<b>Reading Subtotal After Discount from excel sheet -Started </b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Subtotal After Discount from excel sheet is =16745.0</b> <br />]]>
+      <![CDATA[<b>Subtotal After Discount from excel sheet is =47687.5</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Subtotal after discount actual value from screen =£ 16,745.00</b> <br />]]>
+      <![CDATA[<b>Subtotal after discount actual value from screen =£ 47,687.50</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>*********Calculations for On Road Price has been started***********</b> <br />]]>
@@ -77,10 +77,10 @@
       <![CDATA[<b>Started getting On screen values from after discount table </b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Manufacture_delivery_charges =695.00</b> <br />]]>
+      <![CDATA[<b>Manufacture_delivery_charges =550.00</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Road_tax_first_year =290.00</b> <br />]]>
+      <![CDATA[<b>Road_tax_first_year =645.00</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>First_registration_fee =55.00</b> <br />]]>
@@ -101,34 +101,166 @@
       <![CDATA[<b>Reading On Road Price for invoice from excel has been completed</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Expected on the road price from excel is =21273.0</b> <br />]]>
+      <![CDATA[<b>Expected on the road price from excel is =58585.0</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Actual on the road price from screen is =21273.00</b> <br />]]>
+      <![CDATA[<b>Actual on the road price from screen is =58585.00</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>***********Entered in holding cost page ***********</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>***********Holding Cost Calculations has been Started*************</b> <br />]]>
+      <![CDATA[<b>Clicked on holding cost summary</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Clicked on holding_cost_maintenance_toggle_button</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>***Verifying Holding Cost before editing CAP data*** </b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Getting on screen values from Holding Cost Page</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Duration(Terms) =36.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Annual_mileage =10000.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Residual_value_from_screen =27450.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total_cap_maintenance_value_annual =1419.17</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing Holding Cost Summary values to excel has been started</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Writing Holding Cost Summary values to excel has been completed</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Reading Monthly Holding Cost value from excel</b> <br />]]>
+      <![CDATA[<b>Reading Monthly Holding Cost value from excel has been started</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Total_monthly_holding_cost_from_screen =475.58</b> <br />]]>
+      <![CDATA[<b>Reading Monthly Holding Cost value from excel has been completed</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Total_monthly_holding_cost_from_excel =475.5757575757576</b> <br />]]>
+      <![CDATA[<b>Total_monthly_holding_cost_from_screen =1,096.15</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total_monthly_holding_cost_from_excel =1096.1453157375765</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Monthly Holding Cost based on CAP data is Verified and Found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Editing % CAP Residual Value and % CAP Maintenance cost used</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Changing % CAP Residual Value (from test  data) to 60</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Changing % CAP Maintenance cost (from test  data) to 70</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing Holding Cost Summary values to excel has been started</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing Holding Cost Summary values to excel has been completed</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading Monthly Holding Cost value from excel has been started</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading Monthly Holding Cost value from excel has been completed</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total_monthly_holding_cost_from_screen =1,299.25</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total_monthly_holding_cost_from_excel =1299.2500871955428</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Monthly Holding Cost After Editing % Residual Value and % Maintenance Cost is Verified and Found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Editing Residual value and Maintenance cost used</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Changing Residual Value (from test data) to  =20000</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Changing Maintenance Cost used (from test data) to =60</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing Holding Cost Summary values to excel has been started</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing Holding Cost Summary values to excel has been completed</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading Monthly Holding Cost value from excel has been started</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading Monthly Holding Cost value from excel has been completed</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total_monthly_holding_cost_from_screen =1,262.56</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total_monthly_holding_cost_from_excel =1262.5561082265115</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Monthly Holding Cost After Editing Residual Value and Maintenance Cost is Verified and Found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Editing additional terms and mileage</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Updated Residual Value from screen  (to be sent to calculation excel) is =11055.00</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Updated Maintenance Cost from screen  (to be sent to calculation excel) is =123.28</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing Holding Cost Summary values to excel has been started</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Writing Holding Cost Summary values to excel has been completed</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading Monthly Holding Cost value from excel has been started</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading Monthly Holding Cost value from excel has been completed</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total_monthly_holding_cost_from_screen =1,532.41</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total_monthly_holding_cost_from_excel =1532.405828321041</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Monthly Holding Cost After Editing Additional terms and mileage is Verified and Found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>***********Entered in Customer Quote page ***********</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Matrix credit type Limited Credit has been selected</b> <br />]]>
+      <![CDATA[<b>Matrix credit type A1 Credit has been selected</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Writing configuration values from property file to Excel for customer quote calculation -started</b> <br />]]>
@@ -137,7 +269,7 @@
       <![CDATA[<b>Writing configuration values from property file to Excel for customer quote calculation -completed</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Actual Monthly Finance Payment from screen is 943.8</b> <br />]]>
+      <![CDATA[<b>Actual Monthly total Payment from screen is 2015.04</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Writing screen values to Excel for customer quote calculation -started</b> <br />]]>
@@ -146,97 +278,673 @@
       <![CDATA[<b>Writing screen values to Excel for customer quote calculation -completed</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Expected Monthly Finannce Rental from excel is 488.87649981729686</b> <br />]]>
+      <![CDATA[<b>Expected Monthly Total Rental from excel is 2015.0411578970877</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Actual Monthly Maintenance Payment from screen is 2.76</b> <br />]]>
+      <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Writing screen values to Excel for customer quote calculation -completed</b> <br />]]>
+      <![CDATA[<b>Started Verifying Sales price discount not to be greater than cost price discount</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Expected Monthly Maintenance Rental from excel is 61.875</b> <br />]]>
+      <![CDATA[<b>Sales discount price entered greater than Cost discount prices and verified that sales discount input field doesn't accept greater values than cost discount prices</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<br>----------Screenshot---------<br>]]>
+      <![CDATA[<b></b> <br />]]>
     </line>
     <line>
-      <![CDATA[<img src="D:\Acquisition\AMT_Automation_Acquisition\target\surefire-reports\html\failure_screenshots\aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test_07_08_2023_12_00_38.png" height="800" width="1000">]]>
+      <![CDATA[<b>Started Updating Sales price discount</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Actual Sales Total Price from screen (on updating sales discount prices) is 58585.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Expected Sales Total Price from excel (on updating sales discount prices) is 58585.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Actual Vehicle Profit from screen (on updating sales discount prices) is 0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Expected Vehicle Profit from excel (on updating sales discount prices) is 0.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Actual Monthly Finance Payment from screen is 1862.75</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Expected Monthly Finance Payment from excel is 1862.7540990735588</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Actual Monthly Maintenance Payment from screen is 152.29</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Expected Monthly Maintenance Payment from excel is 152.287058823529</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>1. Sales Total Price , 2.Vehicel Profit , 3.Monthly Finance Rental , 4.Monthly Maintenance Rental , Verified on updating sales discount and found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Total Payment verified after editing vehicle profit</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Verifying Vehicle profit and Total Monthly Payment on editing Vehicle Sales Price</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Sending 70302.0 to sales total input field</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Vehicle profit Expected is = 9764.166666666668</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Vehicle profit Actual is = 9764.17</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Total Payment Expected is = 2439.6089963262702</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Total Payment Actual is = 2439.61</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Vehicle profit and Total Monthly Payment verified on editing Vehicle Sales Price</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Clicked on Part Exchange panel</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Actual Balance to finance after editing part exchange values and deposit values is = 67802.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Expected Balance to finance after editing part exchange values and deposit values is = 67802.004</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Actual Monthly total Payment after editing part exchange values and deposit values is = 2349.02</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Expected Monthly total Payment after editing part exchange values and deposit values is = 2349.0210272453587</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly total Payment verified after editing part exchange values and deposit values</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************OTR Calulation on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading values from OTR calculation -Quote Summary Page</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cost otr price from screen is 58585.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cost price ex vat and rfl from screen is 48237.5</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Otr Vat from screen is 9647.5</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Otr rfl and frf from screen is 700.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cost otr price from excel is 58585.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cost price ex vat and rfl from excel is 48237.5</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Otr Vat from excel is 9647.5</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Otr rfl and frf from excel is 700.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>OTR price compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cost price ex vat and rfl compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>VAT compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>RFL & FRF compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************Holding Cost Calulation on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading values from Holding Cost summary -Quote Summary Page</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>holding_cost_terms_from_screen35.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>holding_cost_miles_per_annum_from_screen35000.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>holding_cost_monthly_finance_cost_from_screen1409.13</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>holding_cost_monthly_maint_cost_used_from_screen123.28</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>holding_cost_total_monthly_holding_cost_from_screen =1532.41</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>terms compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Miles per annum compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance cost compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Maint cost used  compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Monthly Holding Cost compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************Customer Quote Calulation on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Terms found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>miles found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>VAT found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Order Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Part Exchange Value - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Document Fee - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Followed By months - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Maint Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Total Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Guaranteed Future Value - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Optional Final Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Pence Per Excess Mile Finance - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Pence Per Excess Mile Maintenance - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Pence Per Excess Mile Total - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Maintenance Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************Configuration Values Verification on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Base Interest Rate found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Deductions found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Additional Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Default Broker Margin percentage found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Customer Interest Rate found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Maintenance Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Document Fee Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Default Broker Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*********Customer Quote generated successfully and Quote_ref_no is=QKU13646</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************OTR Calulation on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading values from OTR calculation -Quote Summary Page</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cost otr price from screen is 58585.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cost price ex vat and rfl from screen is 48237.5</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Otr Vat from screen is 9647.5</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Otr rfl and frf from screen is 700.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cost otr price from excel is 58585.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cost price ex vat and rfl from excel is 48237.5</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Otr Vat from excel is 9647.5</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Otr rfl and frf from excel is 700.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b></b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>OTR price compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Cost price ex vat and rfl compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>VAT compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>RFL & FRF compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************Holding Cost Calulation on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Reading values from Holding Cost summary -Quote Summary Page</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>holding_cost_terms_from_screen35.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>holding_cost_miles_per_annum_from_screen35000.0</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>holding_cost_monthly_finance_cost_from_screen1409.13</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>holding_cost_monthly_maint_cost_used_from_screen123.28</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>holding_cost_total_monthly_holding_cost_from_screen =1532.41</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>terms compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Miles per annum compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance cost compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Maint cost used  compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Monthly Holding Cost compared</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************Customer Quote Calulation on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Terms found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>miles found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>VAT found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Order Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Deposit found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Part Exchange Value - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Document Fee - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Followed By months - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Maint Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Total Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Guaranteed Future Value - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Optional Final Payment - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Pence Per Excess Mile Finance - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Pence Per Excess Mile Maintenance - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Pence Per Excess Mile Total - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Maintenance Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Commission - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************Configuration Values Verification on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Base Interest Rate found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Deductions found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Additional Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Total Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Default Broker Margin percentage found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Customer Interest Rate found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Maintenance Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Document Fee Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Default Broker Margin found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************Editing Base Interest Rate and Verifying  Values on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Base Interest Rate changed to 7.0 %</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Holding Cost after changing Base Int. Rate -  found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Finance Rental after changing Base Int. Rate -  found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Maint Rental after changing Base Int. Rate -  found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Base Interest Rate changed to 6.5 %</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************Editing Customer Rate Over Base and Verifying Values on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Customer Base Over Rate changed to 5.0 %</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Finance Rental after changing Customer Base Over Rate -  found wrong</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Actual Monthly Finance Rental after changing Base Int. Rate - 1844.32</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Expected Monthly Finance Rental after changing Base Int. Rate - 2224.538400545041</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Finance Charges - found wrong</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Actual Finance Charges after changing Base Int. Rate - 5959.88</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Expected Finance Charges after changing Base Int. Rate - 18887.30161853136</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Balance Payable - found wrong</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Actual Balance Payable after changing Base Int. Rate - 74011.87</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Expected Balance Payable after changing Base Int. Rate - 86939.29361853136</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>*************Editing Maintenance Margin and Verifying Values on quote summary page has been started************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Maintenance margin changed to 30 %</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Monthly Maint Rental after changing Maintenance margin -  found OK</b> <br />]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-08-07T11:57:27 IST" name="Default suite" finished-at="2023-08-07T12:00:39 IST" duration-ms="191543">
+  <suite started-at="2023-08-14T15:53:52 IST" name="Default suite" finished-at="2023-08-14T16:03:17 IST" duration-ms="565394">
     <groups>
     </groups>
-    <test started-at="2023-08-07T11:57:27 IST" name="Default test" finished-at="2023-08-07T12:00:39 IST" duration-ms="191543">
-      <class name="newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test">
-        <test-method is-config="true" signature="start_info()[pri:0, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8]" started-at="2023-08-07T11:57:27 IST" name="start_info" finished-at="2023-08-07T11:57:27 IST" duration-ms="6" status="PASS">
+    <test started-at="2023-08-14T15:53:52 IST" name="Default test" finished-at="2023-08-14T16:03:17 IST" duration-ms="565394">
+      <class name="newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test">
+        <test-method is-config="true" signature="start_info()[pri:0, instance:newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test@7d0b7e3c]" started-at="2023-08-14T15:53:52 IST" name="start_info" finished-at="2023-08-14T15:53:52 IST" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start_info -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8]" started-at="2023-08-07T11:57:27 IST" name="setup" finished-at="2023-08-07T11:57:45 IST" duration-ms="17689" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test@7d0b7e3c]" started-at="2023-08-14T15:53:52 IST" name="setup" finished-at="2023-08-14T15:54:06 IST" duration-ms="13553" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="aquisition_quotes_CP_CP_OTR_calculation_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8]" started-at="2023-08-07T11:57:46 IST" name="aquisition_quotes_CP_CP_OTR_calculation_with_maintenance_test" data-provider="testData" finished-at="2023-08-07T11:59:12 IST" duration-ms="85418" status="PASS">
+        <test-method signature="aquisition_quotes_CP_CP_OTR_calculation_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test@7d0b7e3c]" started-at="2023-08-14T15:54:07 IST" name="aquisition_quotes_CP_CP_OTR_calculation_with_maintenance_test" data-provider="testData" finished-at="2023-08-14T15:55:27 IST" duration-ms="79970" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FIAT]]>
+                <![CDATA[AUDI]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[FIORINO]]>
+                <![CDATA[A7]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[REF001]]>
+                <![CDATA[50000]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[05/12/24]]>
+                <![CDATA[630]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[33]]>
+                <![CDATA[60]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[5000]]>
+                <![CDATA[70]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[1000]]>
+                <![CDATA[20000]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[200]]>
+                <![CDATA[60]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[12]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[500]]>
+                <![CDATA[35]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[50]]>
+                <![CDATA[35000]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[6000]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="12">
@@ -246,22 +954,22 @@
             </param>
             <param index="13">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[YES]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[A1 Credit]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[10000]]>
+                <![CDATA[100]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[6000]]>
+                <![CDATA[YES]]>
               </value>
             </param>
             <param index="17">
@@ -276,57 +984,27 @@
             </param>
             <param index="19">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[500]]>
               </value>
             </param>
             <param index="20">
               <value>
-                <![CDATA[199.99]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="21">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[YES]]>
+                <![CDATA[199.99]]>
               </value>
             </param>
             <param index="23">
               <value>
-                <![CDATA[20]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[200]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[NO]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[Limited Credit]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[YES]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[CP (Formula 2) - CP]]>
+                <![CDATA[ContractPurchase]]>
               </value>
             </param>
           </params>
@@ -335,10 +1013,10 @@
               <![CDATA[<b>Clicked on Quote button </b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Manufacture =FIAT has been selected</b> <br />]]>
+              <![CDATA[<b>Manufacture =AUDI has been selected</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Model range =FIORINO has been selected</b> <br />]]>
+              <![CDATA[<b>Model range =A7 has been selected</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Vehicle has been selected</b> <br />]]>
@@ -356,13 +1034,13 @@
               <![CDATA[<b> Customer Contract type option = Contract Purchase (CP) has been selected</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Getting Basic Price- Vehicle value is  =16745.00</b> <br />]]>
+              <![CDATA[<b>Getting Basic Price- Vehicle value is  =46854.17</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Getting Basic Price - Paint  value is  =0.00</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Getting  Basic Price - Options value is   =0.00</b> <br />]]>
+              <![CDATA[<b>Getting  Basic Price - Options value is   =833.33</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Getting Discount- Vehicle value is  =0.00</b> <br />]]>
@@ -395,73 +1073,73 @@
               <![CDATA[<b>Reading Subtotal After Discount from excel sheet -Started </b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Subtotal After Discount from excel sheet is =16745.0</b> <br />]]>
+              <![CDATA[<b>Subtotal After Discount from excel sheet is =47687.5</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Subtotal after discount actual value from screen =£ 16,745.00</b> <br />]]>
+              <![CDATA[<b>Subtotal after discount actual value from screen =£ 47,687.50</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- aquisition_quotes_CP_CP_OTR_calculation_with_maintenance_test -->
-        <test-method signature="aquisition_quotes_CP_CP_after_discount_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8]" started-at="2023-08-07T11:59:12 IST" name="aquisition_quotes_CP_CP_after_discount_calculations_with_maintenance_test" data-provider="testData" finished-at="2023-08-07T11:59:17 IST" depends-on-methods="newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_CP_CP_OTR_calculation_with_maintenance_test" duration-ms="4788" status="PASS">
+        <test-method signature="aquisition_quotes_CP_CP_after_discount_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test@7d0b7e3c]" started-at="2023-08-14T15:55:27 IST" name="aquisition_quotes_CP_CP_after_discount_calculations_with_maintenance_test" data-provider="testData" finished-at="2023-08-14T15:55:32 IST" depends-on-methods="newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test.aquisition_quotes_CP_CP_OTR_calculation_with_maintenance_test" duration-ms="4688" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FIAT]]>
+                <![CDATA[AUDI]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[FIORINO]]>
+                <![CDATA[A7]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[REF001]]>
+                <![CDATA[50000]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[05/12/24]]>
+                <![CDATA[630]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[33]]>
+                <![CDATA[60]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[5000]]>
+                <![CDATA[70]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[1000]]>
+                <![CDATA[20000]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[200]]>
+                <![CDATA[60]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[12]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[500]]>
+                <![CDATA[35]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[50]]>
+                <![CDATA[35000]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[6000]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="12">
@@ -471,22 +1149,22 @@
             </param>
             <param index="13">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[YES]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[A1 Credit]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[10000]]>
+                <![CDATA[100]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[6000]]>
+                <![CDATA[YES]]>
               </value>
             </param>
             <param index="17">
@@ -501,57 +1179,27 @@
             </param>
             <param index="19">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[500]]>
               </value>
             </param>
             <param index="20">
               <value>
-                <![CDATA[199.99]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="21">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[YES]]>
+                <![CDATA[199.99]]>
               </value>
             </param>
             <param index="23">
               <value>
-                <![CDATA[20]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[200]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[NO]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[Limited Credit]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[YES]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[CP (Formula 2) - CP]]>
+                <![CDATA[ContractPurchase]]>
               </value>
             </param>
           </params>
@@ -563,10 +1211,10 @@
               <![CDATA[<b>Started getting On screen values from after discount table </b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Manufacture_delivery_charges =695.00</b> <br />]]>
+              <![CDATA[<b>Manufacture_delivery_charges =550.00</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Road_tax_first_year =290.00</b> <br />]]>
+              <![CDATA[<b>Road_tax_first_year =645.00</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>First_registration_fee =55.00</b> <br />]]>
@@ -587,73 +1235,73 @@
               <![CDATA[<b>Reading On Road Price for invoice from excel has been completed</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Expected on the road price from excel is =21273.0</b> <br />]]>
+              <![CDATA[<b>Expected on the road price from excel is =58585.0</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Actual on the road price from screen is =21273.00</b> <br />]]>
+              <![CDATA[<b>Actual on the road price from screen is =58585.00</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- aquisition_quotes_CP_CP_after_discount_calculations_with_maintenance_test -->
-        <test-method signature="aquisition_quotes_CP_CP_holding_cost_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8]" started-at="2023-08-07T11:59:17 IST" name="aquisition_quotes_CP_CP_holding_cost_calculations_with_maintenance_test" data-provider="testData" finished-at="2023-08-07T11:59:50 IST" depends-on-methods="newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_CP_CP_after_discount_calculations_with_maintenance_test" duration-ms="33255" status="PASS">
+        <test-method signature="aquisition_quotes_CP_CP_holding_cost_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test@7d0b7e3c]" started-at="2023-08-14T15:55:32 IST" name="aquisition_quotes_CP_CP_holding_cost_calculations_with_maintenance_test" data-provider="testData" finished-at="2023-08-14T15:56:17 IST" depends-on-methods="newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test.aquisition_quotes_CP_CP_after_discount_calculations_with_maintenance_test" duration-ms="45104" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FIAT]]>
+                <![CDATA[AUDI]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[FIORINO]]>
+                <![CDATA[A7]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[REF001]]>
+                <![CDATA[50000]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[05/12/24]]>
+                <![CDATA[630]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[33]]>
+                <![CDATA[60]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[5000]]>
+                <![CDATA[70]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[1000]]>
+                <![CDATA[20000]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[200]]>
+                <![CDATA[60]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[12]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[500]]>
+                <![CDATA[35]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[50]]>
+                <![CDATA[35000]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[6000]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="12">
@@ -663,22 +1311,22 @@
             </param>
             <param index="13">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[YES]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[A1 Credit]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[10000]]>
+                <![CDATA[100]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[6000]]>
+                <![CDATA[YES]]>
               </value>
             </param>
             <param index="17">
@@ -693,57 +1341,27 @@
             </param>
             <param index="19">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[500]]>
               </value>
             </param>
             <param index="20">
               <value>
-                <![CDATA[199.99]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="21">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[YES]]>
+                <![CDATA[199.99]]>
               </value>
             </param>
             <param index="23">
               <value>
-                <![CDATA[20]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[200]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[NO]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[Limited Credit]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[YES]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[CP (Formula 2) - CP]]>
+                <![CDATA[ContractPurchase]]>
               </value>
             </param>
           </params>
@@ -752,82 +1370,214 @@
               <![CDATA[<b>***********Entered in holding cost page ***********</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>***********Holding Cost Calculations has been Started*************</b> <br />]]>
+              <![CDATA[<b>Clicked on holding cost summary</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Clicked on holding_cost_maintenance_toggle_button</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>***Verifying Holding Cost before editing CAP data*** </b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Getting on screen values from Holding Cost Page</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Duration(Terms) =36.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Annual_mileage =10000.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Residual_value_from_screen =27450.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total_cap_maintenance_value_annual =1419.17</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing Holding Cost Summary values to excel has been started</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Writing Holding Cost Summary values to excel has been completed</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Reading Monthly Holding Cost value from excel</b> <br />]]>
+              <![CDATA[<b>Reading Monthly Holding Cost value from excel has been started</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Total_monthly_holding_cost_from_screen =475.58</b> <br />]]>
+              <![CDATA[<b>Reading Monthly Holding Cost value from excel has been completed</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Total_monthly_holding_cost_from_excel =475.5757575757576</b> <br />]]>
+              <![CDATA[<b>Total_monthly_holding_cost_from_screen =1,096.15</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total_monthly_holding_cost_from_excel =1096.1453157375765</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Monthly Holding Cost based on CAP data is Verified and Found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Editing % CAP Residual Value and % CAP Maintenance cost used</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Changing % CAP Residual Value (from test  data) to 60</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Changing % CAP Maintenance cost (from test  data) to 70</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing Holding Cost Summary values to excel has been started</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing Holding Cost Summary values to excel has been completed</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading Monthly Holding Cost value from excel has been started</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading Monthly Holding Cost value from excel has been completed</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total_monthly_holding_cost_from_screen =1,299.25</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total_monthly_holding_cost_from_excel =1299.2500871955428</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Monthly Holding Cost After Editing % Residual Value and % Maintenance Cost is Verified and Found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Editing Residual value and Maintenance cost used</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Changing Residual Value (from test data) to  =20000</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Changing Maintenance Cost used (from test data) to =60</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing Holding Cost Summary values to excel has been started</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing Holding Cost Summary values to excel has been completed</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading Monthly Holding Cost value from excel has been started</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading Monthly Holding Cost value from excel has been completed</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total_monthly_holding_cost_from_screen =1,262.56</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total_monthly_holding_cost_from_excel =1262.5561082265115</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Monthly Holding Cost After Editing Residual Value and Maintenance Cost is Verified and Found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Editing additional terms and mileage</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Updated Residual Value from screen  (to be sent to calculation excel) is =11055.00</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Updated Maintenance Cost from screen  (to be sent to calculation excel) is =123.28</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing Holding Cost Summary values to excel has been started</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Writing Holding Cost Summary values to excel has been completed</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading Monthly Holding Cost value from excel has been started</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading Monthly Holding Cost value from excel has been completed</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total_monthly_holding_cost_from_screen =1,532.41</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total_monthly_holding_cost_from_excel =1532.405828321041</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Monthly Holding Cost After Editing Additional terms and mileage is Verified and Found OK</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- aquisition_quotes_CP_CP_holding_cost_calculations_with_maintenance_test -->
-        <test-method signature="aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8]" started-at="2023-08-07T11:59:51 IST" name="aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test" data-provider="testData" finished-at="2023-08-07T12:00:38 IST" depends-on-methods="newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_CP_CP_holding_cost_calculations_with_maintenance_test" duration-ms="47779" status="FAIL">
+        <test-method signature="aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test@7d0b7e3c]" started-at="2023-08-14T15:56:18 IST" name="aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test" data-provider="testData" finished-at="2023-08-14T15:58:09 IST" depends-on-methods="newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test.aquisition_quotes_CP_CP_holding_cost_calculations_with_maintenance_test" duration-ms="111417" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[FIAT]]>
+                <![CDATA[AUDI]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[FIORINO]]>
+                <![CDATA[A7]]>
               </value>
             </param>
             <param index="2">
               <value>
-                <![CDATA[REF001]]>
+                <![CDATA[50000]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[05/12/24]]>
+                <![CDATA[630]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[33]]>
+                <![CDATA[60]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[5000]]>
+                <![CDATA[70]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[1000]]>
+                <![CDATA[20000]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[200]]>
+                <![CDATA[60]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[12]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[500]]>
+                <![CDATA[35]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[50]]>
+                <![CDATA[35000]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[6000]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="12">
@@ -837,22 +1587,22 @@
             </param>
             <param index="13">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[YES]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[A1 Credit]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[10000]]>
+                <![CDATA[100]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[6000]]>
+                <![CDATA[YES]]>
               </value>
             </param>
             <param index="17">
@@ -867,106 +1617,36 @@
             </param>
             <param index="19">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[500]]>
               </value>
             </param>
             <param index="20">
               <value>
-                <![CDATA[199.99]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="21">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[1000]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[YES]]>
+                <![CDATA[199.99]]>
               </value>
             </param>
             <param index="23">
               <value>
-                <![CDATA[20]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[200]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[NO]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[Limited Credit]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[YES]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[CP (Formula 2) - CP]]>
+                <![CDATA[ContractPurchase]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [true] but found [false]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertTrue(Assert.java:45)
-at org.testng.Assert.assertTrue(Assert.java:55)
-at newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test(Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test.java:118)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
             <line>
               <![CDATA[<b>***********Entered in Customer Quote page ***********</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Matrix credit type Limited Credit has been selected</b> <br />]]>
+              <![CDATA[<b>Matrix credit type A1 Credit has been selected</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Writing configuration values from property file to Excel for customer quote calculation -started</b> <br />]]>
@@ -975,7 +1655,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[<b>Writing configuration values from property file to Excel for customer quote calculation -completed</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Actual Monthly Finance Payment from screen is 943.8</b> <br />]]>
+              <![CDATA[<b>Actual Monthly total Payment from screen is 2015.04</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Writing screen values to Excel for customer quote calculation -started</b> <br />]]>
@@ -984,66 +1664,984 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[<b>Writing screen values to Excel for customer quote calculation -completed</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Expected Monthly Finannce Rental from excel is 488.87649981729686</b> <br />]]>
+              <![CDATA[<b>Expected Monthly Total Rental from excel is 2015.0411578970877</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Actual Monthly Maintenance Payment from screen is 2.76</b> <br />]]>
+              <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Writing screen values to Excel for customer quote calculation -completed</b> <br />]]>
+              <![CDATA[<b>Started Verifying Sales price discount not to be greater than cost price discount</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Expected Monthly Maintenance Rental from excel is 61.875</b> <br />]]>
+              <![CDATA[<b>Sales discount price entered greater than Cost discount prices and verified that sales discount input field doesn't accept greater values than cost discount prices</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<br>----------Screenshot---------<br>]]>
+              <![CDATA[<b></b> <br />]]>
             </line>
             <line>
-              <![CDATA[<img src="D:\Acquisition\AMT_Automation_Acquisition\target\surefire-reports\html\failure_screenshots\aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test_07_08_2023_12_00_38.png" height="800" width="1000">]]>
+              <![CDATA[<b>Started Updating Sales price discount</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Actual Sales Total Price from screen (on updating sales discount prices) is 58585.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Expected Sales Total Price from excel (on updating sales discount prices) is 58585.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Actual Vehicle Profit from screen (on updating sales discount prices) is 0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Expected Vehicle Profit from excel (on updating sales discount prices) is 0.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Actual Monthly Finance Payment from screen is 1862.75</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Expected Monthly Finance Payment from excel is 1862.7540990735588</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Actual Monthly Maintenance Payment from screen is 152.29</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Expected Monthly Maintenance Payment from excel is 152.287058823529</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>1. Sales Total Price , 2.Vehicel Profit , 3.Monthly Finance Rental , 4.Monthly Maintenance Rental , Verified on updating sales discount and found OK</b> <br />]]>
             </line>
           </reporter-output>
         </test-method> <!-- aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test -->
-        <test-method signature="aquisition_quotes_CP_CP_quote_summary_values_verification_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8]" started-at="2023-08-07T12:00:39 IST" name="aquisition_quotes_CP_CP_quote_summary_values_verification_with_maintenance_test" finished-at="2023-08-07T12:00:39 IST" depends-on-methods="newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test" duration-ms="0" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_CP_CP_quote_summary_values_verification_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_CP_CP_quote_summary_values_verification_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8] depends on not successfully finished methods
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        <test-method signature="aquisition_quotes_CP_CP_customer_quote_vehicle_profit_edit_check_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test@7d0b7e3c]" started-at="2023-08-14T15:58:09 IST" name="aquisition_quotes_CP_CP_customer_quote_vehicle_profit_edit_check_with_maintenance_test" data-provider="testData" finished-at="2023-08-14T15:58:41 IST" depends-on-methods="newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test.aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test" duration-ms="31958" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AUDI]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[A7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[50000]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[630]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[70]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[20000]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[35]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[35000]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[YES]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[A1 Credit]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[YES]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[199.99]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[ContractPurchase]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
+            <line>
+              <![CDATA[<b>Monthly Total Payment verified after editing vehicle profit</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Verifying Vehicle profit and Total Monthly Payment on editing Vehicle Sales Price</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Sending 70302.0 to sales total input field</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Vehicle profit Expected is = 9764.166666666668</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Vehicle profit Actual is = 9764.17</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Total Payment Expected is = 2439.6089963262702</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Total Payment Actual is = 2439.61</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Vehicle profit and Total Monthly Payment verified on editing Vehicle Sales Price</b> <br />]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- aquisition_quotes_CP_CP_customer_quote_vehicle_profit_edit_check_with_maintenance_test -->
+        <test-method signature="aquisition_quotes_CP_CP_customer_quote_part_exchange_value_edit_check_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test@7d0b7e3c]" started-at="2023-08-14T15:58:42 IST" name="aquisition_quotes_CP_CP_customer_quote_part_exchange_value_edit_check_with_maintenance_test" data-provider="testData" finished-at="2023-08-14T15:59:19 IST" depends-on-methods="newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test.aquisition_quotes_CP_CP_customer_quote_vehicle_profit_edit_check_with_maintenance_test" duration-ms="37273" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AUDI]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[A7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[50000]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[630]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[70]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[20000]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[35]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[35000]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[YES]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[A1 Credit]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[YES]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[199.99]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[ContractPurchase]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<b>Clicked on Part Exchange panel</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Actual Balance to finance after editing part exchange values and deposit values is = 67802.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Expected Balance to finance after editing part exchange values and deposit values is = 67802.004</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Actual Monthly total Payment after editing part exchange values and deposit values is = 2349.02</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Expected Monthly total Payment after editing part exchange values and deposit values is = 2349.0210272453587</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly total Payment verified after editing part exchange values and deposit values</b> <br />]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- aquisition_quotes_CP_CP_customer_quote_part_exchange_value_edit_check_with_maintenance_test -->
+        <test-method signature="aquisition_quotes_CP_CP_quote_summary_values_verification_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test@7d0b7e3c]" started-at="2023-08-14T15:59:19 IST" name="aquisition_quotes_CP_CP_quote_summary_values_verification_with_maintenance_test" data-provider="testData" finished-at="2023-08-14T16:03:17 IST" depends-on-methods="newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test.aquisition_quotes_CP_CP_customer_quote_part_exchange_value_edit_check_with_maintenance_test" duration-ms="238137" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[AUDI]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[A7]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[50000]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[630]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[70]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[20000]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[60]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[35]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[35000]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[20]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[YES]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[A1 Credit]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[YES]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[2000]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="19">
+              <value>
+                <![CDATA[500]]>
+              </value>
+            </param>
+            <param index="20">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="21">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="22">
+              <value>
+                <![CDATA[199.99]]>
+              </value>
+            </param>
+            <param index="23">
+              <value>
+                <![CDATA[ContractPurchase]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[<b>*************OTR Calulation on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading values from OTR calculation -Quote Summary Page</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cost otr price from screen is 58585.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cost price ex vat and rfl from screen is 48237.5</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Otr Vat from screen is 9647.5</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Otr rfl and frf from screen is 700.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cost otr price from excel is 58585.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cost price ex vat and rfl from excel is 48237.5</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Otr Vat from excel is 9647.5</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Otr rfl and frf from excel is 700.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>OTR price compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cost price ex vat and rfl compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>VAT compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>RFL & FRF compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*************Holding Cost Calulation on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading values from Holding Cost summary -Quote Summary Page</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>holding_cost_terms_from_screen35.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>holding_cost_miles_per_annum_from_screen35000.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>holding_cost_monthly_finance_cost_from_screen1409.13</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>holding_cost_monthly_maint_cost_used_from_screen123.28</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>holding_cost_total_monthly_holding_cost_from_screen =1532.41</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>terms compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Miles per annum compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance cost compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Maint cost used  compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Monthly Holding Cost compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*************Customer Quote Calulation on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Terms found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>miles found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>VAT found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Order Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Part Exchange Value - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Document Fee - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Followed By months - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Maint Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Total Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Guaranteed Future Value - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Optional Final Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Pence Per Excess Mile Finance - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Pence Per Excess Mile Maintenance - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Pence Per Excess Mile Total - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Maintenance Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*************Configuration Values Verification on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Base Interest Rate found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Deductions found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Additional Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Default Broker Margin percentage found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Customer Interest Rate found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Maintenance Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Document Fee Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Default Broker Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*********Customer Quote generated successfully and Quote_ref_no is=QKU13646</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*************OTR Calulation on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading values from OTR calculation -Quote Summary Page</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cost otr price from screen is 58585.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cost price ex vat and rfl from screen is 48237.5</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Otr Vat from screen is 9647.5</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Otr rfl and frf from screen is 700.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cost otr price from excel is 58585.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cost price ex vat and rfl from excel is 48237.5</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Otr Vat from excel is 9647.5</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Otr rfl and frf from excel is 700.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b></b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>OTR price compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Cost price ex vat and rfl compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>VAT compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>RFL & FRF compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*************Holding Cost Calulation on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Reading values from Holding Cost summary -Quote Summary Page</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>holding_cost_terms_from_screen35.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>holding_cost_miles_per_annum_from_screen35000.0</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>holding_cost_monthly_finance_cost_from_screen1409.13</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>holding_cost_monthly_maint_cost_used_from_screen123.28</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>holding_cost_total_monthly_holding_cost_from_screen =1532.41</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>terms compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Miles per annum compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance cost compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Maint cost used  compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Monthly Holding Cost compared</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*************Customer Quote Calulation on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Terms found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>miles found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Basic Cash Price found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>VAT found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Non VAT Items Value found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Cash Price found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Order Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Deposit found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Part Exchange Value - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Balance to Finance found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Document Fee - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Option To Purchase Fee - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Initial Cash Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Followed By months - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Finance Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Maint Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Total Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Guaranteed Future Value - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Optional Final Payment - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Pence Per Excess Mile Finance - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Pence Per Excess Mile Maintenance - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Pence Per Excess Mile Total - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Vehicle Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Default Finance Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Maintenance Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Document Fee Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Commission - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*************Configuration Values Verification on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Base Interest Rate found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Deductions found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Additional Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Total Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Default Broker Margin percentage found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Customer Interest Rate found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Maintenance Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Document Fee Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Default Broker Margin found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*************Editing Base Interest Rate and Verifying  Values on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Base Interest Rate changed to 7.0 %</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Holding Cost after changing Base Int. Rate -  found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Finance Rental after changing Base Int. Rate -  found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Maint Rental after changing Base Int. Rate -  found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Charges - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Balance Payable - found OK</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Base Interest Rate changed to 6.5 %</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*************Editing Customer Rate Over Base and Verifying Values on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Customer Base Over Rate changed to 5.0 %</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Finance Rental after changing Customer Base Over Rate -  found wrong</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Actual Monthly Finance Rental after changing Base Int. Rate - 1844.32</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Expected Monthly Finance Rental after changing Base Int. Rate - 2224.538400545041</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Finance Charges - found wrong</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Actual Finance Charges after changing Base Int. Rate - 5959.88</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Expected Finance Charges after changing Base Int. Rate - 18887.30161853136</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Balance Payable - found wrong</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Actual Balance Payable after changing Base Int. Rate - 74011.87</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Expected Balance Payable after changing Base Int. Rate - 86939.29361853136</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>*************Editing Maintenance Margin and Verifying Values on quote summary page has been started************</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Maintenance margin changed to 30 %</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Monthly Maint Rental after changing Maintenance margin -  found OK</b> <br />]]>
+            </line>
           </reporter-output>
         </test-method> <!-- aquisition_quotes_CP_CP_quote_summary_values_verification_with_maintenance_test -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8]" started-at="2023-08-07T12:00:39 IST" name="tearDown" finished-at="2023-08-07T12:00:39 IST" duration-ms="127" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="end()[pri:0, instance:newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test@6e9175d8]" started-at="2023-08-07T12:00:39 IST" name="end" finished-at="2023-08-07T12:00:39 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="end()[pri:0, instance:newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test@7d0b7e3c]" started-at="2023-08-14T16:03:17 IST" name="end" finished-at="2023-08-14T16:03:17 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- newLCV.CP.Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_with_maintenance_Test -->
+      </class> <!-- newCar.CP.Acquisition_Quotes_CP_CP_with_maintenance_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
