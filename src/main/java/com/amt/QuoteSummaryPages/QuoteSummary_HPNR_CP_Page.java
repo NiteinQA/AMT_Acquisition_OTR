@@ -3217,7 +3217,7 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
 
 		wb1.getSheet(sheet_name).getRow(34).getCell(10).setCellValue(Double.parseDouble(prop.getProperty("base_rate")));
-		wb1.getSheet(sheet_name).getRow(62).getCell(1).setCellValue(Double.parseDouble(prop.getProperty("base_rate"))*100);
+		wb1.getSheet(sheet_name).getRow(62).getCell(1).setCellValue(Double.parseDouble(prop.getProperty("base_rate")));
 
 		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
 

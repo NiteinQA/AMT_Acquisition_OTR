@@ -5,7 +5,7 @@
 		<listeners>
 		<listener class-name="com.amt.extentreports.ExtentReportListener" />
 	</listeners>
-  <test thread-count="5" name="Test">
+  <test thread-count="5" name="Acquisition Used LCV">
     <classes>
       <class name="usedLCV.HPNR.Acquisition_Quotes_HPNR_HPNR_used_LCV_without_maintenance_Test"/>
       <class name="usedLCV.FL.Acquisition_Quotes_FL_PCH_used_LCV_without_maintenance_Test"/>
