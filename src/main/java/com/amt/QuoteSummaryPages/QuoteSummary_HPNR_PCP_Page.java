@@ -402,7 +402,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 
 		double baseInterestRateFromExcel = (tempbaseInterestRateFromExcel * 100);
 
-		double financeMarginFromExcel = GetExcelFormulaValue.get_formula_value(268, 5, sheet_name);
+		double financeMarginFromExcel = GetExcelFormulaValue.get_formula_value(263, 1, sheet_name);
 
 		double deductionsFromExcel = GetExcelFormulaValue.get_formula_value(262, 5, sheet_name);
 
@@ -639,7 +639,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 
 		double baseInterestRateFromExcel = (tempbaseInterestRateFromExcel * 100);
 
-		double financeMarginFromExcel = GetExcelFormulaValue.get_formula_value(259, 5, sheet_name);
+		double financeMarginFromExcel = GetExcelFormulaValue.get_formula_value(253, 1, sheet_name);
 
 		double deductionsFromExcel = GetExcelFormulaValue.get_formula_value(253, 5, sheet_name);
 
@@ -2787,7 +2787,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 
 			double baseInterestRateFromExcel = (tempbaseInterestRateFromExcel * 100);
 
-			double financeMarginFromExcel = GetExcelFormulaValue.get_formula_value(259, 5, sheet_name);
+			double financeMarginFromExcel = GetExcelFormulaValue.get_formula_value(253, 1, sheet_name);
 
 			double deductionsFromExcel = GetExcelFormulaValue.get_formula_value(253, 5, sheet_name);
 
@@ -3016,7 +3016,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 
 			double baseInterestRateFromExcel = (tempbaseInterestRateFromExcel * 100);
 
-			double financeMarginFromExcel = GetExcelFormulaValue.get_formula_value(259, 5, sheet_name);
+			double financeMarginFromExcel = GetExcelFormulaValue.get_formula_value(253, 1, sheet_name);
 
 			double deductionsFromExcel = GetExcelFormulaValue.get_formula_value(253, 5, sheet_name);
 
