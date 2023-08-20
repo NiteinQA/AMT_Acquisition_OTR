@@ -1673,9 +1673,14 @@ public class ReadExcelCalculation extends TestBase {
 					
 			
           }
-		else
+		else if(Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used_car"))
 		{
 			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B66*B72");
+		}
+		
+		else 
+		{
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
 		}
 		
 		wb.getSheet(sheet_name).getRow(73).getCell(1)
