@@ -1,8 +1,5 @@
 package com.amt.HoldingCostPages;
 
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.List;
@@ -503,13 +500,11 @@ public class HoldingCost_CP_PCP_Page extends TestBase {
 		// Taking updated values of residual value and maint cost from screen
 		ExplicitWait.visibleElement(driver, residual_value_used, 20);
 		ExplicitWait.visibleElement(driver, maintenance_cost_used, 20);
+		
+		
+		String residual_value_used_from_screen = residual_value_used.getAttribute("value");		
 
-		residual_value_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String residual_value_used_from_screen = (String) clipboard.getData(DataFlavor.stringFlavor);
-
-		maintenance_cost_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		String maint_cost_used_from_screen = (String) clipboard.getData(DataFlavor.stringFlavor);
+		String maint_cost_used_from_screen = maintenance_cost_used.getAttribute("value");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -542,9 +537,7 @@ public class HoldingCost_CP_PCP_Page extends TestBase {
 		// Taking updated values of residual value and maint cost from screen
 		ExplicitWait.visibleElement(driver, residual_value_used, 20);
 
-		residual_value_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String residual_value_used_from_screen = (String) clipboard.getData(DataFlavor.stringFlavor);
+		String residual_value_used_from_screen = residual_value_used.getAttribute("value");		
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 

@@ -1,8 +1,5 @@
 package com.amt.CustomerQuotePackage;
 
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -324,21 +321,14 @@ public class CustomerQuotePage_HPNR_FL_Page extends TestBase {
 		ExplicitWait.visibleElement(driver, maintenance_cost_used, 20);
 		
 		
-		holding_cost_percentage_cap_residual_value_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		double percentage_cap_residual_value = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		double percentage_cap_residual_value =  Double.parseDouble(holding_cost_percentage_cap_residual_value_used.getAttribute("value"));
+		Thread.sleep(1000);		
+		double percentage_cap_maintenance_cost =  Double.parseDouble(holding_cost_percentage_maintenance_cost_used.getAttribute("value"));
+		Thread.sleep(1000);
+		double used_residual_value =  Double.parseDouble(residual_value_used.getAttribute("value"));
+		Thread.sleep(1000);
+		double total_cap_maintenance_value_converted =  Double.parseDouble(maintenance_cost_used.getAttribute("value"));
 
-		Thread.sleep(1000);
-		
-		holding_cost_percentage_maintenance_cost_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double percentage_cap_maintenance_cost = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-		Thread.sleep(1000);
-		residual_value_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		 
-		double used_residual_value = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-		Thread.sleep(1000);
-		maintenance_cost_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double total_cap_maintenance_value_converted = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
 		
 		Thread.sleep(1000);
 
@@ -1969,10 +1959,7 @@ public class CustomerQuotePage_HPNR_FL_Page extends TestBase {
 
 		ExplicitWait.visibleElement(driver, summary_final_balloon_input_field, 30);
 
-		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String default_final_balloon = (String) clipboard.getData(DataFlavor.stringFlavor);
-		double default_final_balloon_converted = Double.parseDouble(default_final_balloon);
+		double default_final_balloon_converted =  Double.parseDouble(summary_final_balloon_input_field.getAttribute("value"));
 
 		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 
@@ -2062,10 +2049,7 @@ public class CustomerQuotePage_HPNR_FL_Page extends TestBase {
 
 		ExplicitWait.visibleElement(driver, summary_final_balloon_input_field, 30);
 
-		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String default_final_balloon = (String) clipboard.getData(DataFlavor.stringFlavor);
-		double default_final_balloon_converted = Double.parseDouble(default_final_balloon);
+		double default_final_balloon_converted =  Double.parseDouble(summary_final_balloon_input_field.getAttribute("value"));
 
 		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		

@@ -1,14 +1,10 @@
 package com.amt.CustomerQuotePackage;
 
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.sql.Date;
 import java.util.List;
 import java.util.Properties;
 
@@ -810,22 +806,25 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		ExplicitWait.visibleElement(driver, residual_value_used, 20);
 		ExplicitWait.visibleElement(driver, maintenance_cost_used, 20);
 		
-		
-		holding_cost_percentage_cap_residual_value_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		double percentage_cap_residual_value = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
 
+		double percentage_cap_residual_value = Double.parseDouble(holding_cost_percentage_cap_residual_value_used.getAttribute("value"));
+		
+		
 		Thread.sleep(1000);
 		
-		holding_cost_percentage_maintenance_cost_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double percentage_cap_maintenance_cost = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-		Thread.sleep(1000);
-		residual_value_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		 
-		double used_residual_value = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
-		Thread.sleep(1000);
-		maintenance_cost_used.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double total_cap_maintenance_value_converted = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+
+		double percentage_cap_maintenance_cost =  Double.parseDouble(holding_cost_percentage_maintenance_cost_used.getAttribute("value"));
+
+		Thread.sleep(1000);		
+	
+		double used_residual_value =  Double.parseDouble(residual_value_used.getAttribute("value"));
+
+		
+		Thread.sleep(1000);	
+		
+	
+		double total_cap_maintenance_value_converted =  Double.parseDouble(maintenance_cost_used.getAttribute("value"));
+
 		
 		Thread.sleep(1000);
 

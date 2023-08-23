@@ -1,8 +1,5 @@
 package com.amt.CustomerQuotePackage;
 
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -1129,12 +1126,7 @@ public class CustomerQuotePageOutrightFLPage extends TestBase {
 
 		Actions act = new Actions(driver);
 
-		ExplicitWait.visibleElement(driver, summary_final_balloon_input_field, 30);
-
-		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String default_final_balloon = (String) clipboard.getData(DataFlavor.stringFlavor);
-		double default_final_balloon_converted = Double.parseDouble(default_final_balloon);
+		double default_final_balloon_converted =  Double.parseDouble(summary_final_balloon_input_field.getAttribute("value"));
 
 		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 
@@ -1222,12 +1214,7 @@ public class CustomerQuotePageOutrightFLPage extends TestBase {
 
 		Actions act = new Actions(driver);
 
-		ExplicitWait.visibleElement(driver, summary_final_balloon_input_field, 30);
-
-		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String default_final_balloon = (String) clipboard.getData(DataFlavor.stringFlavor);
-		double default_final_balloon_converted = Double.parseDouble(default_final_balloon);
+		double default_final_balloon_converted =  Double.parseDouble(summary_final_balloon_input_field.getAttribute("value"));
 
 		summary_final_balloon_input_field.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 
