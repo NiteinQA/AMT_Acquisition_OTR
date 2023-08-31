@@ -3486,8 +3486,8 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 			LO.print("");
 			System.err.println("");
 
-			LO.print("Maintenance margin can not be changed as there is no maintennace for this vehicle");
-			System.err.println("Maintenance margin can not be changed as there is no maintennace for this vehicle");
+			LO.print("Maintenance margin can not be changed as there is no maintenance for this vehicle");
+			System.err.println("Maintenance margin can not be changed as there is no maintenance for this vehicle");
 
 			LO.print("");
 			System.err.println("");

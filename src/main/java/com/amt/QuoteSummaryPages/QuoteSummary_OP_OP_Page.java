@@ -36,8 +36,7 @@ public class QuoteSummary_OP_OP_Page extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Quote reference no.:']//ancestor::div[1]//span[2]")
 	private WebElement quote_summary_ref_no;
 
-	@FindBy(xpath = "//*[normalize-space()='Cost OTR price']//ancestor::div[1]//div//strong")
-	private WebElement quote_summary_cost_otr_price;
+
 
 	@FindBy(xpath = "//body[1]/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-aquisition-generic[1]/form[1]/div[1]/div[1]/div[1]/app-acquisition-summary-quote[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[8]/div[1]/div[1]/p[1]/strong[1]")
 	private WebElement quote_summary_total_monthly_holding_cost;
@@ -60,14 +59,17 @@ public class QuoteSummary_OP_OP_Page extends TestBase {
 	@FindBy(xpath = "//div[@id='headingHoldingCost']//div[7]//div[1]//div[1]//p[1]//strong[1]")
 	private WebElement quote_summary_total_monthly_holding_cost_without_maintenance;
 
-	@FindBy(xpath = "//*[@id='headingTwo']/div/div/div[1]/div/p/strong")
+	@FindBy(xpath = "//*[normalize-space()='Cost price ex. VAT & RFL']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_cost_price_ex_vat_and_rfl;
 
-	@FindBy(xpath = "//*[@id='headingTwo']/div/div/div[2]/div/p/strong")
+	@FindBy(xpath = "//*[normalize-space()='VAT']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_otr_vat;
 
-	@FindBy(xpath = "//*[@id='headingTwo']/div/div/div[3]/div/p/strong")
+	@FindBy(xpath = "//*[normalize-space()='RFL & FRF']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_otr_rfl_and_frf;
+	
+	@FindBy(xpath = "//*[normalize-space()='Cost OTR price']//ancestor::div[1]//div//strong")
+	private WebElement quote_summary_cost_otr_price;
 
 	@FindBy(xpath = "//*[@id='headingHoldingCost']/div/div[2]/div/div/p/strong")
 	private WebElement quote_summary_holding_cost_term;
@@ -258,6 +260,10 @@ public class QuoteSummary_OP_OP_Page extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_cost_price_ex_vat_and_rfl, 120);
 
 		ExplicitWait.visibleElement(driver, quote_summary_otr_vat, 120);
+		
+		ExplicitWait.visibleElement(driver, quote_summary_otr_rfl_and_frf, 120);
+		
+		
 
 		LO.print("Reading values from OTR calculation -Quote Summary Page");
 		System.out.println("Reading values from OTR calculation -Quote Summary Page");
@@ -270,6 +276,9 @@ public class QuoteSummary_OP_OP_Page extends TestBase {
 
 		double OTR_calculation_otr_vat_from_screen_converted = Double
 				.parseDouble(RemoveComma.of(quote_summary_otr_vat.getText().trim().substring(2)));
+		
+		double OTR_calculation_otr_rfl_and_frf_from_screen_converted = Double
+				.parseDouble(RemoveComma.of(quote_summary_otr_rfl_and_frf.getText().trim().substring(2)));
 
 
 		LO.print("Cost otr price from screen =" + OTR_calculation_cost_otr_price_from_screen_converted);
@@ -283,7 +292,7 @@ public class QuoteSummary_OP_OP_Page extends TestBase {
 
 
 		double OTR_calculation_cost_price_ex_vat_and_rfl_expected = (OTR_calculation_cost_otr_price_from_screen_converted
-				- (OTR_calculation_otr_vat_from_screen_converted));
+				- OTR_calculation_otr_vat_from_screen_converted-OTR_calculation_otr_rfl_and_frf_from_screen_converted);
 
 		double diff = Difference.of_two_Double_Values(OTR_calculation_cost_price_ex_vat_and_rfl_from_screen_converted,
 				OTR_calculation_cost_price_ex_vat_and_rfl_expected);
