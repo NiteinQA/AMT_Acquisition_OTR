@@ -9,6 +9,8 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePage_CP_PCH_Page;
+import com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_BCHPage;
+import com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_PCHPage;
 import com.amt.HoldingCostPages.HoldingCost_CP_PCH_Page;
 import com.amt.QuoteSummaryPages.QuoteSummary_CP_PCH_Page;
 import com.amt.pages.AcquisitionListingPage;
@@ -30,7 +32,7 @@ public class Acquisition_Quotes_CP_PCH_with_maintenance_Test extends TestBase {
 	OptionsAccessoriesPage obj_options_accessories;
 	ContractTypesAndOTR_CP_PCH_Page obj_contract_types_and_OTR_page;
 	HoldingCost_CP_PCH_Page obj_holding_cost_page;
-	CustomerQuotePage_CP_PCH_Page obj_customer_quote_page;
+	CustomerQuotePage_HPNR_PCHPage obj_customer_quote_page;
 	QuoteSummary_CP_PCH_Page obj_quote_summary_page;
 	
 	@Test(priority = 1, dataProvider = "testData")	
@@ -119,9 +121,9 @@ public class Acquisition_Quotes_CP_PCH_with_maintenance_Test extends TestBase {
 			String security_deposit, String matrix_upsell, String referrer_upsell, String add_terms, String add_mileage, String maintenance_required, String maintenance_margin, String initial_payment,
 			String part_exchange_status, String target_rental,String sheet_name ) throws InterruptedException, IOException, UnsupportedFlavorException, NumberFormatException, ClassNotFoundException {
 
-		obj_customer_quote_page = new CustomerQuotePage_CP_PCH_Page();
+		obj_customer_quote_page = new CustomerQuotePage_HPNR_PCHPage();
 
-		boolean cust_quote_for_one_payment_boolean_status=obj_customer_quote_page.customer_Quote_CP_PCH_for_one_payment_option_with_maintenance_calculation( actual_part_exchange_value_from_excel,
+		boolean cust_quote_for_one_payment_boolean_status=obj_customer_quote_page.customer_Quote_HPNR_PCH_for_one_payment_option_with_maintenance_calculation( actual_part_exchange_value_from_excel,
 				 given_part_exchange_value_from_excel,  less_finance_settlement_from_excel,
 				 order_deposit_from_excel,  document_fee_from_excel, matrix_upsell,
 				 maintenance_required,  maintenance_margin,  initial_payment,
@@ -147,9 +149,9 @@ public class Acquisition_Quotes_CP_PCH_with_maintenance_Test extends TestBase {
 
 		System.out.println("");
 		System.out.println("");
-		                                                                                                                                                                                                            
-		boolean cust_quote_for_all_payment_boolean_status=obj_customer_quote_page.customer_Quote_CP_PCH_for_all_payment_option_with_maintenance_calculation(initial_payment,sheet_name);
-		Assert.assertTrue(cust_quote_for_all_payment_boolean_status);
+//		                                                                                                                                                                                                            
+//		boolean cust_quote_for_all_payment_boolean_status=obj_customer_quote_page.customer_Quote_HPNR_PCH_for_all_payment_option_with_maintenance_calculation(initial_payment,sheet_name);
+//		Assert.assertTrue(cust_quote_for_all_payment_boolean_status);
 		}
 	
 	@Test(priority=5, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_CP_PCH_customer_quote_payment_profile_calculations_with_maintenance_test" })

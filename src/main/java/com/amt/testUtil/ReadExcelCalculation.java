@@ -46,7 +46,7 @@ public class ReadExcelCalculation extends TestBase {
 
 	public ReadExcelCalculation obj_read_excel_calculation_page;
 
-	public void write_holding_cost_cap_values_to_excel_with_maintenance_for_used_car(double terms_from_screen,
+	public void write_holding_cost_cap_values_to_excel_with_maintenance(double terms_from_screen,
 			double annual_mileage, double used_residual_value, double total_cap_maintenance_value_converted,
 			double percentage_cap_residual_value, double percentage_cap_maintenance_cost, String sheet_name)
 			throws IOException, ClassNotFoundException {
@@ -1664,7 +1664,7 @@ public class ReadExcelCalculation extends TestBase {
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("E15*B72");
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
 			
 			if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used_LCV")) {
 				wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B66*B72");

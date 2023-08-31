@@ -7,11 +7,11 @@
         <methods>
           <include name="end"/>
           <include name="aquisition_quotes_HPNR_FL_OTR_calculation_with_maintenance_test"/>
-          <include name="aquisition_quotes_HPNR_FL_quote_summary_values_verification_with_maintenance_test" invocation-numbers="0"/>
+          <include name="aquisition_quotes_HPNR_FL_quote_summary_values_verification_with_maintenance_test"/>
           <include name="start_info"/>
           <include name="aquisition_quotes_HPNR_FL_other_support_check_with_maintenance_test"/>
           <include name="aquisition_quotes_HPNR_FL_after_discount_calculations_with_maintenance_test"/>
-          <include name="aquisition_quotes_HPNR_FL_customer_quote_payment_profile_calculations_with_maintenance_test"/>
+          <include name="aquisition_quotes_HPNR_FL_customer_quote_payment_profile_calculations_with_maintenance_test" invocation-numbers="0"/>
           <include name="aquisition_quotes_HPNR_FL_holding_cost_calculations_with_maintenance_test"/>
           <include name="setup"/>
         </methods>

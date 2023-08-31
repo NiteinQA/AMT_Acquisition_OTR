@@ -1657,21 +1657,6 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 		Thread.sleep(3000);
 
-//		try {
-//			HttpURLConnection c = (HttpURLConnection) new URL(prop.getProperty("calculate_purchase_ownBook"))
-//					.openConnection();
-//			c.setRequestMethod("HEAD");
-//			c.connect();
-//			int r = c.getResponseCode();
-//
-//			int i = 0;
-//			while (i <= 15 && r != 200 || r != 405) {
-//				Thread.sleep(1000);
-//				r = c.getResponseCode();
-//				i++;
-//			}
-//		} catch (Exception e) {
-//		}
 
 		Click.on(driver, quote_summary, 30);
 
