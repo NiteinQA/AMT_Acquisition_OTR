@@ -387,6 +387,13 @@ public class CustomerQuotePage_HPNR_HPNRPage extends TestBase {
 
 		Thread.sleep(2000);
 
+		Click.on(driver, holding_cost_summary, 30);
+
+		ExplicitWait.visibleElement(driver, total_cap_maintenance_value, 30);
+
+		double totalCapMaintenanceValue = Double
+				.parseDouble(RemoveComma.of(total_cap_maintenance_value.getText().trim().substring(2)));
+
 		Click.on(driver, customer_quote, 30);
 
 		LO.print("***********Entered in Customer Quote page ***********");
@@ -396,6 +403,86 @@ public class CustomerQuotePage_HPNR_HPNRPage extends TestBase {
 
 		Actions act = new Actions(driver);
 
+		if (totalCapMaintenanceValue == 0)
+		{
+			Click.on(driver, matrix_credit_type_dropdown, 50);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+			Thread.sleep(5000);
+			try {
+				List<WebElement> list = driver
+						.findElements(By.xpath("//*[@class='ng-dropdown-panel-items scroll-host']/div/div/span"));
+
+				Thread.sleep(3000);
+
+				for (WebElement e : list) {
+
+					if (e.getText().equalsIgnoreCase(matrix_credit_type)) {
+
+						Click.on(driver, e, 20);
+						Thread.sleep(3000);
+						break;
+					}
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			LO.print("Matrix credit type " + matrix_credit_type + " has been selected");
+			System.out.println("Matrix credit type " + matrix_credit_type + " has been selected");
+
+			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
+
+			ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
+
+			String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+
+			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
+
+			obj_read_excel_calculation_page.set_global_variables_to_excel_for_purchase_agreement_for_funder_addition(term,
+					document_fee, matrix_credit_type, sheet_name);
+
+			Thread.sleep(3000);
+
+			Click.on(driver, quote_summary, 30);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+			Click.on(driver, customer_quote, 30);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+			ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
+
+			double monthly_finance_payment_actual_from_screen = Double
+					.parseDouble(RemoveComma.of(customer_quote_monthly_finance_rental.getText().trim().substring(2)));
+
+			LO.print("Actual Monthly Finance Payment from screen is " + monthly_finance_payment_actual_from_screen);
+			System.out
+					.println("Actual Monthly Finance Payment from screen is " + monthly_finance_payment_actual_from_screen);
+
+			double monthly_finance_payment_expected_from_excel = obj_read_excel_calculation_page
+					.get_monthly_finance_payment_from_excel_for_funder_addition(maintenance_status, matrix_credit_type,
+							balloon_payment_status, order_deposit, finance_deposit, document_fee, sheet_name);
+
+			LO.print("Expected Monthly Finance Rental from excel is " + monthly_finance_payment_expected_from_excel);
+			System.out.println(
+					"Expected Monthly Finance Rental from excel is " + monthly_finance_payment_expected_from_excel);
+
+			double diff = Difference.of_two_Double_Values(monthly_finance_payment_actual_from_screen,
+					monthly_finance_payment_expected_from_excel);
+			boolean status = false;
+			if (diff < 0.2) {
+				status = true;
+			}
+			return status;
+
+		}
+		else 
+		{
+		
+	
 		Click.on(driver, matrix_credit_type_dropdown, 50);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
@@ -491,6 +578,7 @@ public class CustomerQuotePage_HPNR_HPNRPage extends TestBase {
 			status = true;
 		}
 		return status;
+		}
 	}
 
 	public boolean check_monthly_finance_payment_on_customer_quote_for_used_car_with_funder_quote_addition_with_maintenance(
