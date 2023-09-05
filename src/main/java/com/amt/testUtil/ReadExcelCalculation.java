@@ -1882,9 +1882,9 @@ public class ReadExcelCalculation extends TestBase {
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("E15*B72");
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
 			
-			if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used_LCV")) {
+			if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
 				wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B66*B72");
 			}
 

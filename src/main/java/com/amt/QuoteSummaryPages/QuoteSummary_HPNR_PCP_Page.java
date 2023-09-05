@@ -1,8 +1,5 @@
 package com.amt.QuoteSummaryPages;
 
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -380,12 +377,9 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 		// copying default broker margin from input field
 
 		ExplicitWait.visibleElement(driver, quote_summary_configuration_default_broker_margin_input, 30);
-		quote_summary_configuration_default_broker_margin_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String temp_default_broker_margin_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-		double default_broker_margin_copied = Double.parseDouble(temp_default_broker_margin_copied);
-
+		double default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+		
+		
 //					ExplicitWait.visibleElement(driver, quote_summary_configuration_total_tracker_cost, 20);
 //					double trackerCostFromScreen = Double.parseDouble(RemoveComma.of(quote_summary_configuration_total_tracker_cost.getText().trim().substring(2)));
 //
@@ -617,12 +611,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 		// copying default broker margin from input field
 
 		ExplicitWait.visibleElement(driver, quote_summary_configuration_default_broker_margin_input, 30);
-		quote_summary_configuration_default_broker_margin_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-		String temp_default_broker_margin_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-		double default_broker_margin_copied = Double.parseDouble(temp_default_broker_margin_copied);
-
+		double default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
 //		ExplicitWait.visibleElement(driver, quote_summary_configuration_total_tracker_cost, 20);
 //		double trackerCostFromScreen = Double.parseDouble(RemoveComma.of(quote_summary_configuration_total_tracker_cost.getText().trim().substring(2)));
 //
@@ -2765,12 +2754,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 			// copying default broker margin from input field
 
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_default_broker_margin_input, 30);
-			quote_summary_configuration_default_broker_margin_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-			Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-			String temp_default_broker_margin_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-			double default_broker_margin_copied = Double.parseDouble(temp_default_broker_margin_copied);
-
+			double default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
 //					ExplicitWait.visibleElement(driver, quote_summary_configuration_total_tracker_cost, 20);
 //					double trackerCostFromScreen = Double.parseDouble(RemoveComma.of(quote_summary_configuration_total_tracker_cost.getText().trim().substring(2)));
 //
@@ -2994,12 +2978,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 			// copying default broker margin from input field
 
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_default_broker_margin_input, 30);
-			quote_summary_configuration_default_broker_margin_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-			Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
-			String temp_default_broker_margin_copied = (String) clipboard.getData(DataFlavor.stringFlavor);
-			double default_broker_margin_copied = Double.parseDouble(temp_default_broker_margin_copied);
-
+			double default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
 //			ExplicitWait.visibleElement(driver, quote_summary_configuration_total_tracker_cost, 20);
 //			double trackerCostFromScreen = Double.parseDouble(RemoveComma.of(quote_summary_configuration_total_tracker_cost.getText().trim().substring(2)));
 			//
