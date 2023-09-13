@@ -1619,6 +1619,10 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		QuoteSummary_BCH_PCH_Page obj_quote_summary = new QuoteSummary_BCH_PCH_Page();
 		
 		obj_quote_summary.save_quote();	
+		
+		Click.on(driver, quote_summary_customer_quote_summary_value_verification, 20);
+		Click.on(driver, quote_summary_configuration, 20);
+
 
 		ExplicitWait.visibleElement(driver, quote_summary_monthly_finance_rental, 30);
 

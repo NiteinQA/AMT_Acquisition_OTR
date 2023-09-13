@@ -2822,6 +2822,12 @@ try {
 
 			double docFeeCommission = GetExcelFormulaValue.get_formula_value(251, 0, sheet_name);
 			double totalCommission = GetExcelFormulaValue.get_formula_value(251, 1, sheet_name);
+			
+			System.out.println("Fin charges screen "+ customer_quote_summary_finance_charges);
+			System.out.println("Fin charges excel "+ financeCharges);
+			
+			System.out.println("Bal payable screen "+ customer_quote_summary_balance_payable);
+			System.out.println("Bal payable excel "+ balancePayable);
 
 			// comparing actul and expected values
 
@@ -4145,7 +4151,7 @@ try {
 
 			double baseInterestRateFromExcel = (tempbaseInterestRateFromExcel * 100);
 
-			double financeMarginFromExcel = GetExcelFormulaValue.get_formula_value(263, 1, sheet_name);
+			double financeMarginFromExcel = GetExcelFormulaValue.get_formula_value(262, 1, sheet_name);
 
 			double deductionsFromExcel = GetExcelFormulaValue.get_formula_value(262, 5, sheet_name);
 

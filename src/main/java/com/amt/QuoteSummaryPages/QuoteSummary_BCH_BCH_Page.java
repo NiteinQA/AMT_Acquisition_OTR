@@ -1617,6 +1617,7 @@ public class QuoteSummary_BCH_BCH_Page extends TestBase {
 		obj_quote_summary.save_quote();	
 		
 		Click.on(driver, quote_summary_customer_quote_summary_value_verification, 30);
+		Click.on(driver, quote_summary_configuration, 30);
 
 		ExplicitWait.visibleElement(driver, quote_summary_monthly_finance_rental, 30);
 
@@ -1739,7 +1740,9 @@ public class QuoteSummary_BCH_BCH_Page extends TestBase {
 
 		double customer_quote_initial_maint_rental = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_initial_maint_rental.getText().trim().substring(2)));
-
+		
+		System.out.println("Monthly Maint Rental screen "+customer_quote_summary_monthly_maint_rental_from_screen);
+		System.out.println("Initial Maint Rental screen "+customer_quote_initial_maint_rental);
 		// writing values to excel
 
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
@@ -1753,6 +1756,9 @@ public class QuoteSummary_BCH_BCH_Page extends TestBase {
 		double monthlyMaintenanceRental = GetExcelFormulaValue.get_formula_value(170, 1, sheet_name);
 
 		double initialMaintRental = GetExcelFormulaValue.get_formula_value(173, 3, sheet_name);
+		
+		System.out.println("Monthly Maint Rental excel "+monthlyMaintenanceRental);
+		System.out.println("Initial Maint Rental excel "+initialMaintRental);
 
 		// verifying actual and expected values
 

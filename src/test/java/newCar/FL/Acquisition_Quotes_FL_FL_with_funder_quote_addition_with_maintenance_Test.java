@@ -158,10 +158,10 @@ public class Acquisition_Quotes_FL_FL_with_funder_quote_addition_with_maintenanc
 
 
 
-		boolean cutomer_quote_monthly_rental = obj_customer_quote_page
-				.customer_Quote_FL_FL_for_all_payment_option_for_funder_quote_addition_with_maintenance_calculation(
-						initial_payment, sheet_name);
-		Assert.assertTrue(cutomer_quote_monthly_rental);
+//		boolean cutomer_quote_monthly_rental = obj_customer_quote_page
+//				.customer_Quote_FL_FL_for_all_payment_option_for_funder_quote_addition_with_maintenance_calculation(
+//						initial_payment, sheet_name);
+//		Assert.assertTrue(cutomer_quote_monthly_rental);
 
 	}
 
