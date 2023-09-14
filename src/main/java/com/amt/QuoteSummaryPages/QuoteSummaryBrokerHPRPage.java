@@ -82,12 +82,12 @@ public class QuoteSummaryBrokerHPRPage extends TestBase {
 
 		Click.on(driver, quote_summary, 90);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 60);

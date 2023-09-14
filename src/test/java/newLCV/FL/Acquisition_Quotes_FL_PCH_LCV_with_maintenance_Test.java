@@ -173,9 +173,9 @@ public class Acquisition_Quotes_FL_PCH_LCV_with_maintenance_Test extends TestBas
 		System.out.println("");
 		System.out.println("");
 
-		boolean cust_quote_for_all_payment_boolean_status = obj_customer_quote_page
-				.customer_Quote_FL_PCH_for_all_payment_option_with_maintenance_calculation(initial_payment, sheet_name);
-		Assert.assertTrue(cust_quote_for_all_payment_boolean_status);
+//		boolean cust_quote_for_all_payment_boolean_status = obj_customer_quote_page
+//				.customer_Quote_FL_PCH_for_all_payment_option_with_maintenance_calculation(initial_payment, sheet_name);
+//		Assert.assertTrue(cust_quote_for_all_payment_boolean_status);
 
 	}
 

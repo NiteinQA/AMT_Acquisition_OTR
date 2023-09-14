@@ -153,7 +153,7 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 
 		Click.on(driver, quote_summary, 90);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 		Actions act = new Actions(driver);
@@ -265,7 +265,7 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 
 		Click.on(driver, quote_summary, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
 

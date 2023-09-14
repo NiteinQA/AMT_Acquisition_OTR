@@ -20,7 +20,7 @@
       <class name="newLCV.FL.Acquisition_Quotes_FL_FL_LCV_with_maintenance_Test"/>
       <class name="newLCV.CP.Acquisition_Quotes_CP_PCP_LCV_with_funder_quote_addition_without_maintenance_Test"/>
  
-    <!--   <class name="newLCV.HPNR.Acquisition_Quotes_HPNR_HPNR_LCV_with_maintenance_Test"/>
+      <class name="newLCV.HPNR.Acquisition_Quotes_HPNR_HPNR_LCV_with_maintenance_Test"/>
       <class name="newLCV.HPNR.Acquisition_Quotes_HPNR_CP_LCV_with_funder_quote_addition_with_maintenance_Test"/>
       <class name="newLCV.HPNR.Acquisition_Quotes_HPNR_PCP_LCV_with_funder_quote_addition_without_maintenance_Test"/>
       <class name="newLCV.HPNR.Acquisition_Quotes_HPNR_HPR_LCV_with_funder_quote_addition_without_maintenance_Test"/>
@@ -94,7 +94,7 @@
       <class name="newLCV.OP.Acquisition_Quotes_Outright_HPNR_LCV_without_maintenance_Test"/>
       <class name="newLCV.FL.Acquisition_Quotes_FL_FL_LCV_with_funder_quote_addition_without_maintenance_Test"/>
       <class name="newLCV.HPNR.Acquisition_Quotes_HPNR_FL_LCV_with_funder_quote_addition_with_maintenance_Test"/>
-		-->
+		
 	</classes>
     
     

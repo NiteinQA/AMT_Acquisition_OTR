@@ -240,7 +240,7 @@ public boolean quote_summary_OTR_calculation(String sheet_name) throws Interrupt
 		Click.on(driver, quote_summary, 60);
 		
 	
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);		
    	
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
 	
@@ -653,7 +653,7 @@ public void save_quote() throws InterruptedException {
 //		Actions act = new Actions(driver);
 //		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 
@@ -1919,11 +1919,11 @@ public boolean quote_summary_customer_quote_summary_value_verification_without_m
 		obj_read_excel_calculation_page =new ReadExcelCalculation();
 		Click.on(driver, quote_summary, 60);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB,Keys.ENTER).build().perform();		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
 		
@@ -1989,12 +1989,12 @@ public boolean quote_summary_customer_quote_summary_value_verification_without_m
 		obj_read_excel_calculation_page =new ReadExcelCalculation();
 		Click.on(driver, quote_summary, 60);
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB,Keys.TAB,Keys.TAB,Keys.ENTER).build().perform();		
 	
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);

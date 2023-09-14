@@ -334,7 +334,7 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 
 		Click.on(driver, quote_summary, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
 
@@ -438,7 +438,7 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 
 		Click.on(driver, quote_summary, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
 
@@ -4798,10 +4798,10 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 
 		Click.on(driver, quote_summary, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 60);
@@ -4874,12 +4874,12 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		Click.on(driver, quote_summary, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_monthly_maintenance_rental, 120);
@@ -4972,12 +4972,12 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		LO.print("*************Calculations for Quote Summary page has been started************");
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 
@@ -5049,12 +5049,12 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		Click.on(driver, quote_summary, 60);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 35);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);

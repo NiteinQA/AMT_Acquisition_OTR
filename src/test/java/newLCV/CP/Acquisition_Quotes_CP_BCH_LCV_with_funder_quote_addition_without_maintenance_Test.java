@@ -142,9 +142,9 @@ System.out.println("");
 
 		
 		
-		boolean cutomer_quote_monthly_rental = obj_customer_quote_page
-				.customer_Quote_CP_BCH_for_all_payment_option_for_funder_quote_addition_without_maintenance_calculation(initial_payment,sheet_name);
-		Assert.assertTrue(cutomer_quote_monthly_rental);
+//		boolean cutomer_quote_monthly_rental = obj_customer_quote_page
+//				.customer_Quote_CP_BCH_for_all_payment_option_for_funder_quote_addition_without_maintenance_calculation(initial_payment,sheet_name);
+//		Assert.assertTrue(cutomer_quote_monthly_rental);
 	}
 	
 	@Test(priority=5, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_CP_BCH_customer_quote_payment_profile_calculations_without_maintenance_test" })

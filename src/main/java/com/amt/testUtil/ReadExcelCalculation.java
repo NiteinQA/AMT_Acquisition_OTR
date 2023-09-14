@@ -1423,9 +1423,11 @@ public class ReadExcelCalculation extends TestBase {
 		if (sheet_name.contains("Use")) {
 
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B60*B66");
 
 		} else {
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
 	}
 		wb.getSheet(sheet_name).getRow(64).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
@@ -1440,14 +1442,14 @@ public class ReadExcelCalculation extends TestBase {
 
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("E15*B66");
+			
 
 			wb.getSheet(sheet_name).getRow(73).getCell(1)
 					.setCellValue(Double.parseDouble(prop.getProperty("additional_rfl_per_annum_LCV")));
 			wb.getSheet(sheet_name).getRow(74).getCell(1).setCellValue(
 					Double.parseDouble(prop.getProperty("additional_rfl_premium_vehicle_over_40k_per_annum_LCV")));
 		} else {
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
+			
 			wb.getSheet(sheet_name).getRow(73).getCell(1)
 					.setCellValue(Double.parseDouble(prop.getProperty("additional_rfl_per_annum")));
 			wb.getSheet(sheet_name).getRow(74).getCell(1).setCellValue(
@@ -1832,8 +1834,8 @@ public class ReadExcelCalculation extends TestBase {
 		wb.getSheet(sheet_name).getRow(64).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("E15*B66");
+		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B60*B66");
 		} else {
 			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
 		}
