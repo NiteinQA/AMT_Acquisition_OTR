@@ -1779,7 +1779,7 @@ public class ReadExcelCalculation extends TestBase {
 				.setCellValue(Double.parseDouble(prop.getProperty("tracker_subs_per_month_ex_vat")));
 		
 		
-		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
+		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
 
 			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("E15*B72");
           }

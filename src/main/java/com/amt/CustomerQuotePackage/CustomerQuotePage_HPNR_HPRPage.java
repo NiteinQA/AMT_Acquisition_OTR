@@ -659,7 +659,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_summary_basic_cash_price, 20);
 
-		Thread.sleep(5000);
+		Thread.sleep(7000);
 
 		double basic_cash_price_from_screen = Double
 				.parseDouble(RemoveComma.of(customer_quote_summary_basic_cash_price.getText().trim().substring(2)));

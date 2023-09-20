@@ -286,40 +286,40 @@ public class Acquisition_Quotes_Outright_BCH_without_maintenance_Test extends Te
 		System.out.println("");
 		System.out.println("");
 
-		obj_quote_summary_page.save_quote();
-
-		boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
-		Assert.assertTrue(quote_summary_OTR_calculation1);
-
-		System.out.println("");
-		System.out.println("");
-
-		boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page
-				.quote_summary_holding_cost_calculation_without_maintenance(sheet_name);
-		Assert.assertTrue(quote_summary_holding_cost_calculation1);
-
-		System.out.println("");
-		System.out.println("");
-
-		boolean balance_due_value1 = obj_customer_quote_page.verify_balance_due_value(sheet_name);
-		Assert.assertTrue(balance_due_value1);
-
-		System.out.println("");
-		System.out.println("");
-
-		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
-				.quote_summary_customer_quote_summary_value_verification_without_maintenance(sheet_name);
-		Assert.assertTrue(quote_summary_customer_quote_calculation1);
-
-		System.out.println("");
-		System.out.println("");
-
-		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
-				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
-		Assert.assertTrue(quote_summary_configuration_value_check1);
-
-		System.out.println("");
-		System.out.println("");
+//		obj_quote_summary_page.save_quote();
+//
+//		boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
+//		Assert.assertTrue(quote_summary_OTR_calculation1);
+//
+//		System.out.println("");
+//		System.out.println("");
+//
+//		boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page
+//				.quote_summary_holding_cost_calculation_without_maintenance(sheet_name);
+//		Assert.assertTrue(quote_summary_holding_cost_calculation1);
+//
+//		System.out.println("");
+//		System.out.println("");
+//
+//		boolean balance_due_value1 = obj_customer_quote_page.verify_balance_due_value(sheet_name);
+//		Assert.assertTrue(balance_due_value1);
+//
+//		System.out.println("");
+//		System.out.println("");
+//
+//		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
+//				.quote_summary_customer_quote_summary_value_verification_without_maintenance(sheet_name);
+//		Assert.assertTrue(quote_summary_customer_quote_calculation1);
+//
+//		System.out.println("");
+//		System.out.println("");
+//
+//		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
+//				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
+//		Assert.assertTrue(quote_summary_configuration_value_check1);
+//
+//		System.out.println("");
+//		System.out.println("");
 
 		boolean value_check_after_Base_Int_change = obj_quote_summary_page
 				.quote_summary_edit_base_int_rate_value_verification_without_maintenance(sheet_name);

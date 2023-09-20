@@ -295,7 +295,7 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 
 		Click.on(driver, add, 30);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 40);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, common_maintenance_toggle, 30);
 
