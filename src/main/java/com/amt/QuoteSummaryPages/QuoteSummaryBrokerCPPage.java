@@ -8,6 +8,7 @@ import java.util.Properties;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.devtools.idealized.Javascript;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -15,6 +16,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
 import com.amt.testUtil.ExplicitWait;
+import com.amt.testUtil.JavaScriptExecutor;
 import com.amt.testUtil.ReadExcelCalculation;
 import com.amt.testUtil.RemoveComma;
 
@@ -63,6 +65,9 @@ public class QuoteSummaryBrokerCPPage extends TestBase {
 
 	@FindBy(xpath = "//app-broker-cp-customer-quote-summary-header/div/div[6]/div/p/strong")
 	private WebElement quote_summary_total_monthly_payment;
+	
+	@FindBy(xpath = "//div[@class='row acquisition-menu']//div[3]//button[1]")
+	private WebElement quote_summary_save_button;
 
 	Properties prop;
 	
@@ -93,9 +98,10 @@ public class QuoteSummaryBrokerCPPage extends TestBase {
 		Click.on(driver, quote_summary, 90);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+        
+		JavaScriptExecutor.click(driver, quote_summary_save_button);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 60);
@@ -142,10 +148,9 @@ public class QuoteSummaryBrokerCPPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
+        JavaScriptExecutor.click(driver, quote_summary_save_button);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);

@@ -20,6 +20,7 @@ import com.amt.testUtil.Click;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.GetExcelFormulaValue;
+import com.amt.testUtil.JavaScriptExecutor;
 import com.amt.testUtil.ReadExcelCalculation;
 import com.amt.testUtil.RemoveComma;
 
@@ -70,6 +71,9 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 
 	@FindBy(xpath = "//*[normalize-space()='RFL & FRF']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_otr_rfl_and_frf;
+	
+	@FindBy(xpath = "//div[@class='row acquisition-menu']//div[3]//button[1]")
+	private WebElement quote_summary_save_button;
 
 	Properties prop;
 	public QuoteSummaryBrokerPCHPage() {
@@ -213,10 +217,9 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
+        JavaScriptExecutor.click(driver, quote_summary_save_button);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		if (js.executeScript("return document.readyState").toString().equals("complete")) {
@@ -280,8 +283,9 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
+        JavaScriptExecutor.click(driver, quote_summary_save_button);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);

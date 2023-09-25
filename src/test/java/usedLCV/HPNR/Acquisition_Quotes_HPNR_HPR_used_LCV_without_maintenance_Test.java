@@ -225,7 +225,7 @@ public class Acquisition_Quotes_HPNR_HPR_used_LCV_without_maintenance_Test exten
 
 	@DataProvider(name = "testData")
 	public Object[][] getTestData() throws IOException {
-		Object[][] data = ReadExcelData.getTestData("HPNR_HPR_w-oMaint_used_car");
+		Object[][] data = ReadExcelData.getTestData("HPNR_HPR_w-oMaint_used_LCV");
 		return data;
 	}
 

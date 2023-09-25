@@ -19,6 +19,7 @@ import com.amt.testUtil.Click;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.GetExcelFormulaValue;
+import com.amt.testUtil.JavaScriptExecutor;
 import com.amt.testUtil.ReadExcelCalculation;
 import com.amt.testUtil.RemoveComma;
 
@@ -125,6 +126,9 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Commission']//ancestor::div[1]//div//strong")
 	private WebElement quote_summary_customer_quote_summary_commission;
 	
+	@FindBy(xpath = "//div[@class='row acquisition-menu']//div[3]//button[1]")
+	private WebElement quote_summary_save_button;
+	
 	Properties prop;
 
 	public QuoteSummaryBrokerBCHPage() {
@@ -155,11 +159,9 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
+        JavaScriptExecutor.click(driver, quote_summary_save_button);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 60);
@@ -214,11 +216,10 @@ public class QuoteSummaryBrokerBCHPage extends TestBase {
 
 		Thread.sleep(12000);
 
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
+        JavaScriptExecutor.click(driver, quote_summary_save_button);
 
-		Thread.sleep(35000);
-
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
+		
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_contract_type, 120);

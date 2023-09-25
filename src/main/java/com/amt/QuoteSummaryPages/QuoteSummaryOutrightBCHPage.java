@@ -191,6 +191,7 @@ public class QuoteSummaryOutrightBCHPage extends TestBase {
 
 	@FindBy(xpath = "//div[@class='row acquisition-menu']//div[3]//button[1]")
 	private WebElement quote_summary_save_button;
+	
 
 	Properties prop;
 	
