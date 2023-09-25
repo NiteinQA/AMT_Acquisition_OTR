@@ -99,7 +99,7 @@ public class Acquisition_Quotes_Broker_PCH_used_car_with_maintenance_Test extend
 
 	@DataProvider(name = "testData")
 	public Object[][] getTestData() throws IOException {
-		Object[][] data = ReadExcelData.getTestData("BrokerBCHMaitUsedLCV");
+		Object[][] data = ReadExcelData.getTestData("BrokerBCHMaitUsedcar");
 		return data;
 
 	}

@@ -155,8 +155,13 @@ public class ContractTypesAndOTR_Broker_PCH_Page extends TestBase {
 			Thread.sleep(2000);
 
 		} catch (Exception e) {
-			Click.on(driver, popup_yes, 50);
+			
+			try{Click.on(driver, popup_yes, 50);
 			Thread.sleep(2000);
+			}catch(Exception e1)
+			{
+				
+			}
 
 		}
 	
