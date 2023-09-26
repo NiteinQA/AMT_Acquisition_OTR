@@ -3,16 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="usedCar.BROKER.Acquisition_Quotes_Broker_PCH_used_car_with_maintenance_Test">
+      <class name="usedCar.OP.Acquisition_Quotes_OP_OP_used_car_Test">
         <methods>
-          <include name="aquisition_quotes_user_flow_broker_pch_quote_summary_values_verification_with_maintenance_test"/>
           <include name="end"/>
+          <include name="aquisition_quotes_OP_OP_OTR_calculation_test"/>
           <include name="start_info"/>
-          <include name="aquisition_quotes_user_flow_broker_pch_with_maintenance_test"/>
-          <include name="aquisition_quotes_user_flow_broker_pch_OTR_calculation_with_maintenance_test" invocation-numbers="0"/>
+          <include name="aquisition_quotes_OP_OP_customer_quote_vehicle_profit_edit_test"/>
+          <include name="aquisition_quotes_OP_OP_quote_summary_values_verification_with_maintenance_test"/>
+          <include name="aquisition_quotes_OP_OP_customer_quote_part_exchange_value_edit_test" invocation-numbers="0"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- usedCar.BROKER.Acquisition_Quotes_Broker_PCH_used_car_with_maintenance_Test -->
+      </class> <!-- usedCar.OP.Acquisition_Quotes_OP_OP_used_car_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
