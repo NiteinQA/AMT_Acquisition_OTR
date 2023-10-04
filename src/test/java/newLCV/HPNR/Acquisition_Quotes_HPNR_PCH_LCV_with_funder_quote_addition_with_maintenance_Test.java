@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_PCHPage;
 import com.amt.HoldingCostPages.HoldingCost_HPNR_PCHPage;
-import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_PCHPage;
+import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
@@ -29,7 +29,7 @@ public class Acquisition_Quotes_HPNR_PCH_LCV_with_funder_quote_addition_with_mai
 	ContractTypesAndOTR_HPNR_PCH_Page obj_contract_types_and_OTR_page;
 	HoldingCost_HPNR_PCHPage obj_holding_cost_HPNR_PCH_page;
 	CustomerQuotePage_HPNR_PCHPage obj_customer_quote_page;
-	QuoteSummary_HPNR_PCHPage obj_quote_summary_page;
+	QuoteSummary_HPNR_BCHPage obj_quote_summary_page;
 
 	@Test(priority = 1, dataProvider = "testData")
 	public void aquisition_quotes_HPNR_PCH_OTR_calculation_with_maintenance_test(String manufacturer, String model,
@@ -166,7 +166,7 @@ public class Acquisition_Quotes_HPNR_PCH_LCV_with_funder_quote_addition_with_mai
 			String maintenance_margin, String initial_payment, String part_exchange_status, String target_rental,
 			String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException, ClassNotFoundException {
 
-		obj_quote_summary_page = new QuoteSummary_HPNR_PCHPage();
+		obj_quote_summary_page = new QuoteSummary_HPNR_BCHPage();
 
 		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
 		Assert.assertTrue(quote_summary_OTR_calculation);

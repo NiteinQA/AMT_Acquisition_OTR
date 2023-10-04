@@ -107,7 +107,7 @@ public class Acquisition_Quotes_OP_OP_used_car_Test extends TestBase {
 
 		obj_quote_summary_page = new QuoteSummary_OP_OP_Page();
 		
-		boolean quote_summary_value_check =obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
+		boolean quote_summary_value_check =obj_quote_summary_page.quote_summary_OTR_calculation_for_used_car();
 		Assert.assertTrue(quote_summary_value_check);       
 	}
 	

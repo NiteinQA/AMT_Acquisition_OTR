@@ -654,6 +654,15 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		System.out.println("Matrix credit type " + matrix_credit_type + " has been selected");
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		
+		Click.on(driver, quote_summary, 60);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+		Click.on(driver, customer_quote, 60);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		
 
 		Click.on(driver, customer_quote_summary, 40);
 
@@ -1839,6 +1848,14 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 			Click.on(driver, customer_quote_maintenance_toggle_button, 40);
 
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			
+			Click.on(driver, quote_summary, 30);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+			Click.on(driver, customer_quote, 30);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 			Click.on(driver, customer_quote_summary, 40);
 
@@ -1929,6 +1946,14 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 			}
 			return status;
 		} catch (Exception e) {
+			
+			Click.on(driver, quote_summary, 30);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+
+			Click.on(driver, customer_quote, 30);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 			Click.on(driver, customer_quote_summary, 40);
 

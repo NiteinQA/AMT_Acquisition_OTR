@@ -241,6 +241,93 @@ public class QuoteSummary_OP_OP_Page extends TestBase {
 		}
 		PageFactory.initElements(driver, this);
 	}
+	
+	public boolean quote_summary_OTR_calculation_for_used_car() throws InterruptedException, IOException {
+
+		LO.print("*************OTR Calulation on quote summary page has been started************");
+		System.out.println("*************OTR Calulation on quote summary page has been started************");
+
+		obj_read_excel_calculation_page = new ReadExcelCalculation();
+
+		Thread.sleep(2000);
+
+		Click.on(driver, quote_summary, 60);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 150);
+
+		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
+
+		ExplicitWait.visibleElement(driver, quote_summary_cost_price_ex_vat_and_rfl, 120);
+
+		ExplicitWait.visibleElement(driver, quote_summary_otr_vat, 120);
+		
+		 
+
+		LO.print("Reading values from OTR calculation -Quote Summary Page");
+		System.out.println("Reading values from OTR calculation -Quote Summary Page");
+
+		double cost_otr_price = Double
+				.parseDouble(RemoveComma.of(quote_summary_cost_otr_price.getText().trim().substring(2)));
+
+		double cost_price_ex_vat_and_rfl = Double
+				.parseDouble(RemoveComma.of(quote_summary_cost_price_ex_vat_and_rfl.getText().trim().substring(2)));
+
+		double vat = Double
+				.parseDouble(RemoveComma.of(quote_summary_otr_vat.getText().trim().substring(2)));
+
+		 
+
+		LO.print("Cost otr price from screen =" + cost_otr_price);
+		System.out.println("Cost otr price from screen =" + cost_otr_price);
+
+		LO.print("Cost price ex vat and rfl from screen ="+ cost_price_ex_vat_and_rfl);
+		System.out.println("Cost price ex vat and rfl from screen ="+ cost_price_ex_vat_and_rfl);
+
+		LO.print("OTR vat from screen =" + vat);
+		System.out.println("OTR vat from screen =" + vat);
+		
+	 
+
+		double cost_price_ex_vat_and_rfl_expected = (cost_otr_price
+				- vat);
+
+		double diff = Difference.of_two_Double_Values(cost_price_ex_vat_and_rfl,
+				cost_price_ex_vat_and_rfl_expected);
+
+		int count = 0;
+		boolean status = false;
+		if (diff < 0.2) {
+			LO.print("Cost price compared");
+			System.out.println("Cost price compared");
+			count++;
+		} else {
+			LO.print("Cost price found wrong");
+			System.out.println("Cost price found wrong");
+		}
+
+		if (count == 1) {
+			status = true;
+		}
+		
+		ExplicitWait.visibleElement(driver, quote_summary_save_button, 30);
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+
+		js.executeScript("arguments[0].click();", quote_summary_save_button);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 150);
+		
+		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
+		
+		String quote_ref_no = quote_summary_ref_no.getText();		
+	
+		LO.print("Quote no. "+quote_ref_no+" generated successfully after saving the quote ");
+		System.out.println("Quote no. "+quote_ref_no+" generated successfully after saving the quote ");
+
+		return status;
+
+	}
+
 
 	public boolean quote_summary_OTR_calculation(String sheet_name) throws InterruptedException, IOException {
 
