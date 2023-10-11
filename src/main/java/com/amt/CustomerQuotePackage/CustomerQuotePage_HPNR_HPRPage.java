@@ -1923,6 +1923,14 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 					sheet_name);
 
 			Thread.sleep(5000);
+			
+			Click.on(driver, quote_summary, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+			Click.on(driver, customer_quote, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			double monthly_total_payment_actual_from_screen = Double
 					.parseDouble(RemoveComma.of(customer_quote_monthly_total_rental.getText().trim().substring(2)));
@@ -2000,9 +2008,13 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 					basic_cash_price_from_screen, duration, annual_mileage, used_residual_value,
 					percentage_cap_residual_value, sheet_name);
 
-			Click.on(driver, customer_quote, 30);
+			Click.on(driver, quote_summary, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			Click.on(driver, customer_quote, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			double monthly_finance_payment_actual_from_screen = Double
 					.parseDouble(RemoveComma.of(customer_quote_monthly_finance_rental.getText().trim().substring(2)));

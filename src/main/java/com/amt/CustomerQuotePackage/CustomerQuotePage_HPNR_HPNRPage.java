@@ -665,7 +665,6 @@ public class CustomerQuotePage_HPNR_HPNRPage extends TestBase {
 
 			String term = customer_quote_summary_terms.getText().trim().substring(0, 2);
 
-			System.out.println("term " + term);
 
 			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -675,9 +674,20 @@ public class CustomerQuotePage_HPNR_HPNRPage extends TestBase {
 			obj_read_excel_calculation_page.set_global_variables_to_excel_for_purchase_agreement_for_funder_addition(
 					term, document_fee, matrix_credit_type, sheet_name);
 
+
+			Click.on(driver, quote_summary, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+			Click.on(driver, customer_quote, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+			
 			ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 
 			Thread.sleep(3000);
+			
 
 			double monthly_finance_payment_actual_from_screen = Double
 					.parseDouble(RemoveComma.of(customer_quote_monthly_finance_rental.getText().trim().substring(2)));
@@ -778,6 +788,14 @@ public class CustomerQuotePage_HPNR_HPNRPage extends TestBase {
 			ExplicitWait.visibleElement(driver, customer_quote_monthly_maintenance_rental, 30);
 
 			Thread.sleep(3000);
+			
+			Click.on(driver, quote_summary, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+			Click.on(driver, customer_quote, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			double monthly_finance_payment_actual_from_screen = Double
 					.parseDouble(RemoveComma.of(customer_quote_monthly_finance_rental.getText().trim().substring(2)));
@@ -904,9 +922,20 @@ public class CustomerQuotePage_HPNR_HPNRPage extends TestBase {
 		obj_read_excel_calculation_page.set_global_variables_to_excel_for_purchase_agreement_for_funder_addition(term,
 				document_fee, matrix_credit_type, sheet_name);
 
+
+		Click.on(driver, quote_summary, 30);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		Click.on(driver, customer_quote, 30);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 
 		Thread.sleep(3000);
+		
 
 		double monthly_finance_payment_actual_from_screen = Double
 				.parseDouble(RemoveComma.of(customer_quote_monthly_finance_rental.getText().trim().substring(2)));

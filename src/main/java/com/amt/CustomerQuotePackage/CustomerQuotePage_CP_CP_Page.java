@@ -61,6 +61,10 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 	// options_additional_discount_cost_price
 	@FindBy(xpath = "(//*[@id='odiscountvalue']//ancestor::div[3]//div)[1]")
 	private WebElement options_additional_discount_cost_price;
+	
+	// quote summary
+	@FindBy(xpath = "//p[normalize-space()='Quote summary']")
+	private WebElement quote_summary;
 
 	@FindBy(xpath = "//p[normalize-space()='Customer Quote']")
 	private WebElement customer_quote;
@@ -70,7 +74,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 	@FindBy(xpath = "//*[normalize-space()='Monthly finance payment']//ancestor::div[1]//div//p//strong|//*[normalize-space()='Monthly finance rental']//ancestor::div[1]//div//p//strong")
 	private WebElement customer_quote_monthly_finance_rental;
-	
+
 	@FindBy(xpath = "//*[normalize-space()='Monthly maint. payment']//ancestor::div[1]//div//p//strong|//*[normalize-space()='Monthly maint. rental']//ancestor::div[1]//div//p//strong")
 	private WebElement customer_quote_monthly_maintenance_rental;
 
@@ -174,13 +178,11 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 	private WebElement customer_quote_summary_terms;
 
 	Properties prop;
-	
+
 	public CustomerQuotePage_CP_CP_Page() {
-		
-	
 
 		try {
-			 prop = new Properties();
+			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
 					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
 			prop.load(ip);
@@ -268,6 +270,15 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 			obj_read_excel_calculation_page.set_global_variables_to_excel_for_purchase_agreement_cp_for_funder_addition(
 					document_fee, matrix_credit_type, sheet_name);
+
+			Click.on(driver, quote_summary, 30);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+			Click.on(driver, customer_quote, 30);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
 			ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 
 			Thread.sleep(3000);
@@ -326,7 +337,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 			LO.print("Matrix credit type " + matrix_credit_type + " has been selected");
 			System.out.println("Matrix credit type " + matrix_credit_type + " has been selected");
 
-			//Click.on(driver, customer_quote_maintenance_toggle_button, 30);
+			// Click.on(driver, customer_quote_maintenance_toggle_button, 30);
 
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
@@ -346,6 +357,14 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 			obj_read_excel_calculation_page.set_global_variables_to_excel_for_purchase_agreement_cp_for_funder_addition(
 					document_fee, matrix_credit_type, sheet_name);
+
+			Click.on(driver, quote_summary, 30);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+			Click.on(driver, customer_quote, 30);
+
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 
@@ -460,6 +479,16 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		obj_read_excel_calculation_page.set_global_variables_to_excel_for_purchase_agreement_cp_for_funder_addition(
 				document_fee, matrix_credit_type, sheet_name);
 
+		
+		Click.on(driver, quote_summary, 30);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		Click.on(driver, customer_quote, 30);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 
 		Thread.sleep(3000);
@@ -518,13 +547,13 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 		double vehicel_profit_expected = (salesPrice - otrCostPrice) / 1.2;
 
-		   ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
-			double vehicel_profit_actual = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
+		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
+		double vehicel_profit_actual = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
 
-			double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
+		double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
 
-			ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
-			String vehicle_additional_discount_copied = vehicle_additional_discount.getAttribute("value");
+		ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
+		String vehicle_additional_discount_copied = vehicle_additional_discount.getAttribute("value");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		double monthly_total_payment_expected_from_excel = obj_read_excel_calculation_page
@@ -578,13 +607,13 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 		double vehicel_profit_expected = (salesPrice - otrCostPrice) / 1.2;
 
-		   ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
-			double vehicel_profit_actual = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
+		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
+		double vehicel_profit_actual = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
 
-			double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
+		double diff1 = Difference.of_two_Double_Values(vehicel_profit_expected, vehicel_profit_actual);
 
-			ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
-			String vehicle_additional_discount_copied = vehicle_additional_discount.getAttribute("value");
+		ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
+		String vehicle_additional_discount_copied = vehicle_additional_discount.getAttribute("value");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		double monthly_total_payment_expected_from_excel = obj_read_excel_calculation_page
@@ -631,8 +660,6 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		System.out.println("***********Entered in Customer Quote page ***********");
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
-	
 
 		Click.on(driver, matrix_credit_type_dropdown, 50);
 
@@ -723,7 +750,6 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 			status = true;
 		}
 		return status;
-		
 
 	}
 
@@ -881,24 +907,22 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
-		
-
 		// getting updated sales discount prices from input fields
 
 		// getting vehicle Discount Sales Price
-		double vehicleDiscountSalesPrice =  Double.parseDouble(vehicle_discount.getAttribute("value"));
+		double vehicleDiscountSalesPrice = Double.parseDouble(vehicle_discount.getAttribute("value"));
 		// getting paint Discount Sales Price
-		double paintDiscountSalesPrice =  Double.parseDouble(paint_discount.getAttribute("value"));
+		double paintDiscountSalesPrice = Double.parseDouble(paint_discount.getAttribute("value"));
 		// getting options Discount Sales Price
-    	double optionsDiscountSalesPrice =  Double.parseDouble(options_discount.getAttribute("value"));
+		double optionsDiscountSalesPrice = Double.parseDouble(options_discount.getAttribute("value"));
 		// getting vehicle additional Discount Sales Price
-		double vehicleAdditionalDiscountSalesPrice =  Double.parseDouble(vehicle_additional_discount.getAttribute("value"));
+		double vehicleAdditionalDiscountSalesPrice = Double
+				.parseDouble(vehicle_additional_discount.getAttribute("value"));
 		// getting paint additional Discount Sales Price
-		double paintAdditionalDiscountSalesPrice =  Double.parseDouble(paint_additional_discount.getAttribute("value"));
+		double paintAdditionalDiscountSalesPrice = Double.parseDouble(paint_additional_discount.getAttribute("value"));
 		// getting otions additional Discount Sales Price
-		double optionsAdditionalDiscountSalesPrice =  Double.parseDouble(options_additional_discount.getAttribute("value"));
-
-
+		double optionsAdditionalDiscountSalesPrice = Double
+				.parseDouble(options_additional_discount.getAttribute("value"));
 
 		int count = 0;
 
@@ -1025,18 +1049,19 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
 		// getting vehicle Discount Sales Price
-		double vehicleDiscountSalesPrice =  Double.parseDouble(vehicle_discount.getAttribute("value"));
+		double vehicleDiscountSalesPrice = Double.parseDouble(vehicle_discount.getAttribute("value"));
 		// getting paint Discount Sales Price
-		double paintDiscountSalesPrice =  Double.parseDouble(paint_discount.getAttribute("value"));
+		double paintDiscountSalesPrice = Double.parseDouble(paint_discount.getAttribute("value"));
 		// getting options Discount Sales Price
-    	double optionsDiscountSalesPrice =  Double.parseDouble(options_discount.getAttribute("value"));
+		double optionsDiscountSalesPrice = Double.parseDouble(options_discount.getAttribute("value"));
 		// getting vehicle additional Discount Sales Price
-		double vehicleAdditionalDiscountSalesPrice =  Double.parseDouble(vehicle_additional_discount.getAttribute("value"));
+		double vehicleAdditionalDiscountSalesPrice = Double
+				.parseDouble(vehicle_additional_discount.getAttribute("value"));
 		// getting paint additional Discount Sales Price
-		double paintAdditionalDiscountSalesPrice =  Double.parseDouble(paint_additional_discount.getAttribute("value"));
+		double paintAdditionalDiscountSalesPrice = Double.parseDouble(paint_additional_discount.getAttribute("value"));
 		// getting otions additional Discount Sales Price
-		double optionsAdditionalDiscountSalesPrice =  Double.parseDouble(options_additional_discount.getAttribute("value"));
-
+		double optionsAdditionalDiscountSalesPrice = Double
+				.parseDouble(options_additional_discount.getAttribute("value"));
 
 		// writing values to excel
 
@@ -1055,7 +1080,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 		// getting sales price from screen
 
-		double salesPriceActualFromSCreen =  Double.parseDouble(sales_total_input.getAttribute("value"));
+		double salesPriceActualFromSCreen = Double.parseDouble(sales_total_input.getAttribute("value"));
 
 		LO.print("Actual Sales Total Price from screen (on updating sales discount prices) is "
 				+ salesPriceActualFromSCreen);
@@ -1240,17 +1265,19 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 
 		// getting vehicle Discount Sales Price
-		double vehicleDiscountSalesPrice =  Double.parseDouble(vehicle_discount.getAttribute("value"));
+		double vehicleDiscountSalesPrice = Double.parseDouble(vehicle_discount.getAttribute("value"));
 		// getting paint Discount Sales Price
-		double paintDiscountSalesPrice =  Double.parseDouble(paint_discount.getAttribute("value"));
+		double paintDiscountSalesPrice = Double.parseDouble(paint_discount.getAttribute("value"));
 		// getting options Discount Sales Price
-    	double optionsDiscountSalesPrice =  Double.parseDouble(options_discount.getAttribute("value"));
+		double optionsDiscountSalesPrice = Double.parseDouble(options_discount.getAttribute("value"));
 		// getting vehicle additional Discount Sales Price
-		double vehicleAdditionalDiscountSalesPrice =  Double.parseDouble(vehicle_additional_discount.getAttribute("value"));
+		double vehicleAdditionalDiscountSalesPrice = Double
+				.parseDouble(vehicle_additional_discount.getAttribute("value"));
 		// getting paint additional Discount Sales Price
-		double paintAdditionalDiscountSalesPrice =  Double.parseDouble(paint_additional_discount.getAttribute("value"));
+		double paintAdditionalDiscountSalesPrice = Double.parseDouble(paint_additional_discount.getAttribute("value"));
 		// getting otions additional Discount Sales Price
-		double optionsAdditionalDiscountSalesPrice =  Double.parseDouble(options_additional_discount.getAttribute("value"));
+		double optionsAdditionalDiscountSalesPrice = Double
+				.parseDouble(options_additional_discount.getAttribute("value"));
 
 		// writing values to excel
 
@@ -1267,7 +1294,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 		// getting sales price from screen
 
-		double salesPriceActualFromSCreen =  Double.parseDouble(sales_total_input.getAttribute("value"));
+		double salesPriceActualFromSCreen = Double.parseDouble(sales_total_input.getAttribute("value"));
 
 		LO.print("Actual Sales Total Price from screen (on updating sales discount prices) is "
 				+ salesPriceActualFromSCreen);
@@ -1285,7 +1312,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 		// getting sales price from screen
 
-	    ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
+		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
 		double vehicleProfitActualFromSCreen = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
 
 		LO.print("Actual Vehicle Profit from screen (on updating sales discount prices) is "
@@ -1404,26 +1431,22 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 				sheet_name);
 
 		ExplicitWait.visibleElement(driver, vehicle_discount, 30);
-    	String vehicle_discount_copied = vehicle_discount.getAttribute("value");
-		
+		String vehicle_discount_copied = vehicle_discount.getAttribute("value");
+
 		ExplicitWait.visibleElement(driver, paint_discount, 30);
-    	String paint_discount_copied = paint_discount.getAttribute("value");
-	
-		
+		String paint_discount_copied = paint_discount.getAttribute("value");
+
 		ExplicitWait.visibleElement(driver, options_discount, 30);
-    	String options_discount_copied = options_discount.getAttribute("value");
-	
+		String options_discount_copied = options_discount.getAttribute("value");
 
 		ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
-    	String vehicle_additional_copied = vehicle_additional_discount.getAttribute("value");
-	
+		String vehicle_additional_copied = vehicle_additional_discount.getAttribute("value");
 
-    	ExplicitWait.visibleElement(driver, paint_additional_discount, 30);
-    	String paint_additional_copied = paint_additional_discount.getAttribute("value");
-	
-		
+		ExplicitWait.visibleElement(driver, paint_additional_discount, 30);
+		String paint_additional_copied = paint_additional_discount.getAttribute("value");
+
 		ExplicitWait.visibleElement(driver, options_additional_discount, 30);
-    	String options_additional_copied = options_additional_discount.getAttribute("value");		
+		String options_additional_copied = options_additional_discount.getAttribute("value");
 
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 
@@ -1515,26 +1538,22 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 				sheet_name);
 
 		ExplicitWait.visibleElement(driver, vehicle_discount, 30);
-    	String vehicle_discount_copied = vehicle_discount.getAttribute("value");
-		
+		String vehicle_discount_copied = vehicle_discount.getAttribute("value");
+
 		ExplicitWait.visibleElement(driver, paint_discount, 30);
-    	String paint_discount_copied = paint_discount.getAttribute("value");
-	
-		
+		String paint_discount_copied = paint_discount.getAttribute("value");
+
 		ExplicitWait.visibleElement(driver, options_discount, 30);
-    	String options_discount_copied = options_discount.getAttribute("value");
-	
+		String options_discount_copied = options_discount.getAttribute("value");
 
 		ExplicitWait.visibleElement(driver, vehicle_additional_discount, 30);
-    	String vehicle_additional_copied = vehicle_additional_discount.getAttribute("value");
-	
+		String vehicle_additional_copied = vehicle_additional_discount.getAttribute("value");
 
-    	ExplicitWait.visibleElement(driver, paint_additional_discount, 30);
-    	String paint_additional_copied = paint_additional_discount.getAttribute("value");
-	
-		
+		ExplicitWait.visibleElement(driver, paint_additional_discount, 30);
+		String paint_additional_copied = paint_additional_discount.getAttribute("value");
+
 		ExplicitWait.visibleElement(driver, options_additional_discount, 30);
-    	String options_additional_copied = options_additional_discount.getAttribute("value");		
+		String options_additional_copied = options_additional_discount.getAttribute("value");
 
 		ExplicitWait.visibleElement(driver, total_monthly_payment, 30);
 
@@ -1652,8 +1671,8 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 		Thread.sleep(1000);
-		   ExplicitWait.visibleElement(driver, document_fee, 30);		
-		   String document_fee_copied = document_fee.getAttribute("value");
+		ExplicitWait.visibleElement(driver, document_fee, 30);
+		String document_fee_copied = document_fee.getAttribute("value");
 		Thread.sleep(3000);
 
 		ExplicitWait.visibleElement(driver, balance_to_finance_value, 30);
@@ -1722,8 +1741,8 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 		Thread.sleep(1000);
-		   ExplicitWait.visibleElement(driver, document_fee, 30);		
-		   String document_fee_copied = document_fee.getAttribute("value");
+		ExplicitWait.visibleElement(driver, document_fee, 30);
+		String document_fee_copied = document_fee.getAttribute("value");
 		Thread.sleep(3000);
 
 		ExplicitWait.visibleElement(driver, balance_to_finance_value, 30);

@@ -140,7 +140,7 @@ public class HoldingCost_CP_BCH_Page extends TestBase {
 	@FindBy(xpath = "//span[@class='slider round sliderRed']")
 	private WebElement common_maintenance_toggle;
 
-	@FindBy(xpath = "//*[@id='collapseCustomerQuote']/div/div/div/div/div/form/div/div/div[4]/div/p/strong")
+	@FindBy(xpath = "//*[contains(text(),'CAP monthly maint. cost')]//ancestor::div[1]//p//strong")
 	private WebElement cap_monthly_maint_cost;
 
 	@FindBy(xpath = "//input[@id='monthlyMaintenancePayment']")

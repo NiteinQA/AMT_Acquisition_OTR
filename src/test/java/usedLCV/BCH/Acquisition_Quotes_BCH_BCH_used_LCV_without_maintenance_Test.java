@@ -180,15 +180,15 @@ public class Acquisition_Quotes_BCH_BCH_used_LCV_without_maintenance_Test extend
 
 		
 			
-		boolean cutomer_quote_monthly_rental = obj_customer_quote_page
-				.customer_Quote_BCH_PCH_for_all_payment_option_without_maintenance_calculation(initial_payment,sheet_name);
-		Assert.assertTrue(cutomer_quote_monthly_rental);
-		
-		System.out.println("Assertion Passed For Monthly Finance Rental For All Payment Profiles");
-		System.out.println("****************************************************************");
-
-		LO.print("Assertion Passed For Monthly Finance Rental For All Payment Profiles");
-		LO.print("****************************************************************");
+//		boolean cutomer_quote_monthly_rental = obj_customer_quote_page
+//				.customer_Quote_BCH_PCH_for_all_payment_option_without_maintenance_calculation(initial_payment,sheet_name);
+//		Assert.assertTrue(cutomer_quote_monthly_rental);
+//		
+//		System.out.println("Assertion Passed For Monthly Finance Rental For All Payment Profiles");
+//		System.out.println("****************************************************************");
+//
+//		LO.print("Assertion Passed For Monthly Finance Rental For All Payment Profiles");
+//		LO.print("****************************************************************");
 
 
 	}

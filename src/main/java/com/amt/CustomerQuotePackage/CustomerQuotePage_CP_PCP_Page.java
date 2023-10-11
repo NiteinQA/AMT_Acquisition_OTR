@@ -59,6 +59,10 @@ public class CustomerQuotePage_CP_PCP_Page extends TestBase {
 
 	@FindBy(xpath = "//p[normalize-space()='Customer Quote']")
 	private WebElement customer_quote;
+	
+	// quote summary
+	@FindBy(xpath = "//p[normalize-space()='Quote summary']")
+	private WebElement quote_summary;
 
 	@FindBy(xpath = "//body[1]/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-aquisition-generic[1]/form[1]/div[1]/div[1]/div[1]/app-acquisition-all-customer-quotes[1]/div[1]/app-aquisition-hire-agreement[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[6]/div[4]")
 	private WebElement customer_quote_matrix_default_cell;
@@ -252,6 +256,16 @@ public class CustomerQuotePage_CP_PCP_Page extends TestBase {
 
 			obj_read_excel_calculation_page.set_global_variables_to_excel_for_purchase_agreement_cp_for_funder_addition(
 					document_fee, matrix_credit_type, sheet_name);
+		
+		     Click.on(driver, quote_summary, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+			Click.on(driver, customer_quote, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+			
 			ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 
 			Thread.sleep(3000);
@@ -330,6 +344,16 @@ public class CustomerQuotePage_CP_PCP_Page extends TestBase {
 
 			obj_read_excel_calculation_page.set_global_variables_to_excel_for_purchase_agreement_cp_for_funder_addition(
 					document_fee, matrix_credit_type, sheet_name);
+	
+	    	Click.on(driver, quote_summary, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+			Click.on(driver, customer_quote, 30);
+			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+			
 			ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 
 			ExplicitWait.visibleElement(driver, customer_quote_monthly_maintenance_rental, 30);
@@ -399,8 +423,9 @@ public class CustomerQuotePage_CP_PCP_Page extends TestBase {
 
 		Actions act = new Actions(driver);
 
-		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB, Keys.TAB,
-				Keys.TAB, Keys.ENTER).build().perform();
+		Click.on(driver, matrix_credit_type_dropdown, 50);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 
 		Thread.sleep(5000);
 		try {
@@ -442,6 +467,16 @@ public class CustomerQuotePage_CP_PCP_Page extends TestBase {
 		obj_read_excel_calculation_page.set_global_variables_to_excel_for_purchase_agreement_cp_for_funder_addition(
 				document_fee, matrix_credit_type, sheet_name);
 
+		
+		Click.on(driver, quote_summary, 30);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		Click.on(driver, customer_quote, 30);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 
 		Thread.sleep(3000);
