@@ -1987,6 +1987,14 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		}
 		wb.getSheet(sheet_name).getRow(65).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("min_margin_percentage_for_broker_vrb")));
+		
+		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
+			wb.getSheet(sheet_name).getRow(81).getCell(1).setCellFormula("IF(A111=\"YES\",A40,0)");
+			wb.getSheet(sheet_name).getRow(81).getCell(6).setCellFormula("IF(A111=\"YES\",A40,0)");
+		
+		}
+
+		
 		wb.getSheet(sheet_name).getRow(107).getCell(0)
 				.setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
 
@@ -2102,9 +2110,8 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 			wb.getSheet(sheet_name).getRow(81).getCell(1).setCellFormula("IF(A111=\"YES\",D41,0)*1.2");
-		} else {
-			wb.getSheet(sheet_name).getRow(81).getCell(1).setCellFormula("IF(A111=\"YES\",D41,0)");
-		}
+			wb.getSheet(sheet_name).getRow(81).getCell(6).setCellFormula("IF(A111=\"YES\",D41,0)*1.2");
+		} 
 
 		wb.getSheet(sheet_name).getRow(62).getCell(1).setCellValue(Double.parseDouble(prop.getProperty("base_rate")));
 		if (matrixCreditType.contains("A1 Credit")) {
@@ -2180,10 +2187,9 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 			wb.getSheet(sheet_name).getRow(90).getCell(1).setCellFormula("IF(A111=\"YES\",A43,0)*1.2");
-		} else {
-			wb.getSheet(sheet_name).getRow(90).getCell(1).setCellFormula("IF(A111=\"YES\",A43,0)");
-		}
-
+			wb.getSheet(sheet_name).getRow(90).getCell(6).setCellFormula("IF(A111=\"YES\",A43,0)*1.2");
+		} 
+		
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
 		out.close();

@@ -4203,6 +4203,9 @@ try {
 				LO.print("Finance Margin found wrong");
 				System.err.println("Finance Margin found wrong");
 			}
+			
+			System.out.println(financeMarginFromScreen);
+			System.out.println(financeMarginFromExcel);
 
 			// 3
 			if (Difference.of_two_Double_Values(deductionsFromScreen, deductionsFromExcel) < 0.2) {
