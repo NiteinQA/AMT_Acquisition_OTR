@@ -598,7 +598,7 @@ public class HoldingCost_HPNR_CP_Page extends TestBase {
 
 		String totalCashPrice = RemoveComma.of(total_cash_price.getText().trim().substring(2));
 
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
 		Click.on(driver, add, 30);
 

@@ -2,6 +2,8 @@ package com.amt.testUtil;
 
 import java.time.Duration;
 
+import javax.swing.text.Highlighter.Highlight;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,6 +16,8 @@ public class Click extends TestBase {
 	public static void on(WebDriver driver, WebElement element , int timeout )
 	{
 		new WebDriverWait(driver , Duration.ofSeconds(timeout)).until(ExpectedConditions.elementToBeClickable(element));
+		
+		HelperClass.highlightElement(driver, element);
 		
 		element.click();
 	}

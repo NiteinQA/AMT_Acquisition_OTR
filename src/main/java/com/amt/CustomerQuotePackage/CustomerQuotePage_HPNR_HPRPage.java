@@ -1955,6 +1955,8 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 			return status;
 		} catch (Exception e) {
 			
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			
 			Click.on(driver, quote_summary, 30);
 
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);

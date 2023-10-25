@@ -1158,8 +1158,8 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 
 		Click.on(driver, customer_quote, 30);
 
-		LO.print("***********Entered in Customer Quote page ***********");
-		System.out.println("***********Entered in Customer Quote page ***********");
+		LO.print("Started verifying Part Exchange Calculations");
+		System.out.println("Started verifying Part Exchange Calculations");
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
 

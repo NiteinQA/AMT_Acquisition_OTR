@@ -1078,10 +1078,10 @@ public class ReadExcelCalculation extends TestBase {
 
 		double annual_mileage = Double.parseDouble(RemoveComma.of(holding_cost_summary_mileage.getText()));
 
-		ExplicitWait.visibleElement(driver, holding_cost_summary_residual_value_used, 50);
-
-		double used_residual_value = Double
-				.parseDouble(RemoveComma.of(holding_cost_summary_residual_value_used.getText().substring(2)));
+//		ExplicitWait.visibleElement(driver, holding_cost_summary_residual_value_used, 50);
+//
+//		double used_residual_value = Double
+//				.parseDouble(RemoveComma.of(holding_cost_summary_residual_value_used.getText().substring(2)));
 
 		double residual_value_test_data = Double.parseDouble(residual_value_used_from_excel);
 
@@ -1782,10 +1782,12 @@ public class ReadExcelCalculation extends TestBase {
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
 
 			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("E15*B72");
+			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("E15*B69");
           }
 		else
 		{
 			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
+			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B67*B69");
 		}
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {

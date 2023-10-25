@@ -9,8 +9,10 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePage_FL_BCHPage;
+import com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_BCHPage;
 import com.amt.HoldingCostPages.HoldingCost_FL_BCHPage;
 import com.amt.QuoteSummaryPages.QuoteSummary_FL_BCHPage;
+import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
@@ -31,7 +33,8 @@ public class Acquisition_Quotes_FL_BCH_LCV_with_funder_quote_addition_with_maint
 	ContractTypesAndOTR_FL_BCH_Page obj_contract_types_and_OTR_page;
 	HoldingCost_FL_BCHPage obj_holding_cost_FL_BCH_page;
 	CustomerQuotePage_FL_BCHPage obj_customer_quote_page;
-	QuoteSummary_FL_BCHPage obj_quote_summary_page;
+	CustomerQuotePage_HPNR_BCHPage obj_customer_quote_page1;
+	QuoteSummary_HPNR_BCHPage obj_quote_summary_page;
 
 
 	@Test(priority = 1, dataProvider = "testData")
@@ -115,7 +118,9 @@ public class Acquisition_Quotes_FL_BCH_LCV_with_funder_quote_addition_with_maint
 						part_exchange_status, target_rental,sheet_name);
 		Assert.assertTrue(customer_quote_for_payment_boolean);
 		
-		boolean cust_quote_for_upsell_values_boolean_status = obj_customer_quote_page
+		obj_customer_quote_page1 = new CustomerQuotePage_HPNR_BCHPage();
+		
+		boolean cust_quote_for_upsell_values_boolean_status = obj_customer_quote_page1
 		.check_monthly_payments_on_adding_upsell_values_with_maintenance(security_deposit, matrix_upsell,
 				referrer_upsell, add_terms, add_mileage, sheet_name);
 
@@ -125,7 +130,7 @@ System.out.println("");
 System.out.println("");
 		
 	
-		boolean monthly_finance_rental =obj_customer_quote_page.customer_quote_monthly_finance_rental_value_verification_with_part_exchange_with_maintenance(actual_part_exchange_value_from_excel,
+		boolean monthly_finance_rental =obj_customer_quote_page1.customer_quote_monthly_finance_rental_value_verification_with_part_exchange_with_maintenance(actual_part_exchange_value_from_excel,
 				given_part_exchange_value_from_excel, less_finance_settlement_from_excel, order_deposit_from_excel, document_fee_from_excel, matrix_upsell, part_exchange_status, target_rental, sheet_name);
 		
 		Assert.assertTrue(monthly_finance_rental);
@@ -135,7 +140,7 @@ System.out.println("");
 		
 		Assert.assertTrue(balance_due_value);
 		
-		boolean monthly_rental_values_on_updating_upsell_value =obj_customer_quote_page.check_monthly_payments_on_updating_customer_quote_summary_upsell_value_with_maintenance(matrix_upsell, sheet_name);
+		boolean monthly_rental_values_on_updating_upsell_value =obj_customer_quote_page1.check_monthly_payments_on_updating_customer_quote_summary_upsell_value_with_maintenance(matrix_upsell, sheet_name);
 
 		Assert.assertTrue(monthly_rental_values_on_updating_upsell_value);
 
@@ -158,7 +163,7 @@ System.out.println("");
 			 String security_deposit, String matrix_upsell, String referrer_upsell, String add_terms, String add_mileage, String maintenance_required, String maintenance_margin, String initial_payment,
 			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException, ClassNotFoundException {
 
-		obj_quote_summary_page = new QuoteSummary_FL_BCHPage();
+		obj_quote_summary_page = new QuoteSummary_HPNR_BCHPage();
 
 
 		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
