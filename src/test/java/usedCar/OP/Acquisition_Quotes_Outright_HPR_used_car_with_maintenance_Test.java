@@ -78,26 +78,26 @@ public class Acquisition_Quotes_Outright_HPR_used_car_with_maintenance_Test exte
 		Assert.assertTrue(holding_cost_before_editing_percentage_values);
 		
 		
-//		boolean holding_cost_after_editing_percentage_values  = obj_holding_cost_page.edit_percentage_residual_and_maint_cost_then_verify_holding_cost_with_maintenance(
-//				percentage_cap_maint_value, residual_value_used, maint_cost_used,
-//				percentage_cap_residual_value, maintenance_status, target_rental, sheet_name);
-//		Assert.assertTrue(holding_cost_after_editing_percentage_values );
-//		
-//		boolean holding_cost_after_editing_residual_and_maint_cost  = obj_holding_cost_page.edit_residual_value_and_maint_cost_then_verify_holding_cost_with_maintenance(
-//				percentage_cap_maint_value, residual_value_used, maint_cost_used,
-//				percentage_cap_residual_value, maintenance_status, target_rental, sheet_name);
-//		Assert.assertTrue(holding_cost_after_editing_residual_and_maint_cost );
-//		
-//		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
-//				.edit_additional_term_and_mileage_then_verify_holding_cost_with_maintenance(additional_terms, additional_mileage,
-//						maintenance_status, target_rental, sheet_name);
-//		Assert.assertTrue(holding_cost_after_editing_additional_terms_and_mileage);
+		boolean holding_cost_after_editing_percentage_values  = obj_holding_cost_page.edit_percentage_residual_and_maint_cost_then_verify_holding_cost_with_maintenance(
+				percentage_cap_maint_value, residual_value_used, maint_cost_used,
+				percentage_cap_residual_value, maintenance_status, target_rental, sheet_name);
+		Assert.assertTrue(holding_cost_after_editing_percentage_values );
+		
+		boolean holding_cost_after_editing_residual_and_maint_cost  = obj_holding_cost_page.edit_residual_value_and_maint_cost_then_verify_holding_cost_with_maintenance(
+				percentage_cap_maint_value, residual_value_used, maint_cost_used,
+				percentage_cap_residual_value, maintenance_status, target_rental, sheet_name);
+		Assert.assertTrue(holding_cost_after_editing_residual_and_maint_cost );
+		
+		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
+				.edit_additional_term_and_mileage_then_verify_holding_cost_with_maintenance(additional_terms, additional_mileage,
+						maintenance_status, target_rental, sheet_name);
+		Assert.assertTrue(holding_cost_after_editing_additional_terms_and_mileage);
 
 	
 
 	}
 
-	@Test(priority = 4, dataProvider = "testData", dependsOnMethods = {
+	@Test(priority = 3, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_holding_cost_calculations_with_maintenance_test" })
 
 	public void aquisition_quotes_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test(String registrationNumber,
@@ -125,7 +125,7 @@ public class Acquisition_Quotes_Outright_HPR_used_car_with_maintenance_Test exte
 
 	
 
-	@Test(priority = 5, dataProvider = "testData", dependsOnMethods = {
+	@Test(priority = 4, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test" })
 
 	public void aquisition_quotes_customer_quote_part_exchange_value_edit_check_with_maintenance_test(String registrationNumber,
@@ -146,7 +146,7 @@ public class Acquisition_Quotes_Outright_HPR_used_car_with_maintenance_Test exte
 
 	}
 
-	@Test(priority = 6, dataProvider = "testData", dependsOnMethods = {
+	@Test(priority = 5, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_customer_quote_part_exchange_value_edit_check_with_maintenance_test" })
 
 	public void aquisition_quotes_customer_quote_monthly_finance_payment_after_balloon_payment_off_with_maintenance_test(String registrationNumber,
@@ -167,7 +167,7 @@ public class Acquisition_Quotes_Outright_HPR_used_car_with_maintenance_Test exte
 
 	}
 
-	@Test(priority = 8, dataProvider = "testData", dependsOnMethods = {
+	@Test(priority = 6, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_customer_quote_monthly_finance_payment_after_balloon_payment_off_with_maintenance_test" })
 
 	public void aquisition_quotes_quote_summary_values_verification_with_maintenance_test(String registrationNumber,

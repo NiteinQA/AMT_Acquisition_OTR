@@ -16,6 +16,7 @@ import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
 import com.amt.pages.VehicleSelectionPage;
 import com.amt.pages.ContractTypesAndOTRPages.ContractTypesAndOTR_HPNR_BCH_Page;
+import com.amt.pages.ContractTypesAndOTRPages.ContractTypesAndOTR_HPNR_PCH_Page;
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.ReadExcelData;
 
@@ -26,7 +27,7 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_with_funder_quote_addition_wit
 	AcquisitionListingPage obj_acq_listing_page;
 	VehicleSelectionPage obj_vehicle_selection_page;
 	OptionsAccessoriesPage obj_options_accessories;
-	ContractTypesAndOTR_HPNR_BCH_Page obj_contract_types_and_OTR_page;
+	ContractTypesAndOTR_HPNR_PCH_Page obj_contract_types_and_OTR_page;
 	HoldingCost_HPNR_BCHPage obj_holding_cost_HPNR_BCH_page;
 	CustomerQuotePage_HPNR_PCHPage obj_customer_quote_page;
 	QuoteSummary_HPNR_BCHPage obj_quote_summary_page;
@@ -44,7 +45,7 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_with_funder_quote_addition_wit
 		obj_acq_listing_page = new AcquisitionListingPage();
 		obj_vehicle_selection_page = new VehicleSelectionPage();
 		obj_options_accessories = new OptionsAccessoriesPage();
-		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_HPNR_BCH_Page();
+		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_HPNR_PCH_Page();
 		
 
 		obj_acq_listing_page.aquisition_Listingpage_AddnewQuote();
@@ -66,7 +67,7 @@ public class Acquisition_Quotes_HPNR_PCH_used_car_with_funder_quote_addition_wit
 			 String security_deposit, String matrix_upsell, String referrer_upsell, String add_terms, String add_mileage, String maintenance_required, String maintenance_margin, String initial_payment,
 			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
-		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_HPNR_BCH_Page();
+		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_HPNR_PCH_Page();
 
 		//boolean cost_price_ex_vat_and_options_and_preparation_cost = obj_contract_types_and_OTR_page
 //		.edit_vehicle_cost_price_and_check_OTR_price(vehicelCostPrice, options_and_preparation_cost, sheet_name);

@@ -1804,6 +1804,9 @@ public class QuoteSummary_HPNR_HPNRPage extends TestBase {
 			LO.print("Finance Margin found wrong");
 			System.err.println("Finance Margin found wrong");
 		}
+		
+		System.out.println("Finance Margin Actual "+financeMarginFromScreen);
+		System.out.println("Finance Margin Actual "+financeMarginFromExcel);
 
 		// 3
 		if (Difference.of_two_Double_Values(deductionsFromScreen, deductionsFromExcel) < 0.2) {
@@ -2764,6 +2767,10 @@ public class QuoteSummary_HPNR_HPNRPage extends TestBase {
 
 		LO.print("*********Customer Quote generated successfully and Quote_ref_no is=" + quote_ref_no);
 		System.out.println("*********Customer Quote generated successfully and Quote_ref_no is=" + quote_ref_no);
+		
+        driver.navigate().refresh();
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 	}
 

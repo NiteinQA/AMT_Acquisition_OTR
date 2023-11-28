@@ -3288,7 +3288,10 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 				"*************Editing Maintenance Margin and Verifying Values on quote summary page has been started************");
 
 		// Edit finance margin configuration values from screen
-
+		boolean status = false;
+		try
+		{
+		
 		ExplicitWait.visibleElement(driver, quote_summary_configuration_maintenance_margin_input, 30);
 		quote_summary_configuration_maintenance_margin_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		quote_summary_configuration_maintenance_margin_input.sendKeys("30");
@@ -3324,8 +3327,7 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 
 		int count = 0;
 
-		boolean status = false;
-
+		
 		if (Difference.of_two_Double_Values(customer_quote_summary_monthly_maint_rental_from_screen,
 				monthlyMaintenanceRental) < 0.2) {
 			LO.print("Monthly Maint Rental after changing Maintenance margin -  found OK");
@@ -3340,6 +3342,19 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 			status = true;
 		}
 
+		return status;
+		}
+		catch(Exception e)
+		{
+			
+			LO.print("Maintenance Margin can not be changed as CAP maint. value is \"0\"");
+			System.out.println("Maintenance Margin can not be changed as CAP maint. value is \"0\"");
+
+			if(!quote_summary_monthly_maintenance_rental.isDisplayed())
+			{
+				 status = true;
+			}
+		}
 		return status;
 	}
 
@@ -3362,6 +3377,11 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 
 		LO.print("*********Customer Quote generated successfully and Quote_ref_no is=" + quote_ref_no);
 		System.out.println("*********Customer Quote generated successfully and Quote_ref_no is=" + quote_ref_no);
+		
+		
+        driver.navigate().refresh();
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 	}
 

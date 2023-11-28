@@ -120,22 +120,26 @@ public class AcquisitionListingPage extends TestBase {
 			
 						
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
-			   Thread.sleep(10000);	
+//			   Thread.sleep(10000);	
+//				
+//				Click.on(driver, aquisition_quotes_button, 50);	
+//				
+//				Thread.sleep(5000);	
+//				
+//				ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//				
+//				Thread.sleep(10000);	
+//				
+//				//Click.on(driver, new_quote_button, 50);
+//				
+//				JavaScriptExecutor.click(driver, new_quote_button);
+//				
+//				Thread.sleep(2000);	
+			
+			   driver.get("https://stagingamt.azurewebsites.net/acquisition/acquisition-selector");
 				
-				Click.on(driver, aquisition_quotes_button, 50);	
-				
-				Thread.sleep(5000);	
-				
-				ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-				
-				Thread.sleep(10000);	
-				
-				//Click.on(driver, new_quote_button, 50);
-				
-				JavaScriptExecutor.click(driver, new_quote_button);
-				
-				Thread.sleep(2000);	
-				
+			   Thread.sleep(7000);
+			   
 				ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 				
 			 

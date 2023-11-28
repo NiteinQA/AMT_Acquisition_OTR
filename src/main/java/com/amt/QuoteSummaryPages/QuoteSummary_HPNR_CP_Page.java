@@ -3536,14 +3536,6 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 		
 		Click.on(driver, quote_summary_save_button, 50);
 		
-//		ExplicitWait.clickableElement(driver, quote_summary_save_button, 30);
-//
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//
-//		js.executeScript("arguments[0].click();", quote_summary_save_button);
-		
-//		Actions act = new Actions(driver);
-//		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
@@ -3553,6 +3545,12 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 
 		LO.print("*********Customer Quote generated successfully and Quote_ref_no is=" + quote_ref_no);
 		System.out.println("*********Customer Quote generated successfully and Quote_ref_no is=" + quote_ref_no);
+		
+		
+		driver.navigate().refresh();
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
 
 	}
 

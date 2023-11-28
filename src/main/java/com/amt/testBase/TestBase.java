@@ -12,6 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterSuite;
@@ -64,17 +65,26 @@ public class TestBase {
 		
 		
 			options.addArguments("--remote-allow-origins=*");
-			options.addArguments("force-device-scale-factor=0.67");
-			options.addArguments("high-dpi-support=0.67");
+//			options.addArguments("force-device-scale-factor=0.67");
+//			options.addArguments("high-dpi-support=0.67");
 //			options.addArguments("--headless=new");
+			//options.addArguments("window-size=1200x600");
 			driver = new ChromeDriver(options);
 
 		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else if (browser.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+			//WebDriverManager.edgedriver().setup();
+			
+			System.setProperty("webdriver.edge.driver", "D:\\msedgedriver.exe");			
+			EdgeOptions options = new EdgeOptions();
+			options.addArguments("--remote-allow-origins=*");
+//			options.addArguments("force-device-scale-factor=0.67");
+//			options.addArguments("high-dpi-support=0.67");
+//			options.addArguments("--headless=new");
+			
+			driver = new EdgeDriver(options);
 		} else {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -126,7 +136,7 @@ public class TestBase {
 
 
 
-	// @AfterClass
+	//@AfterClass
 	public void tearDown() {
 		driver.close();
 		System.out.println("");

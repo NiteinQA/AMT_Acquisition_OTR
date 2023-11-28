@@ -1802,6 +1802,10 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 
 		LO.print("*********Customer Quote generated successfully and Quote_ref_no is=" + quote_ref_no);
 		System.out.println("*********Customer Quote generated successfully and Quote_ref_no is=" + quote_ref_no);
+		
+		driver.navigate().refresh();
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 	}
 
