@@ -98,7 +98,7 @@ public class Acquisition_Quotes_HPNR_HPR_used_car_with_funder_quote_addition_wit
 	}
 
 	@Test(priority = 4, dataProvider = "testData", dependsOnMethods = {
-			"aquisition_quotes_HPNR_HPNR_holding_cost_calculations_without_maintenance_test" })
+			"aquisition_quotes_holding_cost_calculations_without_maintenance_test" })
 
 	public void aquisition_quotes_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test(String registrationNumber, String mileage, String vehicelCostPrice, String options_and_preparation_cost, String quoteRef, String expiryDate, String term, String milesPerAnnum, String cashDeposit,
 			String financeCharges, String documentFee, String monthlyPayment, String finalBallonPayment,
@@ -121,7 +121,7 @@ public class Acquisition_Quotes_HPNR_HPR_used_car_with_funder_quote_addition_wit
 	}
 
 	@Test(priority = 7, dataProvider = "testData", dependsOnMethods = {
-			"aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test" })
+			"aquisition_quotes_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test" })
 
 	public void aquisition_quotes_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test(String registrationNumber, String mileage, String vehicelCostPrice, String options_and_preparation_cost, String quoteRef, String expiryDate, String term, String milesPerAnnum, String cashDeposit,
 			String financeCharges, String documentFee, String monthlyPayment, String finalBallonPayment,
@@ -142,7 +142,7 @@ public class Acquisition_Quotes_HPNR_HPR_used_car_with_funder_quote_addition_wit
 	}
 
 	@Test(priority = 5, dataProvider = "testData", dependsOnMethods = {
-			"aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test" })
+			"aquisition_quotes_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test" })
 
 	public void aquisition_quotes_quote_summary_values_verification_without_maintenance_test(String registrationNumber, String mileage, String vehicelCostPrice, String options_and_preparation_cost, String quoteRef, String expiryDate, String term, String milesPerAnnum, String cashDeposit,
 			String financeCharges, String documentFee, String monthlyPayment, String finalBallonPayment,

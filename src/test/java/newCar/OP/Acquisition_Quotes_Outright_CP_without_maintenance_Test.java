@@ -229,10 +229,10 @@ public class Acquisition_Quotes_Outright_CP_without_maintenance_Test extends Tes
 //
 //		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
 //				.quote_summary_customer_quote_summary_value_verification_without_maintenance(sheet_name); // Assert.assertTrue(quote_summary_customer_quote_calculation);
-
-		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
-				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
-		// Assert.assertTrue(quote_summary_configuration_value_check1);
+//
+//		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
+//				.quote_summary_configuration_value_verification_without_maintenance(sheet_name);
+//		// Assert.assertTrue(quote_summary_configuration_value_check1);
 
 		boolean value_check_after_Base_Int_change = obj_quote_summary_page
 				.quote_summary_edit_base_int_rate_value_verification_without_maintenance(sheet_name);

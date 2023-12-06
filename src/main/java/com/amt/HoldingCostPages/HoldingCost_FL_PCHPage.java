@@ -296,6 +296,10 @@ public class HoldingCost_FL_PCHPage extends TestBase {
 		Click.on(driver, add, 30);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		
+		Click.on(driver, common_maintenance_toggle, 20);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
 
