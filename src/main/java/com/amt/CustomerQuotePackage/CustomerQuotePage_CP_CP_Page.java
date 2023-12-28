@@ -665,8 +665,13 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 		Thread.sleep(5000);
 		try {
+//			List<WebElement> list = driver
+//					.findElements(By.xpath("//*[@class='ng-dropdown-panel-items scroll-host']/div/div/span"));
+			
+			
 			List<WebElement> list = driver
-					.findElements(By.xpath("//*[@class='ng-dropdown-panel-items scroll-host']/div/div/span"));
+					.findElements(By.xpath("//*[text()='Matrix Credit type']//ancestor::div[1]//*[@role='option']//span"));
+			
 
 			Thread.sleep(3000);
 

@@ -290,6 +290,12 @@ public void select_vehicle_for_used_LCV(String regitrationNumber , String mileag
     
     ExplicitWait.visibleElement(driver, vehicle_option_used_car, 30);
     
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+
+ 	js.executeScript("arguments[0].click();", vat_qualifying_checkbox);
+     
+     ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+    
     
     Actions act = new Actions(driver);
     

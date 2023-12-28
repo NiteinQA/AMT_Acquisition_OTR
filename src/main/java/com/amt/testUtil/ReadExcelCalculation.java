@@ -2956,6 +2956,7 @@ public class ReadExcelCalculation extends TestBase {
 
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 			wb.getSheet(sheet_name).getRow(30).getCell(7).setCellValue(used_residual_value * 1.2);
+			System.out.println(used_residual_value);
 		} else {
 			wb.getSheet(sheet_name).getRow(30).getCell(7).setCellValue(used_residual_value);
 

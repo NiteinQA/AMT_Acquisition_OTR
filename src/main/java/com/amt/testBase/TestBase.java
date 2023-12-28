@@ -68,7 +68,7 @@ public class TestBase {
 //			options.addArguments("force-device-scale-factor=0.67");
 //			options.addArguments("high-dpi-support=0.67");
 //			options.addArguments("--headless=new");
-			//options.addArguments("window-size=1200x600");
+			
 			driver = new ChromeDriver(options);
 
 		} else if (browser.equalsIgnoreCase("firefox")) {
@@ -136,7 +136,7 @@ public class TestBase {
 
 
 
-	//@AfterClass
+	@AfterClass
 	public void tearDown() {
 		driver.close();
 		System.out.println("");
