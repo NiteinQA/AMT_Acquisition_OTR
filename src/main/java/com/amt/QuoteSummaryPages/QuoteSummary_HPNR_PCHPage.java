@@ -1687,6 +1687,10 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 			LO.print("Holding Cost after changing Base Int. Rate -  found wrong");
 			System.err.println("Holding Cost after changing Base Int. Rate -  found wrong");
 		}
+		
+		System.out.println("Holding Cost Screen "+holding_cost_total_monthly_holding_cost_from_screen);
+		System.out.println("Holding Cost Screen "+holding_cost_total_monthly_holding_cost_from_excel);
+
 
 		if (Difference.of_two_Double_Values(customer_quote_summary_monthly_finance_rental_from_screen,
 				monthlyFinanceRental) < 0.2) {
@@ -1697,6 +1701,9 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 			LO.print("Monthly Finance Rental after changing Base Int. Rate -  found wrong");
 			System.err.println("Monthly Finance Rental after changing Base Int. Rate -  found wrong");
 		}
+		
+		System.out.println("Holding Cost Screen "+customer_quote_summary_monthly_finance_rental_from_screen);
+		System.out.println("Holding Cost Screen "+customer_quote_summary_monthly_finance_rental_from_screen);
 
 		if ((Difference.of_two_Double_Values(initialFinanceRental, customer_quote_initial_finance_rental)) < 0.2) {
 			LO.print("Initial Finance Rental found OK");
@@ -1706,6 +1713,9 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 			LO.print("Initial Finance Rental found wrong");
 			System.err.println("Initial Finance Rental found wrong");
 		}
+		
+		System.out.println("Holding Cost Screen "+initialFinanceRental);
+		System.out.println("Holding Cost Screen "+customer_quote_initial_finance_rental);
 
 		if (count == 3) {
 			status = true;
@@ -1764,6 +1774,8 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 		System.out.println("Base Interest Rate changed to 7.0 %");
 
 		// Getting values from screen
+		
+		Thread.sleep(5000);
 
 		ExplicitWait.visibleElement(driver, quote_summary_total_monthly_holding_cost, 30);
 
@@ -1836,32 +1848,32 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 			status = true;
 		}
 
-		ExplicitWait.visibleElement(driver, quote_summary_configuration_base_int_rate_input, 30);
-		quote_summary_configuration_base_int_rate_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		String default_base_rate =  String.valueOf((Double.parseDouble(prop.getProperty("base_rate"))*100));
-
-		
-
-		
-		quote_summary_configuration_base_int_rate_input.sendKeys(default_base_rate);
-
-		act.sendKeys(Keys.TAB).build().perform();
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-
-		LO.print("Base Interest Rate changed to default");
-		System.out.println("Base Interest Rate changed to default");
-
-		// writing values to excel
-
-		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-
-		wb1.getSheet(sheet_name).getRow(34).getCell(7).setCellValue(Double.parseDouble(prop.getProperty("base_rate")));
-
-		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-
-		wb1.write(out1);
+//		ExplicitWait.visibleElement(driver, quote_summary_configuration_base_int_rate_input, 30);
+//		quote_summary_configuration_base_int_rate_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+//		String default_base_rate =  String.valueOf((Double.parseDouble(prop.getProperty("base_rate"))*100));
+//
+//		
+//
+//		
+//		quote_summary_configuration_base_int_rate_input.sendKeys(default_base_rate);
+//
+//		act.sendKeys(Keys.TAB).build().perform();
+//
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+//
+//		LO.print("Base Interest Rate changed to default");
+//		System.out.println("Base Interest Rate changed to default");
+//
+//		// writing values to excel
+//
+//		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
+//		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+//
+//		wb1.getSheet(sheet_name).getRow(34).getCell(7).setCellValue(Double.parseDouble(prop.getProperty("base_rate")));
+//
+//		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
+//
+//		wb1.write(out1);
 
 		return status;
 	}
@@ -1947,14 +1959,14 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 
 		// writing values to excel
 
-		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-
-		wb1.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
-
-		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-
-		wb1.write(out1);
+//		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
+//		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
+//
+//		wb1.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
+//
+//		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
+//
+//		wb1.write(out1);
 
 		return status;
 	}

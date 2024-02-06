@@ -1,9 +1,12 @@
 package com.amt.pages;
 
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -57,8 +60,21 @@ public class AcquisitionListingPage extends TestBase {
 	 	@FindBy(xpath = "// *[@id='vehicleSearchInp']")
 	 	private WebElement acquisition_quote_search_bar;  
 			
-				
+	 	Properties prop;
+	 	
 		public AcquisitionListingPage() {
+			try {
+				
+			 prop = new Properties();
+				FileInputStream ip = new FileInputStream(
+						"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\config.properties");
+				prop.load(ip);
+			} catch (FileNotFoundException e) {
+				e.printStackTrace();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
 			PageFactory.initElements(driver, this);
 		}		
 		
@@ -120,6 +136,8 @@ public class AcquisitionListingPage extends TestBase {
 			
 						
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+			
+			 Thread.sleep(7000);
 //			   Thread.sleep(10000);	
 //				
 //				Click.on(driver, aquisition_quotes_button, 50);	
@@ -135,8 +153,15 @@ public class AcquisitionListingPage extends TestBase {
 //				JavaScriptExecutor.click(driver, new_quote_button);
 //				
 //				Thread.sleep(2000);	
+			  
+			 
+			 String url = prop.getProperty("url");
+			   
+			   String path = "/acquisition/acquisition-selector";
+			   
+			   String full_url =url+path;
 			
-			   driver.get("https://stagingamt.azurewebsites.net/acquisition/acquisition-selector");
+			   driver.get(full_url);
 				
 			   Thread.sleep(7000);
 			   

@@ -374,14 +374,6 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 			System.out.println("Monthly finance rental (with part exchange values) is found wrong");
 		}
 
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
-//
-//		FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-//		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-//
-//		wb1.getSheet(sheet_name).getRow(109).getCell(1).setCellValue("NO");
-//		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-//		wb1.write(out1);
 
 		return flag;
 	}
@@ -450,6 +442,8 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		
+		try {
 
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 		double monthly_finance_rental_actual_converted = Double
@@ -510,14 +504,54 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 			System.out.println("Monthly finance and maint. rental (with part exchange values) is found wrong");
 		}
 
-//    	FileInputStream in1 = new FileInputStream(prop.getProperty("formula_excel_path"));
-//		XSSFWorkbook wb1 = new XSSFWorkbook(in1);
-//
-//		wb1.getSheet(sheet_name).getRow(109).getCell(1).setCellValue("NO");
-//		FileOutputStream out1 = new FileOutputStream(prop.getProperty("formula_excel_path"));
-//		wb1.write(out1);
 
 		return flag;
+		}catch(Exception e)
+		{
+			ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
+			String monthly_finance_rental = customer_quote_monthly_finance_rental.getText().substring(2);
+			String monthly_finance_rental_actual = RemoveComma.of(monthly_finance_rental);
+			double monthly_finance_rental_actual_converted = Double.parseDouble(monthly_finance_rental_actual);
+			LO.print("Monthly Finance Rental from screen (with part exchange values) is "
+					+ monthly_finance_rental_actual_converted);
+			System.out.println("Monthly Finance Rental from screen (with part exchange values) is "
+					+ monthly_finance_rental_actual_converted);
+
+			LO.print("Writing part exchange values to excel");
+			System.out.println("Writing part exchange values to excel");
+
+			FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+			XSSFWorkbook wb = new XSSFWorkbook(in);
+			wb.getSheet(sheet_name).getRow(98).getCell(3).setCellValue(Double.parseDouble(order_Deposit_from_excel));
+			wb.getSheet(sheet_name).getRow(111).getCell(3).setCellValue(0);
+			wb.getSheet(sheet_name).getRow(111).getCell(4)
+					.setCellValue(Double.parseDouble(given_part_exchange_value_from_excel));
+			wb.getSheet(sheet_name).getRow(112).getCell(4)
+					.setCellValue(Double.parseDouble(less_finance_settlement_from_excel));
+			wb.getSheet(sheet_name).getRow(109).getCell(1).setCellValue("NO");
+			FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+			wb.write(out);
+
+			double monthlyFinanceRentalFromExcel = GetExcelFormulaValue.get_formula_value(89, 1, sheet_name);
+
+			LO.print("Monthly Finance Rental from Excel (with part exchange values) is " + monthlyFinanceRentalFromExcel);
+			System.out.println(
+					"Monthly Finance Rental from Excel (with part exchange values) is " + monthlyFinanceRentalFromExcel);
+
+			boolean flag = false;
+			if ((Difference.of_two_Double_Values(monthly_finance_rental_actual_converted,
+					monthlyFinanceRentalFromExcel) < 0.2)) {
+				flag = true;
+				LO.print("Monthly finance rental (with part exchange values) is found OK");
+				System.out.println("Monthly finance rental (with part exchange values) is found OK");
+			} else {
+				LO.print("Monthly finance rental (with part exchange values) is found wrong");
+				System.out.println("Monthly finance rental (with part exchange values) is found wrong");
+			}
+
+
+			return flag;
+		}
 	}
 
 	public boolean verify_balance_due_value(String sheet_name)
@@ -904,6 +938,7 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 				annual_mileage, used_residual_value, total_cap_maintenance_value_converted,
 				percentage_cap_residual_value, percentage_cap_maintenance_cost, sheet_name);
 
+		try {
 		return obj_read_excel_calculation_page
 				.verify_customer_quote_calculations_for_one_payment_options_with_maintenance(driver,
 						customer_quote_payment_profile_dropdown, part_exchange_payment, actual_part_exchange_value,
@@ -913,6 +948,18 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 						document_fee_from_excel, upsell, customer_quote_monthly_finance_rental,
 						customer_quote_monthly_maintenance_rental, maintenance_required, maintenance_margin,
 						initial_payment, part_exchange_status, target_rental, sheet_name);
+		}catch(Exception e)
+		{
+			return obj_read_excel_calculation_page
+					.verify_customer_quote_calculations_for_one_payment_options_without_maintenance(driver,
+							customer_quote_payment_profile_dropdown, part_exchange_payment, actual_part_exchange_value,
+							actual_part_exchange_value_from_excel, given_part_exchange_value,
+							given_part_exchange_value_from_excel, less_finance_settlement,
+							less_finance_settlement_from_excel, order_Deposit, order_Deposit_from_excel, document_fee,
+							document_fee_from_excel, upsell, customer_quote_monthly_finance_rental, maintenance_required,
+							maintenance_margin, initial_payment, part_exchange_status, target_rental, sheet_name);
+
+		}
 	}
 
 	public boolean customer_Quote_used_vehicle_for_one_payment_option_without_maintenance_calculation(

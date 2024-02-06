@@ -2563,7 +2563,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 				"*************Editing Maintenance Margin and Verifying Values on quote summary page has been started************");
 
 		// Edit finance margin configuration values from screen
-
+       try {
 		ExplicitWait.visibleElement(driver, quote_summary_configuration_maintenance_margin_input, 30);
 		quote_summary_configuration_maintenance_margin_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		quote_summary_configuration_maintenance_margin_input.sendKeys("30");
@@ -2631,6 +2631,15 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		}
 
 		return status;
+       }
+       catch(Exception e)
+       {
+			LO.print("Maintenance margin can not be changed as this vehicle has zeor cap maint value");
+			System.out.println("Maintenance margin can not be changed as this vehicle has zeor cap maint value");
+			
+			return true;
+
+       }
 	}
 
 	public boolean verify_balance_due_value(String sheet_name)

@@ -1002,6 +1002,9 @@ public class QuoteSummary_HPNR_FL_Page extends TestBase {
 			LO.print("Holding Cost after changing Base Int. Rate -  found wrong");
 			System.err.println("Holding Cost after changing Base Int. Rate -  found wrong");
 		}
+		
+		System.out.println("Holding Cost Actual = "+holding_cost_total_monthly_holding_cost_from_screen );
+		System.out.println("Holding Cost Expected = "+holding_cost_total_monthly_holding_cost_from_excel );
 
 		if (Difference.of_two_Double_Values(customer_quote_summary_monthly_finance_rental_from_screen,
 				monthlyFinanceRental) < 0.2) {
@@ -1012,6 +1015,10 @@ public class QuoteSummary_HPNR_FL_Page extends TestBase {
 			LO.print("Monthly Finance Rental after changing Base Int. Rate -  found wrong");
 			System.err.println("Monthly Finance Rental after changing Base Int. Rate -  found wrong");
 		}
+		
+		System.out.println("Monthly Finance Rental Actual = "+customer_quote_summary_monthly_finance_rental_from_screen );
+		System.out.println("Monthly Finance Rental Expected = "+monthlyFinanceRental );
+
 
 		if ((Difference.of_two_Double_Values(initialFinanceRental, customer_quote_initial_finance_rental)) < 0.2) {
 			LO.print("Initial Finance Rental found OK");
@@ -1021,6 +1028,10 @@ public class QuoteSummary_HPNR_FL_Page extends TestBase {
 			LO.print("Initial Finance Rental found wrong");
 			System.out.println("Initial Finance Rental found wrong");
 		}
+		
+		System.out.println("Initial Finance Rental Actual = "+customer_quote_initial_finance_rental );
+		System.out.println("Initial Finance Rental Expected = "+initialFinanceRental );
+
 
 		if (count == 3) {
 			status = true;
@@ -3574,14 +3585,21 @@ public class QuoteSummary_HPNR_FL_Page extends TestBase {
 			System.err.println("Monthly Finance Rental after changing finance margin -  found wrong");
 		}
 
+		System.out.println("Monthly Finance Rental Actual = "+customer_quote_summary_monthly_finance_rental_from_screen );
+		System.out.println("Monthly Finance Rental Expected = "+monthlyFinanceRental );
+
+
 		if ((Difference.of_two_Double_Values(initialFinanceRental, customer_quote_initial_finance_rental)) < 0.2) {
 			LO.print("Initial Finance Rental found OK");
 			System.out.println("Initial Finance Rental found OK");
 			count++;
 		} else {
 			LO.print("Initial Finance Rental found wrong");
-			System.err.println("Initial Finance Rental found wrong");
+			System.out.println("Initial Finance Rental found wrong");
 		}
+		
+		System.out.println("Initial Finance Rental Actual = "+customer_quote_initial_finance_rental );
+		System.out.println("Initial Finance Rental Expected = "+initialFinanceRental );
 
 		if (count == 2) {
 			status = true;

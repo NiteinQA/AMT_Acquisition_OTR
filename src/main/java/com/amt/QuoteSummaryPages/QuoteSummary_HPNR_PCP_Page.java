@@ -1856,9 +1856,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 			double customer_quote_summary_balance_payable = Double.parseDouble(
 					RemoveComma.of(quote_summary_customer_quote_summary_balance_payable.getText().trim().substring(2)));
 
-			System.out.println("customer_quote_summary_balance_payable" + customer_quote_summary_balance_payable);
-
-			double customer_quote_summary_option_to_purchase_fee = Double.parseDouble(RemoveComma
+ 			double customer_quote_summary_option_to_purchase_fee = Double.parseDouble(RemoveComma
 					.of(quote_summary_customer_quote_summary_option_to_purchase_fee.getText().trim().substring(2)));
 
 			double customer_quote_summary_initial_cash_payment = Double.parseDouble(RemoveComma

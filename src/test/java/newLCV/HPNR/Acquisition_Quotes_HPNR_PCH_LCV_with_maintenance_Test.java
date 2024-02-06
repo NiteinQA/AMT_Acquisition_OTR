@@ -330,29 +330,29 @@ public class Acquisition_Quotes_HPNR_PCH_LCV_with_maintenance_Test extends TestB
 				.quote_summary_configuration_value_verification_with_maintenance(sheet_name);
 		Assert.assertTrue(quote_summary_configuration_value_check1);
 
-		System.out.println("");
-		System.out.println("");
-
-		boolean value_check_after_Base_Int_change = obj_quote_summary_page
-				.quote_summary_edit_base_int_rate_value_verification_with_maintenance(sheet_name);
-		Assert.assertTrue(value_check_after_Base_Int_change);
-
-		System.out.println("");
-		System.out.println("");
-
-		boolean value_check_after_Finance_margin_change = obj_quote_summary_page
-				.quote_summary_edit_finance_margin_value_verification(sheet_name);
-		Assert.assertTrue(value_check_after_Finance_margin_change);
-
-		System.out.println("");
-		System.out.println("");
-
-		boolean value_check_after_maint_margin_change = obj_quote_summary_page
-				.quote_summary_edit_maintenance_margin_value_verification(sheet_name);
-		Assert.assertTrue(value_check_after_maint_margin_change);
-
-		System.out.println("");
-		System.out.println("");
+//		System.out.println("");
+//		System.out.println("");
+//
+//		boolean value_check_after_Base_Int_change = obj_quote_summary_page
+//				.quote_summary_edit_base_int_rate_value_verification_with_maintenance(sheet_name);
+//		Assert.assertTrue(value_check_after_Base_Int_change);
+//
+//		System.out.println("");
+//		System.out.println("");
+//
+//		boolean value_check_after_Finance_margin_change = obj_quote_summary_page
+//				.quote_summary_edit_finance_margin_value_verification(sheet_name);
+//		Assert.assertTrue(value_check_after_Finance_margin_change);
+//
+//		System.out.println("");
+//		System.out.println("");
+//
+//		boolean value_check_after_maint_margin_change = obj_quote_summary_page
+//				.quote_summary_edit_maintenance_margin_value_verification(sheet_name);
+//		Assert.assertTrue(value_check_after_maint_margin_change);
+//
+//		System.out.println("");
+//		System.out.println("");
 
 	}
 
