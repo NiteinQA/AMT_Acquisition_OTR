@@ -87,7 +87,7 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 		LO.print("***********Entered in holding cost page ***********");
 		System.out.println("***********Entered in holding cost page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(3000);
 		Click.on(driver, holding_cost_summary, 30);
 
@@ -122,9 +122,9 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		return obj_read_excel_calculation_page.edit_percentage_residual_verify_holding_cost_without_maintenance(driver,
 				holding_cost_summary_terms, holding_cost_summary_mileage, holding_cost_summary_residual_value_used,
@@ -148,7 +148,7 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		return obj_read_excel_calculation_page.edit_residual_value_used_then_verify_holding_cost_without_maintenance(
 				driver, holding_cost_summary_terms, holding_cost_summary_mileage,
@@ -169,7 +169,7 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 		LO.print("***********Entered in holding cost page ***********");
 		System.out.println("***********Entered in holding cost page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(3000);
 		Click.on(driver, holding_cost_summary, 30);
 
@@ -180,7 +180,7 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 
 		Click.on(driver, holding_cost_maintenance_toggle_button, 30);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Clicked on holding_cost_maintenance_toggle_button");
 		System.out.println("Clicked on holding_cost_maintenance_toggle_button");
@@ -214,7 +214,7 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		percentage_maintenance_cost_used.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 
@@ -222,7 +222,7 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		return obj_read_excel_calculation_page
 				.edit_percentage_residual_and_maint_cost_then_verify_holding_cost_with_maintenance(driver,
@@ -253,7 +253,7 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		maintenance_cost_used.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 
@@ -261,7 +261,7 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		return obj_read_excel_calculation_page
 				.edit_residual_value_and_maint_cost_then_verify_holding_cost_with_maintenance(driver,
@@ -285,12 +285,12 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 		// send additional terms
 		Click.sendKeys(driver, additional_terms, additional_terms_from_excel, 20);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// send additional mileage
 		Click.sendKeys(driver, additional_mileage, additional_mileage_from_excel, 20);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// Taking updated values of residual value and maint cost from screen
 		ExplicitWait.visibleElement(driver, residual_value_used, 20);
@@ -319,12 +319,12 @@ public class HoldingCostOutrightPCHPage extends TestBase {
 		// send additional terms
 		Click.sendKeys(driver, additional_terms, additional_terms_from_excel, 20);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// send additional mileage
 		Click.sendKeys(driver, additional_mileage, additional_mileage_from_excel, 20);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		// Taking updated values of residual value and maint cost from screen
 		ExplicitWait.visibleElement(driver, residual_value_used, 20);

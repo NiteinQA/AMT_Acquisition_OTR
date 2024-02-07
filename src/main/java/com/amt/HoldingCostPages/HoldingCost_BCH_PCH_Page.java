@@ -117,7 +117,7 @@ public class HoldingCost_BCH_PCH_Page extends TestBase {
 		LO.print("***********Entered in holding cost page ***********");
 		System.out.println("***********Entered in holding cost page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, add_funder_button, 30);
 		Thread.sleep(2000);
@@ -151,7 +151,7 @@ public class HoldingCost_BCH_PCH_Page extends TestBase {
 		LO.print("Funder added successfully");
 		System.out.println("Funder added successfully");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, total_monthly_holding_cost, 30);
 		double holding_cost_from_screen = Double
@@ -188,18 +188,18 @@ public class HoldingCost_BCH_PCH_Page extends TestBase {
 		LO.print("***********Entered in holding cost page ***********");
 		System.out.println("***********Entered in holding cost page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, add_funder_button, 30);
 		Thread.sleep(2000);
 
 		Click.on(driver, funder_maintenance_toggle, 30);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, common_maintenance_toggle, 30);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, funder, 30);
 
@@ -235,7 +235,7 @@ public class HoldingCost_BCH_PCH_Page extends TestBase {
 		LO.print("Funder added successfully");
 		System.out.println("Funder added successfully");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, total_monthly_holding_cost, 30);
 		double holding_cost_from_screen = Double

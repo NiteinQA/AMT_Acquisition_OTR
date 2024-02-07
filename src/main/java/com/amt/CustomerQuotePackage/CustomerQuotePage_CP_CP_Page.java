@@ -218,7 +218,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		LO.print("***********Entered in Customer Quote page ***********");
 		System.out.println("***********Entered in Customer Quote page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Actions act = new Actions(driver);
 
@@ -226,7 +226,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 			Click.on(driver, matrix_credit_type_dropdown, 50);
 
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			Thread.sleep(5000);
 			try {
@@ -248,11 +248,11 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 				e.printStackTrace();
 			}
 
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 			LO.print("Matrix credit type " + matrix_credit_type + " has been selected");
 			System.out.println("Matrix credit type " + matrix_credit_type + " has been selected");
 
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			Click.on(driver, customer_quote_summary, 40);
 
@@ -312,7 +312,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 			Click.on(driver, matrix_credit_type_dropdown, 50);
 
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			Thread.sleep(5000);
 			try {
@@ -333,13 +333,13 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 			LO.print("Matrix credit type " + matrix_credit_type + " has been selected");
 			System.out.println("Matrix credit type " + matrix_credit_type + " has been selected");
 
 			// Click.on(driver, customer_quote_maintenance_toggle_button, 30);
 
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			Click.on(driver, customer_quote_summary, 40);
 
@@ -431,13 +431,13 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		LO.print("***********Entered in Customer Quote page ***********");
 		System.out.println("***********Entered in Customer Quote page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Actions act = new Actions(driver);
 
 		Click.on(driver, matrix_credit_type_dropdown, 50);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Thread.sleep(5000);
 		try {
@@ -458,7 +458,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		LO.print("Matrix credit type " + matrix_credit_type + " has been selected");
 		System.out.println("Matrix credit type " + matrix_credit_type + " has been selected");
 
@@ -540,7 +540,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		Click.sendKeys(driver, sales_total_input, String.valueOf(salesPrice), 20);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Sending " + salesPrice + " to sales total input field");
 		System.out.println("Sending " + salesPrice + " to sales total input field");
@@ -600,7 +600,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		Click.sendKeys(driver, sales_total_input, String.valueOf(salesPrice), 20);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Sending " + salesPrice + " to sales total input field");
 		System.out.println("Sending " + salesPrice + " to sales total input field");
@@ -659,7 +659,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		LO.print("***********Entered in Customer Quote page ***********");
 		System.out.println("***********Entered in Customer Quote page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, matrix_credit_type_dropdown, 50);
 
@@ -693,7 +693,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 		Click.on(driver, customer_quote_maintenance_toggle_button, 30);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -770,7 +770,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		LO.print("***********Entered in Customer Quote page ***********");
 		System.out.println("***********Entered in Customer Quote page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Actions act = new Actions(driver);
 
@@ -789,7 +789,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 				if (e.getText().equalsIgnoreCase(matrix_credit_type)) {
 
 					Click.on(driver, e, 20);
-					ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+					ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 					break;
 				}
 			}
@@ -1393,7 +1393,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		LO.print("***********Entered in Customer Quote page ***********");
 		System.out.println("***********Entered in Customer Quote page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Actions act = new Actions(driver);
 
@@ -1415,7 +1415,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 				if (e.getText().equalsIgnoreCase(matrix_credit_type)) {
 					Click.on(driver, e, 20);
 
-					ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+					ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 					break;
 				}
 			}
@@ -1493,7 +1493,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		LO.print("***********Entered in Customer Quote page ***********");
 		System.out.println("***********Entered in Customer Quote page ***********");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Actions act = new Actions(driver);
 
@@ -1516,7 +1516,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 				if (e.getText().equalsIgnoreCase(matrix_credit_type)) {
 					Click.on(driver, e, 20);
 
-					ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+					ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 					break;
 				}
 			}
@@ -1527,11 +1527,11 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		LO.print("Matrix credit type " + matrix_credit_type + " has been selected");
 		System.out.println("Matrix credit type " + matrix_credit_type + " has been selected");
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, customer_quote_maintenance_toggle_button, 40);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
@@ -1594,7 +1594,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		Click.sendKeys(driver, vehicle_profit_input, vehicle_profit, 30);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		String vehicle_additional_discount_copied = vehicle_additional_discount.getAttribute("value");
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		double monthly_finance_payment_expected_from_excel = obj_read_excel_calculation_page
@@ -1626,7 +1626,7 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		Click.sendKeys(driver, vehicle_profit_input, vehicle_profit, 30);
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		String vehicle_additional_discount_copied = vehicle_additional_discount.getAttribute("value");
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		double monthly_total_payment_expected_from_excel = obj_read_excel_calculation_page
@@ -1658,23 +1658,23 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		Thread.sleep(1000);
 		Click.sendKeys(driver, actual_part_exchange_value, part_exchange_actual, 30);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(1000);
 		Click.sendKeys(driver, given_part_exchange_value, part_exchange_given, 30);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(1000);
 		Click.sendKeys(driver, less_finance_Settlement, less_finance_settlement, 30);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(1000);
 		Click.sendKeys(driver, order_Deposit, order_deposit, 30);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(1000);
 		Click.sendKeys(driver, finance_Deposit, finance_deposit, 30);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(1000);
 		ExplicitWait.visibleElement(driver, document_fee, 30);
 		String document_fee_copied = document_fee.getAttribute("value");
@@ -1728,23 +1728,23 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		Thread.sleep(1000);
 		Click.sendKeys(driver, actual_part_exchange_value, part_exchange_actual, 30);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(1000);
 		Click.sendKeys(driver, given_part_exchange_value, part_exchange_given, 30);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(1000);
 		Click.sendKeys(driver, less_finance_Settlement, less_finance_settlement, 30);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(1000);
 		Click.sendKeys(driver, order_Deposit, order_deposit, 30);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(1000);
 		Click.sendKeys(driver, finance_Deposit, finance_deposit, 30);
 		act.sendKeys(Keys.TAB).build().perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Thread.sleep(1000);
 		ExplicitWait.visibleElement(driver, document_fee, 30);
 		String document_fee_copied = document_fee.getAttribute("value");

@@ -59,6 +59,11 @@ public class AcquisitionListingPage extends TestBase {
 
 	 	@FindBy(xpath = "// *[@id='vehicleSearchInp']")
 	 	private WebElement acquisition_quote_search_bar;  
+	 	
+	 	
+	 	
+	 	@FindBy(xpath = "//*[text()=' Please go to dashboard ']")
+	 	private WebElement button_please_go_to_dashboard; 
 			
 	 	Properties prop;
 	 	
@@ -153,6 +158,15 @@ public class AcquisitionListingPage extends TestBase {
 //				JavaScriptExecutor.click(driver, new_quote_button);
 //				
 //				Thread.sleep(2000);	
+			 
+			 try {
+				 Click.on(driver, button_please_go_to_dashboard,10);
+				 Thread.sleep(3000);
+			 }
+			 catch(Exception e)
+			 {
+				 
+			 }
 			  
 			 
 			 String url = prop.getProperty("url");

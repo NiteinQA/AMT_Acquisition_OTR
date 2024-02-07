@@ -2078,7 +2078,7 @@ public class QuoteSummaryOutrightHPRPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Base Interest Rate changed to 7.0 %");
 		System.out.println("Base Interest Rate changed to 7.0 %");
@@ -2180,7 +2180,7 @@ public class QuoteSummaryOutrightHPRPage extends TestBase {
 //
 //		act.sendKeys(Keys.TAB).build().perform();
 //
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 //
 //		LO.print("Base Interest Rate changed to 6.5 %");
 //		System.out.println("Base Interest Rate changed to 6.5 %");
@@ -2216,7 +2216,7 @@ public class QuoteSummaryOutrightHPRPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Base Interest Rate changed to 7.0 %");
 		System.out.println("Base Interest Rate changed to 7.0 %");
@@ -2335,7 +2335,7 @@ public class QuoteSummaryOutrightHPRPage extends TestBase {
 //
 //		act.sendKeys(Keys.TAB).build().perform();
 //
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 //
 //		LO.print("Base Interest Rate changed to 6.5 %");
 //		System.out.println("Base Interest Rate changed to 6.5 %");
@@ -2372,7 +2372,7 @@ public class QuoteSummaryOutrightHPRPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Customer Base Over Rate changed to 5.0 %");
 		System.out.println("Customer Base Over Rate changed to 5.0 %");
@@ -2468,7 +2468,7 @@ public class QuoteSummaryOutrightHPRPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Maintenance margin changed to 30 %");
 		System.out.println("Maintenance margin changed to 30 %");

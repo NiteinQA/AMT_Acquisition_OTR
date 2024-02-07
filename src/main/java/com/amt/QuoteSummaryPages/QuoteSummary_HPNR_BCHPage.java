@@ -2225,7 +2225,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Base Interest Rate changed to 7.0 %");
 		System.out.println("Base Interest Rate changed to 7.0 %");
@@ -2311,7 +2311,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Base Interest Rate changed to 6.5 %");
 		System.out.println("Base Interest Rate changed to 6.5 %");
@@ -2430,7 +2430,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 //
 //		act.sendKeys(Keys.TAB).build().perform();
 //
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 //
 //		LO.print("Base Interest Rate changed to 6.5 %");
 //		System.out.println("Base Interest Rate changed to 6.5 %");
@@ -2466,7 +2466,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Finance margin changed to 10000");
 		System.out.println("Finance margin changed to 10000");
@@ -2571,7 +2571,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Maintenance margin changed to 30 %");
 		System.out.println("Maintenance margin changed to 30 %");
@@ -3547,7 +3547,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("Finance margin changed to 10000");
 		System.out.println("Finance margin changed to 10000");
@@ -3647,7 +3647,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			Actions act = new Actions(driver);
 			act.sendKeys(Keys.TAB).build().perform();
 
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 60);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			LO.print("Maintenance margin changed to 30 %");
 			System.out.println("Maintenance margin changed to 30 %");

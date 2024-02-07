@@ -105,9 +105,8 @@ public class OptionsAccessoriesPage extends TestBase {
 //
 //		}
 
+	    Thread.sleep(5000);
 		
-
-
 		Click.on(driver, acq_interior, 40);
 		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
