@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/1/2</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Feb 10 12:51:04 IST 2024</td>
+<td>Started on:</td><td>Tue Feb 13 19:13:53 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>204 seconds (204738 ms)</td>
+<tr><td>Total time:</td><td>682 seconds (682726 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,100 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/26, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
-<a href="#Output-735500696" onClick='toggleBox("Output-735500696", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-735500696" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-735500696">
-<b>***********Entered in Customer Quote page ***********</b> <br /><br/>
-<b>Matrix credit type A1 Credit has been selected</b> <br /><br/>
-<b>Writing configuration values from property file to Excel for customer quote calculation -started</b> <br /><br/>
-<b>Writing configuration values from property file to Excel for customer quote calculation -completed</b> <br /><br/>
-<b>Actual Monthly Finance Payment from screen is 1914.3</b> <br /><br/>
-<b>Writing screen values to Excel for customer quote calculation -started</b> <br /><br/>
-<b>Writing screen values to Excel for customer quote calculation -completed</b> <br /><br/>
-<b>Expected Monthly Finance Rental from excel is 2044.9173122741906</b> <br /><br/>
-<br>----------Screenshot---------<br><br/>
-<img src="D:\Acquisition\AMT_Automation_Acquisition\target\surefire-reports\html\failure_screenshots\aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test_10_02_2024_12_54_29.png" height="800" width="1000"><br/>
-</div>
-</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test(Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.java:122)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace735500696", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace735500696'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertTrue(Assert.java:45)
-	at org.testng.Assert.assertTrue(Assert.java:55)
-	at newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test(Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.java:122)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>44</td>
-<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@15bb5034</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -169,34 +75,365 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_after_discount_calculations_without_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/26, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
-<a href="#Output-1080815535" onClick='toggleBox("Output-1080815535", this, "Show output", "Hide output");'>Show output</a>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_after_discount_calculations_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_after_discount_calculations_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 50, 20000, 25, 0, 35, 35000, 1000, 20, YES, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
+<a href="#Output-968593327" onClick='toggleBox("Output-968593327", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1080815535" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1080815535">
+<a href="#Output-968593327" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-968593327">
 <b>*********Calculations for On Road Price has been started***********</b> <br /><br/>
 <b>Started getting On screen values from after discount table </b> <br /><br/>
-<b>Manufacture_delivery_charges =550.00</b> <br /><br/>
-<b>Road_tax_first_year =585.00</b> <br /><br/>
+<b>Manufacture_delivery_charges =645.83</b> <br /><br/>
+<b>Road_tax_first_year =645.00</b> <br /><br/>
 <b>First_registration_fee =55.00</b> <br /><br/>
 <b>Rebate =0.00</b> <br /><br/>
 <b>Writing After discount values to excel has been started</b> <br /><br/>
 <b>Writing After discount values to excel has been completed</b> <br /><br/>
 <b>Reading On Road Price for invoice from excel has been Started</b> <br /><br/>
 <b>Reading On Road Price for invoice from excel has been completed</b> <br /><br/>
-<b>Expected on the road price from excel is =58525.0</b> <br /><br/>
-<b>Actual on the road price from screen is =58525.00</b> <br /><br/>
+<b>Expected on the road price from excel is =69069.99</b> <br /><br/>
+<b>Actual on the road price from screen is =69070.00</b> <br /><br/>
 </div>
 </td>
 <td></td>
 <td>4</td>
-<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@15bb5034</td></tr>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test@2eae8e6e</td></tr>
 <tr>
-<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_OTR_calculation_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_OTR_calculation_without_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/26, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
-<a href="#Output-1520921298" onClick='toggleBox("Output-1520921298", this, "Show output", "Hide output");'>Show output</a>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 50, 20000, 25, 0, 35, 35000, 1000, 20, YES, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
+<a href="#Output-978639296" onClick='toggleBox("Output-978639296", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1520921298" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1520921298">
+<a href="#Output-978639296" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-978639296">
+<b>*************OTR Calulation on quote summary page has been started************</b> <br /><br/>
+<b>Reading values from OTR calculation -Quote Summary Page</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Cost otr price from screen is 69070.0</b> <br /><br/>
+<b>Cost price ex vat and rfl from screen is 56975.0</b> <br /><br/>
+<b>Otr Vat from screen is 11395.0</b> <br /><br/>
+<b>Otr rfl and frf from screen is 700.0</b> <br /><br/>
+<b></b> <br /><br/>
+<b></b> <br /><br/>
+<b>Cost otr price from excel is 69069.98800000001</b> <br /><br/>
+<b>Cost price ex vat and rfl from excel is 56974.99000000001</b> <br /><br/>
+<b>Otr Vat from excel is 11394.998</b> <br /><br/>
+<b>Otr rfl and frf from excel is 700.0</b> <br /><br/>
+<b></b> <br /><br/>
+<b>OTR price compared</b> <br /><br/>
+<b>Cost price ex vat and rfl compared</b> <br /><br/>
+<b>VAT compared</b> <br /><br/>
+<b>RFL & FRF compared</b> <br /><br/>
+<b>*************Holding Cost Calulation on quote summary page has been started************</b> <br /><br/>
+<b>Reading values from Holding Cost summary -Quote Summary Page</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Holding cost Terms from screen35.0</b> <br /><br/>
+<b>Holding cost miles per annum from screen is 35000.0</b> <br /><br/>
+<b>Holding cost monthly finance cost from screen is 1740.4</b> <br /><br/>
+<b>Holding cost monthly maint cost used from screen is 88.83</b> <br /><br/>
+<b>Holding cost total monthly holding cost from screen is 1829.24</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Holding cost Terms from excel is 35.0</b> <br /><br/>
+<b>Holding cost miles per annum from excel is 35000.0</b> <br /><br/>
+<b>Holding cost monthly finance cost from excel is 1740.403308446731</b> <br /><br/>
+<b>Holding cost monthly maint cost used from excel is 88.83</b> <br /><br/>
+<b>Holding cost total monthly holding cost from excel is 1829.233308446731</b> <br /><br/>
+<b>terms compared</b> <br /><br/>
+<b>Miles per annum compared</b> <br /><br/>
+<b>Finance cost compared</b> <br /><br/>
+<b>Maint cost used  compared</b> <br /><br/>
+<b>Total Monthly Holding Cost compared</b> <br /><br/>
+<b>*************Customer Quote Calculation on quote summary page has been started************</b> <br /><br/>
+<b>Terms found OK</b> <br /><br/>
+<b>miles found OK</b> <br /><br/>
+<b>Basic Cash Price found OK</b> <br /><br/>
+<b>VAT found OK</b> <br /><br/>
+<b>Non VAT Items Value found OK</b> <br /><br/>
+<b>Total Cash Price found OK</b> <br /><br/>
+<b>Order Deposit found OK</b> <br /><br/>
+<b>Finance Deposit found OK</b> <br /><br/>
+<b>Total Deposit found OK</b> <br /><br/>
+<b>Part Exchange Value - found OK</b> <br /><br/>
+<b>Balance to Finance found OK</b> <br /><br/>
+<b>Finance Charges - found OK</b> <br /><br/>
+<b>Document Fee - found OK</b> <br /><br/>
+<b>Balance Payable - found OK</b> <br /><br/>
+<b>Option To Purchase Fee - found OK</b> <br /><br/>
+<b>Initial Cash Payment - found OK</b> <br /><br/>
+<b>Followed By months - found OK</b> <br /><br/>
+<b>Monthly Finance Payment - found OK</b> <br /><br/>
+<b>Monthly Maint Payment - found OK</b> <br /><br/>
+<b>Monthly Total Payment - found OK</b> <br /><br/>
+<b>Balloon Value - found OK</b> <br /><br/>
+<b>Final Payment - found OK</b> <br /><br/>
+<b>Pence Per Excess Mile Maintenance - found OK</b> <br /><br/>
+<b>Vehicle Commission - found OK</b> <br /><br/>
+<b>Default Finance Commission - found OK</b> <br /><br/>
+<b>Maintenance Commission - found OK</b> <br /><br/>
+<b>Document Fee Commission - found OK</b> <br /><br/>
+<b>Total Commission - found OK</b> <br /><br/>
+<b>*************Configuration Values Verification on quote summary page has been started************</b> <br /><br/>
+<b>Base Interest Rate found OK</b> <br /><br/>
+<b>Finance Margin found OK</b> <br /><br/>
+<b>Deductions found OK</b> <br /><br/>
+<b>Additional Margin found OK</b> <br /><br/>
+<b>Total Margin found OK</b> <br /><br/>
+<b>Default Broker Margin percentage found OK</b> <br /><br/>
+<b>Customer Interest Rate found OK</b> <br /><br/>
+<b>Maintenance Margin found OK</b> <br /><br/>
+<b>Document Fee Margin found OK</b> <br /><br/>
+<b>Default Broker Margin found OK</b> <br /><br/>
+<b>*********Customer Quote generated successfully and Quote_ref_no is=IDJ97468</b> <br /><br/>
+<b>*************OTR Calulation on quote summary page has been started************</b> <br /><br/>
+<b>Reading values from OTR calculation -Quote Summary Page</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Cost otr price from screen is 69070.0</b> <br /><br/>
+<b>Cost price ex vat and rfl from screen is 56975.0</b> <br /><br/>
+<b>Otr Vat from screen is 11395.0</b> <br /><br/>
+<b>Otr rfl and frf from screen is 700.0</b> <br /><br/>
+<b></b> <br /><br/>
+<b></b> <br /><br/>
+<b>Cost otr price from excel is 69069.98800000001</b> <br /><br/>
+<b>Cost price ex vat and rfl from excel is 56974.99000000001</b> <br /><br/>
+<b>Otr Vat from excel is 11394.998</b> <br /><br/>
+<b>Otr rfl and frf from excel is 700.0</b> <br /><br/>
+<b></b> <br /><br/>
+<b>OTR price compared</b> <br /><br/>
+<b>Cost price ex vat and rfl compared</b> <br /><br/>
+<b>VAT compared</b> <br /><br/>
+<b>RFL & FRF compared</b> <br /><br/>
+<b>*************Holding Cost Calulation on quote summary page has been started************</b> <br /><br/>
+<b>Reading values from Holding Cost summary -Quote Summary Page</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Holding cost Terms from screen35.0</b> <br /><br/>
+<b>Holding cost miles per annum from screen is 35000.0</b> <br /><br/>
+<b>Holding cost monthly finance cost from screen is 1740.4</b> <br /><br/>
+<b>Holding cost monthly maint cost used from screen is 88.83</b> <br /><br/>
+<b>Holding cost total monthly holding cost from screen is 1829.24</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Holding cost Terms from excel is 35.0</b> <br /><br/>
+<b>Holding cost miles per annum from excel is 35000.0</b> <br /><br/>
+<b>Holding cost monthly finance cost from excel is 1740.403308446731</b> <br /><br/>
+<b>Holding cost monthly maint cost used from excel is 88.83</b> <br /><br/>
+<b>Holding cost total monthly holding cost from excel is 1829.233308446731</b> <br /><br/>
+<b>terms compared</b> <br /><br/>
+<b>Miles per annum compared</b> <br /><br/>
+<b>Finance cost compared</b> <br /><br/>
+<b>Maint cost used  compared</b> <br /><br/>
+<b>Total Monthly Holding Cost compared</b> <br /><br/>
+<b>*************Customer Quote Calculation on quote summary page has been started************</b> <br /><br/>
+<b>Terms found OK</b> <br /><br/>
+<b>miles found OK</b> <br /><br/>
+<b>Basic Cash Price found OK</b> <br /><br/>
+<b>VAT found OK</b> <br /><br/>
+<b>Non VAT Items Value found OK</b> <br /><br/>
+<b>Total Cash Price found OK</b> <br /><br/>
+<b>Order Deposit found OK</b> <br /><br/>
+<b>Finance Deposit found OK</b> <br /><br/>
+<b>Total Deposit found OK</b> <br /><br/>
+<b>Part Exchange Value - found OK</b> <br /><br/>
+<b>Balance to Finance found OK</b> <br /><br/>
+<b>Finance Charges - found OK</b> <br /><br/>
+<b>Document Fee - found OK</b> <br /><br/>
+<b>Balance Payable - found OK</b> <br /><br/>
+<b>Option To Purchase Fee - found OK</b> <br /><br/>
+<b>Initial Cash Payment - found OK</b> <br /><br/>
+<b>Followed By months - found OK</b> <br /><br/>
+<b>Monthly Finance Payment - found OK</b> <br /><br/>
+<b>Monthly Maint Payment - found OK</b> <br /><br/>
+<b>Monthly Total Payment - found OK</b> <br /><br/>
+<b>Balloon Value - found OK</b> <br /><br/>
+<b>Final Payment - found OK</b> <br /><br/>
+<b>Pence Per Excess Mile Maintenance - found OK</b> <br /><br/>
+<b>Vehicle Commission - found OK</b> <br /><br/>
+<b>Default Finance Commission - found OK</b> <br /><br/>
+<b>Maintenance Commission - found OK</b> <br /><br/>
+<b>Document Fee Commission - found OK</b> <br /><br/>
+<b>Total Commission - found OK</b> <br /><br/>
+<b>*************Configuration Values Verification on quote summary page has been started************</b> <br /><br/>
+<b>Base Interest Rate found OK</b> <br /><br/>
+<b>Finance Margin found OK</b> <br /><br/>
+<b>Deductions found OK</b> <br /><br/>
+<b>Additional Margin found OK</b> <br /><br/>
+<b>Total Margin found OK</b> <br /><br/>
+<b>Default Broker Margin percentage found OK</b> <br /><br/>
+<b>Customer Interest Rate found OK</b> <br /><br/>
+<b>Maintenance Margin found OK</b> <br /><br/>
+<b>Document Fee Margin found OK</b> <br /><br/>
+<b>Default Broker Margin found OK</b> <br /><br/>
+<b>*************Editing Base Interest Rate and Verifying  Values on quote summary page has been started************</b> <br /><br/>
+<b>Base Interest Rate changed to 7.0 %</b> <br /><br/>
+<b>Holding Cost after changing Base Int. Rate -  found OK</b> <br /><br/>
+<b>Monthly Finance Rental after changing Base Int. Rate -  found OK</b> <br /><br/>
+<b>Monthly Maint Rental after changing Base Int. Rate -  found OK</b> <br /><br/>
+<b>Finance Charges - found OK</b> <br /><br/>
+<b>Balance Payable - found OK</b> <br /><br/>
+<b>*************Editing Customer Rate Over Base and Verifying Values on quote summary page has been started************</b> <br /><br/>
+<b>Customer Base Over Rate changed to 5.0 %</b> <br /><br/>
+<b>Monthly Finance Rental after changing Customer Base Over Rate -  found OK</b> <br /><br/>
+<b>Finance Charges - found OK</b> <br /><br/>
+<b>Balance Payable - found OK</b> <br /><br/>
+<b>*************Editing Maintenance Margin and Verifying Values on quote summary page has been started************</b> <br /><br/>
+<b>Maintenance margin changed to 30 %</b> <br /><br/>
+<b>Monthly Maint Rental after changing Maintenance margin -  found OK</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>247</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test@2eae8e6e</td></tr>
+<tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_holding_cost_calculations_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_holding_cost_calculations_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 50, 20000, 25, 0, 35, 35000, 1000, 20, YES, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
+<a href="#Output-1304361620" onClick='toggleBox("Output-1304361620", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1304361620" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1304361620">
+<b>***********Entered in holding cost page ***********</b> <br /><br/>
+<b>Clicked on holding cost summary</b> <br /><br/>
+<b>Clicked on holding_cost_maintenance_toggle_button</b> <br /><br/>
+<b></b> <br /><br/>
+<b>***Verifying Holding Cost before editing CAP data*** </b> <br /><br/>
+<b>Getting on screen values from Holding Cost Page</b> <br /><br/>
+<b>Duration(Terms) =36.0</b> <br /><br/>
+<b>Annual_mileage =10000.0</b> <br /><br/>
+<b>Residual_value_from_screen =28050.0</b> <br /><br/>
+<b>Total_cap_maintenance_value_annual =1423.33</b> <br /><br/>
+<b>Writing Holding Cost Summary values to excel has been started</b> <br /><br/>
+<b>Writing Holding Cost Summary values to excel has been completed</b> <br /><br/>
+<b>Reading Monthly Holding Cost value from excel has been started</b> <br /><br/>
+<b>Reading Monthly Holding Cost value from excel has been completed</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_screen =1,378.14</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_excel =1378.1413143898574</b> <br /><br/>
+<b>Total Monthly Holding Cost based on CAP data is Verified and Found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Editing % CAP Residual Value and % CAP Maintenance cost used</b> <br /><br/>
+<b>Changing % CAP Residual Value (from test  data) to 50</b> <br /><br/>
+<b>Changing % CAP Maintenance cost (from test  data) to 50</b> <br /><br/>
+<b>Writing Holding Cost Summary values to excel has been started</b> <br /><br/>
+<b>Writing Holding Cost Summary values to excel has been completed</b> <br /><br/>
+<b>Reading Monthly Holding Cost value from excel has been started</b> <br /><br/>
+<b>Reading Monthly Holding Cost value from excel has been completed</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_screen =1,631.81</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_excel =1631.808195820734</b> <br /><br/>
+<b>Total Monthly Holding Cost After Editing % Residual Value and % Maintenance Cost is Verified and Found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Editing Residual value and Maintenance cost used</b> <br /><br/>
+<b>Changing Residual Value (from test data) to  =20000</b> <br /><br/>
+<b>Changing Maintenance Cost used (from test data) to =25</b> <br /><br/>
+<b>Writing Holding Cost Summary values to excel has been started</b> <br /><br/>
+<b>Writing Holding Cost Summary values to excel has been completed</b> <br /><br/>
+<b>Reading Monthly Holding Cost value from excel has been started</b> <br /><br/>
+<b>Reading Monthly Holding Cost value from excel has been completed</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_screen =1,520.55</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_excel =1520.5494392436262</b> <br /><br/>
+<b>Total Monthly Holding Cost After Editing Residual Value and Maintenance Cost is Verified and Found OK</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Editing additional terms and mileage</b> <br /><br/>
+<b>Updated Residual Value from screen  (to be sent to calculation excel) is =9462.50</b> <br /><br/>
+<b>Updated Maintenance Cost from screen  (to be sent to calculation excel) is =88.83</b> <br /><br/>
+<b>Writing Holding Cost Summary values to excel has been started</b> <br /><br/>
+<b>Writing Holding Cost Summary values to excel has been completed</b> <br /><br/>
+<b>Reading Monthly Holding Cost value from excel has been started</b> <br /><br/>
+<b>Reading Monthly Holding Cost value from excel has been completed</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_screen =1,829.24</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_excel =1829.233308446731</b> <br /><br/>
+<b>Total Monthly Holding Cost After Editing Additional terms and mileage is Verified and Found OK</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>53</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test@2eae8e6e</td></tr>
+<tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 50, 20000, 25, 0, 35, 35000, 1000, 20, YES, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
+<a href="#Output-660082979" onClick='toggleBox("Output-660082979", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-660082979" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-660082979">
+<b>Monthly Total Payment verified after editing vehicle profit</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Verifying Vehicle profit and Total Monthly Payment on editing Vehicle Sales Price</b> <br /><br/>
+<b>Sending 82884.0 to sales total input field</b> <br /><br/>
+<b>Vehicle profit Expected is = 11511.666666666668</b> <br /><br/>
+<b>Vehicle profit Actual is = 11511.67</b> <br /><br/>
+<b>Monthly Total Payment Expected is = 2901.3779074934378</b> <br /><br/>
+<b>Monthly Total Payment Actual is = 2901.38</b> <br /><br/>
+<b>Vehicle profit and Total Monthly Payment verified on editing Vehicle Sales Price</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test@2eae8e6e</td></tr>
+<tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 50, 20000, 25, 0, 35, 35000, 1000, 20, YES, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
+<a href="#Output-1910339526" onClick='toggleBox("Output-1910339526", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1910339526" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1910339526">
+<b></b> <br /><br/>
+<b>Monthly Total Payment Expected (with balloon payment toggle button off) is 2962.1903097802688</b> <br /><br/>
+<b>Monthly Total Payment Actual (with balloon payment toggle button off) is 2962.19</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Monthly Total Payment verified after making balloon payment toggle button off</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>23</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test@2eae8e6e</td></tr>
+<tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 50, 20000, 25, 0, 35, 35000, 1000, 20, YES, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
+<a href="#Output-610609353" onClick='toggleBox("Output-610609353", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-610609353" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-610609353">
+<b>Clicked on Part Exchange panel</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Actual Balance to finance after editing part exchange values and deposit values is = 80384.0</b> <br /><br/>
+<b>Expected Balance to finance after editing part exchange values and deposit values is = 80384.00400000002</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Actual Monthly total Payment after editing part exchange values and deposit values is = 2810.49</b> <br /><br/>
+<b>Expected Monthly total Payment after editing part exchange values and deposit values is = 2810.4855001779965</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Monthly total Payment verified after editing part exchange values and deposit values</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>65</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test@2eae8e6e</td></tr>
+<tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 50, 20000, 25, 0, 35, 35000, 1000, 20, YES, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
+<a href="#Output-1222190663" onClick='toggleBox("Output-1222190663", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1222190663" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1222190663">
+<b>***********Entered in Customer Quote page ***********</b> <br /><br/>
+<b>Matrix credit type A1 Credit has been selected</b> <br /><br/>
+<b>Writing configuration values from property file to Excel for customer quote calculation -started</b> <br /><br/>
+<b>Writing configuration values from property file to Excel for customer quote calculation -completed</b> <br /><br/>
+<b>Actual Monthly total Payment from screen is 2399.14</b> <br /><br/>
+<b>Writing screen values to Excel for customer quote calculation -started</b> <br /><br/>
+<b>Writing screen values to Excel for customer quote calculation -completed</b> <br /><br/>
+<b>Expected Monthly Total Rental from excel is 2399.1422399198673</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Started Verifying Sales price discount not to be greater than cost price discount</b> <br /><br/>
+<b>Sales discount price entered greater than Cost discount prices and verified that sales discount input field doesn't accept greater values than cost discount prices</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Started Updating Sales price discount</b> <br /><br/>
+<b>Actual Sales Total Price from screen (on updating sales discount prices) is 69069.99</b> <br /><br/>
+<b>Expected Sales Total Price from excel (on updating sales discount prices) is 69069.98800000001</b> <br /><br/>
+<b>Actual Vehicle Profit from screen (on updating sales discount prices) is -0.01</b> <br /><br/>
+<b>Expected Vehicle Profit from excel (on updating sales discount prices) is 0.0</b> <br /><br/>
+<b>Actual Monthly Finance Payment from screen is 2289.41</b> <br /><br/>
+<b>Expected Monthly Finance Payment from excel is 2289.4110634492795</b> <br /><br/>
+<b>Actual Monthly Maintenance Payment from screen is 109.73</b> <br /><br/>
+<b>Expected Monthly Maintenance Payment from excel is 109.731176470588</b> <br /><br/>
+<b>1. Sales Total Price , 2.Vehicel Profit , 3.Monthly Finance Rental , 4.Monthly Maintenance Rental , Verified on updating sales discount and found OK</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>121</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test@2eae8e6e</td></tr>
+<tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_OTR_calculation_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_OTR_calculation_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test<br>Parameters: AUDI, A7, 50000, 630, 50, 50, 20000, 25, 0, 35, 35000, 1000, 20, YES, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, HirePurchaseNonRegulated<br/>
+<a href="#Output-1088381072" onClick='toggleBox("Output-1088381072", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1088381072" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1088381072">
 <b>Clicked on Quote button </b> <br /><br/>
 <b>Manufacture =AUDI has been selected</b> <br /><br/>
 <b>Model range =A7 has been selected</b> <br /><br/>
@@ -205,7 +442,7 @@ function toggleAllBoxes() {
 <b>Interior option has been selected</b> <br /><br/>
 <b> Acquisition Contract type option = Hire Purchase Non regulated (HPNR) has been selected</b> <br /><br/>
 <b> Customer Contract type option = Hire Purchase Non regulated (HPNR) has been selected</b> <br /><br/>
-<b>Getting Basic Price- Vehicle value is  =46854.17</b> <br /><br/>
+<b>Getting Basic Price- Vehicle value is  =55495.83</b> <br /><br/>
 <b>Getting Basic Price - Paint  value is  =0.00</b> <br /><br/>
 <b>Getting  Basic Price - Options value is   =833.33</b> <br /><br/>
 <b>Getting Discount- Vehicle value is  =0.00</b> <br /><br/>
@@ -218,130 +455,13 @@ function toggleAllBoxes() {
 <b>Writing OTR table values to excel sheet -Completed </b> <br /><br/>
 <b>Reading Subtotal After Discount from excel sheet -Started </b> <br /><br/>
 <b>Reading Subtotal After Discount from excel sheet -Started </b> <br /><br/>
-<b>Subtotal After Discount from excel sheet is =47687.5</b> <br /><br/>
-<b>Subtotal after discount actual value from screen =£ 47,687.50</b> <br /><br/>
+<b>Subtotal After Discount from excel sheet is =56329.16</b> <br /><br/>
+<b>Subtotal after discount actual value from screen =£ 56,329.17</b> <br /><br/>
 </div>
 </td>
 <td></td>
-<td>118</td>
-<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@15bb5034</td></tr>
-<tr>
-<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_holding_cost_calculations_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_holding_cost_calculations_without_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/26, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, NO, 20, 200, NO, 0, A1 Credit, YES, HPNR (Formula 3) - HPNR<br/>
-<a href="#Output-511610" onClick='toggleBox("Output-511610", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-511610" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-511610">
-<b>***********Entered in holding cost page ***********</b> <br /><br/>
-<b>***********Holding Cost Calculations has been Started*************</b> <br /><br/>
-<b>Writing Holding Cost Summary values to excel has been completed</b> <br /><br/>
-<b>Reading Monthly Holding Cost value from excel</b> <br /><br/>
-<b>Total_monthly_holding_cost_from_screen =500.36</b> <br /><br/>
-<b>Total_monthly_holding_cost_from_excel =500.3636363636364</b> <br /><br/>
-</div>
-</td>
-<td></td>
-<td>23</td>
-<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@15bb5034</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test</td>
-<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@15bb5034] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1023616056", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1023616056'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:7, instance:newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@15bb5034] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@15bb5034</td></tr>
-<tr>
-<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test</td>
-<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@15bb5034] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1557860676", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1557860676'><pre>java.lang.Throwable: Method Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test.aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_without_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@15bb5034] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_without_maintenance_Test@15bb5034</td></tr>
+<td>110</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_maintenance_Test@2eae8e6e</td></tr>
 </table><p>
 </body>
 </html>
