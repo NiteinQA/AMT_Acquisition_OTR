@@ -2541,7 +2541,7 @@ public void save_quote() throws InterruptedException {
 
 		js.executeScript("arguments[0].click();", quote_summary_save_button);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 }
 

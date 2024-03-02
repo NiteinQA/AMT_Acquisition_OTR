@@ -2701,7 +2701,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 		js.executeScript("arguments[0].click();", quote_summary_save_button);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 

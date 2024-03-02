@@ -57,7 +57,7 @@ public class CustomerQuotePage_CP_BCH_Page extends TestBase {
 	@FindBy(xpath = "//*[normalize-space()='Total monthly payment']//ancestor::div[1]//div//p//strong|//*[normalize-space()='Total monthly rental']//ancestor::div[1]//div//p//strong")
 	private WebElement customer_quote_monthly_total_rental;
 
-	@FindBy(xpath = "//label[@class='switch mr-1 ml-1']//span[@class='slider round']")
+	@FindBy(xpath = "//span[@class='slider round']")
 	private WebElement customer_quote_maintenance_toggle_button;
 
 	@FindBy(xpath = "//input[@name='monetaryAmount']")

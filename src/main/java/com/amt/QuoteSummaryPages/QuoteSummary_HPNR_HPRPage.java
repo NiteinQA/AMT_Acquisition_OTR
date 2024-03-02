@@ -3369,7 +3369,7 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 //		Actions act = new Actions(driver);
 //		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 

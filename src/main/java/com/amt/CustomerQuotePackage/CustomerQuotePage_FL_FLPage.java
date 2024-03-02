@@ -61,7 +61,7 @@ public class CustomerQuotePage_FL_FLPage extends TestBase {
 	private WebElement customer_quote_monthly_total_rental;
 
 
-	@FindBy(xpath = "//label[@class='switch mr-1 ml-1']//span[@class='slider round']")
+	@FindBy(xpath = "//span[@class='slider round']")
 	private WebElement customer_quote_maintenance_toggle_button;
 
 

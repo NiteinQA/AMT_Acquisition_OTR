@@ -33,7 +33,7 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 	private List<WebElement> loading_icon;
 
 	// vehicle_discount_cost_price
-	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]//div//p")
+	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]/div/span")
 	private WebElement vehicle_discount_cost_price;
 
 	// vehicle_additional_discount_cost_price

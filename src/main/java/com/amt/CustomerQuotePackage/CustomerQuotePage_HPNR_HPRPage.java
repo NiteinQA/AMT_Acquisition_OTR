@@ -40,7 +40,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 	private WebElement quote_summary;
 
 	// vehicle_discount_cost_price
-	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]//div//p")
+	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]/div/span")
 	private WebElement vehicle_discount_cost_price;
 
 	// vehicle_additional_discount_cost_price

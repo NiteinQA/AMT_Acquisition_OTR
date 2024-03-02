@@ -69,7 +69,7 @@ public class CustomerQuotePage_CP_PCH_Page extends TestBase {
 	@FindBy(xpath = "//*[@id='FinanceCommission']")
 	private WebElement referrer_upsell_input_field;
 
-	@FindBy(xpath = "//label[@class='switch mr-1 ml-1']//span[@class='slider round']")
+	@FindBy(xpath = "//span[@class='slider round']")
 	private WebElement customer_quote_maintenance_toggle_button;
 
 	@FindBy(xpath = "//input[@name='monetaryAmount']")

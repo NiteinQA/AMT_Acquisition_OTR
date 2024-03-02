@@ -3532,12 +3532,12 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 
 	public void save_quote() throws InterruptedException {
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
 		Click.on(driver, quote_summary_save_button, 50);
 		
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_ref_no, 120);
 
@@ -3549,7 +3549,9 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 		
 		driver.navigate().refresh();
 		
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 300);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 300);
 
 
 	}
