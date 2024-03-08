@@ -220,7 +220,7 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 
 		Thread.sleep(2000);
 
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -330,7 +330,7 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 
 		Thread.sleep(2000);
 
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -1816,7 +1816,7 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -1892,7 +1892,7 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 

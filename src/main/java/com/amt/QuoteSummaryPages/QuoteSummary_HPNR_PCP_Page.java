@@ -797,7 +797,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 
 		Thread.sleep(2000);
 
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -901,7 +901,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 
 		Thread.sleep(2000);
 
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -5817,7 +5817,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 		Thread.sleep(2000);
 
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Actions act = new Actions(driver);
@@ -5897,7 +5897,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -5992,7 +5992,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 			throws InterruptedException, IOException {
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		LO.print("*************Calculations for Quote Summary page has been started************");
 		System.out.println("*************Calculations for Quote Summary page has been started************");
@@ -6071,7 +6071,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 

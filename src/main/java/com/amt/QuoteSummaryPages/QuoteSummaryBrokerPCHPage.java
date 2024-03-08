@@ -102,7 +102,7 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 
 		Thread.sleep(2000);
 
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -279,7 +279,7 @@ public class QuoteSummaryBrokerPCHPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 

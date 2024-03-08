@@ -63,7 +63,7 @@ public class OptionsAccessoriesPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 		
-		Thread.sleep(3000);
+		Thread.sleep(7000);
 		
 
 
@@ -128,7 +128,7 @@ public void options_And_Accessories_selection_for_used_car() throws InterruptedE
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 		
-		Thread.sleep(2000);
+		Thread.sleep(7000);
 
 		js.executeScript("arguments[0].click();", paint);
 
@@ -156,7 +156,7 @@ public void options_And_Accessories_selection_for_used_LCV() throws InterruptedE
 
 	ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 	
-	Thread.sleep(2000);
+	Thread.sleep(7000);
 
 	js.executeScript("arguments[0].click();", paint);
 

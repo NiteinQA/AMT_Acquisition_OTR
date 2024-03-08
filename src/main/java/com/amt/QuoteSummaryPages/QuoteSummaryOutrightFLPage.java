@@ -237,7 +237,7 @@ public boolean quote_summary_OTR_calculation(String sheet_name) throws Interrupt
 		
 		obj_read_excel_calculation_page =new ReadExcelCalculation();
 		
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 		
 	
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);		
@@ -1917,7 +1917,7 @@ public boolean quote_summary_customer_quote_summary_value_verification_without_m
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 		
 		obj_read_excel_calculation_page =new ReadExcelCalculation();
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
@@ -1987,7 +1987,7 @@ public boolean quote_summary_customer_quote_summary_value_verification_without_m
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 		
 		obj_read_excel_calculation_page =new ReadExcelCalculation();
-		Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
 		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		

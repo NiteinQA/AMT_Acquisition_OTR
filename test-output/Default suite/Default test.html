@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/4</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat Mar 02 16:33:53 IST 2024</td>
+<td>Started on:</td><td>Fri Mar 08 19:12:27 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>494 seconds (494730 ms)</td>
+<tr><td>Total time:</td><td>482 seconds (482539 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,332 +67,279 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_OTR_calculation_with_maintenance_test()'><b>aquisition_quotes_OTR_calculation_with_maintenance_test</b><br>Test class: usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test<br>Parameters: GY19XAG, 15000, 60000, 1000, 50000, 630, 100, 50, 20000, 30, 0, 35, 35000, 1000, 20, YES, A1 Credit, 100, YES, 2000, 1000, 500, 1000, 1000, 199.99, CP_used_car<br/>
-<a href="#Output-517787604" onClick='toggleBox("Output-517787604", this, "Show output", "Hide output");'>Show output</a>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_monthly_total_payment_after_balloon_payment_off_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_monthly_total_payment_after_balloon_payment_off_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/26, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, YES, 20, 200, NO, 0, Limited Credit, YES, HPNR (Formula 3) - HPNR<br/>
+<a href="#Output-176691017" onClick='toggleBox("Output-176691017", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-517787604" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-517787604">
-<b>Clicked on Quote button </b> <br /><br/>
-<b>Selecting used vehicle with registration no. = GY19XAG and mileage = 15000</b> <br /><br/>
-<b>Vehicle selected</b> <br /><br/>
-<b>Paint option has been selected</b> <br /><br/>
-<b>Interior option has been selected</b> <br /><br/>
-<br>----------Screenshot---------<br><br/>
-<img src="D:\Acquisition\AMT_Automation_Acquisition\target\surefire-reports\html\failure_screenshots\aquisition_quotes_OTR_calculation_with_maintenance_test_02_03_2024_04_42_08.png" height="800" width="1000"><br/>
+<a href="#Output-176691017" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-176691017">
+<b>Actual Monthly Finance Payment after making balloon payment toggle button off is 2124.28</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Expected Monthly Finance Payment after making balloon payment toggle button off is 2124.275154959518</b> <br /><br/>
+<b></b> <br /><br/>
+<b>Monthly Total Payment verified after making balloon payment toggle button off</b> <br /><br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;p _ngcontent-rrh-c3=&quot;&quot; class=&quot;text-center&quot; style=&quot; border: 1px solid white;&quot;&gt;...&lt;/p&gt; is not clickable at point (964, 207). Other element would receive the click: &lt;div _ngcontent-rrh-c0=&quot;&quot; class=&quot;loader_div&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=122.0.6261.95)
-Build info: version: &apos;4.1.0&apos;, revision: &apos;87802e897b&apos;
-System info: host: &apos;DSK-4052&apos;, ip: &apos;172.16.1.80&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3912191f23c0b78e90800eab2b586692, clickElement {id=70396F03DC7F073B8E0088A498912BFA_element_451}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64528}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64528/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (3912191f23c0b78e90800eab2b586692)] -&gt; xpath: (//p[contains(text(),&apos; Contract Purchase&apos;)])[1]]
-Session ID: 3912191f23c0b78e90800eab2b586692
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-	at com.amt.testUtil.Click.on(Click.java:22)
-	at com.amt.pages.ContractTypesAndOTRPages.ContractTypesAndOTR_CP_CP_Page.contractTypes_selection_and_OTR_calculation(ContractTypesAndOTR_CP_CP_Page.java:141)
-	at usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_OTR_calculation_with_maintenance_test(Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.java:55)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace517787604", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace517787604'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;p _ngcontent-rrh-c3=&quot;&quot; class=&quot;text-center&quot; style=&quot; border: 1px solid white;&quot;&gt;...&lt;/p&gt; is not clickable at point (964, 207). Other element would receive the click: &lt;div _ngcontent-rrh-c0=&quot;&quot; class=&quot;loader_div&quot;&gt;...&lt;/div&gt;
-  (Session info: chrome=122.0.6261.95)
-Build info: version: &apos;4.1.0&apos;, revision: &apos;87802e897b&apos;
-System info: host: &apos;DSK-4052&apos;, ip: &apos;172.16.1.80&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;19.0.1&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3912191f23c0b78e90800eab2b586692, clickElement {id=70396F03DC7F073B8E0088A498912BFA_element_451}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.85 (3f98d690ad7e..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64528}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64528/devtoo..., se:cdpVersion: 122.0.6261.95, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (3912191f23c0b78e90800eab2b586692)] -&gt; xpath: (//p[contains(text(),&apos; Contract Purchase&apos;)])[1]]
-Session ID: 3912191f23c0b78e90800eab2b586692
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-	at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-	at com.amt.testUtil.Click.on(Click.java:22)
-	at com.amt.pages.ContractTypesAndOTRPages.ContractTypesAndOTR_CP_CP_Page.contractTypes_selection_and_OTR_calculation(ContractTypesAndOTR_CP_CP_Page.java:141)
-	at usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_OTR_calculation_with_maintenance_test(Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.java:55)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>483</td>
-<td>usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
+<td></td>
+<td>21</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test@15bb5034</td></tr>
 <tr>
-<td title='usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_quote_summary_values_verification_with_maintenance_test()'><b>aquisition_quotes_quote_summary_values_verification_with_maintenance_test</b><br>Test class: usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test</td>
-<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_quote_summary_values_verification_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1579650597", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1579650597'><pre>java.lang.Throwable: Method Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_quote_summary_values_verification_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:6, instance:usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c</td></tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/26, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, YES, 20, 200, NO, 0, Limited Credit, YES, HPNR (Formula 3) - HPNR<br/>
+<a href="#Output-1445055211" onClick='toggleBox("Output-1445055211", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1445055211" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1445055211">
+<b>*************OTR Calulation on quote summary page has been started************</b> <br /><br/>
+<b>Reading values from OTR calculation -Quote Summary Page</b> <br /><br/>
+<b>OTR_calculation_cost_otr_price_from_screen =58535.0</b> <br /><br/>
+<b>OTR_calculation_cost_price_ex_vat_and_rfl_from_screen =48237.5</b> <br /><br/>
+<b>OTR_calculation_otr_vat_from_screen =9647.5</b> <br /><br/>
+<b>OTR_calculation_otr_rfl_and_frf_from_screen =650.0</b> <br /><br/>
+<b>OTR price compared</b> <br /><br/>
+<b>Cost price ex vat and rfl compared</b> <br /><br/>
+<b>VAT compared</b> <br /><br/>
+<b>RFL & FRF compared</b> <br /><br/>
+<b>*************Holding Cost Calulation on quote summary page has been started************</b> <br /><br/>
+<b>Reading values from Holding Cost summary -Quote Summary Page</b> <br /><br/>
+<b>holding_cost_terms_from_screen33.0</b> <br /><br/>
+<b>holding_cost_miles_per_annum_from_screen5000.0</b> <br /><br/>
+<b>holding_cost_monthly_finance_cost_from_screen500.36</b> <br /><br/>
+<b>holding_cost_monthly_maint_cost_used_from_screen18.31</b> <br /><br/>
+<b>holding_cost_CAP_monthly_maint_cost_from_screen18.31</b> <br /><br/>
+<b>holding_cost_total_monthly_holding_cost_from_screen =518.67</b> <br /><br/>
+<b>terms compared</b> <br /><br/>
+<b>Miles per annum compared</b> <br /><br/>
+<b>Finance cost compared</b> <br /><br/>
+<b>Maint cost used  compared</b> <br /><br/>
+<b>CAP monthly cost compared</b> <br /><br/>
+<b>Total Monthly Holding Cost compared</b> <br /><br/>
+<b>*************Customer Quote Calulation on quote summary page has been started************</b> <br /><br/>
+<b>Terms found OK</b> <br /><br/>
+<b>miles found OK</b> <br /><br/>
+<b>Basic Cash Price found OK</b> <br /><br/>
+<b>VAT found OK</b> <br /><br/>
+<b>Non VAT Items Value found OK</b> <br /><br/>
+<b>Total Cash Price found OK</b> <br /><br/>
+<b>Order Deposit found OK</b> <br /><br/>
+<b>Finance Deposit found OK</b> <br /><br/>
+<b>Total Deposit found OK</b> <br /><br/>
+<b>Balance to Finance found OK</b> <br /><br/>
+<b>Finance Charges - found OK</b> <br /><br/>
+<b>Document Fee - found OK</b> <br /><br/>
+<b>Balance Payable - found OK</b> <br /><br/>
+<b>Option To Purchase Fee - found OK</b> <br /><br/>
+<b>Initial Cash Payment - found OK</b> <br /><br/>
+<b>Followed By months - found OK</b> <br /><br/>
+<b>Monthly Finance Payment - found OK</b> <br /><br/>
+<b>Monthly Maint Payment - found OK</b> <br /><br/>
+<b>Monthly Total Payment - found OK</b> <br /><br/>
+<b>Balloon Value - found OK</b> <br /><br/>
+<b>Final Payment - found OK</b> <br /><br/>
+<b>Pence Per Excess Mile Maintenance - found OK</b> <br /><br/>
+<b>Vehicle Commission - found OK</b> <br /><br/>
+<b>Default Finance Commission - found OK</b> <br /><br/>
+<b>Maintenance Commission - found OK</b> <br /><br/>
+<b>Document Fee Commission - found OK</b> <br /><br/>
+<b>Total Commission - found OK</b> <br /><br/>
+<b>*************Configuration Values Verification on quote summary page has been started************</b> <br /><br/>
+<b>Base Interest Rate found OK</b> <br /><br/>
+<b>Finance Margin found OK</b> <br /><br/>
+<b>Deductions found OK</b> <br /><br/>
+<b>Additional Margin found OK</b> <br /><br/>
+<b>Total Margin found OK</b> <br /><br/>
+<b>Default Broker Margin percentage found OK</b> <br /><br/>
+<b>Customer Interest Rate found OK</b> <br /><br/>
+<b>Maintenance Margin found OK</b> <br /><br/>
+<b>Document Fee Margin found OK</b> <br /><br/>
+<b>Default Broker Margin found OK</b> <br /><br/>
+<b>*********Customer Quote generated successfully and Quote_ref_no is=CCB89829</b> <br /><br/>
+<b>*************OTR Calulation on quote summary page has been started************</b> <br /><br/>
+<b>Reading values from OTR calculation -Quote Summary Page</b> <br /><br/>
+<b>OTR_calculation_cost_otr_price_from_screen =58535.0</b> <br /><br/>
+<b>OTR_calculation_cost_price_ex_vat_and_rfl_from_screen =48237.5</b> <br /><br/>
+<b>OTR_calculation_otr_vat_from_screen =9647.5</b> <br /><br/>
+<b>OTR_calculation_otr_rfl_and_frf_from_screen =650.0</b> <br /><br/>
+<b>OTR price compared</b> <br /><br/>
+<b>Cost price ex vat and rfl compared</b> <br /><br/>
+<b>VAT compared</b> <br /><br/>
+<b>RFL & FRF compared</b> <br /><br/>
+<b>*************Holding Cost Calulation on quote summary page has been started************</b> <br /><br/>
+<b>Reading values from Holding Cost summary -Quote Summary Page</b> <br /><br/>
+<b>holding_cost_terms_from_screen33.0</b> <br /><br/>
+<b>holding_cost_miles_per_annum_from_screen5000.0</b> <br /><br/>
+<b>holding_cost_monthly_finance_cost_from_screen500.36</b> <br /><br/>
+<b>holding_cost_monthly_maint_cost_used_from_screen18.31</b> <br /><br/>
+<b>holding_cost_CAP_monthly_maint_cost_from_screen18.31</b> <br /><br/>
+<b>holding_cost_total_monthly_holding_cost_from_screen =518.67</b> <br /><br/>
+<b>terms compared</b> <br /><br/>
+<b>Miles per annum compared</b> <br /><br/>
+<b>Finance cost compared</b> <br /><br/>
+<b>Maint cost used  compared</b> <br /><br/>
+<b>CAP monthly cost compared</b> <br /><br/>
+<b>Total Monthly Holding Cost compared</b> <br /><br/>
+<b>*************Customer Quote Calulation on quote summary page has been started************</b> <br /><br/>
+<b>Terms found OK</b> <br /><br/>
+<b>miles found OK</b> <br /><br/>
+<b>Basic Cash Price found OK</b> <br /><br/>
+<b>VAT found OK</b> <br /><br/>
+<b>Non VAT Items Value found OK</b> <br /><br/>
+<b>Total Cash Price found OK</b> <br /><br/>
+<b>Order Deposit found OK</b> <br /><br/>
+<b>Finance Deposit found OK</b> <br /><br/>
+<b>Total Deposit found OK</b> <br /><br/>
+<b>Balance to Finance found OK</b> <br /><br/>
+<b>Finance Charges - found OK</b> <br /><br/>
+<b>Document Fee - found OK</b> <br /><br/>
+<b>Balance Payable - found OK</b> <br /><br/>
+<b>Option To Purchase Fee - found OK</b> <br /><br/>
+<b>Initial Cash Payment - found OK</b> <br /><br/>
+<b>Followed By months - found OK</b> <br /><br/>
+<b>Monthly Finance Payment - found OK</b> <br /><br/>
+<b>Monthly Maint Payment - found OK</b> <br /><br/>
+<b>Monthly Total Payment - found OK</b> <br /><br/>
+<b>Balloon Value - found OK</b> <br /><br/>
+<b>Final Payment - found OK</b> <br /><br/>
+<b>Pence Per Excess Mile Maintenance - found OK</b> <br /><br/>
+<b>Vehicle Commission - found OK</b> <br /><br/>
+<b>Default Finance Commission - found OK</b> <br /><br/>
+<b>Maintenance Commission - found OK</b> <br /><br/>
+<b>Document Fee Commission - found OK</b> <br /><br/>
+<b>Total Commission - found OK</b> <br /><br/>
+<b>*************Configuration Values Verification on quote summary page has been started************</b> <br /><br/>
+<b>Base Interest Rate found OK</b> <br /><br/>
+<b>Finance Margin found OK</b> <br /><br/>
+<b>Deductions found OK</b> <br /><br/>
+<b>Additional Margin found OK</b> <br /><br/>
+<b>Total Margin found OK</b> <br /><br/>
+<b>Default Broker Margin percentage found OK</b> <br /><br/>
+<b>Customer Interest Rate found OK</b> <br /><br/>
+<b>Maintenance Margin found OK</b> <br /><br/>
+<b>Document Fee Margin found OK</b> <br /><br/>
+<b>Default Broker Margin found OK</b> <br /><br/>
+<b>*************Editing Base Interest Rate and Verifying  Values on quote summary page has been started************</b> <br /><br/>
+<b>Base Interest Rate changed to 7.0 %</b> <br /><br/>
+<b>Holding Cost after changing Base Int. Rate -  found OK</b> <br /><br/>
+<b>Monthly Finance Rental after changing Base Int. Rate -  found OK</b> <br /><br/>
+<b>Monthly Maint Rental after changing Base Int. Rate -  found OK</b> <br /><br/>
+<b>Finance Charges - found OK</b> <br /><br/>
+<b>Balance Payable - found OK</b> <br /><br/>
+<b>Base Interest Rate changed to default</b> <br /><br/>
+<b>*************Editing Customer Rate Over Base and Verifying Values on quote summary page has been started************</b> <br /><br/>
+<b>Customer Base Over Rate changed to 5.0 %</b> <br /><br/>
+<b>Monthly Finance Rental after changing Customer Base Over Rate -  found OK</b> <br /><br/>
+<b>Finance Charges - found OK</b> <br /><br/>
+<b>Balance Payable - found OK</b> <br /><br/>
+<b>*************Editing Maintenance Margin and Verifying Values on quote summary page has been started************</b> <br /><br/>
+<b>Maintenance margin changed to 30 %</b> <br /><br/>
+<b>Monthly Maint Rental after changing Maintenance margin -  found OK</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>247</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test@15bb5034</td></tr>
 <tr>
-<td title='usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test()'><b>aquisition_quotes_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test</b><br>Test class: usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test</td>
-<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace343534938", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace343534938'><pre>java.lang.Throwable: Method Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c</td></tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_after_discount_calculations_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_after_discount_calculations_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/26, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, YES, 20, 200, NO, 0, Limited Credit, YES, HPNR (Formula 3) - HPNR<br/>
+<a href="#Output-17014200" onClick='toggleBox("Output-17014200", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-17014200" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-17014200">
+<b>*********Calculations for On Road Price has been started***********</b> <br /><br/>
+<b>Started getting On screen values from after discount table </b> <br /><br/>
+<b>Manufacture_delivery_charges =550.00</b> <br /><br/>
+<b>Road_tax_first_year =585.00</b> <br /><br/>
+<b>First_registration_fee =65.00</b> <br /><br/>
+<b>Rebate =0.00</b> <br /><br/>
+<b>Writing After discount values to excel has been started</b> <br /><br/>
+<b>Writing After discount values to excel has been completed</b> <br /><br/>
+<b>Reading On Road Price for invoice from excel has been Started</b> <br /><br/>
+<b>Reading On Road Price for invoice from excel has been completed</b> <br /><br/>
+<b>Expected on the road price from excel is =58535.0</b> <br /><br/>
+<b>Actual on the road price from screen is =58535.00</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test@15bb5034</td></tr>
 <tr>
-<td title='usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_customer_quote_part_exchange_value_edit_check_with_maintenance_test()'><b>aquisition_quotes_customer_quote_part_exchange_value_edit_check_with_maintenance_test</b><br>Test class: usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test</td>
-<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_customer_quote_part_exchange_value_edit_check_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1026471930", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1026471930'><pre>java.lang.Throwable: Method Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_customer_quote_part_exchange_value_edit_check_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c</td></tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_OTR_calculation_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_OTR_calculation_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/26, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, YES, 20, 200, NO, 0, Limited Credit, YES, HPNR (Formula 3) - HPNR<br/>
+<a href="#Output-295937119" onClick='toggleBox("Output-295937119", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-295937119" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-295937119">
+<b>Clicked on Quote button </b> <br /><br/>
+<b>Manufacture =AUDI has been selected</b> <br /><br/>
+<b>Model range =A7 has been selected</b> <br /><br/>
+<b>Vehicle has been selected</b> <br /><br/>
+<b>Paint option has been selected</b> <br /><br/>
+<b>Interior option has been selected</b> <br /><br/>
+<b> Acquisition Contract type option = Hire Purchase Non regulated (HPNR) has been selected</b> <br /><br/>
+<b> Customer Contract type option = Hire Purchase Non regulated (HPNR) has been selected</b> <br /><br/>
+<b>Getting Basic Price- Vehicle value is  =46854.17</b> <br /><br/>
+<b>Getting Basic Price - Paint  value is  =0.00</b> <br /><br/>
+<b>Getting  Basic Price - Options value is   =833.33</b> <br /><br/>
+<b>Getting Discount- Vehicle value is  =0.00</b> <br /><br/>
+<b>Getting   Discount - Paint value is   =0.00</b> <br /><br/>
+<b>Getting  Discount- Options value is   =0.00</b> <br /><br/>
+<b>Getting Additional Discount- Vehicle value is  =0.00</b> <br /><br/>
+<b>Getting  Additional Discount - paint value is  =0.00</b> <br /><br/>
+<b>Getting  Additional Discount - Options value is  =0.00</b> <br /><br/>
+<b>Writing OTR table values to excel sheet -Started </b> <br /><br/>
+<b>Writing OTR table values to excel sheet -Completed </b> <br /><br/>
+<b>Reading Subtotal After Discount from excel sheet -Started </b> <br /><br/>
+<b>Reading Subtotal After Discount from excel sheet -Started </b> <br /><br/>
+<b>Subtotal After Discount from excel sheet is =47687.5</b> <br /><br/>
+<b>Subtotal after discount actual value from screen =£ 47,687.50</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>110</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test@15bb5034</td></tr>
 <tr>
-<td title='usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_holding_cost_calculations_with_maintenance_test()'><b>aquisition_quotes_holding_cost_calculations_with_maintenance_test</b><br>Test class: usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test</td>
-<td><div><pre>java.lang.Throwable: Method Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_holding_cost_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1973372401", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1973372401'><pre>java.lang.Throwable: Method Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test.aquisition_quotes_holding_cost_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c] depends on not successfully finished methods
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:102)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>usedCar.CP.Acquisition_Quotes_CP_CP_used_car_with_maintenance_Test@7d0b7e3c</td></tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_holding_cost_calculations_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_holding_cost_calculations_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/26, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, YES, 20, 200, NO, 0, Limited Credit, YES, HPNR (Formula 3) - HPNR<br/>
+<a href="#Output-1390599598" onClick='toggleBox("Output-1390599598", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1390599598" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1390599598">
+<b>***********Entered in holding cost page ***********</b> <br /><br/>
+<b>***********Holding Cost Calculations has been Started*************</b> <br /><br/>
+<b>Writing Holding Cost Summary values to excel has been completed</b> <br /><br/>
+<b>Reading Monthly Holding Cost value from excel</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_screen =518.67</b> <br /><br/>
+<b>Total_monthly_holding_cost_from_excel =518.6718181818181</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>33</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test@15bb5034</td></tr>
+<tr>
+<td title='newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test.aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test()'><b>aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test</b><br>Test class: newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test<br>Parameters: AUDI, A7, REF001, 05/12/26, 33, 5000, 1000, 200, 12, 500, 6000, 20, 10000, 6000, 2000, 1000, 0, 199.99, 0, YES, 20, 200, NO, 0, Limited Credit, YES, HPNR (Formula 3) - HPNR<br/>
+<a href="#Output-865296429" onClick='toggleBox("Output-865296429", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-865296429" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-865296429">
+<b>***********Entered in Customer Quote page ***********</b> <br /><br/>
+<b>Matrix credit type Limited Credit has been selected</b> <br /><br/>
+<b>Writing configuration values from property file to Excel for customer quote calculation -started</b> <br /><br/>
+<b>Writing configuration values from property file to Excel for customer quote calculation -completed</b> <br /><br/>
+<b>Actual Monthly Finance Payment from screen is 2001.86</b> <br /><br/>
+<b>Writing screen values to Excel for customer quote calculation -started</b> <br /><br/>
+<b>Writing screen values to Excel for customer quote calculation -completed</b> <br /><br/>
+<b>Expected Monthly Finance Rental from excel is 2001.8603798080187</b> <br /><br/>
+<b>Actual Monthly Maintenance Payment from screen is 22.66</b> <br /><br/>
+<b>Writing screen values to Excel for customer quote calculation -completed</b> <br /><br/>
+<b>Expected Monthly Maintenance Rental from excel is 22.656375</b> <br /><br/>
+</div>
+</td>
+<td></td>
+<td>52</td>
+<td>newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_quote_addition_with_maintenance_Test@15bb5034</td></tr>
 </table><p>
 </body>
 </html>
