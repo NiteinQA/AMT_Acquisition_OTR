@@ -224,7 +224,9 @@ public class QuoteSummary_CP_BCH_Page extends TestBase {
 
 		Thread.sleep(2000);
 
-		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);
+		
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -2633,6 +2635,7 @@ try {
 		
 		driver.navigate().refresh();
 		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 	}

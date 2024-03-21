@@ -1617,6 +1617,7 @@ public class QuoteSummary_BCH_BCH_Page extends TestBase {
 		obj_quote_summary.save_quote();	
 		
 		Click.on(driver, quote_summary_customer_quote_summary_value_verification, 30);
+		
 		Click.on(driver, quote_summary_configuration, 30);
 
 		ExplicitWait.visibleElement(driver, quote_summary_monthly_finance_rental, 30);

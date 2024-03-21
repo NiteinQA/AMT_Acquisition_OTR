@@ -691,6 +691,8 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 		LO.print("Matrix credit type " + matrix_credit_type + " has been selected");
 		System.out.println("Matrix credit type " + matrix_credit_type + " has been selected");
 
+		Thread.sleep(7000);
+		
 		Click.on(driver, customer_quote_maintenance_toggle_button, 30);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
