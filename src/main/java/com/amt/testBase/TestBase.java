@@ -136,7 +136,7 @@ public class TestBase {
 
 
 
-	@AfterClass
+	//@AfterClass
 	public void tearDown() {
 		driver.close();
 		System.out.println("");
@@ -160,8 +160,8 @@ public class TestBase {
 //    }
     
     
-	//SendEmail se = new SendEmail();
-	//		se.send_email();		
+//	SendEmail se = new SendEmail();
+//			se.send_email();		
 	}
 
 

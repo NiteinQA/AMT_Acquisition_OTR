@@ -90,6 +90,9 @@ System.out.println("Email sending process started");
       MimeBodyPart attachmentBodyPart1 = new MimeBodyPart();
       attachmentBodyPart1.attachFile(filename1);
       multipart.addBodyPart(attachmentBodyPart1);
+      
+      
+      
 
       // Attach file 2
       MimeBodyPart attachmentBodyPart2 = new MimeBodyPart();
