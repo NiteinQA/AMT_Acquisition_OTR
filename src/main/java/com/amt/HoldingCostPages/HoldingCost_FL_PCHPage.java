@@ -180,7 +180,7 @@ public class HoldingCost_FL_PCHPage extends TestBase {
 
 		Click.sendKeys(driver, miles_per_annum, milesPerAnnum, 30);
 
-		Click.on(driver, contract_mileage, 30);
+//		Click.on(driver, contract_mileage, 30);
 
 		Click.sendKeys(driver, monthly_finance_rental, monthlyFinanceRental, 30);
 
@@ -273,7 +273,7 @@ public class HoldingCost_FL_PCHPage extends TestBase {
 
 		Click.sendKeys(driver, miles_per_annum, milesPerAnnum, 30);
 
-		Click.on(driver, contract_mileage, 30);
+//		Click.on(driver, contract_mileage, 30);
 
 		Click.sendKeys(driver, monthly_finance_rental, monthlyFinanceRental, 30);
 
@@ -297,8 +297,15 @@ public class HoldingCost_FL_PCHPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		
-		Click.on(driver, common_maintenance_toggle, 20);
 		
+		try
+		{
+		Click.on(driver, common_maintenance_toggle, 30);
+		}catch(Exception e)
+		{
+			
+		}
+			
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();

@@ -45,15 +45,20 @@ public class LoginPage extends TestBase {
 		Thread.sleep(2000);
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
 
+		ExplicitWait.visibleElement(driver, email,20);
 		
+		Thread.sleep(2000);
 		
 		HelperClass.highlightElement(driver,email);
-		email.sendKeys(prop.getProperty("username"));			
+		email.sendKeys(prop.getProperty("username"));
 		
+		ExplicitWait.visibleElement(driver, password,20);
+
+		Thread.sleep(2000);
 		HelperClass.highlightElement(driver,password);
 		password.sendKeys(prop.getProperty("password"));
 
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 
 		
 		ExplicitWait.clickableElement(driver, submit, 30);

@@ -196,7 +196,7 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 
 		Click.sendKeys(driver, miles_per_annum, milesPerAnnum, 30);
 
-		Click.on(driver, contract_mileage, 30);
+//		Click.on(driver, contract_mileage, 30);
 
 		Click.sendKeys(driver, cash_deposit, cashDeposit, 30);
 
@@ -277,7 +277,7 @@ public class HoldingCost_HPNR_BCHPage extends TestBase {
 
 		Click.sendKeys(driver, miles_per_annum, milesPerAnnum, 30);
 
-		Click.on(driver, contract_mileage, 30);
+		//Click.on(driver, contract_mileage, 30);
 
 		Click.sendKeys(driver, cash_deposit, cashDeposit, 30);
 

@@ -329,7 +329,7 @@ public class CustomerQuotePageBrokerHPRPage extends TestBase {
 //
 //		Click.sendKeys(driver, miles_per_annum, milesperannum, 60);
 //
-//		Click.on(driver, contract_miles, 60);
+//		//Click.on(driver, contract_miles, 60);
 //		
 //		if(i==2) {Click.sendKeys(driver, initial_finance_rental , initialFinanceRental , 60);
 //		          Click.sendKeys(driver, initial_maintenance_rental , initialMaintenanceRental , 60);

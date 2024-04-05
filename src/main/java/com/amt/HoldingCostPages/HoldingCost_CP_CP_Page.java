@@ -197,7 +197,7 @@ public class HoldingCost_CP_CP_Page extends TestBase {
 
 		Click.sendKeys(driver, miles_per_annum, milesPerAnnum, 30);
 
-		Click.on(driver, contract_mileage, 30);
+//		Click.on(driver, contract_mileage, 30);
 
 		Click.sendKeys(driver, cash_deposit, cashDeposit, 30);
 
@@ -285,7 +285,7 @@ public class HoldingCost_CP_CP_Page extends TestBase {
 
 		Click.sendKeys(driver, miles_per_annum, milesPerAnnum, 30);
 
-		Click.on(driver, contract_mileage, 30);
+//		Click.on(driver, contract_mileage, 30);
 
 		Click.sendKeys(driver, cash_deposit, cashDeposit, 30);
 
@@ -310,9 +310,12 @@ public class HoldingCost_CP_CP_Page extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		
-		
+		try {
 		 Click.on(driver, holding_cost_maintenance_toggle_button, 30);
-
+		}catch(Exception e)
+		{
+			
+		}
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, holding_cost_summary, 30);

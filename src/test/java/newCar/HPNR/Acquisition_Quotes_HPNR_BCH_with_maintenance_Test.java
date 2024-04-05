@@ -111,10 +111,10 @@ public class Acquisition_Quotes_HPNR_BCH_with_maintenance_Test extends TestBase 
 		System.out.println("");
 		System.out.println("");
 
-//		boolean otr_price_check = obj_contract_types_and_OTR_page.verify_other_support_calculations(other_support_value,
-//				sheet_name);
-//
-//		Assert.assertTrue(otr_price_check);
+		boolean otr_price_check = obj_contract_types_and_OTR_page.verify_other_support_calculations(other_support_value,
+				sheet_name);
+
+		Assert.assertTrue(otr_price_check);
 
 		System.out.println("");
 		System.out.println("");
