@@ -436,7 +436,9 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 
 		Thread.sleep(2000);
 
-		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);
+		
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 

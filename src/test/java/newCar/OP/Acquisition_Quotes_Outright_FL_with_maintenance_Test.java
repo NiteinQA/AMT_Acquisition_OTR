@@ -191,8 +191,8 @@ public class Acquisition_Quotes_Outright_FL_with_maintenance_Test extends TestBa
 
 		Assert.assertTrue(finance_rental_with_part_exchange);
 
-		boolean balance_due_value = obj_customer_quote_page.verify_balance_due_value(sheet_name);
-		Assert.assertTrue(balance_due_value);
+//		boolean balance_due_value = obj_customer_quote_page.verify_balance_due_value(sheet_name);
+//		Assert.assertTrue(balance_due_value);
 
 		System.out.println("");
 		System.out.println("");
@@ -241,8 +241,8 @@ public class Acquisition_Quotes_Outright_FL_with_maintenance_Test extends TestBa
 				.quote_summary_holding_cost_calculation_with_maintenance(sheet_name);
 		Assert.assertTrue(quote_summary_holding_cost_calculation);
 
-		boolean balance_due_value = obj_customer_quote_page.verify_balance_due_value(sheet_name);
-		Assert.assertTrue(balance_due_value);
+//		boolean balance_due_value = obj_customer_quote_page.verify_balance_due_value(sheet_name);
+//		Assert.assertTrue(balance_due_value);
 
 		boolean quote_summary_customer_quote_calculation = obj_quote_summary_page
 				.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name);

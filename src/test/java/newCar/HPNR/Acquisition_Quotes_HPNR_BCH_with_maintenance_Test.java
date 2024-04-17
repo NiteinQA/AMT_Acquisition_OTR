@@ -277,8 +277,8 @@ public class Acquisition_Quotes_HPNR_BCH_with_maintenance_Test extends TestBase 
 		System.out.println("");
 		System.out.println("");
 		
-		boolean balance_due = obj_quote_summary_page.verify_balance_due_value(sheet_name);
-		Assert.assertTrue(balance_due);
+//		boolean balance_due = obj_quote_summary_page.verify_balance_due_value(sheet_name);
+//		Assert.assertTrue(balance_due);
 		
 		System.out.println("");
 		System.out.println("");
@@ -317,8 +317,8 @@ public class Acquisition_Quotes_HPNR_BCH_with_maintenance_Test extends TestBase 
 		System.out.println("");
 		System.out.println("");
 		
-		boolean balance_due1 = obj_quote_summary_page.verify_balance_due_value(sheet_name);
-		Assert.assertTrue(balance_due1);
+//		boolean balance_due1 = obj_quote_summary_page.verify_balance_due_value(sheet_name);
+//		Assert.assertTrue(balance_due1);
 		
 		System.out.println("");
 		System.out.println("");

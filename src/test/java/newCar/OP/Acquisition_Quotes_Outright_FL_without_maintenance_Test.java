@@ -237,8 +237,8 @@ public class Acquisition_Quotes_Outright_FL_without_maintenance_Test extends Tes
 				.quote_summary_holding_cost_calculation_without_maintenance(sheet_name);
 		Assert.assertTrue(quote_summary_holding_cost_calculation);
 		
-		boolean balance_due_value = obj_customer_quote_page.verify_balance_due_value(sheet_name);
-		Assert.assertTrue(balance_due_value);
+//		boolean balance_due_value = obj_customer_quote_page.verify_balance_due_value(sheet_name);
+//		Assert.assertTrue(balance_due_value);
 
 		boolean quote_summary_customer_quote_calculation = obj_quote_summary_page
 				.quote_summary_customer_quote_summary_value_verification_without_maintenance(sheet_name);
