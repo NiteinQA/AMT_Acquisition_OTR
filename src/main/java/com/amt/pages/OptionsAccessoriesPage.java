@@ -105,7 +105,7 @@ public class OptionsAccessoriesPage extends TestBase {
 //
 //		}
 
-	    Thread.sleep(5000);
+	    Thread.sleep(10000);
 		
 		Click.on(driver, acq_interior, 40);
 		

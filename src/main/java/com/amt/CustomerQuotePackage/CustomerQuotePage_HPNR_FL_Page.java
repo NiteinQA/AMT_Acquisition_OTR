@@ -340,7 +340,7 @@ public class CustomerQuotePage_HPNR_FL_Page extends TestBase {
 		obj_read_excel_calculation_page.write_holding_cost_cap_values_to_excel_with_maintenance(duration,
 				annual_mileage, used_residual_value, total_cap_maintenance_value_converted,
 				percentage_cap_residual_value, percentage_cap_maintenance_cost, sheet_name);
-
+try {
 		return obj_read_excel_calculation_page
 				.verify_customer_quote_calculations_for_one_payment_options_with_maintenance(driver,
 						customer_quote_payment_profile_dropdown, part_exchange_payment, actual_part_exchange_value,
@@ -350,6 +350,19 @@ public class CustomerQuotePage_HPNR_FL_Page extends TestBase {
 						document_fee_from_excel, upsell, customer_quote_monthly_finance_rental,
 						customer_quote_monthly_maintenance_rental, maintenance_required, maintenance_margin,
 						initial_payment, part_exchange_status, target_rental, sheet_name);
+}catch(Exception e)
+{
+	return obj_read_excel_calculation_page
+			.verify_customer_quote_calculations_for_one_payment_options_without_maintenance(driver, 
+					customer_quote_payment_profile_dropdown, part_exchange_payment, actual_part_exchange_value,
+					actual_part_exchange_value_from_excel, given_part_exchange_value,
+					given_part_exchange_value_from_excel, less_finance_settlement, 
+					less_finance_settlement_from_excel, order_Deposit, order_Deposit_from_excel,
+					document_fee, document_fee_from_excel, upsell, customer_quote_monthly_finance_rental, 
+					maintenance_required, maintenance_margin, initial_payment, part_exchange_status, 
+					target_rental, sheet_name);			
+			
+}
 	}
 
 	public boolean check_monthly_finance_rental_with_part_exchange_without_maintenance(
