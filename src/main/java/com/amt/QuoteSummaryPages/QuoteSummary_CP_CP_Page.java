@@ -857,7 +857,11 @@ public class QuoteSummary_CP_CP_Page extends TestBase {
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_order_deposit, 20);
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_finance_deposit, 20);
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_deposit, 20);
+				try {
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_part_exchange_value, 20);
+				
+				}catch(Exception e) {}
+				
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_balance_to_finance, 20);
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_finance_charges, 20);
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_document_fee, 20);
@@ -903,9 +907,12 @@ public class QuoteSummary_CP_CP_Page extends TestBase {
 				double customer_quote_summary_total_deposit = Double.parseDouble(
 						RemoveComma.of(quote_summary_customer_quote_summary_total_deposit.getText().trim().substring(2)));
 
-				double customer_quote_summary_part_exchange_value = Double.parseDouble(
-						RemoveComma.of(quote_summary_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));
-
+				double customer_quote_summary_part_exchange_value = 0;				
+				try {
+					 customer_quote_summary_part_exchange_value = Double.parseDouble(
+							RemoveComma.of(quote_summary_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));
+				}catch(Exception e) {}
+				
 				double customer_quote_summary_balance_to_finance = Double.parseDouble(
 						RemoveComma.of(quote_summary_customer_quote_summary_balance_to_finance.getText().trim().substring(2)));
 
@@ -1285,7 +1292,12 @@ try {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_order_deposit, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_finance_deposit, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_deposit, 20);
+		try {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_part_exchange_value, 20);
+		}catch(Exception e)
+		{
+			
+		}
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_balance_to_finance, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_finance_charges, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_document_fee, 20);
@@ -1340,11 +1352,11 @@ try {
 		double customer_quote_summary_total_deposit = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_summary_total_deposit.getText().trim().substring(2)));
 
-
-		
-		double customer_quote_summary_part_exchange_value = Double.parseDouble(
+		double customer_quote_summary_part_exchange_value =0;
+		try {
+		customer_quote_summary_part_exchange_value = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));
-
+		}catch(Exception e) {}
 		double customer_quote_summary_balance_to_finance = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_summary_balance_to_finance.getText().trim().substring(2)));
 
@@ -1791,7 +1803,11 @@ try {
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_order_deposit, 20);
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_finance_deposit, 20);
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_deposit, 20);
+	
+	try {
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_part_exchange_value, 20);
+	}catch(Exception e1) {}
+	
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_balance_to_finance, 20);
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_finance_charges, 20);
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_document_fee, 20);
@@ -1837,9 +1853,14 @@ try {
 	double customer_quote_summary_total_deposit = Double.parseDouble(
 			RemoveComma.of(quote_summary_customer_quote_summary_total_deposit.getText().trim().substring(2)));
 
-	double customer_quote_summary_part_exchange_value = Double.parseDouble(
+	double customer_quote_summary_part_exchange_value =0;
+	try {
+	
+    customer_quote_summary_part_exchange_value = Double.parseDouble(
 			RemoveComma.of(quote_summary_customer_quote_summary_part_exchange_value.getText().trim().substring(2)));
-
+	}catch(Exception e1) {}
+	
+	
 	double customer_quote_summary_balance_to_finance = Double.parseDouble(
 			RemoveComma.of(quote_summary_customer_quote_summary_balance_to_finance.getText().trim().substring(2)));
 

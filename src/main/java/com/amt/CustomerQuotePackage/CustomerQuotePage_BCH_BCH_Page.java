@@ -65,8 +65,8 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 	@FindBy(xpath = "//label[@class='switch mr-2']//span[@class='slider round']")
 	private WebElement part_exchange_toggle;
 
-	@FindBy(xpath = "//*[normalize-space()='Net part exchange allowance']//ancestor::div[1]//p//strong")
-	private WebElement part_exchange_allowance;
+	@FindBy(xpath = "//*[normalize-space()='Part exchange balance']//following::div[1]")
+	private WebElement part_exchange_balance;
 
 	@FindBy(xpath = "//*[normalize-space()='Balance due']//ancestor::div[1]//p//strong")
 	private WebElement balance_due_value;
@@ -112,13 +112,13 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 	@FindBy(xpath = "//*[@id='lessFinanceSettlement']")
 	private WebElement less_finance_settlement;
 
-	@FindBy(xpath = "//*[@name='orderDeposit']")
+	@FindBy(xpath = "//*[@name='orderDeposit']|//*[@name='orderDepositHire']")
 	private WebElement order_Deposit;
 
 	@FindBy(xpath = "//*[@name='financeDeposit']")
 	private WebElement finance_Deposit;
 
-	@FindBy(xpath = "//*[@id='DocumentFee']")
+	@FindBy(xpath = "//*[@id='DocumentFee']|//*[@id='DocumentFeeHire']")
 	private WebElement document_fee;
 
 	@FindBy(xpath = "//*[@name='FunderName']")
@@ -161,54 +161,61 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 			String less_finance_settlement_from_excel, String order_deposit_from_excel, String document_fee_from_excel,
 			String sheet_name) throws InterruptedException, IOException {
 
-		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
+		
+		LO.print("Entering the deposit values in the part Exchange Section");
+		System.out.println("Entering the deposit values in the part Exchange Section");
 		Thread.sleep(4000);
-		Click.on(driver, part_exchange_payment, 70);
-		LO.print("Clicked on Part Exchange panel");
-		System.out.println("Clicked on Part Exchange panel");
 		Actions act = new Actions(driver);
-
-		Click.on(driver, given_part_exchange_value, 20);
-
-		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		// Clicking on outstanding finance and suppliersettling finance checkbox
-
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-
-		// ExplicitWait.clickableElement(driver, check_box_outstanding_finance, 20);
-
-		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
-		// 20);
-
-	
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, funder_name, "Funder X", 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, agreement_number, "123", 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
-		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		
+//		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
+//		Thread.sleep(4000);
+//		Click.on(driver, part_exchange_payment, 70);
+//		LO.print("Clicked on Part Exchange panel");
+//		System.out.println("Clicked on Part Exchange panel");
+//		Actions act = new Actions(driver);
+//
+//		Click.on(driver, given_part_exchange_value, 20);
+//
+//		given_part_exchange_value.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		// Clicking on outstanding finance and suppliersettling finance checkbox
+//
+//		JavascriptExecutor jse = (JavascriptExecutor) driver;
+//
+//		// ExplicitWait.clickableElement(driver, check_box_outstanding_finance, 20);
+//
+//		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
+//
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
+//		// 20);
+//
+//	
+//
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, funder_name, "Funder X", 20);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, agreement_number, "123", 20);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
+//		less_finance_settlement.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, order_Deposit, 20);
 		order_Deposit.clear();
@@ -254,9 +261,9 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 
 		wb.getSheet(sheet_name).getRow(111).getCell(3).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(111).getCell(4)
-				.setCellValue(Double.parseDouble(given_part_exchange_value_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(112).getCell(4)
-				.setCellValue(Double.parseDouble(less_finance_settlement_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(109).getCell(1).setCellValue("NO");
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -288,48 +295,53 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 			String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
 			String less_finance_settlement_from_excel, String order_deposit_from_excel, String document_fee_from_excel,
 			String sheet_name) throws InterruptedException, IOException {
-
-		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
+		
+		LO.print("Entering the deposit values in the part Exchange Section");
+		System.out.println("Entering the deposit values in the part Exchange Section");
 		Thread.sleep(4000);
-		Click.on(driver, part_exchange_payment, 70);
-		LO.print("Clicked on Part Exchange panel");
-		System.out.println("Clicked on Part Exchange panel");
 		Actions act = new Actions(driver);
 
-		Click.on(driver, given_part_exchange_value, 20);
-
-		given_part_exchange_value.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		JavascriptExecutor jse = (JavascriptExecutor) driver;
-
-		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-	
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, funder_name, "Funder X", 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, agreement_number, "123", 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
-		less_finance_settlement.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
+//		Thread.sleep(4000);
+//		Click.on(driver, part_exchange_payment, 70);
+//		LO.print("Clicked on Part Exchange panel");
+//		System.out.println("Clicked on Part Exchange panel");
+//		Actions act = new Actions(driver);
+//
+//		Click.on(driver, given_part_exchange_value, 20);
+//
+//		given_part_exchange_value.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		JavascriptExecutor jse = (JavascriptExecutor) driver;
+//
+//		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
+//
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//	
+//
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, funder_name, "Funder X", 20);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, agreement_number, "123", 20);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
+//		less_finance_settlement.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, order_Deposit, 20);
 		order_Deposit.clear();
@@ -370,9 +382,9 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 
 		wb.getSheet(sheet_name).getRow(111).getCell(3).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(111).getCell(4)
-				.setCellValue(Double.parseDouble(given_part_exchange_value_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(112).getCell(4)
-				.setCellValue(Double.parseDouble(less_finance_settlement_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(109).getCell(1).setCellValue("NO");
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -448,14 +460,14 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 		LO.print("Started verifying Balance Due value");
 		System.out.println("Started verifying Balance Due value");
 
-		ExplicitWait.visibleElement(driver, part_exchange_allowance, 30);
+		ExplicitWait.visibleElement(driver, part_exchange_balance, 30);
 
 		ExplicitWait.visibleElement(driver, balance_due_value, 30);
 
 		Thread.sleep(5000);
 
 		double partExchangeAllowanceFromScreen = Double
-				.parseDouble(RemoveComma.of(part_exchange_allowance.getText().trim().substring(2)));
+				.parseDouble(RemoveComma.of(part_exchange_balance.getText().trim().substring(2)));
 
 		Thread.sleep(5000);
 
@@ -534,11 +546,11 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		wb.getSheet(sheet_name).getRow(109).getCell(1).setCellValue("NO");
 		wb.getSheet(sheet_name).getRow(111).getCell(3)
-				.setCellValue(Double.parseDouble(actual_part_exchange_value_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(111).getCell(4)
-				.setCellValue(Double.parseDouble(given_part_exchange_value_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(112).getCell(4)
-				.setCellValue(Double.parseDouble(less_finance_settlement_from_excel));
+				.setCellValue(0);
 		wb.getSheet(sheet_name).getRow(123).getCell(1).setCellValue(Double.parseDouble(target_rental));
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));

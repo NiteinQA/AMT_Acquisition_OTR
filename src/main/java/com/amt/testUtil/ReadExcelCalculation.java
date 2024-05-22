@@ -1941,9 +1941,7 @@ public class ReadExcelCalculation extends TestBase {
 		List<WebElement> list_dropdown_options = select.getOptions();
 		String dropdown_option = list_dropdown_options.get(0).getText();
 
-		Thread.sleep(3000);
-
-		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
+		
 		Thread.sleep(3000);
 
 		LO.print("Writing values to Excel for customer quote calculation -started");

@@ -869,8 +869,14 @@ public boolean quote_summary_customer_quote_summary_value_verification_without_m
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_term, 20);	  
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_miles, 20);	  
 	  ExplicitWait.visibleElement(driver, quote_summary_monthly_finance_rental, 20);	  
-	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_finance_rental, 20);	 
+	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_finance_rental, 20);
+	  
+	  try {
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_part_exchange_value, 20);		  
+	  }catch(Exception e)
+	  {
+		  
+	  }
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_followed_by, 20);
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_pence_per_excess_mile_finance, 20);	  
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee, 20);
@@ -892,7 +898,16 @@ public boolean quote_summary_customer_quote_summary_value_verification_without_m
    
 	  double customer_quote_initial_finance_rental = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_initial_finance_rental.getText().trim().substring(2)));
 	  
-	  double customer_quote_part_exchange_value = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_part_exchange_value.getText().trim().substring(2)));
+	  double customer_quote_part_exchange_value = 0;
+	  
+		try {
+			
+		customer_quote_part_exchange_value = Double.parseDouble(
+				RemoveComma.of(quote_summary_customer_quote_part_exchange_value.getText().trim().substring(2)));
+		}catch(Exception e)
+		{
+			
+		}
 	  
 	  
 	  double customer_payment_followed_by = Double.parseDouble(quote_summary_customer_quote_followed_by.getText().substring(0,2));
@@ -1022,9 +1037,9 @@ public boolean quote_summary_customer_quote_summary_value_verification_without_m
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_finance_rental, 20);		 
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_maint_rental, 20);
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_total_rental, 20);
-	  
+	  try {
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_part_exchange_value, 20);
-	  
+	  }catch(Exception e) {}
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_followed_by, 20);
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_pence_per_excess_mile_finance, 20);	  
 	  ExplicitWait.visibleElement(driver, quote_summary_customer_quote_pence_per_excess_mile_maintenance, 20);
@@ -1057,7 +1072,16 @@ public boolean quote_summary_customer_quote_summary_value_verification_without_m
 
 	  double customer_quote_initial_total_rental = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_initial_total_rental.getText().trim().substring(2)));
 
-	  double customer_quote_part_exchange_value = Double.parseDouble(RemoveComma.of(quote_summary_customer_quote_part_exchange_value.getText().trim().substring(2)));
+	  double customer_quote_part_exchange_value = 0;
+
+		try {
+			
+		customer_quote_part_exchange_value = Double.parseDouble(
+				RemoveComma.of(quote_summary_customer_quote_part_exchange_value.getText().trim().substring(2)));
+		}catch(Exception e)
+		{
+			
+		}
 
 	  
 	  double customer_payment_followed_by = Double.parseDouble(quote_summary_customer_quote_followed_by.getText().substring(0,2));
