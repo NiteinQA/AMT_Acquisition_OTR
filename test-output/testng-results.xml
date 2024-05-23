@@ -23,7 +23,7 @@
       <![CDATA[<b> Acquisition Contract type option = Business Contract Hire(BCH) has been selected</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b> Customer Contract type option = Business Contract Hire(BCH) has been selected</b> <br />]]>
+      <![CDATA[<b> Customer Contract type option = Personal Contract Hire(PCH) has been selected</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Getting Basic Price- Vehicle value is  =55495.83</b> <br />]]>
@@ -167,16 +167,16 @@
       <![CDATA[<b>Reading  Monthly Finance Rental and monthly maintenance cost from  Excel  -completed</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Finance Rental from Excel is =962.9134025816834</b> <br />]]>
+      <![CDATA[<b>Monthly Finance Rental from Excel is =1153.8783885816833</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly maintenance Rental from Excel is =60.0</b> <br />]]>
+      <![CDATA[<b>Monthly maintenance Rental from Excel is =72.0</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Finance Rental from screen is =962.91</b> <br />]]>
+      <![CDATA[<b>Monthly Finance Rental from screen is =1153.88</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly maintenance Rental from screen is =60.0</b> <br />]]>
+      <![CDATA[<b>Monthly maintenance Rental from screen is =72.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>****************************************************************</b> <br />]]>
@@ -188,19 +188,19 @@
       <![CDATA[<b>****************************************************************</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Finance Rental from screen (after submitting upsell values) is 1000.26</b> <br />]]>
+      <![CDATA[<b>Monthly Finance Rental from screen (after submitting upsell values) is 1198.64</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Mainte. Rental from screen ((after submitting upsell values) is 60.0</b> <br />]]>
+      <![CDATA[<b>Monthly Mainte. Rental from screen (after submitting upsell values) is 72.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Writing upsell values to excel</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Finance Rental from Excel (after submitting upsell values) is 1000.264186201125</b> <br />]]>
+      <![CDATA[<b>Monthly Finance Rental from Excel (after submitting upsell values) is 1198.6365796085333</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Mainte. Rental from Excel ((after submitting upsell values) is 60.0</b> <br />]]>
+      <![CDATA[<b>Monthly Mainte. Rental from Excel (after submitting upsell values) is 72.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Monthly finance and maint. rental (after submitting upsell values) is found OK</b> <br />]]>
@@ -215,16 +215,16 @@
       <![CDATA[<b>Entering the deposit values in the part Exchange Section</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Finance Rental from screen (part exchange values) is 1000.26</b> <br />]]>
+      <![CDATA[<b>Monthly Finance Rental from screen (with part exchange values) is 1198.64</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Mainte. Rental from screen (part exchange values) is 60.0</b> <br />]]>
+      <![CDATA[<b>Monthly Mainte. Rental from screen (with part exchange values) is 72.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Writing part exchange values to excel</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly finance and maint. rental part exchange values) is found OK</b> <br />]]>
+      <![CDATA[<b>Monthly finance and maint. rental (with part exchage values) is found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>*****Assertion Passed For Monthly Finance And Maint. Rental*****</b> <br />]]>
@@ -251,25 +251,37 @@
       <![CDATA[<b>****************************************************************</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Finance Rental from screen (after updating customer quote summary upsell value) is 1018.94</b> <br />]]>
+      <![CDATA[<b>Monthly Finance Rental from screen (after updating customer quote summary upsell value) is 1221.02</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Mainte. Rental from screen (after updating customer quote summary upsell value) is 60.0</b> <br />]]>
+      <![CDATA[<b>Monthly Mainte. Rental from screen (after updating customer quote summary upsell value) is 72.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Writing upsell values to excel</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Finance Rental from Excel (after updating customer quote summary upsell value) is 1018.93957801085</b> <br />]]>
+      <![CDATA[<b>Monthly Finance Rental from Excel (after updating customer quote summary upsell value) is 1221.0156751219583</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>Monthly Mainte. Rental from Excel (after updating customer quote summary upsell value) is 60.0</b> <br />]]>
+      <![CDATA[<b>Monthly Mainte. Rental from Excel (after updating customer quote summary upsell value) is 72.0</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>Monthly finance and maint. rental (after updating customer quote summary upsell value) is found OK</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>***********Assertion Passed For Monthly Finance Rental on updating upsell values***********</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>****************************************************************</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Calculations with different payment profiles for customer quote has been started</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Calculations with different payment profiles for customer quote has been ended</b> <br />]]>
+    </line>
+    <line>
+      <![CDATA[<b>Assertion Passed For Monthly Finance Rental For All Payment Profiles</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>****************************************************************</b> <br />]]>
@@ -440,7 +452,7 @@
       <![CDATA[<b>Refferer Margin  found OK</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>*********Quote generated successfully and Quote_ref_no is=RUB56368</b> <br />]]>
+      <![CDATA[<b>*********Customer Quote generated successfully and Quote_ref_no is=URY42538</b> <br />]]>
     </line>
     <line>
       <![CDATA[<b>*************OTR Calulation on quote summary page has been started************</b> <br />]]>
@@ -614,29 +626,29 @@
       <![CDATA[<b>Finance margin changed to 10000</b> <br />]]>
     </line>
     <line>
-      <![CDATA[<b>*********Quote generated successfully and Quote_ref_no is=RUB56368</b> <br />]]>
+      <![CDATA[<b>*********Customer Quote generated successfully and Quote_ref_no is=URY42538</b> <br />]]>
     </line>
     <line>
       <![CDATA[<br>----------Screenshot---------<br>]]>
     </line>
     <line>
-      <![CDATA[<img src="D:\Acquisition\AMT_Automation_Acquisition\target\surefire-reports\html\failure_screenshots\aquisition_quotes_BCH_BCH_quote_summary_values_verification_with_maintenance_test_22_05_2024_09_16_12.png" height="800" width="1000">]]>
+      <![CDATA[<img src="D:\Acquisition\AMT_Automation_Acquisition\target\surefire-reports\html\failure_screenshots\aquisition_quotes_BCH_PCH_quote_summary_values_verification_with_maintenance_test_23_05_2024_07_27_14.png" height="800" width="1000">]]>
     </line>
   </reporter-output>
-  <suite started-at="2024-05-22T21:06:50 IST" name="Default suite" finished-at="2024-05-22T21:16:13 IST" duration-ms="562408">
+  <suite started-at="2024-05-23T19:15:04 IST" name="Default suite" finished-at="2024-05-23T19:27:15 IST" duration-ms="730788">
     <groups>
     </groups>
-    <test started-at="2024-05-22T21:06:50 IST" name="Default test" finished-at="2024-05-22T21:16:13 IST" duration-ms="562408">
-      <class name="newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test">
-        <test-method is-config="true" signature="start_info()[pri:0, instance:newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-22T21:06:50 IST" name="start_info" finished-at="2024-05-22T21:06:50 IST" duration-ms="7" status="PASS">
+    <test started-at="2024-05-23T19:15:04 IST" name="Default test" finished-at="2024-05-23T19:27:15 IST" duration-ms="730788">
+      <class name="newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test">
+        <test-method is-config="true" signature="start_info()[pri:0, instance:newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-23T19:15:04 IST" name="start_info" finished-at="2024-05-23T19:15:04 IST" duration-ms="7" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- start_info -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-22T21:06:50 IST" name="setup" finished-at="2024-05-22T21:07:06 IST" duration-ms="15927" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-23T19:15:04 IST" name="setup" finished-at="2024-05-23T19:15:25 IST" duration-ms="20781" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="aquisition_quotes_BCH_BCH_OTR_calculation_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-22T21:07:08 IST" name="aquisition_quotes_BCH_BCH_OTR_calculation_with_maintenance_test" data-provider="testData" finished-at="2024-05-22T21:09:41 IST" duration-ms="152746" status="PASS">
+        <test-method signature="aquisition_quotes_BCH_PCH_OTR_calculation_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-23T19:15:26 IST" name="aquisition_quotes_BCH_PCH_OTR_calculation_with_maintenance_test" data-provider="testData" finished-at="2024-05-23T19:17:24 IST" duration-ms="117860" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -715,7 +727,7 @@
             </param>
             <param index="15">
               <value>
-                <![CDATA[199.99]]>
+                <![CDATA[239.99]]>
               </value>
             </param>
             <param index="16">
@@ -770,7 +782,7 @@
             </param>
             <param index="26">
               <value>
-                <![CDATA[BCH (Formula 3) - BCH]]>
+                <![CDATA[BCH (Formula 3) - PCH]]>
               </value>
             </param>
           </params>
@@ -797,7 +809,7 @@
               <![CDATA[<b> Acquisition Contract type option = Business Contract Hire(BCH) has been selected</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b> Customer Contract type option = Business Contract Hire(BCH) has been selected</b> <br />]]>
+              <![CDATA[<b> Customer Contract type option = Personal Contract Hire(PCH) has been selected</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Getting Basic Price- Vehicle value is  =55495.83</b> <br />]]>
@@ -854,8 +866,8 @@
               <![CDATA[<b>****************************************************************</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- aquisition_quotes_BCH_BCH_OTR_calculation_with_maintenance_test -->
-        <test-method signature="aquisition_quotes_BCH_BCH_after_discount_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-22T21:09:41 IST" name="aquisition_quotes_BCH_BCH_after_discount_calculations_with_maintenance_test" data-provider="testData" finished-at="2024-05-22T21:09:46 IST" depends-on-methods="newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test.aquisition_quotes_BCH_BCH_OTR_calculation_with_maintenance_test" duration-ms="4631" status="PASS">
+        </test-method> <!-- aquisition_quotes_BCH_PCH_OTR_calculation_with_maintenance_test -->
+        <test-method signature="aquisition_quotes_BCH_PCH_after_discount_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-23T19:17:24 IST" name="aquisition_quotes_BCH_PCH_after_discount_calculations_with_maintenance_test" data-provider="testData" finished-at="2024-05-23T19:17:29 IST" depends-on-methods="newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test.aquisition_quotes_BCH_PCH_OTR_calculation_with_maintenance_test" duration-ms="4816" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -934,7 +946,7 @@
             </param>
             <param index="15">
               <value>
-                <![CDATA[199.99]]>
+                <![CDATA[239.99]]>
               </value>
             </param>
             <param index="16">
@@ -989,7 +1001,7 @@
             </param>
             <param index="26">
               <value>
-                <![CDATA[BCH (Formula 3) - BCH]]>
+                <![CDATA[BCH (Formula 3) - PCH]]>
               </value>
             </param>
           </params>
@@ -1040,8 +1052,8 @@
               <![CDATA[<b>****************************************************************</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- aquisition_quotes_BCH_BCH_after_discount_calculations_with_maintenance_test -->
-        <test-method signature="aquisition_quotes_BCH_BCH_holding_cost_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-22T21:09:46 IST" name="aquisition_quotes_BCH_BCH_holding_cost_calculations_with_maintenance_test" data-provider="testData" finished-at="2024-05-22T21:10:39 IST" depends-on-methods="newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test.aquisition_quotes_BCH_BCH_after_discount_calculations_with_maintenance_test" duration-ms="53426" status="PASS">
+        </test-method> <!-- aquisition_quotes_BCH_PCH_after_discount_calculations_with_maintenance_test -->
+        <test-method signature="aquisition_quotes_BCH_PCH_holding_cost_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-23T19:17:30 IST" name="aquisition_quotes_BCH_PCH_holding_cost_calculations_with_maintenance_test" data-provider="testData" finished-at="2024-05-23T19:18:02 IST" depends-on-methods="newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test.aquisition_quotes_BCH_PCH_after_discount_calculations_with_maintenance_test" duration-ms="32754" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1120,7 +1132,7 @@
             </param>
             <param index="15">
               <value>
-                <![CDATA[199.99]]>
+                <![CDATA[239.99]]>
               </value>
             </param>
             <param index="16">
@@ -1175,7 +1187,7 @@
             </param>
             <param index="26">
               <value>
-                <![CDATA[BCH (Formula 3) - BCH]]>
+                <![CDATA[BCH (Formula 3) - PCH]]>
               </value>
             </param>
           </params>
@@ -1199,8 +1211,8 @@
               <![CDATA[<b>****************************************************************</b> <br />]]>
             </line>
           </reporter-output>
-        </test-method> <!-- aquisition_quotes_BCH_BCH_holding_cost_calculations_with_maintenance_test -->
-        <test-method signature="aquisition_quotes_BCH_BCH_customer_quote_payment_profile_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-22T21:10:40 IST" name="aquisition_quotes_BCH_BCH_customer_quote_payment_profile_calculations_with_maintenance_test" data-provider="testData" finished-at="2024-05-22T21:12:20 IST" depends-on-methods="newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test.aquisition_quotes_BCH_BCH_holding_cost_calculations_with_maintenance_test" duration-ms="100757" status="PASS">
+        </test-method> <!-- aquisition_quotes_BCH_PCH_holding_cost_calculations_with_maintenance_test -->
+        <test-method signature="aquisition_quotes_BCH_PCH_customer_quote_payment_profile_calculations_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-23T19:18:03 IST" name="aquisition_quotes_BCH_PCH_customer_quote_payment_profile_calculations_with_maintenance_test" data-provider="testData" finished-at="2024-05-23T19:22:45 IST" depends-on-methods="newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test.aquisition_quotes_BCH_PCH_holding_cost_calculations_with_maintenance_test" duration-ms="282738" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -1279,7 +1291,7 @@
             </param>
             <param index="15">
               <value>
-                <![CDATA[199.99]]>
+                <![CDATA[239.99]]>
               </value>
             </param>
             <param index="16">
@@ -1334,7 +1346,7 @@
             </param>
             <param index="26">
               <value>
-                <![CDATA[BCH (Formula 3) - BCH]]>
+                <![CDATA[BCH (Formula 3) - PCH]]>
               </value>
             </param>
           </params>
@@ -1364,16 +1376,16 @@
               <![CDATA[<b>Reading  Monthly Finance Rental and monthly maintenance cost from  Excel  -completed</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Finance Rental from Excel is =962.9134025816834</b> <br />]]>
+              <![CDATA[<b>Monthly Finance Rental from Excel is =1153.8783885816833</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly maintenance Rental from Excel is =60.0</b> <br />]]>
+              <![CDATA[<b>Monthly maintenance Rental from Excel is =72.0</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Finance Rental from screen is =962.91</b> <br />]]>
+              <![CDATA[<b>Monthly Finance Rental from screen is =1153.88</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly maintenance Rental from screen is =60.0</b> <br />]]>
+              <![CDATA[<b>Monthly maintenance Rental from screen is =72.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>****************************************************************</b> <br />]]>
@@ -1385,19 +1397,19 @@
               <![CDATA[<b>****************************************************************</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Finance Rental from screen (after submitting upsell values) is 1000.26</b> <br />]]>
+              <![CDATA[<b>Monthly Finance Rental from screen (after submitting upsell values) is 1198.64</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Mainte. Rental from screen ((after submitting upsell values) is 60.0</b> <br />]]>
+              <![CDATA[<b>Monthly Mainte. Rental from screen (after submitting upsell values) is 72.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Writing upsell values to excel</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Finance Rental from Excel (after submitting upsell values) is 1000.264186201125</b> <br />]]>
+              <![CDATA[<b>Monthly Finance Rental from Excel (after submitting upsell values) is 1198.6365796085333</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Mainte. Rental from Excel ((after submitting upsell values) is 60.0</b> <br />]]>
+              <![CDATA[<b>Monthly Mainte. Rental from Excel (after submitting upsell values) is 72.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Monthly finance and maint. rental (after submitting upsell values) is found OK</b> <br />]]>
@@ -1412,16 +1424,16 @@
               <![CDATA[<b>Entering the deposit values in the part Exchange Section</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Finance Rental from screen (part exchange values) is 1000.26</b> <br />]]>
+              <![CDATA[<b>Monthly Finance Rental from screen (with part exchange values) is 1198.64</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Mainte. Rental from screen (part exchange values) is 60.0</b> <br />]]>
+              <![CDATA[<b>Monthly Mainte. Rental from screen (with part exchange values) is 72.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Writing part exchange values to excel</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly finance and maint. rental part exchange values) is found OK</b> <br />]]>
+              <![CDATA[<b>Monthly finance and maint. rental (with part exchage values) is found OK</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>*****Assertion Passed For Monthly Finance And Maint. Rental*****</b> <br />]]>
@@ -1448,19 +1460,19 @@
               <![CDATA[<b>****************************************************************</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Finance Rental from screen (after updating customer quote summary upsell value) is 1018.94</b> <br />]]>
+              <![CDATA[<b>Monthly Finance Rental from screen (after updating customer quote summary upsell value) is 1221.02</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Mainte. Rental from screen (after updating customer quote summary upsell value) is 60.0</b> <br />]]>
+              <![CDATA[<b>Monthly Mainte. Rental from screen (after updating customer quote summary upsell value) is 72.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Writing upsell values to excel</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Finance Rental from Excel (after updating customer quote summary upsell value) is 1018.93957801085</b> <br />]]>
+              <![CDATA[<b>Monthly Finance Rental from Excel (after updating customer quote summary upsell value) is 1221.0156751219583</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>Monthly Mainte. Rental from Excel (after updating customer quote summary upsell value) is 60.0</b> <br />]]>
+              <![CDATA[<b>Monthly Mainte. Rental from Excel (after updating customer quote summary upsell value) is 72.0</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>Monthly finance and maint. rental (after updating customer quote summary upsell value) is found OK</b> <br />]]>
@@ -1471,9 +1483,21 @@
             <line>
               <![CDATA[<b>****************************************************************</b> <br />]]>
             </line>
+            <line>
+              <![CDATA[<b>Calculations with different payment profiles for customer quote has been started</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Calculations with different payment profiles for customer quote has been ended</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>Assertion Passed For Monthly Finance Rental For All Payment Profiles</b> <br />]]>
+            </line>
+            <line>
+              <![CDATA[<b>****************************************************************</b> <br />]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- aquisition_quotes_BCH_BCH_customer_quote_payment_profile_calculations_with_maintenance_test -->
-        <test-method signature="aquisition_quotes_BCH_BCH_quote_summary_values_verification_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-22T21:12:21 IST" name="aquisition_quotes_BCH_BCH_quote_summary_values_verification_with_maintenance_test" data-provider="testData" finished-at="2024-05-22T21:16:12 IST" depends-on-methods="newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test.aquisition_quotes_BCH_BCH_customer_quote_payment_profile_calculations_with_maintenance_test" duration-ms="231614" status="FAIL">
+        </test-method> <!-- aquisition_quotes_BCH_PCH_customer_quote_payment_profile_calculations_with_maintenance_test -->
+        <test-method signature="aquisition_quotes_BCH_PCH_quote_summary_values_verification_with_maintenance_test(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-23T19:22:46 IST" name="aquisition_quotes_BCH_PCH_quote_summary_values_verification_with_maintenance_test" data-provider="testData" finished-at="2024-05-23T19:27:14 IST" depends-on-methods="newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test.aquisition_quotes_BCH_PCH_customer_quote_payment_profile_calculations_with_maintenance_test" duration-ms="267907" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -1552,7 +1576,7 @@
             </param>
             <param index="15">
               <value>
-                <![CDATA[199.99]]>
+                <![CDATA[239.99]]>
               </value>
             </param>
             <param index="16">
@@ -1607,51 +1631,31 @@
             </param>
             <param index="26">
               <value>
-                <![CDATA[BCH (Formula 3) - BCH]]>
+                <![CDATA[BCH (Formula 3) - PCH]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[element click intercepted: Element <div class="acc-head" style=" border: 1px solid white;">...</div> is not clickable at point (805, 730). Other element would receive the click: <div _ngcontent-rge-c1="" class="loader_div">...</div>
-  (Session info: chrome=124.0.6367.210)
+              <![CDATA[Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (8b8138a89c73c4757df69676033112d9)] -> xpath: //app-hire-customer-quote-summary-detail//*[normalize-space()='Initial finance rental']//ancestor::div[1]//div/p/strong] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '4.1.0', revision: '87802e897b'
 System info: host: 'DSK-4052', ip: '172.16.1.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c0b41c86bb4bcd24cc5da22e49c8285c, clickElement {id=f.3686DCDD4FD04ED85C682FF6A7B859F8.d.F40681C22ABDE75E8C921C5D2E0F26E1.e.2089}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.210, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64866}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64866/devtoo..., se:cdpVersion: 124.0.6367.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (c0b41c86bb4bcd24cc5da22e49c8285c)] -> xpath: //*[@id='headingCustomerQuote']/div[1]/button/div]
-Session ID: c0b41c86bb4bcd24cc5da22e49c8285c]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.210, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54224/devtoo..., se:cdpVersion: 124.0.6367.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8b8138a89c73c4757df69676033112d9]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <div class="acc-head" style=" border: 1px solid white;">...</div> is not clickable at point (805, 730). Other element would receive the click: <div _ngcontent-rge-c1="" class="loader_div">...</div>
-  (Session info: chrome=124.0.6367.210)
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of [[ChromeDriver: chrome on WINDOWS (8b8138a89c73c4757df69676033112d9)] -> xpath: //app-hire-customer-quote-summary-detail//*[normalize-space()='Initial finance rental']//ancestor::div[1]//div/p/strong] (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: '4.1.0', revision: '87802e897b'
 System info: host: 'DSK-4052', ip: '172.16.1.80', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [c0b41c86bb4bcd24cc5da22e49c8285c, clickElement {id=f.3686DCDD4FD04ED85C682FF6A7B859F8.d.F40681C22ABDE75E8C921C5D2E0F26E1.e.2089}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.210, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64866}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64866/devtoo..., se:cdpVersion: 124.0.6367.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (c0b41c86bb4bcd24cc5da22e49c8285c)] -> xpath: //*[@id='headingCustomerQuote']/div[1]/button/div]
-Session ID: c0b41c86bb4bcd24cc5da22e49c8285c
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy22.click(Unknown Source)
-at com.amt.testUtil.Click.on(Click.java:22)
-at com.amt.QuoteSummaryPages.QuoteSummary_BCH_BCH_Page.quote_summary_edit_finance_margin_value_verification(QuoteSummary_BCH_BCH_Page.java:1619)
-at newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test.aquisition_quotes_BCH_BCH_quote_summary_values_verification_with_maintenance_test(Acquisition_Quotes_BCH_BCH_with_maintenance_Test.java:268)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 124.0.6367.210, chrome: {chromedriverVersion: 123.0.6312.58 (6b4b19e9dfbb..., userDataDir: C:\Users\NITEIN~1.KUR\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:54224}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:54224/devtoo..., se:cdpVersion: 124.0.6367.210, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8b8138a89c73c4757df69676033112d9
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:138)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+at com.amt.testUtil.ExplicitWait.visibleElement(ExplicitWait.java:23)
+at com.amt.QuoteSummaryPages.QuoteSummary_BCH_PCH_Page.quote_summary_edit_finance_margin_value_verification(QuoteSummary_BCH_PCH_Page.java:1635)
+at newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test.aquisition_quotes_BCH_PCH_quote_summary_values_verification_with_maintenance_test(Acquisition_Quotes_BCH_PCH_with_maintenance_Test.java:263)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -1680,7 +1684,7 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
             <line>
               <![CDATA[<b>*************OTR Calulation on quote summary page has been started************</b> <br />]]>
@@ -1848,7 +1852,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[<b>Refferer Margin  found OK</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>*********Quote generated successfully and Quote_ref_no is=RUB56368</b> <br />]]>
+              <![CDATA[<b>*********Customer Quote generated successfully and Quote_ref_no is=URY42538</b> <br />]]>
             </line>
             <line>
               <![CDATA[<b>*************OTR Calulation on quote summary page has been started************</b> <br />]]>
@@ -2022,21 +2026,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
               <![CDATA[<b>Finance margin changed to 10000</b> <br />]]>
             </line>
             <line>
-              <![CDATA[<b>*********Quote generated successfully and Quote_ref_no is=RUB56368</b> <br />]]>
+              <![CDATA[<b>*********Customer Quote generated successfully and Quote_ref_no is=URY42538</b> <br />]]>
             </line>
             <line>
               <![CDATA[<br>----------Screenshot---------<br>]]>
             </line>
             <line>
-              <![CDATA[<img src="D:\Acquisition\AMT_Automation_Acquisition\target\surefire-reports\html\failure_screenshots\aquisition_quotes_BCH_BCH_quote_summary_values_verification_with_maintenance_test_22_05_2024_09_16_12.png" height="800" width="1000">]]>
+              <![CDATA[<img src="D:\Acquisition\AMT_Automation_Acquisition\target\surefire-reports\html\failure_screenshots\aquisition_quotes_BCH_PCH_quote_summary_values_verification_with_maintenance_test_23_05_2024_07_27_14.png" height="800" width="1000">]]>
             </line>
           </reporter-output>
-        </test-method> <!-- aquisition_quotes_BCH_BCH_quote_summary_values_verification_with_maintenance_test -->
-        <test-method is-config="true" signature="end()[pri:0, instance:newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-22T21:16:13 IST" name="end" finished-at="2024-05-22T21:16:13 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- aquisition_quotes_BCH_PCH_quote_summary_values_verification_with_maintenance_test -->
+        <test-method is-config="true" signature="end()[pri:0, instance:newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test@8f2ef19]" started-at="2024-05-23T19:27:15 IST" name="end" finished-at="2024-05-23T19:27:15 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
-      </class> <!-- newCar.BCH.Acquisition_Quotes_BCH_BCH_with_maintenance_Test -->
+      </class> <!-- newCar.BCH.Acquisition_Quotes_BCH_PCH_with_maintenance_Test -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -474,11 +474,11 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 		LO.print("Started verifying Balance To Finance Value");
 		System.out.println("Started verifying Balance To Finance Value");
 
-		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
-		Thread.sleep(4000);
-		// Click.on(driver, part_exchange_payment, 70);
-		LO.print("Clicked on Part Exchange panel");
-		System.out.println("Clicked on Part Exchange panel");
+//		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
+//		Thread.sleep(4000);
+//		// Click.on(driver, part_exchange_payment, 70);
+//		LO.print("Clicked on Part Exchange panel");
+//		System.out.println("Clicked on Part Exchange panel");
 
 //		Click.on(driver, given_part_exchange_value, 20);
 //

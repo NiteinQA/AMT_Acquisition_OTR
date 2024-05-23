@@ -1620,7 +1620,10 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		
 		obj_quote_summary.save_quote();	
 		
+		Thread.sleep(10000);
+		
 		Click.on(driver, quote_summary_customer_quote_summary_value_verification, 20);
+		
 		Click.on(driver, quote_summary_configuration, 20);
 
 

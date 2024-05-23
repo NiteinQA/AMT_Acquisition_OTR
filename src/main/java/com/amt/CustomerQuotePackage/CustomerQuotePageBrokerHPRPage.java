@@ -538,8 +538,8 @@ public class CustomerQuotePageBrokerHPRPage extends TestBase {
 		LO.print("");
 		System.out.println("");
 
-		LO.print("Entering Deposit Valuesin part exchange");
-		System.out.println("Entering Deposit Valuesin part exchange");
+		LO.print("Entering Deposit Values in part exchange");
+		System.out.println("Entering Deposit Values in part exchange");
 
 		ExplicitWait.visibleElement(driver, part_exchange_balance, 30);
 
