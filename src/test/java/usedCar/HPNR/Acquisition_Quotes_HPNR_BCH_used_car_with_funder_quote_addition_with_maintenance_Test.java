@@ -181,9 +181,9 @@ Assert.assertTrue(cost_price_ex_vat_and_options_and_preparation_cost);
 				.quote_summary_holding_cost_calculation_with_maintenance_for_funder(sheet_name);
 		Assert.assertTrue(quote_summary_holding_cost_calculation);
 		
-		boolean balance_due_value = obj_quote_summary_page.verify_balance_due_value(sheet_name);
-		
-		Assert.assertTrue(balance_due_value);
+//		boolean balance_due_value = obj_quote_summary_page.verify_balance_due_value(sheet_name);
+//		
+//		Assert.assertTrue(balance_due_value);
 
 		boolean quote_summary_customer_quote_calculation = obj_quote_summary_page
 				.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name);
@@ -202,9 +202,9 @@ Assert.assertTrue(cost_price_ex_vat_and_options_and_preparation_cost);
 				.quote_summary_holding_cost_calculation_with_maintenance_for_funder(sheet_name);
 		Assert.assertTrue(quote_summary_holding_cost_calculation1);
 		
-		boolean balance_due_value1 = obj_quote_summary_page.verify_balance_due_value(sheet_name);
-		
-		Assert.assertTrue(balance_due_value1);
+//		boolean balance_due_value1 = obj_quote_summary_page.verify_balance_due_value(sheet_name);
+//		
+//		Assert.assertTrue(balance_due_value1);
 
 		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
 				.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name);

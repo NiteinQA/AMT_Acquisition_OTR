@@ -335,9 +335,9 @@ public class QuoteSummary_CP_BCH_Page extends TestBase {
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
 
-		Thread.sleep(2000);
+		Thread.sleep(12000);
 
-		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 

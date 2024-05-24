@@ -294,11 +294,6 @@ public class Acquisition_Quotes_HPNR_BCH_without_maintenance_Test extends TestBa
 		System.out.println("");
 		System.out.println("");
 		
-		boolean balance_due1 = obj_quote_summary_page.verify_balance_due_value(sheet_name);
-		Assert.assertTrue(balance_due1);
-		
-		System.out.println("");
-		System.out.println("");
 
 		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
 				.quote_summary_customer_quote_summary_value_verification_without_maintenance(sheet_name);

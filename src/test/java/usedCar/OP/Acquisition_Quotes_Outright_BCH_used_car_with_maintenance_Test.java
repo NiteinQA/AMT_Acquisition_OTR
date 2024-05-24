@@ -207,7 +207,8 @@ public class Acquisition_Quotes_Outright_BCH_used_car_with_maintenance_Test exte
 		Assert.assertTrue(quote_summary_holding_cost_calculation1);
 
 		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
-				.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name); // Assert.assertTrue(quote_summary_customer_quote_calculation);
+				.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name);
+		// Assert.assertTrue(quote_summary_customer_quote_calculation);
 
 		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
 				.quote_summary_configuration_value_verification_with_maintenance(sheet_name);

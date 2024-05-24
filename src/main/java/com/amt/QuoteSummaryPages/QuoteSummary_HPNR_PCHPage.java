@@ -1717,8 +1717,8 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 			System.err.println("Monthly Finance Rental after changing Base Int. Rate -  found wrong");
 		}
 		
-		System.out.println("Holding Cost Screen "+customer_quote_summary_monthly_finance_rental_from_screen);
-		System.out.println("Holding Cost Screen "+customer_quote_summary_monthly_finance_rental_from_screen);
+		System.out.println("Monthly Finance Screen "+customer_quote_summary_monthly_finance_rental_from_screen);
+		System.out.println("Monthly Finance Screen "+customer_quote_summary_monthly_finance_rental_from_screen);
 
 		if ((Difference.of_two_Double_Values(initialFinanceRental, customer_quote_initial_finance_rental)) < 0.2) {
 			LO.print("Initial Finance Rental found OK");
@@ -1729,8 +1729,8 @@ public class QuoteSummary_HPNR_PCHPage extends TestBase {
 			System.err.println("Initial Finance Rental found wrong");
 		}
 		
-		System.out.println("Holding Cost Screen "+initialFinanceRental);
-		System.out.println("Holding Cost Screen "+customer_quote_initial_finance_rental);
+		System.out.println("Initial Finance Screen "+initialFinanceRental);
+		System.out.println("Initial Finance Screen "+customer_quote_initial_finance_rental);
 
 		if (count == 3) {
 			status = true;
