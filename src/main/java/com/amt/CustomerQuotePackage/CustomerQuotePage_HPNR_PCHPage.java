@@ -32,6 +32,9 @@ public class CustomerQuotePage_HPNR_PCHPage extends TestBase {
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
+	
+	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
+    private WebElement part_exchange_and_additional_payment_button;
 
 	@FindBy(xpath = "//p[normalize-space()='Customer Quote']")
 	private WebElement customer_quote;
@@ -260,6 +263,9 @@ public class CustomerQuotePage_HPNR_PCHPage extends TestBase {
 		System.out.println("Entering the deposit values in the part Exchange Section");
 		
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //		Thread.sleep(4000);
@@ -388,6 +394,9 @@ public class CustomerQuotePage_HPNR_PCHPage extends TestBase {
 		System.out.println("Entering Deposit Values in the part exchange section");
 		
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		Click.on(driver, given_part_exchange_value, 20);
 //
@@ -913,7 +922,7 @@ public class CustomerQuotePage_HPNR_PCHPage extends TestBase {
 
 	}
 
-	public boolean customer_quote_monthly_finance_rental_value_verification_with_part_exchange_without_maintenance(
+	public boolean 	customer_quote_monthly_finance_rental_value_verification_with_part_exchange_without_maintenance (
 			String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
 			String less_finance_settlement_from_excel, String order_Deposit_from_excel, String document_fee_from_excel,
 			String upsell, String part_exchange_status, String target_rental, String sheet_name)
@@ -926,6 +935,9 @@ public class CustomerQuotePage_HPNR_PCHPage extends TestBase {
 		Thread.sleep(4000);
 		
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //		Thread.sleep(4000);
@@ -1063,6 +1075,9 @@ public class CustomerQuotePage_HPNR_PCHPage extends TestBase {
 			
 			Actions act = new Actions(driver);
 			
+			Click.on(driver, part_exchange_and_additional_payment_button, 20);
+			Thread.sleep(4000);
+			
 //			ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //			Thread.sleep(4000);
 //			Click.on(driver, part_exchange_payment, 70);
@@ -1170,6 +1185,9 @@ public class CustomerQuotePage_HPNR_PCHPage extends TestBase {
 			Thread.sleep(4000);
 			
 			Actions act = new Actions(driver);
+			
+			Click.on(driver, part_exchange_and_additional_payment_button, 20);
+			Thread.sleep(4000);
 
 
 //			ExplicitWait.clickableElement(driver, part_exchange_payment, 50);

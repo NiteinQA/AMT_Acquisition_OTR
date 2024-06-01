@@ -32,6 +32,9 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
+	
+	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
+    private WebElement part_exchange_and_additional_payment_button;
 
 	@FindBy(xpath = "//p[normalize-space()='Customer Quote']")
 	private WebElement customer_quote;
@@ -281,6 +284,9 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		System.out.println("Entering the deposit values in the part Exchange Section");
 		
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //		Thread.sleep(4000);
@@ -397,6 +403,9 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		System.out.println("Adding Deposit Values in the part Exchange");
 		
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		Click.on(driver, given_part_exchange_value, 20);
 //
@@ -1097,6 +1106,9 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		
 		Actions act = new Actions(driver);
 		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
+		
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //		Thread.sleep(4000);
 //		Click.on(driver, part_exchange_payment, 70);
@@ -1225,6 +1237,9 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 
 		if (totalCapMaintenanceValue == 0) {
 			
+			Click.on(driver, part_exchange_and_additional_payment_button, 20);
+			Thread.sleep(4000);
+			
 			Actions act = new Actions(driver);
 //			ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //			Thread.sleep(4000);
@@ -1329,6 +1344,9 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		} else {
 			
 			Actions act = new Actions(driver);
+			
+			Click.on(driver, part_exchange_and_additional_payment_button, 20);
+			Thread.sleep(4000);
 
 //			ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //			Thread.sleep(4000);

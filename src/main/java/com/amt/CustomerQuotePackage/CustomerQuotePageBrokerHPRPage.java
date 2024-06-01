@@ -28,6 +28,9 @@ public class CustomerQuotePageBrokerHPRPage extends TestBase {
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
+	
+	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
+    private WebElement part_exchange_and_additional_payment_button;
 
 	// vehicle_discount_cost_price
 	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]//div//p")
@@ -489,6 +492,9 @@ public class CustomerQuotePageBrokerHPRPage extends TestBase {
 		System.out.println("Funder Quote Added Successfully");
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		LO.print("Clicked on Part Exchange panel");
 //		System.out.println("Clicked on Part Exchange panel");

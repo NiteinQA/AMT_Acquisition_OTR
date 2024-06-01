@@ -32,6 +32,8 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
+	
+	
 
 	// vehicle_discount_cost_price
 	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]//div//p")
@@ -311,6 +313,9 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 			String sheet_name) throws UnsupportedFlavorException, IOException, InterruptedException {
 
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		Click.on(driver, given_part_exchange_value, 20);
 //
@@ -408,6 +413,9 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 			String sheet_name) throws UnsupportedFlavorException, IOException, InterruptedException {
 
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 		
 //		Click.on(driver, given_part_exchange_value, 20);
 //

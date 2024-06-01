@@ -70,6 +70,9 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 
 	@FindBy(xpath = "//*[normalize-space()='Balance due']//ancestor::div[1]//p//strong")
 	private WebElement balance_due_value;
+	
+	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
+	private WebElement part_exchange_and_additional_payment_button;
 
 	// security deposit
 	@FindBy(xpath = "//*[@id='securityDeposit']")
@@ -166,6 +169,9 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 		System.out.println("Entering the deposit values in the part Exchange Section");
 		Thread.sleep(4000);
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 		
 		
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
@@ -300,6 +306,9 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 		System.out.println("Entering the deposit values in the part Exchange Section");
 		Thread.sleep(4000);
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //		Thread.sleep(4000);

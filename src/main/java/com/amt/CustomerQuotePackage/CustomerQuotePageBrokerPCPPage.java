@@ -27,6 +27,9 @@ public class CustomerQuotePageBrokerPCPPage extends TestBase {
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
+	
+	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
+    private WebElement part_exchange_and_additional_payment_button;
 
 	// vehicle_discount_cost_price
 	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]//div//p")
@@ -408,6 +411,9 @@ public class CustomerQuotePageBrokerPCPPage extends TestBase {
 
 		LO.print("");
 		System.out.println("");
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		LO.print("Entering Part Exchange Values to screen");
 //		System.out.println("Entering Part Exchange Values to screen");
@@ -641,6 +647,9 @@ public class CustomerQuotePageBrokerPCPPage extends TestBase {
 
 		LO.print("");
 		System.out.println("");
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		LO.print("Entering Part Exchange Values to screen");
 //		System.out.println("Entering Part Exchange Values to screen");

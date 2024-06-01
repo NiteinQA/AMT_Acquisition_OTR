@@ -32,6 +32,9 @@ public class CustomerQuotePage_HPNR_FL_Page extends TestBase {
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
+	
+	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
+    private WebElement part_exchange_and_additional_payment_button;
 
 	@FindBy(xpath = "//*[@name='withBalloon']//ancestor::label[1]//span")
 	private WebElement with_balloon_toggle;
@@ -377,6 +380,9 @@ try {
 		System.out.println("Entering the deposit Values");
 		
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		Click.on(driver, given_part_exchange_value, 20);
 //
@@ -545,6 +551,9 @@ try {
 		System.out.println("Entering the deposit Values");
 		
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		Click.on(driver, given_part_exchange_value, 20);
 //
@@ -1181,6 +1190,9 @@ try {
 		
 		Actions act = new Actions(driver);
 		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
+		
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //		Thread.sleep(4000);
 //		Click.on(driver, part_exchange_payment, 70);
@@ -1318,6 +1330,9 @@ try {
 			
 			Actions act = new Actions(driver);
 			
+			Click.on(driver, part_exchange_and_additional_payment_button, 20);
+			Thread.sleep(4000);
+			
 			
 //			ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //			Thread.sleep(4000);
@@ -1429,6 +1444,9 @@ try {
 			System.out.println("Entering the deposit values in the part Exchange Section");
 			
 			Actions act = new Actions(driver);
+			
+			Click.on(driver, part_exchange_and_additional_payment_button, 20);
+			Thread.sleep(4000);
 			
 //			ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //			Thread.sleep(4000);

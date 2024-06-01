@@ -35,6 +35,9 @@ public class CustomerQuotePage_CP_PCH_Page extends TestBase {
 
 	@FindBy(xpath = "//p[normalize-space()='Customer Quote']")
 	private WebElement customer_quote;
+	
+	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
+    private WebElement part_exchange_and_additional_payment_button;
 
 	@FindBy(xpath = "//body[1]/app-root[1]/div[1]/div[2]/div[2]/div[1]/app-aquisition-generic[1]/form[1]/div[1]/div[1]/div[1]/app-acquisition-all-customer-quotes[1]/div[1]/app-aquisition-hire-agreement[1]/form[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[5]/div[2]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[2]/div[6]/div[4]")
 	private WebElement customer_quote_matrix_default_cell;
@@ -181,6 +184,9 @@ public class CustomerQuotePage_CP_PCH_Page extends TestBase {
 		
 		
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		Click.on(driver, given_part_exchange_value, 20);
 //
@@ -634,6 +640,9 @@ public class CustomerQuotePage_CP_PCH_Page extends TestBase {
 		
 		Actions act = new Actions(driver);
 		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
+		
 
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //		Thread.sleep(4000);
@@ -748,6 +757,9 @@ public class CustomerQuotePage_CP_PCH_Page extends TestBase {
 		System.out.println("Entering the deposit values in the part Exchange Section");
 		
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //		Thread.sleep(4000);

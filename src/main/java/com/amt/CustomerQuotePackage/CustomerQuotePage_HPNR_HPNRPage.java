@@ -33,6 +33,8 @@ public class CustomerQuotePage_HPNR_HPNRPage extends TestBase {
 	// quote summary
 	@FindBy(xpath = "//p[normalize-space()='Quote summary']")
 	private WebElement quote_summary;
+	
+	
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;

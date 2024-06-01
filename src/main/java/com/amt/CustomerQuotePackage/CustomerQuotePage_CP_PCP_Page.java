@@ -32,6 +32,9 @@ public class CustomerQuotePage_CP_PCP_Page extends TestBase {
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
+	
+	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
+    private WebElement part_exchange_and_additional_payment_button;
 
 	// vehicle_discount_cost_price
 	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]//div//p")
@@ -139,8 +142,7 @@ public class CustomerQuotePage_CP_PCP_Page extends TestBase {
 	@FindBy(xpath = "//input[@id='profit']")
 	private WebElement vehicle_profit_input;
 
-	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
-	private WebElement part_exchange_and_additional_payment_button;
+
 
 	@FindBy(xpath = "//*[@id='collapseFirst']/div/div/div[5]/label/span")
 	private WebElement balloon_payment_toggle;

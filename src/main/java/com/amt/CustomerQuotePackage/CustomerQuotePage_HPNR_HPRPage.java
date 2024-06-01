@@ -2219,7 +2219,12 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		
 		LO.print("Entering the deposit Values");
 		System.out.println("Entering the deposit Values");
+		
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
+		
 //		Click.on(driver, given_part_exchange_value, 20);
 //
 //		given_part_exchange_value.clear();
@@ -2368,6 +2373,9 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		
 		
 		Actions act = new Actions(driver);
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		Click.on(driver, given_part_exchange_value, 20);
 //

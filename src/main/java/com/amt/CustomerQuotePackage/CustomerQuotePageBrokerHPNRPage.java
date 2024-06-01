@@ -31,6 +31,9 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
+	
+	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
+    private WebElement part_exchange_and_additional_payment_button;
 
 	// vehicle_discount_cost_price
 	@FindBy(xpath = "//*[@id='bdiscount']//ancestor::div[3]//div//p")
@@ -473,6 +476,9 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 
 		LO.print("Started verifying Balance To Finance Value");
 		System.out.println("Started verifying Balance To Finance Value");
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //		Thread.sleep(4000);
@@ -689,6 +695,9 @@ public class CustomerQuotePageBrokerHPNRPage extends TestBase {
 
 		LO.print("Started verifying Balance To Finance Value");
 		System.out.println("Started verifying Balance To Finance Value");
+		
+		Click.on(driver, part_exchange_and_additional_payment_button, 20);
+		Thread.sleep(4000);
 
 //		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
 //		Thread.sleep(4000);
