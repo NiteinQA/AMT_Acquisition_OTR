@@ -65,13 +65,21 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_quote_addition_without_main
 		    String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
 			String less_finance_settlement_from_excel, String order_deposit_from_excel, String document_fee_from_excel,
 			 String security_deposit, String matrix_upsell, String referrer_upsell, String add_terms, String add_mileage, String maintenance_required, String maintenance_margin, String initial_payment,
-			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException, ClassNotFoundException {
 
 		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_HPNR_BCH_Page();
 
 		boolean otr_price_check = obj_contract_types_and_OTR_page
 				.verify_after_discount_calculations_contract_types_page(sheet_name);
 		Assert.assertTrue(otr_price_check);
+		
+		System.out.println("");
+		System.out.println("");
+		
+		obj_contract_types_and_OTR_page.increase_OTR_price(add_terms ,sheet_name );
+		
+		System.out.println("");
+		System.out.println("");
 
 	}
 	

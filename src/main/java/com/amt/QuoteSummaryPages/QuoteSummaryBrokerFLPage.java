@@ -6,14 +6,13 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
+import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.JavaScriptExecutor;
 import com.amt.testUtil.ReadExcelCalculation;
@@ -67,7 +66,7 @@ public class QuoteSummaryBrokerFLPage extends TestBase {
 		try {
 			 prop = new Properties();
 			FileInputStream ip = new FileInputStream(
-					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
+					ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

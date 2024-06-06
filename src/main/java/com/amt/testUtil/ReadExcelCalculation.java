@@ -31,8 +31,7 @@ public class ReadExcelCalculation extends TestBase {
 		try {
 			// Properties class object initialization
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
+			FileInputStream ip = new FileInputStream(ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			// load property file
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
@@ -40,11 +39,27 @@ public class ReadExcelCalculation extends TestBase {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		
+		
 
 		PageFactory.initElements(driver, this);
 	}
 
 	public ReadExcelCalculation obj_read_excel_calculation_page;
+	
+	public void write_otr_value_to_the_calculation_sheet_excel(double otr_value , String sheet_name) throws IOException
+	{
+		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		wb.getSheet(sheet_name).getRow(14).getCell(9).setCellValue(otr_value);
+		
+		wb.getSheet(sheet_name).getRow(14).getCell(4).setCellFormula("J15");
+		
+		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+		wb.write(out);
+
+
+	}
 
 	public void write_holding_cost_cap_values_to_excel_with_maintenance(double terms_from_screen,
 			double annual_mileage, double used_residual_value, double total_cap_maintenance_value_converted,
@@ -608,7 +623,8 @@ public class ReadExcelCalculation extends TestBase {
 		// wb.getSheet(sheet_name).getRow(8).getCell(4).setCellValue(subtotal_price);
 		wb.getSheet(sheet_name).getRow(9).getCell(4).setCellValue(manufacture_delivery_charges_converted);
 		wb.getSheet(sheet_name).getRow(12).getCell(4).setCellValue(road_tax_first_year_converted);
-		wb.getSheet(sheet_name).getRow(13).getCell(4).setCellValue(first_registration_fee_converted);
+		wb.getSheet(sheet_name).getRow(13).getCell(4).setCellValue(first_registration_fee_converted);		
+		wb.getSheet(sheet_name).getRow(14).getCell(4).setCellFormula("(E9+E10+E13+E14+E11)-E12");		
 		wb.getSheet(sheet_name).getRow(15).getCell(4).setCellValue(rebate_converted);
 		wb.getSheet(sheet_name).getRow(19).getCell(4).setCellValue(0);
 

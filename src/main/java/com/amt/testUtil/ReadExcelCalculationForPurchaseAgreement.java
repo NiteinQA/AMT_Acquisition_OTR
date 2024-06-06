@@ -21,8 +21,7 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 	public ReadExcelCalculationForPurchaseAgreement() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
+			FileInputStream ip = new FileInputStream(ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

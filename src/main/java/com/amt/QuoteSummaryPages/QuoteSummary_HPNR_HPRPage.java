@@ -18,6 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
+import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.GetExcelFormulaValue;
@@ -311,7 +312,7 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(
-					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\excelValues.properties");
+					ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -434,7 +435,7 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
-		Thread.sleep(10000);
+		Thread.sleep(15000);
 
 				
 		Click.on(driver, quote_summary, 60);
@@ -867,7 +868,7 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 	}
 
 	public boolean quote_summary_customer_quote_summary_value_verification_without_maintenance(String sheet_name)
-			throws IOException {
+			throws IOException, InterruptedException {
 
 		LO.print("*************Customer Quote Calulation on quote summary page has been started************");
 		System.out.println("*************Customer Quote Calulation on quote summary page has been started************");
@@ -876,6 +877,8 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 		Click.on(driver, quote_summary_customer_quote_summary_value_verification, 20);
 
 		// waiting for elements
+		
+		Thread.sleep(5000);
 
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_terms, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_miles_per_annum, 20);

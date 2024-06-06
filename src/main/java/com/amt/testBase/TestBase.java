@@ -20,6 +20,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 import com.amt.pages.LoginPage;
+import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Logger;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -42,8 +43,7 @@ public class TestBase {
 	public TestBase() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\config.properties");
+			FileInputStream ip = new FileInputStream(ConfigConstants.CONFIG_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -101,8 +101,7 @@ public class TestBase {
 	public void start_info() throws InterruptedException, IOException {
 
 		prop = new Properties();
-		FileInputStream ip = new FileInputStream(
-				"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\config.properties");
+		FileInputStream ip = new FileInputStream(ConfigConstants.CONFIG_PROPERTY_FILE_PATH);
 		prop.load(ip);
 
 
@@ -120,8 +119,7 @@ public class TestBase {
 	public void setup() throws InterruptedException, IOException {
 
 		prop = new Properties();
-		FileInputStream ip = new FileInputStream(
-				"D:\\Acquisition\\AMT_Automation_Acquisition\\src\\main\\java\\configs\\config.properties");
+		FileInputStream ip = new FileInputStream(ConfigConstants.CONFIG_PROPERTY_FILE_PATH);
 		prop.load(ip);
 
 		initialization(prop.getProperty("browser"));
