@@ -756,6 +756,8 @@ public class ContractTypesAndOTR_HPNR_BCH_Page extends TestBase {
 	public void decrease_OTR_price(String on_road_price_for_invoice , String sheet_name) throws InterruptedException, IOException, ClassNotFoundException {
 
 
+		
+		
 		LO.print("Decreasing OTR price by 50 %");
 		System.out.println("Decreasing OTR price by 50 %");
 

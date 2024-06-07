@@ -21,7 +21,7 @@ import com.amt.testBase.TestBase;
 import com.amt.testUtil.ReadExcelData;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_without_maintenance_Test extends TestBase {
+public class Acquisition_Quotes_HPNR_HPNR_decrease_OTR_additional_term_and_mileage_purchase_without_maintenance_Test extends TestBase {
 
 	LoginPage obj_Login_Page;
 	AcquisitionListingPage obj_acq_listing_page;
@@ -94,7 +94,7 @@ public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_without_maintena
 		
 		obj_OTR_page = new ContractTypesAndOTR_HPNR_BCH_Page();
 		
-		obj_OTR_page.increase_OTR_price(otr_value ,sheet_name );
+		obj_OTR_page.decrease_OTR_price(otr_value ,sheet_name );
 		
 		System.out.println("");
 		System.out.println("");
@@ -135,10 +135,10 @@ public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_without_maintena
 						maintenance_status, sheet_name);
 		Assert.assertTrue(holding_cost_after_editing_residual_value);
 		
-//		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
-//				.edit_additional_term_and_mileage_then_verify_holding_cost_without_maintenance(additional_terms, additional_mileage,
-//						maintenance_status,  sheet_name);
-//		Assert.assertTrue(holding_cost_after_editing_additional_terms_and_mileage);
+		boolean holding_cost_after_editing_additional_terms_and_mileage = obj_holding_cost_page
+				.edit_additional_term_and_mileage_then_verify_holding_cost_without_maintenance(additional_terms, additional_mileage,
+						maintenance_status,  sheet_name);
+		Assert.assertTrue(holding_cost_after_editing_additional_terms_and_mileage);
 
 
 	}

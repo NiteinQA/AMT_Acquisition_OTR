@@ -168,8 +168,8 @@ public class HoldingCost_HPNR_HPRPage extends TestBase {
 			throws IOException, InterruptedException, ClassNotFoundException {
 		Click.on(driver, holding_cost, 30);
 
-		LO.print("***********Entered in holding cost page ***********");
-		System.out.println("***********Entered in holding cost page ***********");
+		LO.print("***********Entered into holding cost page ***********");
+		System.out.println("***********Entered into holding cost page ***********");
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Click.on(driver, holding_cost_summary, 30);

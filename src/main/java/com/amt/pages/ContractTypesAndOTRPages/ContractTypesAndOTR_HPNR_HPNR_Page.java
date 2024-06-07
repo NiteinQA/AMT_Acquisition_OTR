@@ -197,6 +197,11 @@ public class ContractTypesAndOTR_HPNR_HPNR_Page extends TestBase {
 
 	public boolean contractTypes_and_OTR_selection_HPNR_HPNR_Ownbook_calculation(String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
+
+		LO.print("***********Entered into Contract Types & OTR page***************");
+		System.out.println("***********Entered into Contract Types & OTR page***************");
+
+		
 		Click.on(driver, acq_contractTypes, 50);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 50);
 		Click.on(driver, acq_acq_contractTypes_HPNR, 50);
