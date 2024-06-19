@@ -88,7 +88,7 @@ public class Acquisition_Quotes_HPNR_BCH_with_funder_decrease_OTR_hire_without_m
 		System.out.println("");
 		System.out.println("");
 		
-		obj_contract_types_and_OTR_page.decrease_OTR_price(add_terms ,sheet_name );
+		obj_contract_types_and_OTR_page.decrease_OTR_price(otr_value ,sheet_name );
 		
 		System.out.println("");
 		System.out.println("");

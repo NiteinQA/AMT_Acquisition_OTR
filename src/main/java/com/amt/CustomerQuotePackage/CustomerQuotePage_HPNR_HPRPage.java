@@ -1226,11 +1226,11 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 				.parseDouble(options_discount_cost_price.getText().trim().substring(0, 4));
 
 		double vehicleAdditionalDiscountCostPrice = Double
-				.parseDouble(vehicle_additional_discount_cost_price.getText().trim().substring(2));
+				.parseDouble(RemoveComma.of(vehicle_additional_discount_cost_price.getText().trim().substring(2)));
 		double paintAdditionalDiscountCostPrice = Double
-				.parseDouble(paint_additional_discount_cost_price.getText().trim().substring(2));
+				.parseDouble(RemoveComma.of(paint_additional_discount_cost_price.getText().trim().substring(2)));
 		double optionsAdditionalDiscountCostPrice = Double
-				.parseDouble(options_additional_discount_cost_price.getText().trim().substring(2));
+				.parseDouble(RemoveComma.of(options_additional_discount_cost_price.getText().trim().substring(2)));
 
 		// getting sales price elements
 
@@ -1300,13 +1300,13 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_maintenance_rental, 30);
-		ExplicitWait.visibleElement(driver, sales_total_input, 30);
+		ExplicitWait.visibleElement(driver, sales_total_after_rebate, 30);
 		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
 
 		// getting sales price from screen
 
-		double salesPriceActualFromSCreen = Double.parseDouble(sales_total_input.getAttribute("value"));
-		LO.print("Actual Sales Total Price from screen (on updating sales discount prices) is "
+		double salesPriceActualFromSCreen = Double
+				.parseDouble(RemoveComma.of(sales_total_after_rebate.getText().trim().substring(2)));		LO.print("Actual Sales Total Price from screen (on updating sales discount prices) is "
 				+ salesPriceActualFromSCreen);
 		System.out.println("Actual Sales Total Price from screen (on updating sales discount prices) is "
 				+ salesPriceActualFromSCreen);

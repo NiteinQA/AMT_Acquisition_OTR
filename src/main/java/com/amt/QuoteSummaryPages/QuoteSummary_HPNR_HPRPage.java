@@ -1285,7 +1285,7 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 	}
 
 	public boolean quote_summary_customer_quote_summary_value_verification_with_maintenance(String sheet_name)
-			throws IOException {
+			throws IOException, InterruptedException {
 
 		LO.print("*************Customer Quote Calculation on quote summary page has been started************");
 		System.out
@@ -1766,6 +1766,8 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 			return status;
 
 		} catch (Exception e) {
+			Thread.sleep(3000);
+			
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_terms, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_miles_per_annum, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_basic_cash_price, 20);

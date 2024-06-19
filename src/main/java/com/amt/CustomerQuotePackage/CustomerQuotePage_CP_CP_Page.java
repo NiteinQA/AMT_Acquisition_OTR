@@ -1107,8 +1107,9 @@ public class CustomerQuotePage_CP_CP_Page extends TestBase {
 
 		// getting sales price from screen
 
-		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-		double vehicleProfitActualFromSCreen = Double.parseDouble((String) clipboard.getData(DataFlavor.stringFlavor));
+		ExplicitWait.visibleElement(driver, vehicle_profit_input, 20);
+		
+		double vehicleProfitActualFromSCreen = Double.parseDouble(vehicle_profit_input.getAttribute("value"));
 
 		LO.print("Actual Vehicle Profit from screen (on updating sales discount prices) is "
 				+ vehicleProfitActualFromSCreen);

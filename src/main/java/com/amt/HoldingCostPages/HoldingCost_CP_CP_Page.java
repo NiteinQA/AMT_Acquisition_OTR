@@ -361,6 +361,92 @@ public class HoldingCost_CP_CP_Page extends TestBase {
 
 	}
 
+	
+	public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculation_with_maintenance(String quoteRef, String expiryDate,
+			String term, String milesPerAnnum, String cashDeposit, String documentFee,
+			String monthlyPayment, String optionalFinalPayment, String optionToPurchaseFee, String monthlyMaintPayment,
+			String pencePerExcessMileFinance, String pencePerExcessMileMaintenance, String sheet_name)
+			throws InterruptedException, IOException, ClassNotFoundException {
+
+		
+		Click.on(driver, holding_cost, 30);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);	
+
+		LO.print("***********Entered in holding cost page ***********");
+		System.out.println("***********Entered in holding cost page ***********");
+		
+		LO.print("Adding funder quote");
+		System.out.println("Adding funder quote");	
+		
+		Click.on(driver, holding_cost_summary, 30);
+
+		Thread.sleep(3000);
+		
+		ExplicitWait.visibleElement(driver, holding_cost_summary_terms, 40);
+
+		String default_term = holding_cost_summary_terms.getText().substring(0, 2);
+
+		ExplicitWait.visibleElement(driver, holding_cost_summary_mileage, 30);
+
+		String annual_mileage =RemoveComma.of(holding_cost_summary_mileage.getText());
+
+		Click.on(driver, add_funder_quote, 30);
+
+		Thread.sleep(3000);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		Click.on(driver, maintenance_toggle_button, 30);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		Click.on(driver, funder, 30);
+
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.ENTER).build().perform();
+
+		Click.sendKeys(driver, quote_ref, quoteRef, 30);
+
+		Click.sendKeys(driver, expiry_date, expiryDate, 30);
+
+		Click.sendKeys(driver, duration, default_term, 30);
+
+		Click.sendKeys(driver, miles_per_annum, annual_mileage, 30);
+
+		Click.sendKeys(driver, cash_deposit, cashDeposit, 30);
+
+		Click.sendKeys(driver, document_fee, documentFee, 30);
+
+		Click.sendKeys(driver, monthly_payment, monthlyPayment, 30);
+
+		Click.sendKeys(driver, optional_final_payment, optionalFinalPayment, 30);
+
+		Click.sendKeys(driver, option_to_purchase_fee, optionToPurchaseFee, 30);
+
+		Click.sendKeys(driver, monthly_maintenance_rental, monthlyMaintPayment, 30);
+
+		Click.sendKeys(driver, pense_per_excess_mile_finance, pencePerExcessMileFinance, 30);
+
+		Click.sendKeys(driver, pense_per_excess_mile_maintenance, pencePerExcessMileMaintenance, 30);
+
+		Thread.sleep(5000);
+
+		Click.on(driver, add, 30);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
+		
+		return obj_read_excel_calculation_page
+				.verify_holding_cost_after_adding_funder_based_on_ownbook_calculation_with_maintenance(driver,
+						holding_cost_summary_terms,holding_cost_summary_mileage,
+						holding_cost_summary_residual_value_used, total_monthly_holding_cost ,
+						"YES", "0" , monthlyMaintPayment, sheet_name);
+
+	}
+
 	public boolean verify_holding_cost_before_editing_cap_values_without_maintenance(
 			String residual_value_used_from_excel, String percentage_cap_residual_value_used,
 			String maintenance_required, String sheet_name)

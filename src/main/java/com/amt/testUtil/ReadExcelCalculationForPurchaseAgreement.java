@@ -850,6 +850,128 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 
 	}
 
+public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculation_with_maintenance(WebDriver driver,
+			WebElement holding_cost_summary_terms, WebElement holding_cost_summary_mileage,
+			WebElement holding_cost_summary_residual_value_used, WebElement total_monthly_holding_cost,
+			String maintenance_required, String target_rental,
+            String maintenance_cost_used_from_funder, String sheet_name)
+			throws IOException, InterruptedException, ClassNotFoundException {
+
+		LO.print("");
+		System.out.println("");
+
+		LO.print("***Verifying Holding Cost after adding a funder based on ownbook calculation*** ");
+		System.out.println("***Verifying Holding Cost after adding a funder based on ownbook calculation*** ");
+		
+		
+		Thread.sleep(3000);
+		
+		
+		ExplicitWait.visibleElement(driver, holding_cost_summary_terms, 40);
+
+		double duration = Double.parseDouble(holding_cost_summary_terms.getText().substring(0, 2));
+
+		ExplicitWait.visibleElement(driver, holding_cost_summary_mileage, 30);
+
+		double annual_mileage = Double.parseDouble(RemoveComma.of(holding_cost_summary_mileage.getText()));
+
+		ExplicitWait.visibleElement(driver, holding_cost_summary_residual_value_used, 30);
+
+		double used_residual_value = Double
+				.parseDouble(RemoveComma.of(holding_cost_summary_residual_value_used.getText().substring(2)));
+
+//		ExplicitWait.visibleElement(driver, total_cap_maintenance_value, 30);
+//
+//		double total_cap_maintenance_value_annual_converted_double = Double
+//				.parseDouble(RemoveComma.of(total_cap_maintenance_value.getText().substring(2)));
+
+		LO.print("Getting on screen values from Holding Cost Page");
+		System.out.println("Getting on screen values from Holding Cost Page");
+
+		LO.print("Duration(Terms) =" + duration);
+		System.out.println("Duration(Terms) =" + duration);
+
+		LO.print("Annual_mileage =" + annual_mileage);
+		System.out.println("Annual_mileage =" + annual_mileage);
+
+		LO.print("Residual_value_from_screen =" + used_residual_value);
+		System.out.println("Residual_value_from_screen =" + used_residual_value);
+
+		LO.print("Writing Holding Cost Summary values to excel has been started");
+		System.out.println("Writing Holding Cost Summary values to excel has been started");
+
+     	double maintenance_cost_used_from_funder_converted = Double.parseDouble(maintenance_cost_used_from_funder);
+
+		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		wb.getSheet(sheet_name).getRow(25).getCell(1).setCellValue(maintenance_required);
+		wb.getSheet(sheet_name).getRow(28).getCell(10).setCellValue(duration);
+		wb.getSheet(sheet_name).getRow(29).getCell(10).setCellValue(annual_mileage);
+
+		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
+			wb.getSheet(sheet_name).getRow(30).getCell(10).setCellValue(used_residual_value * 1.2);
+
+		} else {
+			wb.getSheet(sheet_name).getRow(30).getCell(10).setCellValue(used_residual_value);
+
+		}
+		wb.getSheet(sheet_name).getRow(31).getCell(10)
+		.setCellValue(maintenance_cost_used_from_funder_converted * duration);	
+		wb.getSheet(sheet_name).getRow(34).getCell(10).setCellValue(Double.parseDouble(prop.getProperty("base_rate")));
+		wb.getSheet(sheet_name).getRow(29).getCell(1).setCellValue(target_rental);
+		wb.getSheet(sheet_name).getRow(44).getCell(0).setCellValue(100);
+		wb.getSheet(sheet_name).getRow(44).getCell(2).setCellValue(100);
+
+		if (sheet_name.equals("Formula1-FL")) {
+			wb.getSheet(sheet_name).getRow(106).getCell(2).setCellValue("YES");
+		}
+
+		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+		wb.write(out);
+
+		LO.print("Writing Holding Cost Summary values to excel has been completed");
+		System.out.println("Writing Holding Cost Summary values to excel has been completed");
+
+		// excel code for reading calculated values from excel sheet
+
+		LO.print("Reading Monthly Holding Cost value from excel has been started");
+		System.out.println("Reading Monthly Holding Cost value from excel has been started");
+
+		double monthly_holding_cost_expected = GetExcelFormulaValue.get_formula_value(51, 1, sheet_name);
+
+		LO.print("Reading Monthly Holding Cost value from excel has been completed");
+		System.out.println("Reading Monthly Holding Cost value from excel has been completed");
+
+		String monthly_holding_cost = total_monthly_holding_cost.getText().substring(2);
+
+		String total_monthly_holding_cost_from_screen = RemoveComma.of(monthly_holding_cost);
+
+		LO.print("Total_monthly_holding_cost_from_screen =" + monthly_holding_cost);
+		System.out.println("Total_monthly_holding_cost_from_screen " + monthly_holding_cost);
+
+		LO.print("Total_monthly_holding_cost_from_excel =" + monthly_holding_cost_expected);
+		System.out.println("Total_monthly_holding_cost_from_excel " + monthly_holding_cost_expected);
+
+		double total_monthly_holding_cost_actual1 = Double.parseDouble(total_monthly_holding_cost_from_screen);
+		double diff = Difference.of_two_Double_Values(monthly_holding_cost_expected,
+				total_monthly_holding_cost_actual1);
+		boolean flag = false;
+		if (diff < 0.2) {
+			flag = true;
+
+			LO.print("Total Monthly Holding Cost After adding a funder based on Ownbook calculation is Verified and Found OK");
+			System.out.println("Total Monthly Holding Cost After adding a funder based on Ownbook calculation is Verified and Found OK");
+
+		} else {
+			LO.print("Total Monthly Holding Cost After adding a funder based on Ownbook calculation is Verified but Found Wrong");
+			System.err.println("Total Monthly Holding Cost After adding a funder based on Ownbook calculation is Verified but Found Wrong");
+
+		}
+		return flag;
+
+	}
+
+	
 	public double verify_holding_cost_after_adding_funder_with_maintenance_for_hpnr_hire_purchase(String totalCashPrice,
 			String cashDeposit, String term, String milesPerAnnum, String monthlyPayment,
 			String totalCapMaintenanceValue, String finalBalloonPayment, String documentFee, String sheet_name)
