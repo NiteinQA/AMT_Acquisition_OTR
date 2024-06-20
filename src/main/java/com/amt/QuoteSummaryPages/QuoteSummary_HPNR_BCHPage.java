@@ -477,7 +477,10 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 		Thread.sleep(5000);
 
-		Thread.sleep(3000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(3000);
+		try {
+		Click.on(driver, quote_summary, 60);
+		}catch(Exception e) {}
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 

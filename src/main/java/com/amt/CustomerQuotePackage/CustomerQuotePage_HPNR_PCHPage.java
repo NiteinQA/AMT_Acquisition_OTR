@@ -543,7 +543,12 @@ public class CustomerQuotePage_HPNR_PCHPage extends TestBase {
 
 		double balance_due_expected = 0;
 		if (Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("funder")) {
-			balance_due_expected = GetExcelFormulaValue.get_formula_value(124, 4, sheet_name);
+			if(Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName().contains("ownbook"))
+			{
+				balance_due_expected = GetExcelFormulaValue.get_formula_value(118, 4, sheet_name);
+			}else {
+				balance_due_expected = GetExcelFormulaValue.get_formula_value(124, 4, sheet_name);
+			}
 		} else {
 			balance_due_expected = GetExcelFormulaValue.get_formula_value(118, 4, sheet_name);
 		}

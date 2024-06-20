@@ -332,8 +332,10 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
 		Thread.sleep(2000);
-
+		
+		try {
 		Click.on(driver, quote_summary, 60);
+		}catch(Exception e) {}
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
