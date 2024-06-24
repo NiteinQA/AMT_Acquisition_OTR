@@ -134,7 +134,7 @@ public class TestBase {
 
 //commment 
 
-	//@AfterClass
+	@AfterClass
 	public void tearDown() {
 		driver.close();
 		System.out.println("");
