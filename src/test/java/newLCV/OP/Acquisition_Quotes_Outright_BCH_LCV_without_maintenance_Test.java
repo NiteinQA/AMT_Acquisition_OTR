@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePageOutrightBCHPage;
 import com.amt.HoldingCostPages.HoldingCostOutrightBCHPage;
-import com.amt.QuoteSummaryPages.QuoteSummaryOutrightBCHPage;
+import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
@@ -29,7 +29,7 @@ public class Acquisition_Quotes_Outright_BCH_LCV_without_maintenance_Test extend
 	ContractTypesAndOTR_Outright_BCH_Page obj_contract_types_and_OTR_page;
 	HoldingCostOutrightBCHPage obj_holding_cost_page;
 	CustomerQuotePageOutrightBCHPage obj_customer_quote_page;
-	QuoteSummaryOutrightBCHPage obj_quote_summary_page;
+	QuoteSummary_HPNR_BCHPage obj_quote_summary_page;
 
 	@Test(priority = 1, dataProvider = "testData")
 	public void aquisition_quotes_outright_BCH_OTR_calculation_without_maintenance_test(String manufacturer,
@@ -240,7 +240,7 @@ public class Acquisition_Quotes_Outright_BCH_LCV_without_maintenance_Test extend
 			String target_rental, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
-		obj_quote_summary_page = new QuoteSummaryOutrightBCHPage();
+		obj_quote_summary_page = new QuoteSummary_HPNR_BCHPage();
 
 		System.out.println("");
 		System.out.println("");

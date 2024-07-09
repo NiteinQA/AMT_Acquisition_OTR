@@ -4,6 +4,7 @@ import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -164,6 +165,9 @@ public class HoldingCost_CP_BCH_Page extends TestBase {
 
 	@FindBy(xpath = "//input[@id='monthlyMaintenancePayment']")
 	private WebElement monthly_maintenance_rental;
+	
+	@FindBy(xpath = "//ng-dropdown-panel//*[@role='option']")
+	private List<WebElement> funder_options;
 
 	public HoldingCost_CP_BCH_Page() {
 		PageFactory.initElements(driver, this);
@@ -181,20 +185,24 @@ public class HoldingCost_CP_BCH_Page extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, add_funder_quote, 30);
-
+		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, holding_cost_based_on_funder_quote_toggle_button, 30);
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);		
+       
+		
+//		Click.on(driver, funder_maintenance_toggle_button, 30);
+//
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		Click.on(driver, funder, 30);
 
-		Thread.sleep(2000);
-
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.ENTER).build().perform();
-
+		ExplicitWait.waitForListOfVisibleElements(driver, funder_options, 20);
+		
+		Click.on(driver, funder_options.get(1) , 20);		
+		
 		Click.sendKeys(driver, quote_ref, quoteRef, 30);
 
 		Click.sendKeys(driver, expiry_date, expiryDate, 30);

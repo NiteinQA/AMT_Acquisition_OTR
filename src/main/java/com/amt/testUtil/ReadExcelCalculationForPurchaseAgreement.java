@@ -1,6 +1,7 @@
 package com.amt.testUtil;
 
 import java.io.FileInputStream;
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -17,7 +18,16 @@ import org.openqa.selenium.support.ui.Select;
 
 import com.amt.testBase.TestBase;
 
+
+	
+
 public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
+	
+	
+	 CommonClass obj_common_class;
+	
+	 Properties prop;
+	
 	public ReadExcelCalculationForPurchaseAgreement() {
 		try {
 			prop = new Properties();
@@ -2086,9 +2096,12 @@ public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculat
 		// rfl values fakt on hotya baki sarv comment hotya
 		wb.getSheet(sheet_name).getRow(59).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("option_to_purchase_fee")));
+		
+		
 
 		double term = Double.parseDouble(terms);
 		
+
 		if (term <= 23 && term >= 12) {
 			wb.getSheet(sheet_name).getRow(61).getCell(1)
 					.setCellValue(Double.parseDouble(prop.getProperty("period_supplment_used_car")));
@@ -2106,8 +2119,17 @@ public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculat
 			wb.getSheet(sheet_name).getRow(63).getCell(1)
 					.setCellValue(Double.parseDouble(prop.getProperty("rate_over_base_rate_Limited")));
 		}
+		
+//		String sheet_name_to_get_default_broker_values =  prop.getProperty("Default_Broker_Margin_Values_sheet_name");
+		
+		obj_common_class = new CommonClass();		
+		
+		double defaultBrokerMarginFromPercentageConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_purchase_contract_types(term,matrixCreditType, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
+
+		
+		
 		wb.getSheet(sheet_name).getRow(65).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("min_margin_percentage_for_broker_vrb")));
+				.setCellValue(defaultBrokerMarginFromPercentageConfiguration/100);
 			
 		wb.getSheet(sheet_name).getRow(81).getCell(1).setCellFormula("IF(A111=\"YES\",A40,0)");
 			
@@ -2248,8 +2270,16 @@ public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculat
 			wb.getSheet(sheet_name).getRow(63).getCell(1)
 					.setCellValue(Double.parseDouble(prop.getProperty("rate_over_base_rate_Limited")));
 		}
+		
+		
+		
+		obj_common_class = new CommonClass();		
+		
+		double defaultBrokerMarginFromPercentageConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_purchase_contract_types(term,matrixCreditType, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
+
+		
 		wb.getSheet(sheet_name).getRow(65).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("min_margin_percentage_for_broker_vrb")));
+				.setCellValue(defaultBrokerMarginFromPercentageConfiguration/100);
 		wb.getSheet(sheet_name).getRow(107).getCell(0)
 				.setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
 		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue(DocFee);
@@ -2321,6 +2351,15 @@ public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculat
 			wb.getSheet(sheet_name).getRow(90).getCell(1).setCellFormula("IF(A111=\"YES\",A43,0)");
 			wb.getSheet(sheet_name).getRow(90).getCell(6).setCellFormula("IF(A111=\"YES\",A43,0)");
 		}
+		
+		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("with_maintenance")) {
+			wb.getSheet(sheet_name).getRow(113).getCell(4).setCellValue("YES");
+		} 
+		else
+		{
+			wb.getSheet(sheet_name).getRow(113).getCell(4).setCellValue("NO");
+		}
+
 		
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);

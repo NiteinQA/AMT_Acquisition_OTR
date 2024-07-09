@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePageOutrightBCHPage;
 import com.amt.HoldingCostPages.HoldingCostOutrightBCHPage;
-import com.amt.QuoteSummaryPages.QuoteSummaryOutrightBCHPage;
+import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
@@ -29,7 +29,7 @@ public class Acquisition_Quotes_Outright_BCH_LCV_with_maintenance_Test extends T
 	ContractTypesAndOTR_Outright_BCH_Page obj_contract_types_and_OTR_page;
 	HoldingCostOutrightBCHPage obj_holding_cost_page;
 	CustomerQuotePageOutrightBCHPage obj_customer_quote_page;
-	QuoteSummaryOutrightBCHPage obj_quote_summary_page;
+	QuoteSummary_HPNR_BCHPage obj_quote_summary_page;
 
 	@Test(priority = 1, dataProvider = "testData")
 	public void aquisition_quotes_outright_BCH_OTR_calculation_with_maintenance_test(String manufacturer, String model,
@@ -230,7 +230,7 @@ public class Acquisition_Quotes_Outright_BCH_LCV_with_maintenance_Test extends T
 			String security_deposit, String matrix_upsell, String referrer_upsell, String add_terms, String add_mileage, String maintenance_required, String maintenance_margin, String initial_payment,
 			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
-		obj_quote_summary_page = new QuoteSummaryOutrightBCHPage();
+		obj_quote_summary_page = new QuoteSummary_HPNR_BCHPage();
 		
 		System.out.println("");
 		System.out.println("");
@@ -262,31 +262,31 @@ public class Acquisition_Quotes_Outright_BCH_LCV_with_maintenance_Test extends T
 		System.out.println("");
 		System.out.println("");
 
-//		obj_quote_summary_page.save_quote();
-//
-//		boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
-//		Assert.assertTrue(quote_summary_OTR_calculation1);
-//		
-//		System.out.println("");
-//		System.out.println("");
-//
-//		boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page
-//				.quote_summary_holding_cost_calculation_with_maintenance(sheet_name);
-//		Assert.assertTrue(quote_summary_holding_cost_calculation1);
-//		
-//		System.out.println("");
-//		System.out.println("");
-//
-//		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
-//				.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name);
-//		Assert.assertTrue(quote_summary_customer_quote_calculation1);
-//		
-//		System.out.println("");
-//		System.out.println("");
-//
-//		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
-//				.quote_summary_configuration_value_verification_with_maintenance(sheet_name);
-//		Assert.assertTrue(quote_summary_configuration_value_check1);
+		obj_quote_summary_page.save_quote();
+
+		boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
+		Assert.assertTrue(quote_summary_OTR_calculation1);
+		
+		System.out.println("");
+		System.out.println("");
+
+		boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page
+				.quote_summary_holding_cost_calculation_with_maintenance(sheet_name);
+		Assert.assertTrue(quote_summary_holding_cost_calculation1);
+		
+		System.out.println("");
+		System.out.println("");
+
+		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
+				.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name);
+		Assert.assertTrue(quote_summary_customer_quote_calculation1);
+		
+		System.out.println("");
+		System.out.println("");
+
+		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
+				.quote_summary_configuration_value_verification_with_maintenance(sheet_name);
+		Assert.assertTrue(quote_summary_configuration_value_check1);
 		
 		System.out.println("");
 		System.out.println("");
@@ -298,16 +298,16 @@ public class Acquisition_Quotes_Outright_BCH_LCV_with_maintenance_Test extends T
 		System.out.println("");
 		System.out.println("");
 //
-//		boolean value_check_after_Finance_margin_change = obj_quote_summary_page
-//				.quote_summary_edit_finance_margin_value_verification(sheet_name);
-//		//Assert.assertTrue(value_check_after_Finance_margin_change);
-//		
-//		System.out.println("");
-//		System.out.println("");
-//
-//		boolean value_check_after_maint_margin_change = obj_quote_summary_page
-//				.quote_summary_edit_maintenance_margin_value_verification(sheet_name);
-//	//	Assert.assertTrue(value_check_after_maint_margin_change);
+		boolean value_check_after_Finance_margin_change = obj_quote_summary_page
+				.quote_summary_edit_finance_margin_value_verification(sheet_name);
+		//Assert.assertTrue(value_check_after_Finance_margin_change);
+		
+		System.out.println("");
+		System.out.println("");
+
+		boolean value_check_after_maint_margin_change = obj_quote_summary_page
+				.quote_summary_edit_maintenance_margin_value_verification(sheet_name);
+	//	Assert.assertTrue(value_check_after_maint_margin_change);
 		
 		System.out.println("");
 		System.out.println("");

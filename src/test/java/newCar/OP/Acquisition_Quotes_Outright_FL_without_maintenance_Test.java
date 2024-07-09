@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePageOutrightFLPage;
 import com.amt.HoldingCostPages.HoldingCostOutrightFLPage;
-import com.amt.QuoteSummaryPages.QuoteSummaryOutrightFLPage;
+import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
@@ -31,7 +31,7 @@ public class Acquisition_Quotes_Outright_FL_without_maintenance_Test extends Tes
 	ContractTypesAndOTR_Outright_FL_Page obj_contract_types_and_OTR_page;
 	HoldingCostOutrightFLPage obj_holding_cost_page;
 	CustomerQuotePageOutrightFLPage obj_customer_quote_page;
-	QuoteSummaryOutrightFLPage obj_quote_summary_page;
+	QuoteSummary_HPNR_BCHPage obj_quote_summary_page;
 
 	@Test(priority = 1, dataProvider = "testData")
 	public void aquisition_quotes_outright_FL_OTR_calculation_without_maintenance_test(String manufacturer,
@@ -228,7 +228,7 @@ public class Acquisition_Quotes_Outright_FL_without_maintenance_Test extends Tes
 			String target_rental, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
-		obj_quote_summary_page = new QuoteSummaryOutrightFLPage();
+		obj_quote_summary_page = new QuoteSummary_HPNR_BCHPage();
 
 		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
 		Assert.assertTrue(quote_summary_OTR_calculation);

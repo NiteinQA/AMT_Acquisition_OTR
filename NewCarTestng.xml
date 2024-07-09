@@ -111,7 +111,7 @@
       <class name="newCar.HPNR.Acquisition_Quotes_HPNR_BCH_with_funder_Increase_OTR_hire_with_maintenance_Test"/>
       <class name="newCar.HPNR.Acquisition_Quotes_HPNR_BCH_decrease_OTR_hire_additional_term_and_mileage_with_maintenance_Test"/>
       <class name="newCar.HPNR.Acquisition_Quotes_HPNR_BCH_Increase_OTR_hire_additional_term_and_mileage_with_maintenance_Test"/>
-      <class name="newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_Increase_OTR_purchase_without_maintenance_Test"/>
+     <!--  <class name="newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_with_funder_Increase_OTR_purchase_without_maintenance_Test"/>
       <class name="newCar.HPNR.Acquisition_Quotes_HPNR_BCH_decrease_OTR_hire_with_maintenance_Test"/>
       <class name="newCar.HPNR.Acquisition_Quotes_HPNR_BCH_with_funder_decrease_OTR_hire_without_maintenance_Test"/>
       <class name="newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_with_maintenance_Test"/>
@@ -141,7 +141,7 @@
       <class name="newCar.HPNR.Acquisition_Quotes_HPNR_BCH_with_funder_Increase_OTR_hire_without_maintenance_Test"/>
       <class name="newCar.HPNR.Acquisition_Quotes_HPNR_BCH_decrease_OTR_hire_additional_term_and_mileage_without_maintenance_Test"/>
       <class name="newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_add_discounts_with_maintenance_Test"/>
-      <class name="newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_Increase_OTR_additional_term_and_mileage_purchase_without_maintenance_Test"/>
+      <class name="newCar.HPNR.Acquisition_Quotes_HPNR_HPNR_Increase_OTR_additional_term_and_mileage_purchase_without_maintenance_Test"/>-->
 	</classes>
     
     

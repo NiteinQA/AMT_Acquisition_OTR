@@ -3,7 +3,6 @@ package newCar.CP;
 import java.awt.datatransfer.UnsupportedFlavorException;
 import java.io.IOException;
 
-import org.apache.poi.ss.formula.FormulaParseException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -12,7 +11,6 @@ import org.testng.annotations.Test;
 import com.amt.CustomerQuotePackage.CustomerQuotePage_CP_PCH_Page;
 import com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_PCHPage;
 import com.amt.HoldingCostPages.HoldingCost_CP_BCH_Page;
-import com.amt.HoldingCostPages.HoldingCost_CP_PCH_Page;
 import com.amt.QuoteSummaryPages.QuoteSummary_CP_PCH_Page;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
@@ -149,8 +147,9 @@ public class Acquisition_Quotes_CP_PCH_with_funder_ownbook_calculation_with_main
 		System.out.println("");
 //		                                                                                                                                                                                                            
 //		boolean cust_quote_for_all_payment_boolean_status=obj_customer_quote_page.customer_Quote_HPNR_PCH_for_all_payment_option_with_maintenance_calculation(initial_payment,sheet_name);
-//		Assert.assertTrue(cust_quote_for_all_payment_boolean_status);
-		}
+//		Assert.assertTrue(cust_quote_for_all_payment_boolean_status);		
+		
+	}
 	
 	@Test(priority=5, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_CP_PCH_customer_quote_payment_profile_calculations_with_maintenance_test" })
 

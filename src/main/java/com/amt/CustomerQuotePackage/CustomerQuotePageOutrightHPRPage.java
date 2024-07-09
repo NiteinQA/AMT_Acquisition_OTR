@@ -140,8 +140,8 @@ public class CustomerQuotePageOutrightHPRPage extends TestBase {
 	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
 	private WebElement part_exchange_and_additional_payment_button;
 
-	@FindBy(xpath = "//*[@id='collapseFirst']/div/div/div[5]/label/span")
-	private WebElement balloon_payment_toggle;
+	@FindBy(xpath = "//*[@name='withBalloon']//ancestor::div[1]//span[@class='slider round']")
+	private WebElement balloon_payment_toggle;	
 
 	@FindBy(xpath = "//app-purchase-customer-quote-summary-header/div/div[6]/div/p/strong")
 	private WebElement total_monthly_payment;

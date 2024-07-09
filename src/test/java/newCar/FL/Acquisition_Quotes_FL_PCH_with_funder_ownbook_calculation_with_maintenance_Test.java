@@ -12,6 +12,7 @@ import com.amt.CustomerQuotePackage.CustomerQuotePage_FL_PCHPage;
 import com.amt.HoldingCostPages.HoldingCost_FL_BCHPage;
 import com.amt.HoldingCostPages.HoldingCost_FL_PCHPage;
 import com.amt.QuoteSummaryPages.QuoteSummary_FL_PCHPage;
+import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
@@ -223,17 +224,17 @@ public class Acquisition_Quotes_FL_PCH_with_funder_ownbook_calculation_with_main
 				.quote_summary_configuration_value_verification_with_maintenance(sheet_name);
 		Assert.assertTrue(quote_summary_configuration_value_check1);
 
-//		boolean value_check_after_Base_Int_change = obj_quote_summary_page
-//				.quote_summary_edit_base_int_rate_value_verification_with_maintenance(sheet_name);
-////		Assert.assertTrue(value_check_after_Base_Int_change);
-//
-//		boolean value_check_after_Finance_margin_change = obj_quote_summary_page
-//				.quote_summary_edit_finance_margin_value_verification(sheet_name);
-//		Assert.assertTrue(value_check_after_Finance_margin_change);
-//
-//		boolean value_check_after_maint_margin_change = obj_quote_summary_page
-//				.quote_summary_edit_maintenance_margin_value_verification(sheet_name);
-//		Assert.assertTrue(value_check_after_maint_margin_change);
+		boolean value_check_after_Base_Int_change = obj_quote_summary_page
+				.quote_summary_edit_base_int_rate_value_verification_with_maintenance(sheet_name);
+//		Assert.assertTrue(value_check_after_Base_Int_change);
+
+		boolean value_check_after_Finance_margin_change = obj_quote_summary_page
+				.quote_summary_edit_finance_margin_value_verification(sheet_name);
+		Assert.assertTrue(value_check_after_Finance_margin_change);
+
+		boolean value_check_after_maint_margin_change = obj_quote_summary_page
+				.quote_summary_edit_maintenance_margin_value_verification(sheet_name);
+		Assert.assertTrue(value_check_after_maint_margin_change);
 
 	}
 

@@ -411,10 +411,14 @@ public class CustomerQuotePage_HPNR_BCHPage extends TestBase {
 		ExplicitWait.visibleElement(driver, document_fee, 30);
 		document_fee.clear();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		Thread.sleep(2000);
 
 		ExplicitWait.visibleElement(driver, document_fee, 30);
 		document_fee.clear();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		Thread.sleep(2000);
 
 		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();

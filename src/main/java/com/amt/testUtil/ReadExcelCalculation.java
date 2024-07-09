@@ -23,9 +23,14 @@ import com.amt.testBase.TestBase;
 public class ReadExcelCalculation extends TestBase {
 	
 	Properties prop;
+	
+	CommonClass obj_common_class ;
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
+	
+	@FindBy(xpath = "//*[normalize-space()='Term']//ancestor::div[1]//div//p//strong")
+	private WebElement customer_quote_summary_terms;
 
 	public ReadExcelCalculation() {
 		try {
@@ -1439,14 +1444,24 @@ public class ReadExcelCalculation extends TestBase {
 		if (sheet_name.contains("Use")) {
 
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B60*B66");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
 
 		} else {
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
 	}
+		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
+
+		double terms = Double.parseDouble(customer_quote_summary_terms.getText().trim().split(" ")[0]);	
+		
+		
+		obj_common_class = new CommonClass();		
+		
+		double defaultBrokerMarginFromConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_hire_contract_types(terms, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
+		
 		wb.getSheet(sheet_name).getRow(64).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
+				.setCellValue(defaultBrokerMarginFromConfiguration);
+		
 		wb.getSheet(sheet_name).getRow(67).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("contingency_insurance_multiplier_holding_cost")));
 		wb.getSheet(sheet_name).getRow(68).getCell(1)
@@ -1504,17 +1519,28 @@ public class ReadExcelCalculation extends TestBase {
 	
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B60*B66");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
 		}
 		else
 		{
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
 
 		}
+			
+			
+			ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
+
+			double terms = Double.parseDouble(customer_quote_summary_terms.getText().trim().split(" ")[0]);	
+			
+			
+			obj_common_class = new CommonClass();		
+			
+			double defaultBrokerMarginFromConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_hire_contract_types(terms, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
+	
 		
 		wb.getSheet(sheet_name).getRow(64).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
+				.setCellValue(defaultBrokerMarginFromConfiguration);
 		wb.getSheet(sheet_name).getRow(67).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("contingency_insurance_multiplier_holding_cost")));
 		wb.getSheet(sheet_name).getRow(68).getCell(1)
@@ -1594,33 +1620,43 @@ public class ReadExcelCalculation extends TestBase {
 
 		wb.getSheet(sheet_name).getRow(61).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
+		
+		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
+
+		double terms = Double.parseDouble(customer_quote_summary_terms.getText().trim().split(" ")[0]);	
+		
+		
+		obj_common_class = new CommonClass();		
+		
+		double defaultBrokerMarginFromConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_hire_contract_types(terms, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
+
 		wb.getSheet(sheet_name).getRow(64).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
+				.setCellValue(defaultBrokerMarginFromConfiguration);
 
 		
 	
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("E15*B66");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
 			
 			if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) 
 			{
-				wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B60*B66");
+				wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
 			}
 
 
 		} else {
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
 
 		}
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) 
 		{
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B60*B66");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
 		}else {
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
 
 		}
 
@@ -1672,8 +1708,20 @@ public class ReadExcelCalculation extends TestBase {
 
 		wb.getSheet(sheet_name).getRow(67).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
+		
+		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
+
+		double terms = Double.parseDouble(customer_quote_summary_terms.getText().trim().split(" ")[0]);	
+		
+		
+		obj_common_class = new CommonClass();		
+		
+		double defaultBrokerMarginFromConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_hire_contract_types(terms, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
+
+		
+		
 		wb.getSheet(sheet_name).getRow(70).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
+				.setCellValue(defaultBrokerMarginFromConfiguration);
 		
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("CP_")) {
@@ -1682,7 +1730,7 @@ public class ReadExcelCalculation extends TestBase {
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B71");
 			
 	
 			
@@ -1690,13 +1738,13 @@ public class ReadExcelCalculation extends TestBase {
 	    if(Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used"))
 		{
 			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B66*B69");
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B66*B72");
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B71");
 		}
 		
 		else 
 		{
 			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B67*B69");
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B71");
 		}
 		
 		wb.getSheet(sheet_name).getRow(73).getCell(1)
@@ -1781,8 +1829,20 @@ public class ReadExcelCalculation extends TestBase {
 
 		wb.getSheet(sheet_name).getRow(67).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
+		
+		
+		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
+
+		double terms = Double.parseDouble(customer_quote_summary_terms.getText().trim().split(" ")[0]);	
+		
+		
+		obj_common_class = new CommonClass();		
+		
+		double defaultBrokerMarginFromConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_hire_contract_types(terms, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
+
+		
 		wb.getSheet(sheet_name).getRow(70).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
+				.setCellValue(defaultBrokerMarginFromConfiguration);
 		wb.getSheet(sheet_name).getRow(73).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("contingency_insurance_multiplier_holding_cost")));
 		wb.getSheet(sheet_name).getRow(74).getCell(1)
@@ -1795,12 +1855,12 @@ public class ReadExcelCalculation extends TestBase {
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
 
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("E15*B72");
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B71");
 			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("E15*B69");
           }
 		else
 		{
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B71");
 			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B67*B69");
 		}
 		
@@ -1847,14 +1907,26 @@ public class ReadExcelCalculation extends TestBase {
 
 		wb.getSheet(sheet_name).getRow(61).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
-		wb.getSheet(sheet_name).getRow(64).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
+		
+	
+		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B60*B66");
-		} else {
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B61*B66");
-		}
+		double terms = Double.parseDouble(customer_quote_summary_terms.getText().trim().split(" ")[0]);	
+		
+		
+		obj_common_class = new CommonClass();		
+		
+		double defaultBrokerMarginFromConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_hire_contract_types(terms, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
+
+		
+		wb.getSheet(sheet_name).getRow(64).getCell(1)
+				.setCellValue(defaultBrokerMarginFromConfiguration);
+
+//		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
+//			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
+//		} else {
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
+//		}
 
 		wb.getSheet(sheet_name).getRow(67).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("contingency_insurance_multiplier_holding_cost")));
@@ -1896,19 +1968,31 @@ public class ReadExcelCalculation extends TestBase {
 
 		wb.getSheet(sheet_name).getRow(67).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
+		
+		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
+
+		double terms = Double.parseDouble(customer_quote_summary_terms.getText().trim().split(" ")[0]);	
+		
+		
+		obj_common_class = new CommonClass();		
+		
+		double defaultBrokerMarginFromConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_hire_contract_types(terms, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
+
+		
+		
 		wb.getSheet(sheet_name).getRow(70).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage_for_broker_vrb")));
+				.setCellValue(defaultBrokerMarginFromConfiguration);
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
 			
-			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B66*B69");	
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B66*B72");
+			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B67*B69");	
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B71");
 				
 			}          
 		else
 		{
 			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B67*B69");	
-			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B67*B72");
+			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B71");
 		}		
 		wb.getSheet(sheet_name).getRow(73).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("contingency_insurance_multiplier_holding_cost")));

@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePage_CP_PCH_Page;
 import com.amt.HoldingCostPages.HoldingCost_CP_PCH_Page;
-import com.amt.QuoteSummaryPages.QuoteSummary_CP_PCH_Page;
+import com.amt.QuoteSummaryPages.QuoteSummary_CP_BCH_Page;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
@@ -32,7 +32,7 @@ public class Acquisition_Quotes_CP_PCH_with_funder_quote_addition_without_mainte
 	ContractTypesAndOTR_CP_PCH_Page obj_contract_types_and_OTR_page;
 	HoldingCost_CP_PCH_Page obj_holding_cost_CP_PCH_page;
 	CustomerQuotePage_CP_PCH_Page obj_customer_quote_page;
-	QuoteSummary_CP_PCH_Page obj_quote_summary_page;
+	QuoteSummary_CP_BCH_Page obj_quote_summary_page;
 
 
 	@Test(priority = 1, dataProvider = "testData")
@@ -157,7 +157,7 @@ System.out.println("");
 			 String security_deposit, String matrix_upsell, String referrer_upsell, String add_terms, String add_mileage, String maintenance_required, String maintenance_margin, String initial_payment,
 			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException, ClassNotFoundException {
 
-		obj_quote_summary_page = new QuoteSummary_CP_PCH_Page();
+		obj_quote_summary_page = new QuoteSummary_CP_BCH_Page();
 
 
 		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);

@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 import com.amt.CustomerQuotePackage.CustomerQuotePage_FL_PCHPage;
 import com.amt.HoldingCostPages.HoldingCost_FL_PCHPage;
 import com.amt.QuoteSummaryPages.QuoteSummary_FL_PCHPage;
+import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;

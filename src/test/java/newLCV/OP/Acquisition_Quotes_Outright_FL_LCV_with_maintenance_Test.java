@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePageOutrightFLPage;
 import com.amt.HoldingCostPages.HoldingCostOutrightFLPage;
-import com.amt.QuoteSummaryPages.QuoteSummaryOutrightFLPage;
+import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
 import com.amt.pages.OptionsAccessoriesPage;
@@ -30,7 +30,7 @@ public class Acquisition_Quotes_Outright_FL_LCV_with_maintenance_Test extends Te
 	ContractTypesAndOTR_Outright_FL_Page obj_contract_types_and_OTR_page;
 	HoldingCostOutrightFLPage obj_holding_cost_page;
 	CustomerQuotePageOutrightFLPage obj_customer_quote_page;
-	QuoteSummaryOutrightFLPage obj_quote_summary_page;
+	QuoteSummary_HPNR_BCHPage obj_quote_summary_page;
 
 	@Test(priority = 1, dataProvider = "testData")
 	public void aquisition_quotes_outright_FL_OTR_calculation_with_maintenance_test(String manufacturer, String model,
@@ -207,7 +207,7 @@ public class Acquisition_Quotes_Outright_FL_LCV_with_maintenance_Test extends Te
 			String security_deposit, String matrix_upsell, String referrer_upsell, String add_terms, String add_mileage, String maintenance_required, String maintenance_margin, String initial_payment,
 			String part_exchange_status, String target_rental, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
-		obj_quote_summary_page = new QuoteSummaryOutrightFLPage();
+		obj_quote_summary_page = new QuoteSummary_HPNR_BCHPage();
 
 		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
 		Assert.assertTrue(quote_summary_OTR_calculation);
@@ -224,22 +224,22 @@ public class Acquisition_Quotes_Outright_FL_LCV_with_maintenance_Test extends Te
 				.quote_summary_configuration_value_verification_with_maintenance(sheet_name);
 		Assert.assertTrue(quote_summary_configuration_value_check);
 
-//		obj_quote_summary_page.save_quote();
-//
-//		boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
-//		Assert.assertTrue(quote_summary_OTR_calculation1);
-//
-//		boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page
-//				.quote_summary_holding_cost_calculation_with_maintenance(sheet_name);
-//		Assert.assertTrue(quote_summary_holding_cost_calculation1);
-//
-//		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
-//				.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name);
-//		Assert.assertTrue(quote_summary_customer_quote_calculation);
-//
-//		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
-//				.quote_summary_configuration_value_verification_with_maintenance(sheet_name);
-//		Assert.assertTrue(quote_summary_configuration_value_check1);
+		obj_quote_summary_page.save_quote();
+
+		boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
+		Assert.assertTrue(quote_summary_OTR_calculation1);
+
+		boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page
+				.quote_summary_holding_cost_calculation_with_maintenance(sheet_name);
+		Assert.assertTrue(quote_summary_holding_cost_calculation1);
+
+		boolean quote_summary_customer_quote_calculation1 = obj_quote_summary_page
+				.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name);
+		Assert.assertTrue(quote_summary_customer_quote_calculation);
+
+		boolean quote_summary_configuration_value_check1 = obj_quote_summary_page
+				.quote_summary_configuration_value_verification_with_maintenance(sheet_name);
+		Assert.assertTrue(quote_summary_configuration_value_check1);
 
 		boolean value_check_after_Base_Int_change = obj_quote_summary_page
 				.quote_summary_edit_base_int_rate_value_verification_with_maintenance(sheet_name);

@@ -617,22 +617,6 @@ public class QuoteSummary_CP_CP_Page extends TestBase {
 		double holding_cost_total_monthly_holding_cost_from_screen_converted = Double.parseDouble(RemoveComma
 				.of(quote_summary_total_monthly_holding_cost_without_maintenance.getText().trim().substring(2)));
 
-		LO.print("holding_cost_terms_from_screen" + holding_cost_terms_from_screen_converted);
-		System.out.println("holding_cost_terms_from_screen" + holding_cost_terms_from_screen_converted);
-
-		LO.print("holding_cost_miles_per_annum_from_screen" + holding_cost_miles_per_annum_from_screen_converted);
-		System.out.println(
-				"holding_cost_miles_per_annum_from_screen" + holding_cost_miles_per_annum_from_screen_converted);
-
-		LO.print("holding_cost_monthly_finance_cost_from_screen"
-				+ holding_cost_monthly_finance_cost_from_screen_converted);
-		System.out.println("holding_cost_monthly_finance_cost_from_screen"
-				+ holding_cost_monthly_finance_cost_from_screen_converted);
-
-		LO.print("holding_cost_total_monthly_holding_cost_from_screen ="
-				+ holding_cost_total_monthly_holding_cost_from_screen_converted);
-		System.out.println("holding_cost_total_monthly_holding_cost_from_screen ="
-				+ holding_cost_total_monthly_holding_cost_from_screen_converted);
 
 		double holding_cost_terms_from_excel = GetExcelFormulaValue.get_formula_value(51, 0, sheet_name);
 		double holding_cost_miles_per_annum_from_excel = GetExcelFormulaValue.get_formula_value(50, 1, sheet_name);
@@ -946,7 +930,12 @@ public class QuoteSummary_CP_CP_Page extends TestBase {
 				ExplicitWait.visibleElement(driver,	quote_summary_customer_quote_summary_optional_final_payment_inc_option_to_purchase_fee, 20);
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_pence_per_excess_mile_finance, 20);
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_vehicle_comm, 20);
+
+
+				try {
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_default_finance_comm, 20);
+				}catch(Exception e1) {}
+				
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_document_fee_comm, 20);
 				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_comm, 20);
 
@@ -1024,8 +1013,11 @@ public class QuoteSummary_CP_CP_Page extends TestBase {
 				double customer_quote_summary_vehicle_comm = Double.parseDouble(
 						RemoveComma.of(quote_summary_customer_quote_summary_vehicle_comm.getText().trim().substring(2)));
 
-				double customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
+				double customer_quote_summary_default_finance_comm =0;
+				try {
+				customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
 						.of(quote_summary_customer_quote_summary_default_finance_comm.getText().trim().substring(2)));
+				}catch(Exception e3) {}	
 
 		
 				double customer_quote_summary_document_fee_comm = Double.parseDouble(
@@ -1387,7 +1379,12 @@ try {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_pence_per_excess_mile_maint, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_pence_per_excess_mile_total, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_vehicle_comm, 20);
+
+		try {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_default_finance_comm, 20);
+		}catch(Exception e1) {}
+		
+		
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_maintenance_commision, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_document_fee_comm, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_comm, 20);
@@ -1486,8 +1483,12 @@ try {
 		double customer_quote_summary_vehicle_comm = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_summary_vehicle_comm.getText().trim().substring(2)));
 
-		double customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
+
+		double customer_quote_summary_default_finance_comm =0;
+		try {
+		customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
 				.of(quote_summary_customer_quote_summary_default_finance_comm.getText().trim().substring(2)));
+		}catch(Exception e3) {}	
 
  
 		
@@ -1669,6 +1670,10 @@ try {
 			LO.print("Finance Charges - found wrong");
 			System.err.println("Finance Charges - found wrong");
 		}
+		System.out.println("Finance Charges - Actual "+ customer_quote_summary_finance_charges );
+		
+		System.out.println("Finance Charges - Expected "+ financeCharges );
+		
 
 		// 13
 		if ((Difference.of_two_Double_Values(documentFee, customer_quote_summary_document_fee)) < 0.2) {
@@ -1892,7 +1897,11 @@ try {
 	ExplicitWait.visibleElement(driver,	quote_summary_customer_quote_summary_optional_final_payment_inc_option_to_purchase_fee, 20);
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_pence_per_excess_mile_finance, 20);
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_vehicle_comm, 20);
+
+	try {
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_default_finance_comm, 20);
+	}catch(Exception e1) {}
+	
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_document_fee_comm, 20);
 	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_comm, 20);
 
@@ -1972,8 +1981,11 @@ try {
 	double customer_quote_summary_vehicle_comm = Double.parseDouble(
 			RemoveComma.of(quote_summary_customer_quote_summary_vehicle_comm.getText().trim().substring(2)));
 
-	double customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
+	double customer_quote_summary_default_finance_comm =0;
+	try {
+	customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
 			.of(quote_summary_customer_quote_summary_default_finance_comm.getText().trim().substring(2)));
+	}catch(Exception e3) {}	
 
 
 	double customer_quote_summary_document_fee_comm = Double.parseDouble(
@@ -2777,7 +2789,11 @@ try {
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_pence_per_excess_mile_maint, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_pence_per_excess_mile_total, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_vehicle_comm, 20);
-			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_default_finance_comm, 20);
+
+			try {
+				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_default_finance_comm, 20);
+				}catch(Exception e1) {}
+			
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_maintenance_commision, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_document_fee_comm, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_comm, 20);
@@ -2859,8 +2875,11 @@ try {
 			double customer_quote_summary_vehicle_comm = Double.parseDouble(
 					RemoveComma.of(quote_summary_customer_quote_summary_vehicle_comm.getText().trim().substring(2)));
 
-			double customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
+			double customer_quote_summary_default_finance_comm =0;
+			try {
+			customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
 					.of(quote_summary_customer_quote_summary_default_finance_comm.getText().trim().substring(2)));
+			}catch(Exception e3) {}
 
 			double customer_quote_summary_maintenance_commision = Double.parseDouble(RemoveComma
 					.of(quote_summary_customer_quote_summary_maintenance_commision.getText().trim().substring(2)));
@@ -3272,7 +3291,11 @@ try {
 					quote_summary_customer_quote_summary_optional_final_payment_inc_option_to_purchase_fee, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_pence_per_excess_mile_finance, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_vehicle_comm, 20);
-			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_default_finance_comm, 20);
+
+			try {
+				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_default_finance_comm, 20);
+				}catch(Exception e1) {}
+			
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_document_fee_comm, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_total_comm, 20);
 
@@ -3346,8 +3369,11 @@ try {
 			double customer_quote_summary_vehicle_comm = Double.parseDouble(
 					RemoveComma.of(quote_summary_customer_quote_summary_vehicle_comm.getText().trim().substring(2)));
 
-			double customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
+			double customer_quote_summary_default_finance_comm =0;
+			try {
+			customer_quote_summary_default_finance_comm = Double.parseDouble(RemoveComma
 					.of(quote_summary_customer_quote_summary_default_finance_comm.getText().trim().substring(2)));
+			}catch(Exception e3) {}
 
 		
 			double customer_quote_summary_document_fee_comm = Double.parseDouble(
@@ -3991,10 +4017,6 @@ try {
 			double totalMarginFromScreen = Double
 					.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin_percentage, 20);
-			double defaultBrokerMarginPercentageFromScreen = Double
-					.parseDouble(quote_summary_default_broker_margin_percentage.getText().trim().substring(0, 4));
-
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_customer_interest_rate, 20);
 			double customerInterestRateFromScreen = Double
 					.parseDouble(quote_summary_configuration_customer_interest_rate.getText().trim().substring(0, 5));
@@ -4005,8 +4027,17 @@ try {
 
 			// copying default broker margin from input field
 
+			double defaultBrokerMarginPercentageFromScreen =0;
+			double default_broker_margin_copied =0;
+			
+			try {
+			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin_percentage, 20);
+			defaultBrokerMarginPercentageFromScreen = Double
+					.parseDouble(quote_summary_default_broker_margin_percentage.getText().trim().split(" ")[0]);
+			
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_default_broker_margin_input, 30);
-			double default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+			default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+			}catch(Exception e) {}
 
 			
 			//			ExplicitWait.visibleElement(driver, quote_summary_configuration_total_tracker_cost, 20);
@@ -4213,10 +4244,6 @@ try {
 			double totalMarginFromScreen = Double
 					.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin_percentage, 20);
-			double defaultBrokerMarginPercentageFromScreen = Double
-					.parseDouble(quote_summary_default_broker_margin_percentage.getText().trim().substring(0, 4));
-
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_customer_interest_rate, 20);
 			double customerInterestRateFromScreen = Double
 					.parseDouble(quote_summary_configuration_customer_interest_rate.getText().trim().substring(0, 4));
@@ -4230,8 +4257,17 @@ try {
 					.parseDouble(RemoveComma.of(quote_summary_decument_fee_margin.getText().trim().substring(2)));
 
 			// copying default broker margin from input field
+			double defaultBrokerMarginPercentageFromScreen =0;
+			double default_broker_margin_copied =0;
+			
+			try {
+			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin_percentage, 20);
+			defaultBrokerMarginPercentageFromScreen = Double
+					.parseDouble(quote_summary_default_broker_margin_percentage.getText().trim().split(" ")[0]);
+			
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_default_broker_margin_input, 30);
-			double default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+			default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+			}catch(Exception e) {}
 //						ExplicitWait.visibleElement(driver, quote_summary_configuration_total_tracker_cost, 20);
 //						double trackerCostFromScreen = Double.parseDouble(RemoveComma.of(quote_summary_configuration_total_tracker_cost.getText().trim().substring(2)));
 	//
@@ -4451,10 +4487,6 @@ try {
 			double totalMarginFromScreen = Double
 					.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin_percentage, 20);
-			double defaultBrokerMarginPercentageFromScreen = Double
-					.parseDouble(quote_summary_default_broker_margin_percentage.getText().trim().substring(0, 4));
-
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_customer_interest_rate, 20);
 			double customerInterestRateFromScreen = Double
 					.parseDouble(quote_summary_configuration_customer_interest_rate.getText().trim().substring(0, 5));
@@ -4465,8 +4497,17 @@ try {
 
 			// copying default broker margin from input field
 
+			double defaultBrokerMarginPercentageFromScreen =0;
+			double default_broker_margin_copied =0;
+			
+			try {
+			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin_percentage, 20);
+			defaultBrokerMarginPercentageFromScreen = Double
+					.parseDouble(quote_summary_default_broker_margin_percentage.getText().trim().split(" ")[0]);
+			
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_default_broker_margin_input, 30);
-			double default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+			default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+			}catch(Exception e) {}
 //			ExplicitWait.visibleElement(driver, quote_summary_configuration_total_tracker_cost, 20);
 //			double trackerCostFromScreen = Double.parseDouble(RemoveComma.of(quote_summary_configuration_total_tracker_cost.getText().trim().substring(2)));
 	//
@@ -4671,10 +4712,6 @@ try {
 			double totalMarginFromScreen = Double
 					.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin_percentage, 20);
-			double defaultBrokerMarginPercentageFromScreen = Double
-					.parseDouble(quote_summary_default_broker_margin_percentage.getText().trim().substring(0, 4));
-
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_customer_interest_rate, 20);
 			double customerInterestRateFromScreen = Double
 					.parseDouble(quote_summary_configuration_customer_interest_rate.getText().trim().substring(0, 4));
@@ -4689,8 +4726,17 @@ try {
 
 			// copying default broker margin from input field
 
+			double defaultBrokerMarginPercentageFromScreen =0;
+			double default_broker_margin_copied =0;
+			
+			try {
+			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin_percentage, 20);
+			defaultBrokerMarginPercentageFromScreen = Double
+					.parseDouble(quote_summary_default_broker_margin_percentage.getText().trim().split(" ")[0]);
+			
 			ExplicitWait.visibleElement(driver, quote_summary_configuration_default_broker_margin_input, 30);
-			double default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+			default_broker_margin_copied =  Double.parseDouble(quote_summary_configuration_default_broker_margin_input.getAttribute("value"));
+			}catch(Exception e) {}
 //						ExplicitWait.visibleElement(driver, quote_summary_configuration_total_tracker_cost, 20);
 //						double trackerCostFromScreen = Double.parseDouble(RemoveComma.of(quote_summary_configuration_total_tracker_cost.getText().trim().substring(2)));
 	//

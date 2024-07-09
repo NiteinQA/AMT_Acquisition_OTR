@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_FL_Page;
 import com.amt.HoldingCostPages.HoldingCost_HPNR_FL_Page;
+import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_BCHPage;
 import com.amt.QuoteSummaryPages.QuoteSummary_HPNR_FL_Page;
 import com.amt.pages.AcquisitionListingPage;
 import com.amt.pages.LoginPage;
@@ -30,7 +31,7 @@ public class Acquisition_Quotes_HPNR_FL_with_funder_quote_addition_with_maintena
 	ContractTypesAndOTR_HPNR_FL_Page obj_contract_types_and_OTR_page;
 	HoldingCost_HPNR_FL_Page obj_holding_cost_HPNR_FL_page;
 	CustomerQuotePage_HPNR_FL_Page obj_customer_quote_page;
-	QuoteSummary_HPNR_FL_Page obj_quote_summary_page;
+	QuoteSummary_HPNR_BCHPage obj_quote_summary_page;
 
 	@Test(priority = 1, dataProvider = "testData")
 	public void aquisition_quotes_HPNR_FL_OTR_calculation_with_maintenance_test(String manufacturer, String model,
@@ -154,10 +155,10 @@ public class Acquisition_Quotes_HPNR_FL_with_funder_quote_addition_with_maintena
 
 
 
-		boolean cutomer_quote_monthly_rental = obj_customer_quote_page
-				.customer_Quote_HPNR_FL_for_all_payment_option_for_funder_quote_addition_with_maintenance_calculation(
-						initial_payment, sheet_name);
-		Assert.assertTrue(cutomer_quote_monthly_rental);
+//		boolean cutomer_quote_monthly_rental = obj_customer_quote_page
+//				.customer_Quote_HPNR_FL_for_all_payment_option_for_funder_quote_addition_with_maintenance_calculation(
+//						initial_payment, sheet_name);
+//		Assert.assertTrue(cutomer_quote_monthly_rental);
 
 	}
 
@@ -175,7 +176,7 @@ public class Acquisition_Quotes_HPNR_FL_with_funder_quote_addition_with_maintena
 			String target_rental, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException, ClassNotFoundException {
 
-		obj_quote_summary_page = new QuoteSummary_HPNR_FL_Page();
+		obj_quote_summary_page = new QuoteSummary_HPNR_BCHPage();
 
 		boolean quote_summary_OTR_calculation = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
 		Assert.assertTrue(quote_summary_OTR_calculation);

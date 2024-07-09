@@ -127,7 +127,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
 	private WebElement part_exchange_and_additional_payment_button;
 
-	@FindBy(xpath = "//*[@id='collapseFirst']/div/div/div[5]/label/span")
+	@FindBy(xpath = "//*[@name='withBalloon']//ancestor::div[1]//span[@class='slider round']")
 	private WebElement balloon_payment_toggle;
 
 	@FindBy(xpath = "((//*[normalize-space()='On the road price']//ancestor::div[1])[1])//div[2]")
@@ -1670,7 +1670,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-		String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+		String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -1738,7 +1738,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		{
 			ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-			String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+			String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -2596,6 +2596,8 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 	public boolean check_monthly_total_payment_after_making_balloon_payment_off_with_maintenance(String sheet_name)
 			throws InterruptedException, IOException {
+		
+		
 		Click.on(driver, balloon_payment_toggle, 40);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
