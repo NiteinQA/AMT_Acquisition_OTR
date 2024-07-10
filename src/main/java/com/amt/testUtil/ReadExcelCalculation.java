@@ -1633,22 +1633,7 @@ public class ReadExcelCalculation extends TestBase {
 		wb.getSheet(sheet_name).getRow(64).getCell(1)
 				.setCellValue(defaultBrokerMarginFromConfiguration);
 
-		
-	
-		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
-
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
-			
-			if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) 
-			{
-				wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
-			}
-
-
-		} else {
-			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
-
-		}
+		wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) 
 		{
@@ -1731,10 +1716,10 @@ public class ReadExcelCalculation extends TestBase {
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 
 			wb.getSheet(sheet_name).getRow(72).getCell(1).setCellFormula("B71");
-			
-	
-			
+				
           }
+		
+		
 	    if(Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used"))
 		{
 			wb.getSheet(sheet_name).getRow(69).getCell(1).setCellFormula("B66*B69");
@@ -1922,11 +1907,15 @@ public class ReadExcelCalculation extends TestBase {
 		wb.getSheet(sheet_name).getRow(64).getCell(1)
 				.setCellValue(defaultBrokerMarginFromConfiguration);
 
-//		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
-//			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
-//		} else {
+		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
+			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
 			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
-//		}
+
+		} else {
+			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B61*B63");
+			wb.getSheet(sheet_name).getRow(66).getCell(1).setCellFormula("B65");
+	    }
+
 
 		wb.getSheet(sheet_name).getRow(67).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("contingency_insurance_multiplier_holding_cost")));
@@ -1973,12 +1962,10 @@ public class ReadExcelCalculation extends TestBase {
 
 		double terms = Double.parseDouble(customer_quote_summary_terms.getText().trim().split(" ")[0]);	
 		
-		
 		obj_common_class = new CommonClass();		
 		
 		double defaultBrokerMarginFromConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_hire_contract_types(terms, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
 
-		
 		
 		wb.getSheet(sheet_name).getRow(70).getCell(1)
 				.setCellValue(defaultBrokerMarginFromConfiguration);

@@ -1036,7 +1036,9 @@ public class QuoteSummary_CP_PCH_Page extends TestBase {
 
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell, 20);
+		try {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+		}catch(Exception e) {}
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell_commission, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_maint_commission, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee_commission, 20);
@@ -1093,8 +1095,11 @@ public class QuoteSummary_CP_PCH_Page extends TestBase {
 		double customer_quote_summary_upsell = Double
 				.parseDouble(RemoveComma.of(quote_summary_customer_quote_upsell.getText().trim().substring(2)));
 
-		double customer_quote_summary_default_finance_commission = Double.parseDouble(
-				RemoveComma.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+		double customer_quote_summary_default_finance_commission =0;
+try {
+customer_quote_summary_default_finance_commission = Double.parseDouble(
+		RemoveComma.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+}catch(Exception e) {}
 
 		double customer_quote_summary_upsell_commission = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_upsell_commission.getText().trim().substring(2)));

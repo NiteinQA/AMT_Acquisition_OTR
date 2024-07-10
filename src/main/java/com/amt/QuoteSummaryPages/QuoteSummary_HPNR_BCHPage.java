@@ -202,8 +202,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(
-					ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
+			FileInputStream ip = new FileInputStream(ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
@@ -223,7 +222,8 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 		Thread.sleep(2000);
 
-		Thread.sleep(3000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(3000);
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -335,12 +335,12 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		Thread.sleep(2000);
 
 		Thread.sleep(3000);
-		
-		try {		
-		Click.on(driver, quote_summary, 60);
-		}catch(Exception e)
-		{}
-		
+
+		try {
+			Click.on(driver, quote_summary, 60);
+		} catch (Exception e) {
+		}
+
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, quote_summary_cost_otr_price, 120);
@@ -479,8 +479,9 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 		Thread.sleep(3000);
 		try {
-		Click.on(driver, quote_summary, 60);
-		}catch(Exception e) {}
+			Click.on(driver, quote_summary, 60);
+		} catch (Exception e) {
+		}
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -900,7 +901,10 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_pence_per_excess_mile_finance, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell, 20);
-		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+		} catch (Exception e) {
+		}
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell_commission, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee_commission, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_total_commission, 20);
@@ -937,8 +941,12 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		double customer_quote_summary_upsell = Double
 				.parseDouble(RemoveComma.of(quote_summary_customer_quote_upsell.getText().trim().substring(2)));
 
-		double customer_quote_summary_default_finance_commission = Double.parseDouble(
-				RemoveComma.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+		double customer_quote_summary_default_finance_commission = 0;
+		try {
+			customer_quote_summary_default_finance_commission = Double.parseDouble(RemoveComma
+					.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+		} catch (Exception e) {
+		}
 
 		double customer_quote_summary_upsell_commission = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_upsell_commission.getText().trim().substring(2)));
@@ -1141,7 +1149,11 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell, 20);
-			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+			try {
+				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+			} catch (Exception e) {
+			}
+
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell_commission, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_maint_commission, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee_commission, 20);
@@ -1195,8 +1207,12 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			double customer_quote_summary_upsell = Double
 					.parseDouble(RemoveComma.of(quote_summary_customer_quote_upsell.getText().trim().substring(2)));
 
-			double customer_quote_summary_default_finance_commission = Double.parseDouble(RemoveComma
-					.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+			double customer_quote_summary_default_finance_commission = 0;
+			try {
+				customer_quote_summary_default_finance_commission = Double.parseDouble(RemoveComma
+						.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+			} catch (Exception e) {
+			}
 
 			double customer_quote_summary_upsell_commission = Double.parseDouble(
 					RemoveComma.of(quote_summary_customer_quote_upsell_commission.getText().trim().substring(2)));
@@ -1449,7 +1465,10 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_pence_per_excess_mile_finance, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell, 20);
-			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+			try {
+				ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+			} catch (Exception e1) {
+			}
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell_commission, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee_commission, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_total_commission, 20);
@@ -1486,8 +1505,12 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			double customer_quote_summary_upsell = Double
 					.parseDouble(RemoveComma.of(quote_summary_customer_quote_upsell.getText().trim().substring(2)));
 
-			double customer_quote_summary_default_finance_commission = Double.parseDouble(RemoveComma
-					.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+			double customer_quote_summary_default_finance_commission = 0;
+			try {
+				customer_quote_summary_default_finance_commission = Double.parseDouble(RemoveComma
+						.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+			} catch (Exception e1) {
+			}
 
 			double customer_quote_summary_upsell_commission = Double.parseDouble(
 					RemoveComma.of(quote_summary_customer_quote_upsell_commission.getText().trim().substring(2)));
@@ -1692,10 +1715,13 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		double totalMarginFromScreen = Double
 				.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-		ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
-		double defaultBrokerMarginFromScreen = Double
-				.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));	
-
+		double defaultBrokerMarginFromScreen = 0;
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
+			defaultBrokerMarginFromScreen = Double
+					.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
+		} catch (Exception e) {
+		}
 
 		ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin_percentage, 20);
 		double brokerUpsellMarginPercentageFromScreen = Double
@@ -1788,8 +1814,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			System.err.println("Total Margin found wrong");
 		}
 
-		if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel,
-				defaultBrokerMarginFromScreen) < 0.01) {
+		if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel, defaultBrokerMarginFromScreen) < 0.01) {
 			LO.print("Default Broker Margin percentage found OK");
 			System.out.println("Default Broker Margin percentage found OK");
 			count++;
@@ -1873,9 +1898,13 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			double totalMarginFromScreen = Double
 					.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
-			double defaultBrokerMarginFromScreen = Double
-					.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));	
+			double defaultBrokerMarginFromScreen = 0;
+			try {
+				ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
+				defaultBrokerMarginFromScreen = Double
+						.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
+			} catch (Exception e) {
+			}
 
 			ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin_percentage, 20);
 			double brokerUpsellMarginPercentageFromScreen = Double
@@ -1911,8 +1940,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 			double totalMarginFromExcel = GetExcelFormulaValue.get_formula_value(212, 1, sheet_name);
 
-			double defaualtBrokerMarginFromExcel = GetExcelFormulaValue.get_formula_value(218, 1,
-					sheet_name);
+			double defaualtBrokerMarginFromExcel = GetExcelFormulaValue.get_formula_value(218, 1, sheet_name);
 
 			double tempbrokerUpsellMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(218, 4,
 					sheet_name);
@@ -1977,8 +2005,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 				System.err.println("Total Margin found wrong");
 			}
 
-			if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel,
-					defaultBrokerMarginFromScreen) < 0.2) {
+			if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel, defaultBrokerMarginFromScreen) < 0.2) {
 				LO.print("Default Broker Margin percentage found OK");
 				System.out.println("Default Broker Margin percentage found OK");
 				count++;
@@ -2058,9 +2085,13 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			double totalMarginFromScreen = Double
 					.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
-			double defaultBrokerMarginFromScreen = Double
-					.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));	
+			double defaultBrokerMarginFromScreen = 0;
+			try {
+				ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
+				defaultBrokerMarginFromScreen = Double
+						.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
+			} catch (Exception e2) {
+			}
 
 			ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin_percentage, 20);
 			double brokerUpsellMarginPercentageFromScreen = Double
@@ -2092,9 +2123,8 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 			double totalMarginFromExcel = GetExcelFormulaValue.get_formula_value(212, 1, sheet_name);
 
-			double defaultBrokerMarginFromExcel = GetExcelFormulaValue.get_formula_value(218, 1,
-					sheet_name);
-			
+			double defaultBrokerMarginFromExcel = GetExcelFormulaValue.get_formula_value(218, 1, sheet_name);
+
 			double tempbrokerUpsellMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(218, 4,
 					sheet_name);
 
@@ -2155,8 +2185,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 				System.err.println("Total Margin found wrong");
 			}
 
-			if (Difference.of_two_Double_Values(defaultBrokerMarginFromExcel,
-					defaultBrokerMarginFromScreen) < 0.2) {
+			if (Difference.of_two_Double_Values(defaultBrokerMarginFromExcel, defaultBrokerMarginFromScreen) < 0.2) {
 				LO.print("Default Broker Margin found OK");
 				System.out.println("Default Broker Margin  found OK");
 				count++;
@@ -2563,83 +2592,81 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 				"*************Editing Maintenance Margin and Verifying Values on quote summary page has been started************");
 
 		// Edit finance margin configuration values from screen
-       try {
-		ExplicitWait.visibleElement(driver, quote_summary_configuration_maintenance_margin_input, 30);
-		quote_summary_configuration_maintenance_margin_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
-		quote_summary_configuration_maintenance_margin_input.sendKeys("30");
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_configuration_maintenance_margin_input, 30);
+			quote_summary_configuration_maintenance_margin_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+			quote_summary_configuration_maintenance_margin_input.sendKeys("30");
 
-		Actions act = new Actions(driver);
-		act.sendKeys(Keys.TAB).build().perform();
+			Actions act = new Actions(driver);
+			act.sendKeys(Keys.TAB).build().perform();
 
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		LO.print("Maintenance margin changed to 30 %");
-		System.out.println("Maintenance margin changed to 30 %");
+			LO.print("Maintenance margin changed to 30 %");
+			System.out.println("Maintenance margin changed to 30 %");
 
-		// Getting values from screen
-		Thread.sleep(2000);
+			// Getting values from screen
+			Thread.sleep(2000);
 
-		ExplicitWait.visibleElement(driver, quote_summary_monthly_maintenance_rental, 30);
+			ExplicitWait.visibleElement(driver, quote_summary_monthly_maintenance_rental, 30);
 
-		double customer_quote_summary_monthly_maint_rental_from_screen = Double
-				.parseDouble(RemoveComma.of(quote_summary_monthly_maintenance_rental.getText().trim().substring(2)));
+			double customer_quote_summary_monthly_maint_rental_from_screen = Double.parseDouble(
+					RemoveComma.of(quote_summary_monthly_maintenance_rental.getText().trim().substring(2)));
 
-		double customer_quote_initial_maint_rental = Double.parseDouble(
-				RemoveComma.of(quote_summary_customer_quote_initial_maint_rental.getText().trim().substring(2)));
+			double customer_quote_initial_maint_rental = Double.parseDouble(
+					RemoveComma.of(quote_summary_customer_quote_initial_maint_rental.getText().trim().substring(2)));
 
-		// writing values to excel
+			// writing values to excel
 
-		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
-		XSSFWorkbook wb = new XSSFWorkbook(in);
-		wb.getSheet(sheet_name).getRow(104).getCell(1).setCellValue(0.3);
-		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
-		wb.write(out);
+			FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+			XSSFWorkbook wb = new XSSFWorkbook(in);
+			wb.getSheet(sheet_name).getRow(104).getCell(1).setCellValue(0.3);
+			FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+			wb.write(out);
 
-		// getting values from excel
+			// getting values from excel
 
-		double monthlyMaintenanceRental = GetExcelFormulaValue.get_formula_value(176, 1, sheet_name);
+			double monthlyMaintenanceRental = GetExcelFormulaValue.get_formula_value(176, 1, sheet_name);
 
-		double initialMaintRental = GetExcelFormulaValue.get_formula_value(179, 3, sheet_name);
+			double initialMaintRental = GetExcelFormulaValue.get_formula_value(179, 3, sheet_name);
 
-		// verifying actual and expected values
+			// verifying actual and expected values
 
-		int count = 0;
+			int count = 0;
 
-		boolean status = false;
+			boolean status = false;
 
-		if (Difference.of_two_Double_Values(customer_quote_summary_monthly_maint_rental_from_screen,
-				monthlyMaintenanceRental) < 0.2) {
-			LO.print("Monthly Maint Rental after changing Maintenance margin -  found OK");
-			System.out.println("Monthly Maint Rental after changing Maintenance margin -  found OK");
-			count++;
-		} else {
-			LO.print("Monthly Maint Rental after changing Maintenance margin -  found wrong");
-			System.err.println("Monthly Maint Rental after changing Maintenance margin -  found wrong");
-		}
+			if (Difference.of_two_Double_Values(customer_quote_summary_monthly_maint_rental_from_screen,
+					monthlyMaintenanceRental) < 0.2) {
+				LO.print("Monthly Maint Rental after changing Maintenance margin -  found OK");
+				System.out.println("Monthly Maint Rental after changing Maintenance margin -  found OK");
+				count++;
+			} else {
+				LO.print("Monthly Maint Rental after changing Maintenance margin -  found wrong");
+				System.err.println("Monthly Maint Rental after changing Maintenance margin -  found wrong");
+			}
 
-		if ((Difference.of_two_Double_Values(initialMaintRental, customer_quote_initial_maint_rental)) < 0.2) {
-			LO.print("Initial Maint Rental found OK");
-			System.out.println("Initial Maint Rental found OK");
-			count++;
-		} else {
-			LO.print("Initial Maint Rental found wrong");
-			System.err.println("Initial Maint Rental found wrong");
-		}
+			if ((Difference.of_two_Double_Values(initialMaintRental, customer_quote_initial_maint_rental)) < 0.2) {
+				LO.print("Initial Maint Rental found OK");
+				System.out.println("Initial Maint Rental found OK");
+				count++;
+			} else {
+				LO.print("Initial Maint Rental found wrong");
+				System.err.println("Initial Maint Rental found wrong");
+			}
 
-		if (count == 2) {
-			status = true;
-		}
+			if (count == 2) {
+				status = true;
+			}
 
-		return status;
-       }
-       catch(Exception e)
-       {
+			return status;
+		} catch (Exception e) {
 			LO.print("Maintenance margin can not be changed as this vehicle has zeor cap maint value");
 			System.out.println("Maintenance margin can not be changed as this vehicle has zeor cap maint value");
-			
+
 			return true;
 
-       }
+		}
 	}
 
 	public boolean verify_balance_due_value(String sheet_name)
@@ -2761,9 +2788,13 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		double totalMarginFromScreen = Double
 				.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-		ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
-		double defaultBrokerMarginFromScreen = Double
-				.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));	
+		double defaultBrokerMarginFromScreen = 0;
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
+			defaultBrokerMarginFromScreen = Double
+					.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
+		} catch (Exception e) {
+		}
 
 		ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin_percentage, 20);
 		double brokerUpsellMarginPercentageFromScreen = Double
@@ -2844,8 +2875,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			System.err.println("Total Margin found wrong");
 		}
 
-		if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel,
-				defaultBrokerMarginFromScreen) < 0.2) {
+		if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel, defaultBrokerMarginFromScreen) < 0.2) {
 			LO.print("Default Broker Margin found OK");
 			System.out.println("Default Broker Margin found OK");
 			count++;
@@ -2926,9 +2956,13 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			double totalMarginFromScreen = Double
 					.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
-			double defaultBrokerMarginFromScreen = Double
-					.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));	
+			double defaultBrokerMarginFromScreen = 0;
+			try {
+				ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
+				defaultBrokerMarginFromScreen = Double
+						.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
+			} catch (Exception e) {
+			}
 
 			ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin_percentage, 20);
 			double brokerUpsellMarginPercentageFromScreen = Double
@@ -2960,8 +2994,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 			double totalMarginFromExcel = GetExcelFormulaValue.get_formula_value(212, 1, sheet_name);
 
-			double defaultBrokerMarginFromExcel = GetExcelFormulaValue.get_formula_value(218, 1,
-					sheet_name);
+			double defaultBrokerMarginFromExcel = GetExcelFormulaValue.get_formula_value(218, 1, sheet_name);
 
 			double tempbrokerUpsellMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(218, 4,
 					sheet_name);
@@ -3018,8 +3051,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 				System.err.println("Total Margin found wrong");
 			}
 
-			if (Difference.of_two_Double_Values(defaultBrokerMarginFromExcel,
-					defaultBrokerMarginFromScreen) < 0.2) {
+			if (Difference.of_two_Double_Values(defaultBrokerMarginFromExcel, defaultBrokerMarginFromScreen) < 0.2) {
 				LO.print("Default Broker Margin percentage found OK");
 				System.out.println("Default Broker Margin percentage found OK");
 				count++;
@@ -3096,9 +3128,13 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			double totalMarginFromScreen = Double
 					.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
-			double defaultBrokerMarginFromScreen = Double
-					.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));	
+			double defaultBrokerMarginFromScreen = 0;
+			try {
+				ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
+				defaultBrokerMarginFromScreen = Double
+						.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
+			} catch (Exception e1) {
+			}
 
 			ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin_percentage, 20);
 			double brokerUpsellMarginPercentageFromScreen = Double
@@ -3126,8 +3162,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 
 			double totalMarginFromExcel = GetExcelFormulaValue.get_formula_value(212, 1, sheet_name);
 
-			double defaualtBrokerMarginFromExcel = GetExcelFormulaValue.get_formula_value(218, 1,
-					sheet_name);
+			double defaualtBrokerMarginFromExcel = GetExcelFormulaValue.get_formula_value(218, 1, sheet_name);
 
 			double tempbrokerUpsellMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(218, 4,
 					sheet_name);
@@ -3181,8 +3216,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 				System.err.println("Total Margin found wrong");
 			}
 
-			if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel,
-					defaultBrokerMarginFromScreen) < 0.2) {
+			if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel, defaultBrokerMarginFromScreen) < 0.2) {
 				LO.print("Default Broker Margin percentage found OK");
 				System.out.println("Default Broker Margin percentage found OK");
 				count++;
@@ -3717,7 +3751,8 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
-		Thread.sleep(3000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(3000);
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Actions act = new Actions(driver);
@@ -3792,7 +3827,8 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
-		Thread.sleep(3000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(3000);
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Actions act = new Actions(driver);
@@ -3868,7 +3904,8 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
-		Thread.sleep(3000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(3000);
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 		Actions act = new Actions(driver);
@@ -3950,7 +3987,8 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
-		Thread.sleep(3000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(3000);
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 30);
 

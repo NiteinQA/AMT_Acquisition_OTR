@@ -860,7 +860,7 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 
 	}
 
-public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculation_with_maintenance(WebDriver driver,
+    public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculation_with_maintenance(WebDriver driver,
 			WebElement holding_cost_summary_terms, WebElement holding_cost_summary_mileage,
 			WebElement holding_cost_summary_residual_value_used, WebElement total_monthly_holding_cost,
 			String maintenance_required, String target_rental,
@@ -2120,8 +2120,6 @@ public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculat
 					.setCellValue(Double.parseDouble(prop.getProperty("rate_over_base_rate_Limited")));
 		}
 		
-//		String sheet_name_to_get_default_broker_values =  prop.getProperty("Default_Broker_Margin_Values_sheet_name");
-		
 		obj_common_class = new CommonClass();		
 		
 		double defaultBrokerMarginFromPercentageConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_purchase_contract_types(term,matrixCreditType, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
@@ -2155,35 +2153,6 @@ public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculat
 		System.out.println(
 				"Writing configuration values from property file to Excel for customer quote calculation -completed");
 	}
-
-//	public void set_global_variables_to_excel_for_purchase_agreement_for_configuration(String matrixCreditType, String sheet_name) throws IOException {
-//		//write / take global variables and set to excel sheet for calculation
-//		 
-//		LO.print("Writing configuration values from property file to Excel for customer quote calculation -started" );
-//		System.out.println("Writing configuration values from property file to Excel for customer quote calculation -started" );
-//		
-//		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
-//		XSSFWorkbook wb = new XSSFWorkbook(in);
-//		//rfl values fakt on hotya baki sarv comment hotya 
-//		wb.getSheet(sheet_name).getRow(258).getCell(5).setCellValue(Double.parseDouble(prop.getProperty("period_supplment")));
-//		if(matrixCreditType.contains("A1 Credit")) {wb.getSheet(sheet_name).getRow(258).getCell(1).setCellValue(Double.parseDouble(prop.getProperty("rate_over_base_rate_A1")));}
-//		else{wb.getSheet(sheet_name).getRow(258).getCell(1).setCellValue(Double.parseDouble(prop.getProperty("rate_over_base_rate_Limited")));}
-//		wb.getSheet(sheet_name).getRow(265).getCell(1).setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
-//		wb.getSheet(sheet_name).getRow(267).getCell(1).setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
-//		wb.getSheet(sheet_name).getRow(269).getCell(1).setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
-//		wb.getSheet(sheet_name).getRow(270).getCell(1).setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
-//		wb.getSheet(sheet_name).getRow(265).getCell(5).setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
-//		
-//	
-//		
-//				
-//		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
-//		wb.write(out);	
-//		out.close();
-//		
-//		LO.print("Writing configuration values from property file to Excel for customer quote calculation -completed" );
-//		System.out.println("Writing configuration values from property file to Excel for customer quote calculation -completed" );
-//	}
 
 	public void write_basic_cash_price_to_excel_for_used_car_funder(double basic_cash_price, String sheet_name)
 			throws IOException, NumberFormatException, ClassNotFoundException {
@@ -2272,7 +2241,6 @@ public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculat
 		}
 		
 		
-		
 		obj_common_class = new CommonClass();		
 		
 		double defaultBrokerMarginFromPercentageConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_purchase_contract_types(term,matrixCreditType, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
@@ -2300,7 +2268,7 @@ public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculat
 				"Writing configuration values from property file to Excel for customer quote calculation -completed");
 	}
 
-	public void set_global_variables_to_excel_for_purchase_agreement_cp_for_funder_addition(String DocFee,
+	public void set_global_variables_to_excel_for_purchase_agreement_cp_for_funder_addition(String terms , String DocFee,
 			String matrixCreditType, String sheet_name)
 			throws IOException, NumberFormatException, ClassNotFoundException {
 		// write / take global variables and set to excel sheet for calculation
@@ -2329,8 +2297,16 @@ public boolean verify_holding_cost_after_adding_funder_based_on_ownbook_calculat
 			wb.getSheet(sheet_name).getRow(72).getCell(1)
 					.setCellValue(Double.parseDouble(prop.getProperty("rate_over_base_rate_Limited")));
 		}
+		
+		double term = Double.parseDouble(terms);
+		
+		obj_common_class = new CommonClass();		
+		
+		double defaultBrokerMarginFromPercentageConfiguration = obj_common_class.get_the_default_broker_margin_value_from_excel_based_on_configurations_for_purchase_contract_types(term,matrixCreditType, prop.getProperty("Default_Broker_Margin_Values_sheet_name"));
+
+		
 		wb.getSheet(sheet_name).getRow(74).getCell(1)
-				.setCellValue(Double.parseDouble(prop.getProperty("min_margin_percentage_for_broker_vrb")));
+				.setCellValue(defaultBrokerMarginFromPercentageConfiguration/100);
 
 		wb.getSheet(sheet_name).getRow(116).getCell(0)
 				.setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));

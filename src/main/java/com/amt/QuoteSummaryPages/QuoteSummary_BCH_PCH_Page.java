@@ -193,12 +193,11 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 	private WebElement quote_summary_save_button;
 
 	Properties prop;
-	
+
 	public QuoteSummary_BCH_PCH_Page() {
-		
 
 		try {
-			 prop = new Properties();
+			prop = new Properties();
 			FileInputStream ip = new FileInputStream(ConfigConstants.EXCEL_VALUES_PROPERTY_FILE_PATH);
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
@@ -206,7 +205,7 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		PageFactory.initElements(driver, this);
 	}
 
@@ -220,7 +219,8 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 
 		Thread.sleep(2000);
 
-		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -330,7 +330,8 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 
 		Thread.sleep(2000);
 
-		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -722,14 +723,20 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_miles, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_monthly_finance_rental, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_finance_rental, 20);
-		
-		try{ExplicitWait.visibleElement(driver, quote_summary_customer_quote_part_exchange_value, 20);}catch(Exception e) {}
+
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_part_exchange_value, 20);
+		} catch (Exception e) {
+		}
 
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_followed_by, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_pence_per_excess_mile_finance, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell, 20);
-		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+		} catch (Exception e) {
+		}
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell_commission, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee_commission, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_total_commission, 20);
@@ -747,11 +754,13 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		double customer_quote_initial_finance_rental = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_initial_finance_rental.getText().trim().substring(2)));
 
-		double customer_quote_summary_part_exchange_value =0;
-		
-		try{ customer_quote_summary_part_exchange_value = Double.parseDouble(
-				RemoveComma.of(quote_summary_customer_quote_part_exchange_value.getText().trim().substring(2)));}catch(Exception e) {}
+		double customer_quote_summary_part_exchange_value = 0;
 
+		try {
+			customer_quote_summary_part_exchange_value = Double.parseDouble(
+					RemoveComma.of(quote_summary_customer_quote_part_exchange_value.getText().trim().substring(2)));
+		} catch (Exception e) {
+		}
 
 		double customer_payment_followed_by = Double
 				.parseDouble(quote_summary_customer_quote_followed_by.getText().substring(0, 2));
@@ -765,8 +774,12 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		double customer_quote_summary_upsell = Double
 				.parseDouble(RemoveComma.of(quote_summary_customer_quote_upsell.getText().trim().substring(2)));
 
-		double customer_quote_summary_default_finance_commission = Double.parseDouble(
-				RemoveComma.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+		double customer_quote_summary_default_finance_commission = 0;
+		try {
+			customer_quote_summary_default_finance_commission = Double.parseDouble(RemoveComma
+					.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+		} catch (Exception e) {
+		}
 
 		double customer_quote_summary_upsell_commission = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_upsell_commission.getText().trim().substring(2)));
@@ -845,14 +858,17 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 			System.err.println("Followed By months - found wrong");
 		}
 
-		try{if (partExchangeValue == customer_quote_summary_part_exchange_value) {
-			LO.print("Part Exchange Value - found OK");
-			System.out.println("Part Exchange Value - found OK");
-			count++;
-		} else {
-			LO.print("Part Exchange Value - found wrong");
-			System.err.println("Part Exchange Value - found wrong");
-		}}catch(Exception e) {}
+		try {
+			if (partExchangeValue == customer_quote_summary_part_exchange_value) {
+				LO.print("Part Exchange Value - found OK");
+				System.out.println("Part Exchange Value - found OK");
+				count++;
+			} else {
+				LO.print("Part Exchange Value - found wrong");
+				System.err.println("Part Exchange Value - found wrong");
+			}
+		} catch (Exception e) {
+		}
 
 		if ((Difference.of_two_Double_Values(pencePerExcessMileFinance,
 				customer_quote_pence_per_excess_mile_finance)) < 0.2) {
@@ -952,16 +968,22 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_maint_rental, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_total_rental, 20);
 
-		try{ExplicitWait.visibleElement(driver, quote_summary_customer_quote_part_exchange_value, 20);}catch(Exception e) {}
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_part_exchange_value, 20);
+		} catch (Exception e) {
+		}
 
-    	ExplicitWait.visibleElement(driver, quote_summary_customer_quote_followed_by, 20);
+		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_followed_by, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_pence_per_excess_mile_finance, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_pence_per_excess_mile_maintenance, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_pence_per_excess_mile_total, 20);
 
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell, 20);
-		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_default_finance_commission, 20);
+		} catch (Exception e) {
+		}
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_upsell_commission, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_maint_commission, 20);
 		ExplicitWait.visibleElement(driver, quote_summary_customer_quote_doc_fee_commission, 20);
@@ -989,8 +1011,11 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		double customer_quote_initial_total_rental = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_initial_total_rental.getText().trim().substring(2)));
 		double customer_quote_summary_part_exchange_value = 0;
-		try{ customer_quote_summary_part_exchange_value = Double.parseDouble(
-				RemoveComma.of(quote_summary_customer_quote_part_exchange_value.getText().trim().substring(2)));}catch(Exception e) {}
+		try {
+			customer_quote_summary_part_exchange_value = Double.parseDouble(
+					RemoveComma.of(quote_summary_customer_quote_part_exchange_value.getText().trim().substring(2)));
+		} catch (Exception e) {
+		}
 
 		double customer_payment_followed_by = Double
 				.parseDouble(quote_summary_customer_quote_followed_by.getText().substring(0, 2));
@@ -1010,8 +1035,12 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		double customer_quote_summary_upsell = Double
 				.parseDouble(RemoveComma.of(quote_summary_customer_quote_upsell.getText().trim().substring(2)));
 
-		double customer_quote_summary_default_finance_commission = Double.parseDouble(
-				RemoveComma.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+		double customer_quote_summary_default_finance_commission = 0;
+		try {
+			customer_quote_summary_default_finance_commission = Double.parseDouble(RemoveComma
+					.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
+		} catch (Exception e) {
+		}
 
 		double customer_quote_summary_upsell_commission = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_upsell_commission.getText().trim().substring(2)));
@@ -1120,15 +1149,18 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 			System.err.println("Initial Total Rental found wrong");
 		}
 
-		try{if (partExchangeValue == customer_quote_summary_part_exchange_value) {
-			LO.print("Part Exchange Value - found OK");
-			System.out.println("Part Exchange Value - found OK");
-			count++;
-		} else {
-			LO.print("Part Exchange Value - found wrong");
-			System.err.println("Part Exchange Value - found wrong");
-		}}catch(Exception e) {}
-		
+		try {
+			if (partExchangeValue == customer_quote_summary_part_exchange_value) {
+				LO.print("Part Exchange Value - found OK");
+				System.out.println("Part Exchange Value - found OK");
+				count++;
+			} else {
+				LO.print("Part Exchange Value - found wrong");
+				System.err.println("Part Exchange Value - found wrong");
+			}
+		} catch (Exception e) {
+		}
+
 		if (followedBy == customer_payment_followed_by) {
 			LO.print("Followed By months - found OK");
 			System.out.println("Followed By months - found OK");
@@ -1275,9 +1307,13 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		double totalMarginFromScreen = Double
 				.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-		ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
-		double defaultBrokerMarginFromScreen = Double
-				.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
+		double defaultBrokerMarginFromScreen = 0;
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
+			defaultBrokerMarginFromScreen = Double
+					.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
+		} catch (Exception e) {
+		}
 
 		ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin_percentage, 20);
 		double brokerUpsellMarginPercentageFromScreen = Double
@@ -1357,8 +1393,7 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 			System.err.println("Total Margin found wrong");
 		}
 
-		if (Difference.of_two_Double_Values(defaultBrokerMarginFromExcel,
-				defaultBrokerMarginFromScreen) < 0.2) {
+		if (Difference.of_two_Double_Values(defaultBrokerMarginFromExcel, defaultBrokerMarginFromScreen) < 0.2) {
 			LO.print("Default Broker Margin percentage found OK");
 			System.out.println("Default Broker Margin percentage found OK");
 			count++;
@@ -1437,11 +1472,14 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		double totalMarginFromScreen = Double
 				.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
-		ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
-		double defaultBrokerMarginFromScreen = Double
-				.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
-		
-		
+		double defaultBrokerMarginFromScreen = 0;
+		try {
+			ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
+			defaultBrokerMarginFromScreen = Double
+					.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
+		} catch (Exception e) {
+		}
+
 		ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin_percentage, 20);
 		double brokerUpsellMarginPercentageFromScreen = Double
 				.parseDouble(quote_summary_broker_upsell_margin_percentage.getText().trim().substring(0, 4));
@@ -1528,8 +1566,7 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 			System.err.println("Total Margin found wrong");
 		}
 
-		if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel,
-				defaultBrokerMarginFromScreen) < 0.2) {
+		if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel, defaultBrokerMarginFromScreen) < 0.2) {
 			LO.print("Default Broker Margin percentage found OK");
 			System.out.println("Default Broker Margin percentage found OK");
 			count++;
@@ -1614,15 +1651,14 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 
 		// Getting values from screen
 		QuoteSummary_BCH_PCH_Page obj_quote_summary = new QuoteSummary_BCH_PCH_Page();
-		
-		obj_quote_summary.save_quote();	
-		
-		Thread.sleep(10000);
-		
-		Click.on(driver, quote_summary_customer_quote_summary_value_verification, 20);
-		
-		Click.on(driver, quote_summary_configuration, 20);
 
+		obj_quote_summary.save_quote();
+
+		Thread.sleep(10000);
+
+		Click.on(driver, quote_summary_customer_quote_summary_value_verification, 20);
+
+		Click.on(driver, quote_summary_configuration, 20);
 
 		ExplicitWait.visibleElement(driver, quote_summary_monthly_finance_rental, 30);
 
@@ -1790,7 +1826,7 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
 		js.executeScript("arguments[0].click();", quote_summary_save_button);
-		
+
 //		Actions act = new Actions(driver);
 //		act.sendKeys(Keys.TAB, Keys.TAB, Keys.TAB, Keys.ENTER).build().perform();
 
@@ -1802,9 +1838,9 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 
 		LO.print("*********Customer Quote generated successfully and Quote_ref_no is=" + quote_ref_no);
 		System.out.println("*********Customer Quote generated successfully and Quote_ref_no is=" + quote_ref_no);
-		
+
 		driver.navigate().refresh();
-		
+
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 	}
@@ -1816,7 +1852,8 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
-		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -1892,7 +1929,8 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		System.out.println("*************Calculations for Quote Summary page has been started************");
 
 		obj_read_excel_calculation_page = new ReadExcelCalculation();
-		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
+		Thread.sleep(5000);
+		Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
