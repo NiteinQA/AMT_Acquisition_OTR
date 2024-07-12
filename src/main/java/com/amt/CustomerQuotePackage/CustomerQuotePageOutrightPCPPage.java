@@ -145,9 +145,6 @@ public class CustomerQuotePageOutrightPCPPage extends TestBase {
 	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
 	private WebElement part_exchange_and_additional_payment_button;
 
-	@FindBy(xpath = "//*[@id='collapseFirst']/div/div/div[5]/label/span")
-	private WebElement balloon_payment_toggle;
-
 	@FindBy(xpath = "//app-purchase-customer-quote-summary-header/div/div[6]/div/p/strong")
 	private WebElement total_monthly_payment;
 
@@ -984,7 +981,7 @@ public class CustomerQuotePageOutrightPCPPage extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-		String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+		String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 

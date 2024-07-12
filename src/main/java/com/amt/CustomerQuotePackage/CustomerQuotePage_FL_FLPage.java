@@ -1049,7 +1049,7 @@ public class CustomerQuotePage_FL_FLPage extends TestBase {
 
 		boolean monthlyFinanceRentalExpected = false;
 
-		if (diff < 0.3) {
+		if (diff < 0.1) {
 			monthlyFinanceRentalExpected = true;
 		}
 

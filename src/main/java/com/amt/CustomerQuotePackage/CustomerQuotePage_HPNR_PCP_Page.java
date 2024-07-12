@@ -313,7 +313,7 @@ public class CustomerQuotePage_HPNR_PCP_Page extends TestBase {
 
 			ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-			String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+			String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -423,7 +423,7 @@ public class CustomerQuotePage_HPNR_PCP_Page extends TestBase {
 
 			ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-			String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+			String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -548,7 +548,7 @@ public class CustomerQuotePage_HPNR_PCP_Page extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-		String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+		String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -762,7 +762,7 @@ public class CustomerQuotePage_HPNR_PCP_Page extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-		String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+		String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -1391,7 +1391,7 @@ public class CustomerQuotePage_HPNR_PCP_Page extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-		String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+		String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -1498,7 +1498,7 @@ public class CustomerQuotePage_HPNR_PCP_Page extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-		String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+		String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -1610,7 +1610,7 @@ public class CustomerQuotePage_HPNR_PCP_Page extends TestBase {
 
 			ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-			String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+			String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
@@ -1708,7 +1708,7 @@ public class CustomerQuotePage_HPNR_PCP_Page extends TestBase {
 
 		ExplicitWait.visibleElement(driver, customer_quote_summary_terms, 20);
 
-		String term = customer_quote_summary_terms.getText().trim().substring(0, 1);
+		String term = customer_quote_summary_terms.getText().trim().split(" ")[0];
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
