@@ -1314,7 +1314,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 	}
 
 	public boolean quote_summary_customer_quote_summary_value_verification_with_maintenance(String sheet_name)
-			throws IOException {
+			throws IOException, InterruptedException {
 
 		LO.print("*************Customer Quote Calulation on quote summary page has been started************");
 		System.out.println("*************Customer Quote Calulation on quote summary page has been started************");
@@ -1326,6 +1326,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 		try {
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_terms, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_miles_per_annum, 20);
+			Thread.sleep(2000);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_basic_cash_price, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_vat, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_non_vat_items, 20);
@@ -1834,6 +1835,7 @@ public class QuoteSummary_HPNR_PCP_Page extends TestBase {
 		} catch (Exception e) {
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_terms, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_miles_per_annum, 20);
+			Thread.sleep(2000);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_basic_cash_price, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_vat, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_non_vat_items, 20);

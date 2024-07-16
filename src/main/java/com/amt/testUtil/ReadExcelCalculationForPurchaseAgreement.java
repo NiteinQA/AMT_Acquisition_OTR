@@ -2144,6 +2144,8 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(151).getCell(4).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(151).getCell(6).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(152).getCell(6).setCellValue(0);
+		wb.getSheet(sheet_name).getRow(155).getCell(7).setCellValue(0);
+
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -2258,6 +2260,8 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(72).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(74).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(75).getCell(1).setCellValue(0);
+		wb.getSheet(sheet_name).getRow(155).getCell(7).setCellValue(0);
+
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -2317,6 +2321,8 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(81).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(83).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(84).getCell(1).setCellValue(0);
+		wb.getSheet(sheet_name).getRow(164).getCell(7).setCellValue(0);
+
 
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 			wb.getSheet(sheet_name).getRow(90).getCell(1).setCellFormula("IF(A111=\"YES\",A43,0)*1.2");
@@ -2709,6 +2715,68 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 
 	}
 
+	public double get_monthly_finance_payment_after_adding_referrer_commission(String referrer_commission , String sheet_name) throws IOException {
+		
+		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		
+		if(sheet_name.contains("CP(F2)")||sheet_name.contains("CP (Formula 2)"))
+		{
+		wb.getSheet(sheet_name).getRow(164).getCell(7).setCellValue(Double.parseDouble(referrer_commission));
+		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+		wb.write(out);
+		out.close();
+
+		double monthlyPayment = GetExcelFormulaValue.get_formula_value(103, 1, sheet_name);
+
+		return monthlyPayment;
+		}else
+		{
+			wb.getSheet(sheet_name).getRow(155).getCell(7).setCellValue(Double.parseDouble(referrer_commission));
+			FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+			wb.write(out);
+			out.close();
+
+			double monthlyPayment = GetExcelFormulaValue.get_formula_value(94, 1, sheet_name);
+
+			return monthlyPayment;
+
+		}
+
+	}
+	
+	
+	public double get_monthly_total_payment_after_adding_referrer_commission(String referrer_commission , String sheet_name) throws IOException {
+		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
+		XSSFWorkbook wb = new XSSFWorkbook(in);
+		
+		if(sheet_name.contains("CP(F2)")||sheet_name.contains("CP (Formula 2)"))
+		{
+		wb.getSheet(sheet_name).getRow(164).getCell(7).setCellValue(Double.parseDouble(referrer_commission));
+		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+		wb.write(out);
+		out.close();
+
+		double monthlyPayment = GetExcelFormulaValue.get_formula_value(104, 1, sheet_name);
+
+		return monthlyPayment;
+		}else
+		{
+			wb.getSheet(sheet_name).getRow(155).getCell(7).setCellValue(Double.parseDouble(referrer_commission));
+			FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
+			wb.write(out);
+			out.close();
+
+			double monthlyPayment = GetExcelFormulaValue.get_formula_value(95, 1, sheet_name);
+
+			return monthlyPayment;
+
+		}
+
+	}
+
+
+	
 	public double get_monthly_total_payment_after_making_balloon_payment_off(String sheet_name) throws IOException {
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);

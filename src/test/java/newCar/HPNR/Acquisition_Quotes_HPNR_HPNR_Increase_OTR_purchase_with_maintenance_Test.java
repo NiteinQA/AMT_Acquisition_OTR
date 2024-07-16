@@ -34,19 +34,17 @@ public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_with_maintenance
 	ContractTypesAndOTR_HPNR_BCH_Page obj_OTR_page;
 
 	@Test(priority = 1, dataProvider = "testData")
-	public void aquisition_quotes_HPNR_HPNR_OTR_calculation_with_maintenance_test(String manufacturer, String model,
-			String vehicle_percentage_discount , String additional_discount_vehicle ,
-            String options_percentage_discount , String additional_discount_options , 
-            String paint_percentage_discount ,   String additional_discount_paint ,
-            String rebate ,                      String marketing_bonus ,
-            String manufacturer_delivery_charges,
-			String Vehicle_Basic_price, String road_tax_for_first_year, String otr_value, String percentage_cap_residual_value,
-			String percentage_cap_maint_value, String residual_value_used, String maint_cost_used, String target_rental,
-			String additional_terms, String additional_mileage, String vehicle_profit, String sales_price_percentage,
-			String maintenance_status, String matrix_credit_type, String security_deposit,
-			String balloon_payment_status, String part_exchange_actual, String part_exchange_given,
-			String less_finance_settlement, String order_deposit, String finance_deposit, String document_fee,
-			String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+	public void aquisition_quotes_HPNR_HPNR_OTR_calculation_with_maintenance_test(
+			String manufacturer, String model, String vehicle_percentage_discount, String additional_discount_vehicle,
+			String options_percentage_discount, String additional_discount_options, String paint_percentage_discount,
+			String additional_discount_paint, String rebate, String marketing_bonus,
+			String manufacturer_delivery_charges, String Vehicle_Basic_price, String road_tax_for_first_year,
+			String otr_value, String percentage_cap_residual_value, String percentage_cap_maint_value,
+			String residual_value_used, String maint_cost_used, String target_rental, String additional_terms,
+			String additional_mileage, String vehicle_profit, String sales_price_percentage, String maintenance_status,
+			String matrix_credit_type, String security_deposit, String balloon_payment_status, String referrer_commission,
+			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String order_deposit, String finance_deposit, String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_acq_listing_page = new AcquisitionListingPage();
 		obj_vehicle_selection_page = new VehicleSelectionPage();
@@ -65,19 +63,17 @@ public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_with_maintenance
 	@Test(priority = 2, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_HPNR_HPNR_OTR_calculation_with_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_HPNR_after_discount_calculations_with_maintenance_test(String manufacturer, String model,
-			String vehicle_percentage_discount , String additional_discount_vehicle ,
-            String options_percentage_discount , String additional_discount_options , 
-            String paint_percentage_discount ,   String additional_discount_paint ,
-            String rebate ,                      String marketing_bonus ,
-            String manufacturer_delivery_charges,
-			String Vehicle_Basic_price, String road_tax_for_first_year, String otr_value, String percentage_cap_residual_value,
-			String percentage_cap_maint_value, String residual_value_used, String maint_cost_used, String target_rental,
-			String additional_terms, String additional_mileage, String vehicle_profit, String sales_price_percentage,
-			String maintenance_status, String matrix_credit_type, String security_deposit,
-			String balloon_payment_status, String part_exchange_actual, String part_exchange_given,
-			String less_finance_settlement, String order_deposit, String finance_deposit, String document_fee,
-			String sheet_name)
+	public void aquisition_quotes_HPNR_HPNR_after_discount_calculations_with_maintenance_test(
+			String manufacturer, String model, String vehicle_percentage_discount, String additional_discount_vehicle,
+			String options_percentage_discount, String additional_discount_options, String paint_percentage_discount,
+			String additional_discount_paint, String rebate, String marketing_bonus,
+			String manufacturer_delivery_charges, String Vehicle_Basic_price, String road_tax_for_first_year,
+			String otr_value, String percentage_cap_residual_value, String percentage_cap_maint_value,
+			String residual_value_used, String maint_cost_used, String target_rental, String additional_terms,
+			String additional_mileage, String vehicle_profit, String sales_price_percentage, String maintenance_status,
+			String matrix_credit_type, String security_deposit, String balloon_payment_status, String referrer_commission,
+			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String order_deposit, String finance_deposit, String document_fee, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException, ClassNotFoundException {
 
 		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_HPNR_HPNR_Page();
@@ -101,19 +97,17 @@ public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_with_maintenance
 	@Test(priority = 3, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_HPNR_HPNR_after_discount_calculations_with_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_HPNR_holding_cost_calculations_with_maintenance_test(String manufacturer, String model,
-			String vehicle_percentage_discount , String additional_discount_vehicle ,
-            String options_percentage_discount , String additional_discount_options , 
-            String paint_percentage_discount ,   String additional_discount_paint ,
-            String rebate ,                      String marketing_bonus ,
-            String manufacturer_delivery_charges,
-			String Vehicle_Basic_price, String road_tax_for_first_year, String otr_value, String percentage_cap_residual_value,
-			String percentage_cap_maint_value, String residual_value_used, String maint_cost_used, String target_rental,
-			String additional_terms, String additional_mileage, String vehicle_profit, String sales_price_percentage,
-			String maintenance_status, String matrix_credit_type, String security_deposit,
-			String balloon_payment_status, String part_exchange_actual, String part_exchange_given,
-			String less_finance_settlement, String order_deposit, String finance_deposit, String document_fee,
-			String sheet_name)
+	public void aquisition_quotes_HPNR_HPNR_holding_cost_calculations_with_maintenance_test(
+			String manufacturer, String model, String vehicle_percentage_discount, String additional_discount_vehicle,
+			String options_percentage_discount, String additional_discount_options, String paint_percentage_discount,
+			String additional_discount_paint, String rebate, String marketing_bonus,
+			String manufacturer_delivery_charges, String Vehicle_Basic_price, String road_tax_for_first_year,
+			String otr_value, String percentage_cap_residual_value, String percentage_cap_maint_value,
+			String residual_value_used, String maint_cost_used, String target_rental, String additional_terms,
+			String additional_mileage, String vehicle_profit, String sales_price_percentage, String maintenance_status,
+			String matrix_credit_type, String security_deposit, String balloon_payment_status, String referrer_commission,
+			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String order_deposit, String finance_deposit, String document_fee, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException, ClassNotFoundException {
 
 		obj_holding_cost_page = new HoldingCost_HPNR_HPRPage();
@@ -144,19 +138,17 @@ public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_with_maintenance
 	@Test(priority = 4, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_HPNR_HPNR_holding_cost_calculations_with_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test(String manufacturer, String model,
-			String vehicle_percentage_discount , String additional_discount_vehicle ,
-            String options_percentage_discount , String additional_discount_options , 
-            String paint_percentage_discount ,   String additional_discount_paint ,
-            String rebate ,                      String marketing_bonus ,
-            String manufacturer_delivery_charges,
-			String Vehicle_Basic_price, String road_tax_for_first_year, String otr_value, String percentage_cap_residual_value,
-			String percentage_cap_maint_value, String residual_value_used, String maint_cost_used, String target_rental,
-			String additional_terms, String additional_mileage, String vehicle_profit, String sales_price_percentage,
-			String maintenance_status, String matrix_credit_type, String security_deposit,
-			String balloon_payment_status, String part_exchange_actual, String part_exchange_given,
-			String less_finance_settlement, String order_deposit, String finance_deposit, String document_fee,
-			String sheet_name) throws InterruptedException, IOException,
+	public void aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test(
+			String manufacturer, String model, String vehicle_percentage_discount, String additional_discount_vehicle,
+			String options_percentage_discount, String additional_discount_options, String paint_percentage_discount,
+			String additional_discount_paint, String rebate, String marketing_bonus,
+			String manufacturer_delivery_charges, String Vehicle_Basic_price, String road_tax_for_first_year,
+			String otr_value, String percentage_cap_residual_value, String percentage_cap_maint_value,
+			String residual_value_used, String maint_cost_used, String target_rental, String additional_terms,
+			String additional_mileage, String vehicle_profit, String sales_price_percentage, String maintenance_status,
+			String matrix_credit_type, String security_deposit, String balloon_payment_status, String referrer_commission,
+			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String order_deposit, String finance_deposit, String document_fee, String sheet_name) throws InterruptedException, IOException,
 			UnsupportedFlavorException, NumberFormatException, ClassNotFoundException {
 
 		obj_customer_quote_page = new CustomerQuotePage_HPNR_HPRPage();
@@ -181,19 +173,17 @@ public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_with_maintenance
 	@Test(priority = 5, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_with_maintenance_test(String manufacturer, String model,
-			String vehicle_percentage_discount , String additional_discount_vehicle ,
-            String options_percentage_discount , String additional_discount_options , 
-            String paint_percentage_discount ,   String additional_discount_paint ,
-            String rebate ,                      String marketing_bonus ,
-            String manufacturer_delivery_charges,
-			String Vehicle_Basic_price, String road_tax_for_first_year, String otr_value, String percentage_cap_residual_value,
-			String percentage_cap_maint_value, String residual_value_used, String maint_cost_used, String target_rental,
-			String additional_terms, String additional_mileage, String vehicle_profit, String sales_price_percentage,
-			String maintenance_status, String matrix_credit_type, String security_deposit,
-			String balloon_payment_status, String part_exchange_actual, String part_exchange_given,
-			String less_finance_settlement, String order_deposit, String finance_deposit, String document_fee,
-			String sheet_name)
+	public void aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_with_maintenance_test(
+			String manufacturer, String model, String vehicle_percentage_discount, String additional_discount_vehicle,
+			String options_percentage_discount, String additional_discount_options, String paint_percentage_discount,
+			String additional_discount_paint, String rebate, String marketing_bonus,
+			String manufacturer_delivery_charges, String Vehicle_Basic_price, String road_tax_for_first_year,
+			String otr_value, String percentage_cap_residual_value, String percentage_cap_maint_value,
+			String residual_value_used, String maint_cost_used, String target_rental, String additional_terms,
+			String additional_mileage, String vehicle_profit, String sales_price_percentage, String maintenance_status,
+			String matrix_credit_type, String security_deposit, String balloon_payment_status, String referrer_commission,
+			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String order_deposit, String finance_deposit, String document_fee, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_customer_quote_page = new CustomerQuotePage_HPNR_HPRPage();
@@ -212,19 +202,17 @@ public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_with_maintenance
 	@Test(priority = 6, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_HPNR_HPNR_customer_quote_vehicle_profit_edit_check_with_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_with_maintenance_test(String manufacturer, String model,
-			String vehicle_percentage_discount , String additional_discount_vehicle ,
-            String options_percentage_discount , String additional_discount_options , 
-            String paint_percentage_discount ,   String additional_discount_paint ,
-            String rebate ,                      String marketing_bonus ,
-            String manufacturer_delivery_charges,
-			String Vehicle_Basic_price, String road_tax_for_first_year, String otr_value, String percentage_cap_residual_value,
-			String percentage_cap_maint_value, String residual_value_used, String maint_cost_used, String target_rental,
-			String additional_terms, String additional_mileage, String vehicle_profit, String sales_price_percentage,
-			String maintenance_status, String matrix_credit_type, String security_deposit,
-			String balloon_payment_status, String part_exchange_actual, String part_exchange_given,
-			String less_finance_settlement, String order_deposit, String finance_deposit, String document_fee,
-			String sheet_name)
+	public void aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_with_maintenance_test(
+			String manufacturer, String model, String vehicle_percentage_discount, String additional_discount_vehicle,
+			String options_percentage_discount, String additional_discount_options, String paint_percentage_discount,
+			String additional_discount_paint, String rebate, String marketing_bonus,
+			String manufacturer_delivery_charges, String Vehicle_Basic_price, String road_tax_for_first_year,
+			String otr_value, String percentage_cap_residual_value, String percentage_cap_maint_value,
+			String residual_value_used, String maint_cost_used, String target_rental, String additional_terms,
+			String additional_mileage, String vehicle_profit, String sales_price_percentage, String maintenance_status,
+			String matrix_credit_type, String security_deposit, String balloon_payment_status, String referrer_commission,
+			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String order_deposit, String finance_deposit, String document_fee, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_customer_quote_page = new CustomerQuotePage_HPNR_HPRPage();
@@ -239,19 +227,17 @@ public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_with_maintenance
 	@Test(priority = 7, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_HPNR_HPNR_customer_quote_part_exchange_value_edit_check_with_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_with_maintenance_test(String manufacturer, String model,
-			String vehicle_percentage_discount , String additional_discount_vehicle ,
-            String options_percentage_discount , String additional_discount_options , 
-            String paint_percentage_discount ,   String additional_discount_paint ,
-            String rebate ,                      String marketing_bonus ,
-            String manufacturer_delivery_charges,
-			String Vehicle_Basic_price, String road_tax_for_first_year, String otr_value, String percentage_cap_residual_value,
-			String percentage_cap_maint_value, String residual_value_used, String maint_cost_used, String target_rental,
-			String additional_terms, String additional_mileage, String vehicle_profit, String sales_price_percentage,
-			String maintenance_status, String matrix_credit_type, String security_deposit,
-			String balloon_payment_status, String part_exchange_actual, String part_exchange_given,
-			String less_finance_settlement, String order_deposit, String finance_deposit, String document_fee,
-			String sheet_name)
+	public void aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_with_maintenance_test(
+			String manufacturer, String model, String vehicle_percentage_discount, String additional_discount_vehicle,
+			String options_percentage_discount, String additional_discount_options, String paint_percentage_discount,
+			String additional_discount_paint, String rebate, String marketing_bonus,
+			String manufacturer_delivery_charges, String Vehicle_Basic_price, String road_tax_for_first_year,
+			String otr_value, String percentage_cap_residual_value, String percentage_cap_maint_value,
+			String residual_value_used, String maint_cost_used, String target_rental, String additional_terms,
+			String additional_mileage, String vehicle_profit, String sales_price_percentage, String maintenance_status,
+			String matrix_credit_type, String security_deposit, String balloon_payment_status, String referrer_commission,
+			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String order_deposit, String finance_deposit, String document_fee, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_customer_quote_page = new CustomerQuotePage_HPNR_HPRPage();
@@ -266,19 +252,17 @@ public class Acquisition_Quotes_HPNR_HPNR_Increase_OTR_purchase_with_maintenance
 	@Test(priority = 8, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_with_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_with_maintenance_test(String manufacturer, String model,
-			String vehicle_percentage_discount , String additional_discount_vehicle ,
-            String options_percentage_discount , String additional_discount_options , 
-            String paint_percentage_discount ,   String additional_discount_paint ,
-            String rebate ,                      String marketing_bonus ,
-            String manufacturer_delivery_charges,
-			String Vehicle_Basic_price, String road_tax_for_first_year, String otr_value, String percentage_cap_residual_value,
-			String percentage_cap_maint_value, String residual_value_used, String maint_cost_used, String target_rental,
-			String additional_terms, String additional_mileage, String vehicle_profit, String sales_price_percentage,
-			String maintenance_status, String matrix_credit_type, String security_deposit,
-			String balloon_payment_status, String part_exchange_actual, String part_exchange_given,
-			String less_finance_settlement, String order_deposit, String finance_deposit, String document_fee,
-			String sheet_name)
+	public void aquisition_quotes_HPNR_HPNR_quote_summary_values_verification_with_maintenance_test(
+			String manufacturer, String model, String vehicle_percentage_discount, String additional_discount_vehicle,
+			String options_percentage_discount, String additional_discount_options, String paint_percentage_discount,
+			String additional_discount_paint, String rebate, String marketing_bonus,
+			String manufacturer_delivery_charges, String Vehicle_Basic_price, String road_tax_for_first_year,
+			String otr_value, String percentage_cap_residual_value, String percentage_cap_maint_value,
+			String residual_value_used, String maint_cost_used, String target_rental, String additional_terms,
+			String additional_mileage, String vehicle_profit, String sales_price_percentage, String maintenance_status,
+			String matrix_credit_type, String security_deposit, String balloon_payment_status, String referrer_commission,
+			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String order_deposit, String finance_deposit, String document_fee, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_quote_summary_page = new QuoteSummary_HPNR_HPRPage();

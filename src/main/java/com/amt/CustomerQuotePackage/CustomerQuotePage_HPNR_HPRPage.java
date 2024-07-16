@@ -129,6 +129,10 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 	@FindBy(xpath = "//*[@name='withBalloon']//ancestor::div[1]//span[@class='slider round']")
 	private WebElement balloon_payment_toggle;
+	
+	// referrer commission
+	@FindBy(xpath = "//*[@id='referrerComm']")
+	private WebElement referrer_commission_input_field;
 
 	@FindBy(xpath = "((//*[normalize-space()='On the road price']//ancestor::div[1])[1])//div[2]")
 	private WebElement otr_cost_price;
@@ -2696,6 +2700,118 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		}
 	}
 
+	
+	public boolean check_monthly_total_payment_after_adding_referrer_commission(String ref_commission_from_excel,  String sheet_name)
+			throws InterruptedException, IOException {
+		
+		
+		
+		ExplicitWait.visibleElement(driver, referrer_commission_input_field, 20);
+		referrer_commission_input_field.clear();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		Actions act = new Actions(driver);
+		
+		Click.sendKeys(driver, referrer_commission_input_field, ref_commission_from_excel, 30);
+		act.sendKeys(Keys.TAB).perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+
+		LO.print("Referrer Commission "+ref_commission_from_excel+"added to the referrer commission field");
+		System.out.println("Referrer Commission "+ref_commission_from_excel+"added to the referrer commission field");
+
+		
+
+		try {
+
+			ExplicitWait.visibleElement(driver, customer_quote_monthly_total_rental, 40);
+
+			Thread.sleep(4000);
+
+			double monthly_total_payment_actual_from_screen = Double
+					.parseDouble(RemoveComma.of(customer_quote_monthly_total_rental.getText().trim().substring(2)));
+
+			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
+
+			double monthly_total_payment_expected_from_excel = obj_read_excel_calculation_page
+					.get_monthly_total_payment_after_adding_referrer_commission(ref_commission_from_excel , sheet_name);
+
+			LO.print("");
+			System.out.println("");
+
+			LO.print("Monthly Total Payment Expected (after adding Referrer Commission) is "
+					+ monthly_total_payment_expected_from_excel);
+			System.out.println("Monthly Total Payment Expected (after adding Referrer Commission) is "
+					+ monthly_total_payment_expected_from_excel);
+
+			LO.print("Monthly Total Payment Actual (after adding Referrer Commission) is "
+					+ monthly_total_payment_actual_from_screen);
+			System.out.println("Monthly Total Payment Actual (after adding Referrer Commission) is "
+					+ monthly_total_payment_actual_from_screen);
+
+			LO.print("");
+			System.out.println("");
+
+			double diff = Difference.of_two_Double_Values(monthly_total_payment_actual_from_screen,
+					monthly_total_payment_expected_from_excel);
+
+			boolean status = false;
+			if (diff < 0.05) {
+				status = true;
+
+				LO.print("Monthly Total Payment verified after adding Referrer Commission");
+				System.out.println("Monthly Total Payment after adding Referrer Commission");
+			}
+
+
+			return status;
+		} catch (Exception e) {
+
+			Thread.sleep(4000);
+			
+			ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 40);
+
+			double monthly_finance_payment_actual_from_screen = Double
+					.parseDouble(RemoveComma.of(customer_quote_monthly_finance_rental.getText().trim().substring(2)));
+
+			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
+
+			double monthly_finance_payment_expected_from_excel = obj_read_excel_calculation_page
+					.get_monthly_finance_payment_after_adding_referrer_commission(ref_commission_from_excel , sheet_name);
+
+			LO.print("");
+			System.out.println("");
+
+			LO.print("Monthly Finance Payment Expected (after adding Referrer Commission) is "
+					+ monthly_finance_payment_expected_from_excel);
+			System.out.println("Monthly Finance Payment Expected (after adding Referrer Commission) is "
+					+ monthly_finance_payment_expected_from_excel);
+
+			LO.print("Monthly Finance Payment Actual (after adding Referrer Commission) is "
+					+ monthly_finance_payment_actual_from_screen);
+			System.out.println("Monthly Finance Payment Actual (after adding Referrer Commission) is "
+					+ monthly_finance_payment_actual_from_screen);
+
+			LO.print("");
+			System.out.println("");
+
+			double diff = Difference.of_two_Double_Values(monthly_finance_payment_actual_from_screen,
+					monthly_finance_payment_expected_from_excel);
+
+			boolean status = false;
+			if (diff < 0.05) {
+				status = true;
+
+				LO.print("Monthly Finance Payment verified after adding Referrer Commission");
+				System.out.println("Monthly Finance Payment verified after adding Referrer Commission");
+			}
+
+			
+			return status;
+
+		}
+	}
+
+	
 	public boolean check_monthly_finance_payment_after_making_balloon_payment_off(String sheet_name)
 			throws InterruptedException, IOException {
 		Click.on(driver, balloon_payment_toggle, 40);
