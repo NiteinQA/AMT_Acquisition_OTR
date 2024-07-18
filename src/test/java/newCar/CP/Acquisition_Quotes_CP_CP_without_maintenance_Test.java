@@ -216,8 +216,7 @@ public class Acquisition_Quotes_CP_CP_without_maintenance_Test extends TestBase 
 	
 	
 	
-    @Test(priority =7 , dataProvider = "testData", dependsOnMethods = {
-    "" })
+    @Test(priority =7 , dataProvider = "testData", dependsOnMethods = {  "aquisition_quotes_CP_CP_customer_quote_part_exchange_value_edit_check_without_maintenance_test" })
 
     public void aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test(
 			String manufacturer,                                     String model,

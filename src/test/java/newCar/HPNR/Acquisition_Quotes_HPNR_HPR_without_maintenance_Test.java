@@ -227,7 +227,7 @@ public class Acquisition_Quotes_HPNR_HPR_without_maintenance_Test extends TestBa
 	
 	
 	@Test(priority = 8, dataProvider = "testData", dependsOnMethods = {
-	"aquisition_quotes_HPNR_HPNR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test" })
+	"aquisition_quotes_HPNR_HPR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test" })
 
 	public void aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test(
 			String manufacturer,                             String model, 

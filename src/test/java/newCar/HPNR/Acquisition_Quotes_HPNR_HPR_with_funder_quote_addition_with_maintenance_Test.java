@@ -178,7 +178,7 @@ public class Acquisition_Quotes_HPNR_HPR_with_funder_quote_addition_with_mainten
 	
 	
 	@Test(priority = 6, dataProvider = "testData", dependsOnMethods = {
-	"aquisition_quotes_HPNR_HPNR_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test" })
+	"aquisition_quotes_HPNR_HPR_customer_quote_monthly_total_payment_after_balloon_payment_off_with_maintenance_test" })
 
 	public void aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test(
 			String manufacturer,			                                String model, 

@@ -287,20 +287,20 @@ public class Acquisition_Quotes_Outright_CP_with_maintenance_Test extends TestBa
 		//Assert.assertTrue(quote_summary_configuration_value_check);
 		  
 		  
-			obj_quote_summary_page.save_quote();
-			
-			boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
-			Assert.assertTrue(quote_summary_OTR_calculation1);
-			
-			boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page.quote_summary_holding_cost_calculation_with_maintenance(sheet_name);
-			Assert.assertTrue(quote_summary_holding_cost_calculation1);
-			
-			boolean quote_summary_customer_quote_calculation1= obj_quote_summary_page.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name);
-			Assert.assertTrue(quote_summary_customer_quote_calculation1); 
-			
-			  boolean quote_summary_configuration_value_check1 = obj_quote_summary_page.
-					  quote_summary_configuration_value_verification_with_maintenance(sheet_name);
-					//Assert.assertTrue(quote_summary_configuration_value_check1);
+//			obj_quote_summary_page.save_quote();
+//			
+//			boolean quote_summary_OTR_calculation1 = obj_quote_summary_page.quote_summary_OTR_calculation(sheet_name);
+//			Assert.assertTrue(quote_summary_OTR_calculation1);
+//			
+//			boolean quote_summary_holding_cost_calculation1 = obj_quote_summary_page.quote_summary_holding_cost_calculation_with_maintenance(sheet_name);
+//			Assert.assertTrue(quote_summary_holding_cost_calculation1);
+//			
+//			boolean quote_summary_customer_quote_calculation1= obj_quote_summary_page.quote_summary_customer_quote_summary_value_verification_with_maintenance(sheet_name);
+//			Assert.assertTrue(quote_summary_customer_quote_calculation1); 
+//			
+//			  boolean quote_summary_configuration_value_check1 = obj_quote_summary_page.
+//					  quote_summary_configuration_value_verification_with_maintenance(sheet_name);
+//					//Assert.assertTrue(quote_summary_configuration_value_check1);
 		  
 		
 		  

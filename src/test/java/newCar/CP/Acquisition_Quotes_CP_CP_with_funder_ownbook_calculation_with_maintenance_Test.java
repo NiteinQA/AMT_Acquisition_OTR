@@ -225,12 +225,41 @@ public class Acquisition_Quotes_CP_CP_with_funder_ownbook_calculation_with_maint
 	}
 	
 	
-	
+    @Test(priority = 7, dataProvider = "testData", dependsOnMethods = { "aquisition_quotes_CP_CP_customer_quote_part_exchange_value_edit_check_with_maintenance_test" })
+
+    public void aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test(
+			String manufacturer,                                      String model,
+			String quoteRef,                                          String expiryDate,
+			String term,                                              String milesPerAnnum,
+			String cashDeposit,                                       String financeCharges,
+			String documentFee,                                       String monthlyPayment,
+			String monthlyMaintenance,                                String finalBallonPayment,
+			String optionToPurchaseFee,                               String pencePerExcessMileFinance,
+			String pencePerExcessMileMaintenance,                     String vehicle_profit,
+			String sales_price_percentage,                            String actual_part_exchange_value_from_excel,
+			String given_part_exchange_value_from_excel,              String less_finance_settlement_from_excel,
+			String order_deposit_from_excel,                          String finance_deposit,
+			String document_fee_from_excel,                           String upsell,
+			String maintenance_required,                              String maintenance_margin,
+			String initial_payment,                                   String part_exchange_status,
+			String target_rental,                                     String matrix_credit_type,
+			String balloon_payment_status,                            String referrer_commission,
+			String sheet_name)
+		throws InterruptedException, IOException, UnsupportedFlavorException {
+
+	CustomerQuotePage_HPNR_HPRPage obj_customer_quote_page1 = new CustomerQuotePage_HPNR_HPRPage();
+
+	boolean monthlyFinancePaymentCheckAfterReferrerCommission  = obj_customer_quote_page1
+			.check_monthly_total_payment_after_adding_referrer_commission(referrer_commission ,sheet_name);
+
+	Assert.assertTrue(monthlyFinancePaymentCheckAfterReferrerCommission);
+
+   }
 	
 	
 	
 		
-	@Test(priority=7, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_CP_CP_customer_quote_part_exchange_value_edit_check_with_maintenance_test" })
+	@Test(priority=8, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_CP_CP_customer_quote_part_exchange_value_edit_check_with_maintenance_test" })
 
 	public void aquisition_quotes_CP_CP_quote_summary_values_verification_with_maintenance_test(
 			String manufacturer,                                      String model,

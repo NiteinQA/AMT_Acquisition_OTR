@@ -9,6 +9,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.amt.CustomerQuotePackage.CustomerQuotePage_CP_CP_Page;
+import com.amt.CustomerQuotePackage.CustomerQuotePage_HPNR_HPRPage;
 import com.amt.HoldingCostPages.HoldingCost_CP_CP_Page;
 import com.amt.QuoteSummaryPages.QuoteSummary_CP_CP_Page;
 import com.amt.pages.AcquisitionListingPage;
@@ -39,7 +40,7 @@ public class Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_without_mai
 			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
 			String order_deposit_from_excel, String finance_deposit, String document_fee_from_excel, String upsell,
 			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-			String target_rental, String matrix_credit_type, String balloon_payment_status, String sheet_name)
+			String target_rental, String matrix_credit_type, String balloon_payment_status, String referrer_commission, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_acq_listing_page = new AcquisitionListingPage();
@@ -65,7 +66,7 @@ public class Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_without_mai
 			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
 			String order_deposit_from_excel, String finance_deposit, String document_fee_from_excel, String upsell,
 			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-			String target_rental, String matrix_credit_type, String balloon_payment_status, String sheet_name)
+			String target_rental, String matrix_credit_type, String balloon_payment_status, String referrer_commission, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_CP_CP_Page();
@@ -86,7 +87,7 @@ public class Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_without_mai
 			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
 			String order_deposit_from_excel, String finance_deposit, String document_fee_from_excel, String upsell,
 			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-			String target_rental, String matrix_credit_type, String balloon_payment_status, String sheet_name)
+			String target_rental, String matrix_credit_type, String balloon_payment_status, String referrer_commission, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_holding_cost_CP_CP_page = new HoldingCost_CP_CP_Page();
@@ -109,7 +110,7 @@ public class Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_without_mai
 			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
 			String order_deposit_from_excel, String finance_deposit, String document_fee_from_excel, String upsell,
 			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-			String target_rental, String matrix_credit_type, String balloon_payment_status, String sheet_name)
+			String target_rental, String matrix_credit_type, String balloon_payment_status, String referrer_commission, String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException, NumberFormatException, ClassNotFoundException {
 
 		obj_customer_quote_page = new CustomerQuotePage_CP_CP_Page();
@@ -121,9 +122,35 @@ public class Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_without_mai
 
 		 Assert.assertTrue(monthly_finance_payment_check);
 	}
+	
+	
+	
+    @Test(priority =5 , dataProvider = "testData", dependsOnMethods = {"aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test"})
+
+    public void aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test(String manufacturer,
+			String model, String quoteRef, String expiryDate, String term, String milesPerAnnum, String cashDeposit,
+			String financeCharges, String documentFee, String monthlyPayment, String finalBallonPayment,
+			String optionToPurchaseFee,String pencePerExcessMileFinance, String actual_part_exchange_value_from_excel,
+			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
+			String order_deposit_from_excel, String finance_deposit, String document_fee_from_excel, String upsell,
+			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
+			String target_rental, String matrix_credit_type, String balloon_payment_status, String referrer_commission, String sheet_name)
+		throws InterruptedException, IOException, UnsupportedFlavorException {
+
+	CustomerQuotePage_HPNR_HPRPage obj_customer_quote_page1 = new CustomerQuotePage_HPNR_HPRPage();
+
+	boolean monthlyFinancePaymentCheckAfterReferrerCommission  = obj_customer_quote_page1
+			.check_monthly_total_payment_after_adding_referrer_commission(referrer_commission ,sheet_name);
+
+	Assert.assertTrue(monthlyFinancePaymentCheckAfterReferrerCommission);
+
+   }
+
+	
+	
 
 		  
-		  @Test(priority = 5, dataProvider = "testData", dependsOnMethods = { "aquisition_quotes_CP_CP_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test"
+		  @Test(priority = 6, dataProvider = "testData", dependsOnMethods = { "aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test"
 				  })
 		  
 		  
@@ -135,7 +162,7 @@ public class Acquisition_Quotes_CP_CP_LCV_with_funder_quote_addition_without_mai
 					String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
 					String order_deposit_from_excel, String finance_deposit, String document_fee_from_excel, String upsell,
 					String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-					String target_rental, String matrix_credit_type, String balloon_payment_status, String sheet_name) throws
+					String target_rental, String matrix_credit_type, String balloon_payment_status, String referrer_commission, String sheet_name) throws
 		  InterruptedException, IOException, UnsupportedFlavorException {
 		  
 		  obj_quote_summary_page = new QuoteSummary_CP_CP_Page();

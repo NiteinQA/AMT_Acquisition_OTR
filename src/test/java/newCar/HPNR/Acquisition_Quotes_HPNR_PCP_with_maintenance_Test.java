@@ -226,7 +226,7 @@ public class Acquisition_Quotes_HPNR_PCP_with_maintenance_Test extends TestBase 
 	}
 	
 	@Test(priority = 7, dataProvider = "testData", dependsOnMethods = {
-	"aquisition_quotes_HPNR_CP_customer_quote_part_exchange_value_edit_check_with_maintenance_test" })
+	"aquisition_quotes_HPNR_PCP_customer_quote_part_exchange_value_edit_check_with_maintenance_test" })
 
 	public void aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test(
 			String manufacturer,                                     String model,
