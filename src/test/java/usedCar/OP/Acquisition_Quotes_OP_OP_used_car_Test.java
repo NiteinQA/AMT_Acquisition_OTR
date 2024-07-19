@@ -36,7 +36,7 @@ public class Acquisition_Quotes_OP_OP_used_car_Test extends TestBase {
 	public void aquisition_quotes_OP_OP_OTR_calculation_test(String registrationNumber,
 			String mileage, String vehicelCostPrice, String options_and_preparation_cost, 
 			String vehicle_Basic_sales_price_percentage, String vehicle_otr_sales_price_percentage,
-			String vehicle_profit , String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String vehicle_profit , String referrer_commission, String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
 			 String deposit,String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_acq_listing_page = new AcquisitionListingPage();
@@ -63,7 +63,7 @@ public class Acquisition_Quotes_OP_OP_used_car_Test extends TestBase {
 	public void aquisition_quotes_OP_OP_customer_quote_vehicle_profit_edit_test(String registrationNumber,
 			String mileage, String vehicelCostPrice, String options_and_preparation_cost, 
 			String vehicle_Basic_sales_price_percentage, String vehicle_otr_sales_price_percentage,
-			String vehicle_profit , String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String vehicle_profit , String referrer_commission, String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
 			 String deposit,String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 
@@ -78,12 +78,31 @@ public class Acquisition_Quotes_OP_OP_used_car_Test extends TestBase {
 	}
 	
 	
-	@Test(priority=4, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_OP_OP_customer_quote_vehicle_profit_edit_test" })
+	
+	
+	@Test(priority=3, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_OP_OP_customer_quote_vehicle_profit_edit_test" })
+
+	public void aquisition_quotes_OP_OP_customer_quote_referrer_commission_edit_test(String registrationNumber,
+			String mileage, String vehicelCostPrice, String options_and_preparation_cost, 
+			String vehicle_Basic_sales_price_percentage, String vehicle_otr_sales_price_percentage,
+			String vehicle_profit , String referrer_commission, String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			 String deposit,String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+
+
+		obj_customer_quote_page = new CustomerQuotePage_OP_OP_Page();
+		
+		boolean monthly_total_payment_after_editing_vehicle_profit =obj_customer_quote_page.edit_referrer_commission_and_check_updated_total_profit(referrer_commission, sheet_name);
+		Assert.assertTrue(monthly_total_payment_after_editing_vehicle_profit);
+	}
+
+	
+	
+	@Test(priority=4, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_OP_OP_customer_quote_referrer_commission_edit_test" })
 
 	public void aquisition_quotes_OP_OP_customer_quote_part_exchange_value_edit_test(String registrationNumber,
 			String mileage, String vehicelCostPrice, String options_and_preparation_cost, 
 			String vehicle_Basic_sales_price_percentage, String vehicle_otr_sales_price_percentage,
-			String vehicle_profit , String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String vehicle_profit , String referrer_commission, String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
 			 String deposit,String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 
@@ -101,7 +120,7 @@ public class Acquisition_Quotes_OP_OP_used_car_Test extends TestBase {
 	public void aquisition_quotes_OP_OP_quote_summary_values_verification_with_maintenance_test(String registrationNumber,
 			String mileage, String vehicelCostPrice, String options_and_preparation_cost, 
 			String vehicle_Basic_sales_price_percentage, String vehicle_otr_sales_price_percentage,
-			String vehicle_profit , String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
+			String vehicle_profit , String referrer_commission, String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
 			 String deposit,String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 

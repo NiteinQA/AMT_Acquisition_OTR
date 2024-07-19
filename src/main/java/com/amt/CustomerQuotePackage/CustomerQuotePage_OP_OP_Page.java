@@ -128,6 +128,13 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 
 	@FindBy(xpath = "//input[@id='VehicleProfit']")
 	private WebElement vehicle_profit_input;
+	
+	@FindBy(xpath = "//*[normalize-space()='Total profit']//ancestor::div[1]//div[2]//p")
+	private WebElement total_profit;
+	
+	// referrer commission
+	@FindBy(xpath = "//*[@id='referrerComm']")
+	private WebElement referrer_commission_input;
 
 	@FindBy(xpath = "(//*[normalize-space()='Vehicle sales price'])[2]//ancestor::div[2]//div[3]")
 	private WebElement vehicle_sales_price;
@@ -138,8 +145,6 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 	@FindBy(xpath = "//*[contains(text(),' Part exchange & additional payments ')]")
 	private WebElement part_exchange_and_additional_payment_button;
 
-	@FindBy(xpath = "//*[@id='collapseFirst']/div/div/div[5]/label/span")
-	private WebElement balloon_payment_toggle;
 
 	@FindBy(xpath = "//app-purchase-customer-quote-summary-header/div/div[6]/div/p/strong")
 	private WebElement total_monthly_payment;
@@ -224,22 +229,34 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 	}
 
 
-	public boolean edit_vehicle_profit_and_check_monthly_total_payment(String vehicle_profit, String sheet_name)
+	public boolean edit_vehicle_profit_and_check_updated_sales_price(String vehicle_profit, String sheet_name)
 			throws InterruptedException, UnsupportedFlavorException, IOException {
 
 		Click.on(driver, customer_quote, 30);
+		
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		LO.print("***********Entered in Customer Quote page ***********");
 		System.out.println("***********Entered in Customer Quote page ***********");
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		
+		LO.print("");
+		System.out.println("");
+		
+		LO.print("Adding the Vehicle Profit");
+		System.out.println("Adding the Vehicle Profit");	
 
 		ExplicitWait.visibleElement(driver, vehicle_profit_input, 30);
 		vehicle_profit_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
 		Click.sendKeys(driver, vehicle_profit_input, vehicle_profit, 30);
+		
+		
 		Actions act = new Actions(driver);
 		act.sendKeys(Keys.TAB).build().perform();
+		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		
 		ExplicitWait.visibleElement(driver, vehicle_sales_price, 30);
 		double vehicleSalesPriceFromScreen = Double
 				.parseDouble(RemoveComma.of(vehicle_sales_price.getText().trim().substring(2)));
@@ -264,6 +281,83 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 		return status;
 	}
 
+	
+	
+	public boolean edit_referrer_commission_and_check_updated_total_profit(String referrer_commission, String sheet_name)
+			throws InterruptedException, UnsupportedFlavorException, IOException {
+
+		LO.print("");
+		System.out.println("");
+		
+		LO.print("Adding the referrer commission");
+		System.out.println("Adding the referrer commission");
+
+		
+
+		ExplicitWait.visibleElement(driver, referrer_commission_input, 30);
+		referrer_commission_input.sendKeys(Keys.chord(Keys.CONTROL, "a", Keys.DELETE));
+		Click.sendKeys(driver, referrer_commission_input, referrer_commission, 30);
+		
+		
+		Actions act = new Actions(driver);
+		act.sendKeys(Keys.TAB).build().perform();
+		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		ExplicitWait.visibleElement(driver, total_profit, 30);
+		
+		
+			
+//		double totalProfitActual = Double
+//				.parseDouble(RemoveComma.of(total_profit.getText()).trim().split(" ")[1].replaceAll("[^\\d.]", ""));
+	
+        StringBuilder cleanedNumber = new StringBuilder();
+       
+        boolean decimalPointEncountered = false;
+        boolean arithmeticSymbolEncountered = false;
+		
+
+	        for (char c : total_profit.getText().toCharArray()) {
+	            if (Character.isDigit(c) ||c == '-') {
+	                cleanedNumber.append(c);
+	            } else if (c == '.' && !decimalPointEncountered) {
+	                cleanedNumber.append(c);
+	                decimalPointEncountered = true;
+	            }
+//	            else if ((c == '-') && !arithmeticSymbolEncountered && cleanedNumber.length() == 0) {
+//	                cleanedNumber.append(c);
+//	                arithmeticSymbolEncountered = true;
+//	            }
+	        }
+
+	        double totalProfitActual =  Double.parseDouble(cleanedNumber.toString());
+		
+		
+		double totalProfitExpected = Double.parseDouble(vehicle_profit_input.getAttribute("value")) - Double.parseDouble(referrer_commission);
+	
+		
+		System.out.println("Actual total profit " + totalProfitActual + " and Expected total profit " + totalProfitExpected);
+
+
+		double diff = Difference.of_two_Double_Values(totalProfitActual, totalProfitExpected);
+
+		boolean status = true;
+
+		if (diff < 0.05) {
+			status = true;
+
+			LO.print("Actual total profit " + totalProfitActual + " equals to the Expected total profit " + totalProfitExpected+ " i.e. true");
+			System.out.println("Actual total profit " + totalProfitActual + " equals to the Expected total profit " + totalProfitExpected+ " i.e. true");
+		}
+		else 
+		{
+			LO.print("Actual total profit " + totalProfitActual + " does not equal to the Expected total profit " + totalProfitExpected);
+			System.err.println("Actual total profit " + totalProfitActual + " does not equal to the Expected total profit " + totalProfitExpected);
+
+		}
+		return status;
+	}
+
+	
 	public boolean edit_vehicle_profit_and_sales_price_for_used_vehicle(String vehicle_profit, String sheet_name)
 			throws InterruptedException, UnsupportedFlavorException, IOException {
 
@@ -312,43 +406,17 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 			String order_Deposit_from_excel, String finance_deposit_from_excel, String document_fee_from_excel,
 			String sheet_name) throws UnsupportedFlavorException, IOException, InterruptedException {
 
+		LO.print("");
+		System.out.println("");
+		
+		LO.print("Adding deposit values");
+		System.out.println("Adding deposit values");
+
+		
 		Actions act = new Actions(driver);
 		
 		Click.on(driver, part_exchange_and_additional_payment_button, 20);
 		Thread.sleep(4000);
-
-//		Click.on(driver, given_part_exchange_value, 20);
-//
-//		given_part_exchange_value.clear();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		JavascriptExecutor jse = (JavascriptExecutor) driver;
-//
-//		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-//
-//	
-//
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, funder_name, "Funder X", 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, agreement_number, "123", 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		ExplicitWait.visibleElement(driver, less_finance_Settlement, 20);
-//		less_finance_Settlement.clear();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, less_finance_Settlement, less_finance_settlement_from_excel, 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, order_Deposit, 20);
 		order_Deposit.clear();
@@ -412,49 +480,19 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel, String deposit, String documentFee,
 			String sheet_name) throws UnsupportedFlavorException, IOException, InterruptedException {
 
+		
+		LO.print("");
+		System.out.println("");
+		
+		LO.print("Adding deposit values");
+		System.out.println("Adding deposit values");
+
+		
 		Actions act = new Actions(driver);
 		
 		Click.on(driver, part_exchange_and_additional_payment_button, 20);
 		Thread.sleep(4000);
 		
-//		Click.on(driver, given_part_exchange_value, 20);
-//
-//		given_part_exchange_value.clear();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		JavascriptExecutor jse = (JavascriptExecutor) driver;
-//
-//		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-//		
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//	
-//
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, funder_name, "Funder X", 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, agreement_number, "123", 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
-//		less_finance_settlement.clear();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//		
-		
-		
-
 		Click.on(driver, deposit_required, 30);
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 

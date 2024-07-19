@@ -32,15 +32,21 @@ public class Acquisition_Quotes_HPNR_HPR_LCV_with_funder_quote_addition_without_
 	QuoteSummary_HPNR_HPRPage obj_quote_summary_page;
 
 	@Test(priority = 1, dataProvider = "testData")
-	public void aquisition_quotes_HPNR_HPR_OTR_calculation_without_maintenance_test(String manufacturer, String model,
-			String quoteRef, String expiryDate, String term, String milesPerAnnum, String cashDeposit,
-			String financeCharges, String documentFee, String monthlyPayment, String finalBallonPayment,
-			String optionToPurchaseFee, String actual_part_exchange_value_from_excel,
-			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
-			String order_deposit_from_excel, String finance_deposit, String document_fee_from_excel, String upsell,
-			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-			String target_rental, String matrix_credit_type, String balloon_payment_status, String sheet_name)
-			throws InterruptedException, IOException, UnsupportedFlavorException {
+	public void aquisition_quotes_HPNR_HPR_OTR_calculation_without_maintenance_test(
+			String manufacturer,                                      String model,
+			String quoteRef,                                          String expiryDate,
+			String term,                                              String milesPerAnnum,
+			String cashDeposit,                                       String financeCharges,
+			String documentFee,                                       String monthlyPayment,
+			String finalBallonPayment,                                String optionToPurchaseFee,
+			String actual_part_exchange_value_from_excel,             String given_part_exchange_value_from_excel,
+			String less_finance_settlement_from_excel,                String order_deposit_from_excel,
+			String finance_deposit,                                   String document_fee_from_excel,
+			String upsell,                                            String maintenance_required,
+			String maintenance_margin,                                String initial_payment,
+			String part_exchange_status,                              String target_rental,
+			String matrix_credit_type,                                String balloon_payment_status,
+			String referrer_commission,                               String sheet_name)throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_acq_listing_page = new AcquisitionListingPage();
 		obj_vehicle_selection_page = new VehicleSelectionPage();
@@ -58,14 +64,21 @@ public class Acquisition_Quotes_HPNR_HPR_LCV_with_funder_quote_addition_without_
 	@Test(priority = 2, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_HPNR_HPR_OTR_calculation_without_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_HPR_after_discount_calculations_without_maintenance_test(String manufacturer,
-			String model, String quoteRef, String expiryDate, String term, String milesPerAnnum, String cashDeposit,
-			String financeCharges, String documentFee, String monthlyPayment, String finalBallonPayment,
-			String optionToPurchaseFee, String actual_part_exchange_value_from_excel,
-			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
-			String order_deposit_from_excel, String finance_deposit, String document_fee_from_excel, String upsell,
-			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-			String target_rental, String matrix_credit_type, String balloon_payment_status, String sheet_name)
+	public void aquisition_quotes_HPNR_HPR_after_discount_calculations_without_maintenance_test(
+			String manufacturer,                                      String model,
+			String quoteRef,                                          String expiryDate,
+			String term,                                              String milesPerAnnum,
+			String cashDeposit,                                       String financeCharges,
+			String documentFee,                                       String monthlyPayment,
+			String finalBallonPayment,                                String optionToPurchaseFee,
+			String actual_part_exchange_value_from_excel,             String given_part_exchange_value_from_excel,
+			String less_finance_settlement_from_excel,                String order_deposit_from_excel,
+			String finance_deposit,                                   String document_fee_from_excel,
+			String upsell,                                            String maintenance_required,
+			String maintenance_margin,                                String initial_payment,
+			String part_exchange_status,                              String target_rental,
+			String matrix_credit_type,                                String balloon_payment_status,
+			String referrer_commission,                               String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_HPNR_HPR_Page();
@@ -79,14 +92,21 @@ public class Acquisition_Quotes_HPNR_HPR_LCV_with_funder_quote_addition_without_
 	@Test(priority = 3, dataProvider = "testData", dependsOnMethods = {
 			"aquisition_quotes_HPNR_HPR_after_discount_calculations_without_maintenance_test" })
 
-	public void aquisition_quotes_HPNR_HPR_holding_cost_calculations_without_maintenance_test(String manufacturer,
-			String model, String quoteRef, String expiryDate, String term, String milesPerAnnum, String cashDeposit,
-			String financeCharges, String documentFee, String monthlyPayment, String finalBallonPayment,
-			String optionToPurchaseFee, String actual_part_exchange_value_from_excel,
-			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
-			String order_deposit_from_excel, String finance_deposit, String document_fee_from_excel, String upsell,
-			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-			String target_rental, String matrix_credit_type, String balloon_payment_status, String sheet_name)
+	public void aquisition_quotes_HPNR_HPR_holding_cost_calculations_without_maintenance_test(
+			String manufacturer,                                      String model,
+			String quoteRef,                                          String expiryDate,
+			String term,                                              String milesPerAnnum,
+			String cashDeposit,                                       String financeCharges,
+			String documentFee,                                       String monthlyPayment,
+			String finalBallonPayment,                                String optionToPurchaseFee,
+			String actual_part_exchange_value_from_excel,             String given_part_exchange_value_from_excel,
+			String less_finance_settlement_from_excel,                String order_deposit_from_excel,
+			String finance_deposit,                                   String document_fee_from_excel,
+			String upsell,                                            String maintenance_required,
+			String maintenance_margin,                                String initial_payment,
+			String part_exchange_status,                              String target_rental,
+			String matrix_credit_type,                                String balloon_payment_status,
+			String referrer_commission,                               String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_holding_cost_HPNR_HPR_page = new HoldingCost_HPNR_HPRPage();
@@ -103,13 +123,20 @@ public class Acquisition_Quotes_HPNR_HPR_LCV_with_funder_quote_addition_without_
 			"aquisition_quotes_HPNR_HPR_holding_cost_calculations_without_maintenance_test" })
 
 	public void aquisition_quotes_HPNR_HPR_customer_quote_calculations_check_monthly_finance_payment_without_maintenance_test(
-			String manufacturer, String model, String quoteRef, String expiryDate, String term, String milesPerAnnum,
-			String cashDeposit, String financeCharges, String documentFee, String monthlyPayment,
-			String finalBallonPayment, String optionToPurchaseFee, String actual_part_exchange_value_from_excel,
-			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
-			String order_deposit_from_excel, String finance_deposit, String document_fee_from_excel, String upsell,
-			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-			String target_rental, String matrix_credit_type, String balloon_payment_status, String sheet_name)
+			String manufacturer,                                      String model,
+			String quoteRef,                                          String expiryDate,
+			String term,                                              String milesPerAnnum,
+			String cashDeposit,                                       String financeCharges,
+			String documentFee,                                       String monthlyPayment,
+			String finalBallonPayment,                                String optionToPurchaseFee,
+			String actual_part_exchange_value_from_excel,             String given_part_exchange_value_from_excel,
+			String less_finance_settlement_from_excel,                String order_deposit_from_excel,
+			String finance_deposit,                                   String document_fee_from_excel,
+			String upsell,                                            String maintenance_required,
+			String maintenance_margin,                                String initial_payment,
+			String part_exchange_status,                              String target_rental,
+			String matrix_credit_type,                                String balloon_payment_status,
+			String referrer_commission,                               String sheet_name)
 			throws InterruptedException, IOException, UnsupportedFlavorException, NumberFormatException, ClassNotFoundException {
 
 		obj_customer_quote_page = new CustomerQuotePage_HPNR_HPRPage();
@@ -127,16 +154,21 @@ public class Acquisition_Quotes_HPNR_HPR_LCV_with_funder_quote_addition_without_
 		  })
 		  
 		  public void aquisition_quotes_HPNR_HPR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test
-		  (String manufacturer, String model, String quoteRef, String expiryDate,
-		  String term, String milesPerAnnum, String cashDeposit, String financeCharges,
-		  String documentFee, String monthlyPayment, String finalBallonPayment, String
-		  optionToPurchaseFee, String actual_part_exchange_value_from_excel, String
-		  given_part_exchange_value_from_excel, String
-		  less_finance_settlement_from_excel, String order_deposit_from_excel, String
-		  finance_deposit,String document_fee_from_excel, String upsell, String
-		  maintenance_required, String maintenance_margin, String initial_payment,
-		  String part_exchange_status, String target_rental,String matrix_credit_type,
-		  String balloon_payment_status, String sheet_name) throws
+		  (
+					String manufacturer,                                      String model,
+					String quoteRef,                                          String expiryDate,
+					String term,                                              String milesPerAnnum,
+					String cashDeposit,                                       String financeCharges,
+					String documentFee,                                       String monthlyPayment,
+					String finalBallonPayment,                                String optionToPurchaseFee,
+					String actual_part_exchange_value_from_excel,             String given_part_exchange_value_from_excel,
+					String less_finance_settlement_from_excel,                String order_deposit_from_excel,
+					String finance_deposit,                                   String document_fee_from_excel,
+					String upsell,                                            String maintenance_required,
+					String maintenance_margin,                                String initial_payment,
+					String part_exchange_status,                              String target_rental,
+					String matrix_credit_type,                                String balloon_payment_status,
+					String referrer_commission,                               String sheet_name) throws
 		  InterruptedException, IOException, UnsupportedFlavorException {
 		  
 		  obj_customer_quote_page = new CustomerQuotePage_HPNR_HPRPage();
@@ -149,22 +181,59 @@ public class Acquisition_Quotes_HPNR_HPR_LCV_with_funder_quote_addition_without_
 		  
 	
 	}
+	
+	
+    @Test(priority =6 , dataProvider = "testData", dependsOnMethods = {"aquisition_quotes_HPNR_HPR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test"})
+
+    public void aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test(
+			String manufacturer,                                      String model,
+			String quoteRef,                                          String expiryDate,
+			String term,                                              String milesPerAnnum,
+			String cashDeposit,                                       String financeCharges,
+			String documentFee,                                       String monthlyPayment,
+			String finalBallonPayment,                                String optionToPurchaseFee,
+			String actual_part_exchange_value_from_excel,             String given_part_exchange_value_from_excel,
+			String less_finance_settlement_from_excel,                String order_deposit_from_excel,
+			String finance_deposit,                                   String document_fee_from_excel,
+			String upsell,                                            String maintenance_required,
+			String maintenance_margin,                                String initial_payment,
+			String part_exchange_status,                              String target_rental,
+			String matrix_credit_type,                                String balloon_payment_status,
+			String referrer_commission,                               String sheet_name)
+		throws InterruptedException, IOException, UnsupportedFlavorException {
+
+	CustomerQuotePage_HPNR_HPRPage obj_customer_quote_page1 = new CustomerQuotePage_HPNR_HPRPage();
+
+	boolean monthlyFinancePaymentCheckAfterReferrerCommission  = obj_customer_quote_page1
+			.check_monthly_total_payment_after_adding_referrer_commission(referrer_commission ,sheet_name);
+
+	Assert.assertTrue(monthlyFinancePaymentCheckAfterReferrerCommission);
+
+   }
+
+	
+	
+	
+	
 		  
-		  @Test(priority = 6, dataProvider = "testData", dependsOnMethods = { "aquisition_quotes_HPNR_HPR_customer_quote_monthly_finance_payment_after_balloon_payment_off_without_maintenance_test"
-				  })
-		  
-		  
+		  @Test(priority = 7, dataProvider = "testData", dependsOnMethods = { "aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test"
+				  })		  
 		  public void aquisition_quotes_HPNR_HPR_quote_summary_values_verification_without_maintenance_test
-		  (String manufacturer, String model, String quoteRef, String expiryDate,
-		  String term, String milesPerAnnum, String cashDeposit, String financeCharges,
-		  String documentFee, String monthlyPayment, String finalBallonPayment, String
-		  optionToPurchaseFee, String actual_part_exchange_value_from_excel, String
-		  given_part_exchange_value_from_excel, String
-		  less_finance_settlement_from_excel, String order_deposit_from_excel, String
-		  finance_deposit,String document_fee_from_excel, String upsell, String
-		  maintenance_required, String maintenance_margin, String initial_payment,
-		  String part_exchange_status, String target_rental,String matrix_credit_type,
-		  String balloon_payment_status, String sheet_name) throws
+		  (
+					String manufacturer,                                      String model,
+					String quoteRef,                                          String expiryDate,
+					String term,                                              String milesPerAnnum,
+					String cashDeposit,                                       String financeCharges,
+					String documentFee,                                       String monthlyPayment,
+					String finalBallonPayment,                                String optionToPurchaseFee,
+					String actual_part_exchange_value_from_excel,             String given_part_exchange_value_from_excel,
+					String less_finance_settlement_from_excel,                String order_deposit_from_excel,
+					String finance_deposit,                                   String document_fee_from_excel,
+					String upsell,                                            String maintenance_required,
+					String maintenance_margin,                                String initial_payment,
+					String part_exchange_status,                              String target_rental,
+					String matrix_credit_type,                                String balloon_payment_status,
+					String referrer_commission,                               String sheet_name) throws
 		  InterruptedException, IOException, UnsupportedFlavorException {
 		  
 		  obj_quote_summary_page = new QuoteSummary_HPNR_HPRPage();

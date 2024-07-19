@@ -3,19 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="usedCar.CP.Acquisition_Quotes_CP_PCP_used_car_with_funder_ownbook_calculation_with_maintenance_Test">
+      <class name="usedLCV.OP.Acquisition_Quotes_OP_OP_used_LCV_Test">
         <methods>
-          <include name="aquisition_quotes_OTR_calculation_with_maintenance_test"/>
-          <include name="aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test"/>
           <include name="end"/>
-          <include name="aquisition_quotes_quote_summary_values_verification_with_maintenance_test"/>
+          <include name="aquisition_quotes_OP_OP_OTR_calculation_test"/>
+          <include name="aquisition_quotes_OP_OP_customer_quote_referrer_commission_edit_test"/>
           <include name="start_info"/>
-          <include name="aquisition_quotes_customer_quote_calculations_check_monthly_finance_payment_with_maintenance_test"/>
-          <include name="aquisition_quotes_holding_cost_calculations_with_maintenance_test"/>
-          <include name="aquisition_quotes_customer_quote_part_exchange_value_edit_check_with_maintenance_test"/>
+          <include name="aquisition_quotes_OP_OP_customer_quote_part_exchange_value_edit_test"/>
+          <include name="aquisition_quotes_OP_OP_customer_quote_vehicle_profit_edit_test"/>
+          <include name="aquisition_quotes_OP_OP_quote_summary_values_verification_with_maintenance_test"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- usedCar.CP.Acquisition_Quotes_CP_PCP_used_car_with_funder_ownbook_calculation_with_maintenance_Test -->
+      </class> <!-- usedLCV.OP.Acquisition_Quotes_OP_OP_used_LCV_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

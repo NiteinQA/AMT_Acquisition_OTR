@@ -33,10 +33,14 @@ public class Acquisition_Quotes_OP_OP_Test extends TestBase {
 
 
 	@Test(priority = 1, dataProvider = "testData")
-	public void aquisition_quotes_OP_OP_OTR_calculation_test(String manufacturer, String model, 
-			String Vehicle_Basic_price, String  road_tax_for_first_year,
-			String vehicle_profit , String rebate , String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
-			String  order_deposit, String finance_deposit, String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+	public void aquisition_quotes_OP_OP_OTR_calculation_test(
+			String manufacturer,                                     String model,
+			String Vehicle_Basic_price,                              String road_tax_for_first_year,
+			String vehicle_profit,                                   String rebate,
+			String referrer_commission,                              String part_exchange_actual,
+			String part_exchange_given,                              String less_finance_settlement,
+			String order_deposit,                                    String finance_deposit,
+			String document_fee,                                     String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_acq_listing_page = new AcquisitionListingPage();
 		obj_vehicle_selection_page = new VehicleSelectionPage();
@@ -55,10 +59,14 @@ public class Acquisition_Quotes_OP_OP_Test extends TestBase {
 	
 	@Test(priority=2, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_OP_OP_OTR_calculation_test" })
 
-	public void aquisition_quotes_OP_OP_after_discount_calculations_test(String manufacturer, String model, 
-			String Vehicle_Basic_price, String  road_tax_for_first_year,
-			String vehicle_profit , String rebate , String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
-			String  order_deposit, String finance_deposit, String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+	public void aquisition_quotes_OP_OP_after_discount_calculations_test(
+			String manufacturer,                                     String model,
+			String Vehicle_Basic_price,                              String road_tax_for_first_year,
+			String vehicle_profit,                                   String rebate,
+			String referrer_commission,                              String part_exchange_actual,
+			String part_exchange_given,                              String less_finance_settlement,
+			String order_deposit,                                    String finance_deposit,
+			String document_fee,                                     String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 		obj_contract_types_and_OTR_page = new ContractTypesAndOTR_OP_OP_Page();
 
@@ -73,29 +81,52 @@ public class Acquisition_Quotes_OP_OP_Test extends TestBase {
 	
 	@Test(priority=3, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_OP_OP_after_discount_calculations_test" })
 
-	public void aquisition_quotes_OP_OP_customer_quote_vehicle_profit_edit_test(String manufacturer, String model, 
-			String Vehicle_Basic_price, String  road_tax_for_first_year,
-			String vehicle_profit , String rebate , String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
-			String  order_deposit, String finance_deposit, String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+	public void aquisition_quotes_OP_OP_customer_quote_vehicle_profit_edit_test(
+			String manufacturer,                                     String model,
+			String Vehicle_Basic_price,                              String road_tax_for_first_year,
+			String vehicle_profit,                                   String rebate,
+			String referrer_commission,                              String part_exchange_actual,
+			String part_exchange_given,                              String less_finance_settlement,
+			String order_deposit,                                    String finance_deposit,
+			String document_fee,                                     String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 
 		obj_customer_quote_page = new CustomerQuotePage_OP_OP_Page();
 		
-		boolean monthly_total_payment_after_editing_vehicle_profit =obj_customer_quote_page.edit_vehicle_profit_and_check_monthly_total_payment(vehicle_profit, sheet_name);
+		boolean monthly_total_payment_after_editing_vehicle_profit =obj_customer_quote_page.edit_vehicle_profit_and_check_updated_sales_price(vehicle_profit, sheet_name);
 		Assert.assertTrue(monthly_total_payment_after_editing_vehicle_profit);
-		
-
-
-
 	}
 	
 	
 	@Test(priority=4, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_OP_OP_customer_quote_vehicle_profit_edit_test" })
 
-	public void aquisition_quotes_OP_OP_customer_quote_part_exchange_value_edit_test(String manufacturer, String model, 
-			String Vehicle_Basic_price, String  road_tax_for_first_year,
-			String vehicle_profit , String rebate , String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
-			String  order_deposit, String finance_deposit, String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+	public void aquisition_quotes_OP_OP_customer_quote_referrer_commission_edit_test(
+			String manufacturer,                                     String model,
+			String Vehicle_Basic_price,                              String road_tax_for_first_year,
+			String vehicle_profit,                                   String rebate,
+			String referrer_commission,                              String part_exchange_actual,
+			String part_exchange_given,                              String less_finance_settlement,
+			String order_deposit,                                    String finance_deposit,
+			String document_fee,                                     String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+
+
+		obj_customer_quote_page = new CustomerQuotePage_OP_OP_Page();
+		
+		boolean monthly_total_payment_after_editing_vehicle_profit =obj_customer_quote_page.edit_referrer_commission_and_check_updated_total_profit(referrer_commission, sheet_name);
+		Assert.assertTrue(monthly_total_payment_after_editing_vehicle_profit);
+	}
+	
+	
+	@Test(priority=5, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_OP_OP_customer_quote_referrer_commission_edit_test" })
+
+	public void aquisition_quotes_OP_OP_customer_quote_part_exchange_value_edit_test(
+			String manufacturer,                                     String model,
+			String Vehicle_Basic_price,                              String road_tax_for_first_year,
+			String vehicle_profit,                                   String rebate,
+			String referrer_commission,                              String part_exchange_actual,
+			String part_exchange_given,                              String less_finance_settlement,
+			String order_deposit,                                    String finance_deposit,
+			String document_fee,                                     String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 
 		obj_customer_quote_page = new CustomerQuotePage_OP_OP_Page();
@@ -107,12 +138,16 @@ public class Acquisition_Quotes_OP_OP_Test extends TestBase {
 	}
 	
 	
-	@Test(priority=5, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_OP_OP_customer_quote_part_exchange_value_edit_test" })
+	@Test(priority=6, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_OP_OP_customer_quote_part_exchange_value_edit_test" })
 
-	public void aquisition_quotes_OP_OP_quote_summary_values_verification_with_maintenance_test(String manufacturer, String model, 
-			String Vehicle_Basic_price, String  road_tax_for_first_year,
-			String vehicle_profit , String rebate , String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
-			String  order_deposit, String finance_deposit, String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+	public void aquisition_quotes_OP_OP_quote_summary_values_verification_with_maintenance_test(
+			String manufacturer,                                     String model,
+			String Vehicle_Basic_price,                              String road_tax_for_first_year,
+			String vehicle_profit,                                   String rebate,
+			String referrer_commission,                              String part_exchange_actual,
+			String part_exchange_given,                              String less_finance_settlement,
+			String order_deposit,                                    String finance_deposit,
+			String document_fee,                                     String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 
 		obj_quote_summary_page = new QuoteSummary_OP_OP_Page();
