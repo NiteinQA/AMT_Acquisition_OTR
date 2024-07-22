@@ -1461,6 +1461,9 @@ public class QuoteSummary_FL_BCHPage extends TestBase {
 		double totalMarginFromScreen = Double
 				.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
+		
+		
+		
 		ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
 		double defaultBrokerMarginPercentageFromScreen = Double
 				.parseDouble(quote_summary_broker_upsell_margin.getAttribute("value"));

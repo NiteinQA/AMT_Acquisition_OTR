@@ -283,12 +283,20 @@ public class Acquisition_Quotes_Outright_HPNR_LCV_with_maintenance_Test extends 
 	
 	@Test(priority=9, dataProvider="testData", dependsOnMethods = { "aquisition_quotes_verify_customer_quote_monthly_finance_payment_after_adding_referrer_commission_test" })
 
-	public void aquisition_quotes_outright_HPNR_quote_summary_values_verification_with_maintenance_test(String manufacturer, String model, 
-			String Vehicle_Basic_price, String  road_tax_for_first_year, String percentage_cap_residual_value, String percentage_cap_maint_value,
-			String residual_value_used, String maint_cost_used, String target_rental, String additional_terms, String additional_mileage,
-			 String vehicle_profit, String sales_price_percentage,String  maintenance_status,String matrix_credit_type, String security_deposit, 
-			String balloon_payment_status, String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
-			String  order_deposit, String finance_deposit, String document_fee, String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+	public void aquisition_quotes_outright_HPNR_quote_summary_values_verification_with_maintenance_test(
+			String manufacturer,                                     String model,
+			String Vehicle_Basic_price,                              String road_tax_for_first_year,
+			String percentage_cap_residual_value,                    String percentage_cap_maint_value,
+			String residual_value_used,                              String maint_cost_used,
+			String target_rental,                                    String additional_terms,
+			String additional_mileage,                               String vehicle_profit,
+			String sales_price_percentage,                           String maintenance_status,
+			String matrix_credit_type,                               String security_deposit,
+			String balloon_payment_status,                           String referrer_commission,
+			String part_exchange_actual,                             String part_exchange_given,
+			String less_finance_settlement,                          String order_deposit,
+			String finance_deposit,                                  String document_fee,
+			String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
 
 
 		obj_quote_summary_page = new QuoteSummaryOutrightHPRPage();

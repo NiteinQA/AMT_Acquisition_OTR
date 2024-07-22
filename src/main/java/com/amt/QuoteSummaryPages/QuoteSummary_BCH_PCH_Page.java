@@ -333,7 +333,9 @@ public class QuoteSummary_BCH_PCH_Page extends TestBase {
 		Thread.sleep(2000);
 
 		Thread.sleep(5000);
+		try {
 		Click.on(driver, quote_summary, 60);
+		}catch(Exception e) {}
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 

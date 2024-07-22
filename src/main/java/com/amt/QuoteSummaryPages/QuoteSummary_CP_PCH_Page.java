@@ -1368,8 +1368,8 @@ customer_quote_summary_default_finance_commission = Double.parseDouble(
 				.parseDouble(RemoveComma.of(quote_summary_total_margin.getText().trim().substring(2)));
 
 		ExplicitWait.visibleElement(driver, quote_summary_default_broker_margin, 20);
-		double defaultBrokerMarginPercentageFromScreen = Double
-				.parseDouble(quote_summary_default_broker_margin.getText().trim().substring(0, 4));
+		double defaultBrokerMarginFromScreen = Double
+				.parseDouble(quote_summary_default_broker_margin.getAttribute("value"));
 
 		ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin_percentage, 20);
 		double brokerUpsellMarginPercentageFromScreen = Double
@@ -1401,9 +1401,7 @@ customer_quote_summary_default_finance_commission = Double.parseDouble(
 
 		double totalMarginFromExcel = GetExcelFormulaValue.get_formula_value(212, 1, sheet_name);
 
-		double tempdefaualtBrokerMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(216, 4, sheet_name);
-
-		double defaualtBrokerMarginPercentageFromExcel = (tempdefaualtBrokerMarginPercentageFromExcel * 100);
+		double defaualtBrokerMarginFromExcel = GetExcelFormulaValue.get_formula_value(218, 1, sheet_name);
 
 		double tempbrokerUpsellMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(218, 4, sheet_name);
 
@@ -1464,8 +1462,8 @@ customer_quote_summary_default_finance_commission = Double.parseDouble(
 			System.err.println("Total Margin found wrong");
 		}
 
-		if (Difference.of_two_Double_Values(defaualtBrokerMarginPercentageFromExcel,
-				defaultBrokerMarginPercentageFromScreen) < 0.2) {
+		if (Difference.of_two_Double_Values(defaualtBrokerMarginFromExcel,
+				defaultBrokerMarginFromScreen) < 0.2) {
 			LO.print("Default Broker Margin percentage found OK");
 			System.out.println("Default Broker Margin percentage found OK");
 			count++;
