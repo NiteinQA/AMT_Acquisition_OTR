@@ -63,7 +63,7 @@ public class OptionsAccessoriesPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 		
-		Thread.sleep(7000);
+		Thread.sleep(4000);
 		
 
 
@@ -71,15 +71,18 @@ public class OptionsAccessoriesPage extends TestBase {
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 20);
 		
-		Thread.sleep(15000);
+		Thread.sleep(6000);
 		
 	    try {
-		Click.on(driver, ok_pop_up, 10);
+	    	ExplicitWait.visibleElement(driver, ok_pop_up, 20);
+	    	js.executeScript("arguments[0].scrollIntoView(true); arguments[0].click(); ", ok_pop_up);			
 	    }
 	    catch(Exception e)
 	    {
 		    try {
-				Click.on(driver, ok_pop_up, 10);
+//				Click.on(driver, ok_pop_up, 10);
+		    	ExplicitWait.visibleElement(driver, ok_pop_up, 20);
+		    	js.executeScript("arguments[0].scrollIntoView(true); arguments[0].click(); ", ok_pop_up);		
 			    }
 			    catch(Exception e1)
 			    {

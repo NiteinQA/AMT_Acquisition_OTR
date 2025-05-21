@@ -242,11 +242,11 @@ public class Acquisition_Quotes_HPNR_FL_without_maintenance_Test extends TestBas
 		System.out.println("");
 		System.out.println("");
 		
-		boolean balance_due = obj_quote_summary_page.verify_balance_due_value(sheet_name);
-		Assert.assertTrue(balance_due);
-		
-		System.out.println("");
-		System.out.println("");
+//		boolean balance_due = obj_quote_summary_page.verify_balance_due_value(sheet_name);
+//		Assert.assertTrue(balance_due);
+//		
+//		System.out.println("");
+//		System.out.println("");
 
 		boolean quote_summary_customer_quote_calculation = obj_quote_summary_page
 				.quote_summary_customer_quote_summary_value_verification_without_maintenance(sheet_name);

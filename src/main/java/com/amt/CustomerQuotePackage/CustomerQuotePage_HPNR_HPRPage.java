@@ -19,6 +19,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.amt.QuoteSummaryPages.QuoteSummaryOutrightHPNRPage;
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
+import com.amt.testUtil.CommonClass;
 import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
@@ -30,6 +31,8 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 	CustomerQuotePage_HPNR_HPRPage obj_cust_quote_outright_bchPage;
 	ReadExcelCalculationForPurchaseAgreement obj_read_excel_calculation_page;
+	
+	CommonClass obj_common_class ;
 
 
 
@@ -602,7 +605,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
 		double monthly_finance_payment_expected_from_excel = obj_read_excel_calculation_page
-				.get_monthly_finanace_payment_from_excel(maintenance_status, matrix_credit_type, balloon_payment_status,
+				.get_monthly_finance_payment_from_excel(maintenance_status, matrix_credit_type, balloon_payment_status,
 						order_deposit, finance_deposit, document_fee, vehicle_discount_copied, paint_discount_copied,
 						options_discount_copied, vehicle_additional_copied, paint_additional_copied,
 						options_additional_copied, sheet_name);
@@ -820,10 +823,12 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		LO.print("Actual Monthly Finance Payment from screen is " + monthly_finance_payment_actual_from_screen);
 		System.out
 				.println("Actual Monthly Finance Payment from screen is " + monthly_finance_payment_actual_from_screen);
+		
+		
 
 		double monthly_finance_payment_expected_from_excel = obj_read_excel_calculation_page
 				.get_monthly_finance_payment_from_excel_for_funder_addition(maintenance_status, matrix_credit_type,
-						balloon_payment_status, order_deposit, finance_deposit, document_fee, sheet_name);
+						balloon_payment_status, order_deposit, finance_deposit, sheet_name);
 
 		LO.print("Expected Monthly Finance Rental from excel is " + monthly_finance_payment_expected_from_excel);
 		System.out.println(
@@ -921,10 +926,11 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 			LO.print("Actual Monthly Finance Payment from screen is " + monthly_finance_payment_actual_from_screen);
 			System.out
 					.println("Actual Monthly Finance Payment from screen is " + monthly_finance_payment_actual_from_screen);
+			
 
 			double monthly_finance_payment_expected_from_excel = obj_read_excel_calculation_page
 					.get_monthly_finance_payment_from_excel_for_funder_addition(maintenance_status, matrix_credit_type,
-							balloon_payment_status, order_deposit, finance_deposit, document_fee, sheet_name);
+							balloon_payment_status, order_deposit, finance_deposit, sheet_name);
 
 			LO.print("Expected Monthly Finance Rental from excel is " + monthly_finance_payment_expected_from_excel);
 			System.out.println(
@@ -1008,7 +1014,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 		double monthly_finance_payment_expected_from_excel = obj_read_excel_calculation_page
 				.get_monthly_finance_payment_from_excel_for_funder_addition(maintenance_status, matrix_credit_type,
-						balloon_payment_status, order_deposit, finance_deposit, document_fee, sheet_name);
+						balloon_payment_status, order_deposit, finance_deposit, sheet_name);
 
 		LO.print("Expected Monthly Finannce Rental from excel is " + monthly_finance_payment_expected_from_excel);
 		System.out.println(
@@ -1790,7 +1796,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
 			double monthly_finance_payment_expected_from_excel = obj_read_excel_calculation_page
-					.get_monthly_finanace_payment_from_excel(maintenance_status, matrix_credit_type, balloon_payment_status,
+					.get_monthly_finance_payment_from_excel(maintenance_status, matrix_credit_type, balloon_payment_status,
 							order_deposit, finance_deposit, document_fee, vehicle_discount_copied, paint_discount_copied,
 							options_discount_copied, vehicle_additional_copied, paint_additional_copied,
 							options_additional_copied, sheet_name);
@@ -2224,7 +2230,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 	public boolean put_part_exchange_values_and_check_monthly_finance_payment(String part_exchange_actual_from_excel,
 			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
 			String order_deposit_from_excel, String finance_deposit_from_excel, String sheet_name)
-			throws UnsupportedFlavorException, IOException, InterruptedException {
+			throws UnsupportedFlavorException, IOException, InterruptedException, ClassNotFoundException {
 	
 		Actions act = new Actions(driver);
 
@@ -2296,13 +2302,13 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		Thread.sleep(2000);
-		document_fee.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		String document_fee_copied = document_fee.getAttribute("value");
-		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		Thread.sleep(2000);
+//		document_fee.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
+//
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		String document_fee_copied = document_fee.getAttribute("value");
+//		act.sendKeys(Keys.TAB).perform();
 
 
 		Click.on(driver, quote_summary, 30);
@@ -2325,12 +2331,13 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		double monthly_finance_payment_actual_from_screen = Double
 				.parseDouble(RemoveComma.of(customer_quote_monthly_finance_rental.getText().trim().substring(2)));
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
+		
 
 		double[] monthlyFinanceAndBalanceToFinance = obj_read_excel_calculation_page
 				.get_monthly_finance_payment_and_balance_to_finance_payment_after_editing_part_exchange_values(
 						part_exchange_actual_from_excel, given_part_exchange_value_from_excel,
 						less_finance_settlement_from_excel, order_deposit_from_excel, finance_deposit_from_excel,
-						document_fee_copied, sheet_name);
+						sheet_name);
 
 		double monthly_finance_payment_expected = monthlyFinanceAndBalanceToFinance[0];
 		double balance_to_finance_expected = monthlyFinanceAndBalanceToFinance[1];
@@ -2377,7 +2384,7 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 			String part_exchange_actual_value_from_excel, String given_part_exchange_value_from_excel,
 			String less_finance_settlement_from_excel, String order_deposit_from_excel,
 			String finance_deposit_from_excel, String sheet_name)
-			throws UnsupportedFlavorException, IOException, InterruptedException {
+			throws UnsupportedFlavorException, IOException, InterruptedException, ClassNotFoundException {
 
 		Thread.sleep(4000);
 		
@@ -2437,12 +2444,12 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 		act.sendKeys(Keys.TAB).build().perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//
+//		document_fee.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
 
-		document_fee.sendKeys(Keys.chord(Keys.CONTROL, "a", "c"));
-
-		   ExplicitWait.visibleElement(driver, document_fee, 30);		
-		   String document_fee_copied = document_fee.getAttribute("value");
+//		   ExplicitWait.visibleElement(driver, document_fee, 30);		
+//		   String document_fee_copied = document_fee.getAttribute("value");
 		// driver.findElement(By.xpath("//*[@id='collapseThree']/div/div")).click();
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
@@ -2466,13 +2473,15 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 
 			double monthly_total_payment_actual_from_screen = Double
 					.parseDouble(RemoveComma.of(customer_quote_monthly_total_rental.getText().trim().substring(2)));
+			
 			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
+			
+
 
 			double[] monthlyFinanceAndBalanceToFinance = obj_read_excel_calculation_page
 					.get_monthly_total_payment_and_balance_to_finance_payment_after_editing_part_exchange_values(
 							part_exchange_actual_value_from_excel, given_part_exchange_value_from_excel,
-							less_finance_settlement_from_excel, order_deposit_from_excel, finance_deposit_from_excel,
-							document_fee_copied, sheet_name);
+							less_finance_settlement_from_excel, order_deposit_from_excel, finance_deposit_from_excel, sheet_name);
 
 			double monthly_total_payment_expected = monthlyFinanceAndBalanceToFinance[0];
 			double balance_to_finance_expected = monthlyFinanceAndBalanceToFinance[1];
@@ -2549,12 +2558,13 @@ public class CustomerQuotePage_HPNR_HPRPage extends TestBase {
 					.parseDouble(RemoveComma.of(customer_quote_monthly_finance_rental.getText().trim().substring(2)));
 
 			obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
+			
 
 			double[] monthlyFinanceAndBalanceToFinance = obj_read_excel_calculation_page
 					.get_monthly_finance_payment_and_balance_to_finance_payment_after_editing_part_exchange_values(
 							part_exchange_actual_value_from_excel, given_part_exchange_value_from_excel,
 							less_finance_settlement_from_excel, order_deposit_from_excel, finance_deposit_from_excel,
-							document_fee_copied, sheet_name);
+							sheet_name);
 
 			double monthly_finance_payment_expected = monthlyFinanceAndBalanceToFinance[0];
 			double balance_to_finance_expected = monthlyFinanceAndBalanceToFinance[1];

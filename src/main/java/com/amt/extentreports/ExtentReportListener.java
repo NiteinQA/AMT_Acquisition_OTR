@@ -53,6 +53,7 @@ public class ExtentReportListener  extends TestBase  implements ITestListener  {
 		 
 	//	ExtentTest test = extentReports.startTest("Test Name", "Sample description");
 	//	extentTest.log(LogStatus.PASS, "PASS");
+		extentTest =extentReports.createTest(result.getMethod().getMethodName());
 		extentTest.pass(result.getName());
 		
 	}
@@ -63,6 +64,8 @@ public class ExtentReportListener  extends TestBase  implements ITestListener  {
 		//extentTest.log(LogStatus.FAIL, "FAIL");
 
 		String feature = result.getMethod().getRealClass().getName() + "  :  " + result.getMethod().getMethodName();
+		extentTest =extentReports.createTest(result.getMethod().getMethodName());
+
 		extentTest.fail(feature);
 		
 		

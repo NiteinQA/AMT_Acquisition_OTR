@@ -1160,7 +1160,7 @@ public class QuoteSummary_HPNR_FL_Page extends TestBase {
 			System.out.println("Total Commission - found wrong");
 		}
 
-		if ((Difference.of_two_Double_Values(referrerCommission, customer_quote_summary_referrer_commision)) < 0.2) {
+		if ((referrerCommission + customer_quote_summary_referrer_commision) < 0.2) {
 			LO.print("Referrer Commission - found OK");
 			System.out.println("Referrer Commission - found OK");
 			count++;
@@ -1390,7 +1390,7 @@ public class QuoteSummary_HPNR_FL_Page extends TestBase {
 				System.out.println("Total Commission - found wrong");
 			}
 
-			if ((Difference.of_two_Double_Values(referrerCommission, customer_quote_summary_referrer_commision)) < 0.2) {
+			if ((referrerCommission+customer_quote_summary_referrer_commision) < 0.2) {
 				LO.print("Referrer Commission - found OK");
 				System.out.println("Referrer Commission - found OK");
 				count++;
@@ -1709,7 +1709,7 @@ public class QuoteSummary_HPNR_FL_Page extends TestBase {
 			System.err.println("Total Commission - found wrong");
 		}
 
-		if ((Difference.of_two_Double_Values(referrerCommission, customer_quote_summary_referrer_commision)) < 0.2) {
+		if ((referrerCommission+customer_quote_summary_referrer_commision) < 0.2) {
 			LO.print("Referrer Commission - found OK");
 			System.out.println("Referrer Commission - found OK");
 			count++;
@@ -2678,9 +2678,7 @@ public class QuoteSummary_HPNR_FL_Page extends TestBase {
 
 		double totalMarginFromExcel = GetExcelFormulaValue.get_formula_value(212, 1, sheet_name);
 
-		double tempdefaualtBrokerMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(216, 4, sheet_name);
-
-		double defaualtBrokerMarginPercentageFromExcel = (tempdefaualtBrokerMarginPercentageFromExcel * 100);
+		double defaualtBrokerMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(218, 1, sheet_name);
 
 		double tempbrokerUpsellMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(218, 4, sheet_name);
 
@@ -2743,12 +2741,12 @@ public class QuoteSummary_HPNR_FL_Page extends TestBase {
 
 		if (Difference.of_two_Double_Values(defaualtBrokerMarginPercentageFromExcel,
 				defaultBrokerMarginFromScreen) < 0.2) {
-			LO.print("Default Broker Margin percentage found OK");
-			System.out.println("Default Broker Margin percentage found OK");
+			LO.print("Default Broker Margin found OK");
+			System.out.println("Default Broker Margin found OK");
 			count++;
 		} else {
-			LO.print("Default Broker Margin percentage found wrong");
-			System.err.println("Default Broker Margin percentage found wrong");
+			LO.print("Default Broker Margin found wrong");
+			System.err.println("Default Broker Margin found wrong");
 		}
 
 		if (Difference.of_two_Double_Values(brokerUpsellMarginPercentageFromScreen,

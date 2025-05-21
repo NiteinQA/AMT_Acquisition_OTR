@@ -425,6 +425,9 @@ public class CustomerQuotePage_OP_OP_Page extends TestBase {
 		Click.sendKeys(driver, order_Deposit, order_Deposit_from_excel, 30);
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+		
+		
+		
 
 		ExplicitWait.visibleElement(driver, document_fee, 30);
 		document_fee.clear();

@@ -425,17 +425,17 @@ try {
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 		String monthly_finance_rental = customer_quote_monthly_finance_rental.getText().substring(2);
@@ -601,17 +601,17 @@ try {
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 		double monthly_finance_rental_actual_converted = Double
@@ -1248,17 +1248,17 @@ try {
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		ExplicitWait.visibleElement(driver, document_fee, 30);
+//		document_fee.clear();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
+//		act.sendKeys(Keys.TAB).perform();
+//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -1389,17 +1389,17 @@ try {
 			act.sendKeys(Keys.TAB).perform();
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-			ExplicitWait.visibleElement(driver, document_fee, 30);
-			document_fee.clear();
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-			ExplicitWait.visibleElement(driver, document_fee, 30);
-			document_fee.clear();
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-			Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-			act.sendKeys(Keys.TAB).perform();
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//			ExplicitWait.visibleElement(driver, document_fee, 30);
+//			document_fee.clear();
+//			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//			ExplicitWait.visibleElement(driver, document_fee, 30);
+//			document_fee.clear();
+//			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//			Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
+//			act.sendKeys(Keys.TAB).perform();
+//			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 			XSSFWorkbook wb = new XSSFWorkbook(in);
@@ -1503,17 +1503,17 @@ try {
 			act.sendKeys(Keys.TAB).perform();
 			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-			ExplicitWait.visibleElement(driver, document_fee, 30);
-			document_fee.clear();
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-			ExplicitWait.visibleElement(driver, document_fee, 30);
-			document_fee.clear();
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-			Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-			act.sendKeys(Keys.TAB).perform();
-			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//			ExplicitWait.visibleElement(driver, document_fee, 30);
+//			document_fee.clear();
+//			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//			ExplicitWait.visibleElement(driver, document_fee, 30);
+//			document_fee.clear();
+//			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
+//
+//			Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
+//			act.sendKeys(Keys.TAB).perform();
+//			ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 			FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 			XSSFWorkbook wb = new XSSFWorkbook(in);

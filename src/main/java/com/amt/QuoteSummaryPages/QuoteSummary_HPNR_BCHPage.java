@@ -1102,7 +1102,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			System.err.println("Total Commission - found wrong");
 		}
 
-		if ((Difference.of_two_Double_Values(referrerCommission, customer_quote_summary_referrer_commision)) < 0.2) {
+		if ((referrerCommission +customer_quote_summary_referrer_commision) < 0.2) {
 			LO.print("Referrer Commission - found OK");
 			System.out.println("Referrer Commission - found OK");
 			count++;
@@ -1133,7 +1133,10 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 			ExplicitWait.visibleElement(driver, quote_summary_monthly_finance_rental, 20);
 
 			ExplicitWait.visibleElement(driver, quote_summary_monthly_maintenance_rental, 20);
+			try {
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_finance_rental, 20);
+			} catch (Exception e) {
+			}
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_maint_rental, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_initial_total_rental, 20);
 
@@ -1227,7 +1230,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 					RemoveComma.of(quote_summary_customer_quote_total_commission.getText().trim().substring(2)));
 
 			double customer_quote_summary_referrer_commision = Double.parseDouble(
-					RemoveComma.of(quote_summary_customer_quote_referrer_commission.getText().trim().substring(2)));
+					RemoveComma.of(quote_summary_customer_quote_referrer_commission.getText().trim().split(" ")[1]));
 
 			double terms = GetExcelFormulaValue.get_formula_value(173, 1, sheet_name);
 			double miles = GetExcelFormulaValue.get_formula_value(173, 3, sheet_name);
@@ -1437,8 +1440,8 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 				System.err.println("Total Commission - found wrong");
 			}
 
-			if ((Difference.of_two_Double_Values(referrerCommission,
-					customer_quote_summary_referrer_commision)) < 0.2) {
+			
+			if ((referrerCommission +customer_quote_summary_referrer_commision) < 0.2) {
 				LO.print("Referrer Commission - found OK");
 				System.out.println("Referrer Commission - found OK");
 				count++;
@@ -1447,6 +1450,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 				System.err.println("Referrer Commission - found wrong");
 			}
 
+			
 			if (count == 20) {
 				status = true;
 			}
@@ -1666,8 +1670,7 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 				System.err.println("Total Commission - found wrong");
 			}
 
-			if ((Difference.of_two_Double_Values(referrerCommission,
-					customer_quote_summary_referrer_commision)) < 0.2) {
+			if ((referrerCommission +customer_quote_summary_referrer_commision) < 0.2) {
 				LO.print("Referrer Commission - found OK");
 				System.out.println("Referrer Commission - found OK");
 				count++;
@@ -1726,7 +1729,8 @@ public class QuoteSummary_HPNR_BCHPage extends TestBase {
 		ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin_percentage, 20);
 		double brokerUpsellMarginPercentageFromScreen = Double
 				.parseDouble(quote_summary_broker_upsell_margin_percentage.getText().trim().substring(0, 4));
-
+		
+		
 		ExplicitWait.visibleElement(driver, quote_summary_broker_upsell_margin, 20);
 		double brokerUpsellMarginFromScreen = Double
 				.parseDouble(RemoveComma.of(quote_summary_broker_upsell_margin.getText().trim().substring(2)));

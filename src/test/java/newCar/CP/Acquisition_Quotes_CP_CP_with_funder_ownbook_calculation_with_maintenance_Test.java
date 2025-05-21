@@ -215,7 +215,7 @@ public class Acquisition_Quotes_CP_CP_with_funder_ownbook_calculation_with_maint
 			String initial_payment,                                   String part_exchange_status,
 			String target_rental,                                     String matrix_credit_type,
 			String balloon_payment_status,                            String referrer_commission,
-			String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+			String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException, ClassNotFoundException {
 
 
 		obj_customer_quote_page = new CustomerQuotePage_HPNR_HPRPage();

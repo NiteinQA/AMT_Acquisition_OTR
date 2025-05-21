@@ -602,7 +602,7 @@ public class ReadExcelCalculation extends TestBase {
 		double manufacture_delivery_charges_converted = Double.parseDouble(
 				RemoveComma.of(acq_contractTypes_manufacturer_delivery_charges.getText().trim().substring(2)));
 		double road_tax_first_year_converted = Double
-				.parseDouble(acq_contractTypes_road_tax_first_year.getText().trim().substring(2));
+				.parseDouble(RemoveComma.of(acq_contractTypes_road_tax_first_year.getText().trim().substring(2)));
 		double first_registration_fee_converted = Double
 				.parseDouble(acq_contractTypes_first_registration_fee.getText().trim().substring(2));
 		double rebate_converted = Double.parseDouble(acq_contractTypes_rebate.getText().trim().substring(2));
@@ -1436,6 +1436,11 @@ public class ReadExcelCalculation extends TestBase {
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
 		// rfl values fakt on hotya baki sarv comment hotya
+		
+		
+		wb.getSheet(sheet_name).getRow(14).getCell(9)
+		.setCellValue(Double.parseDouble(prop.getProperty("broker_upsell_margin")));
+
 
 		wb.getSheet(sheet_name).getRow(61).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
@@ -1705,6 +1710,9 @@ public class ReadExcelCalculation extends TestBase {
 
 		
 		
+		wb.getSheet(sheet_name).getRow(14).getCell(9)
+		.setCellValue(Double.parseDouble(prop.getProperty("broker_upsell_margin")));
+		
 		wb.getSheet(sheet_name).getRow(70).getCell(1)
 				.setCellValue(defaultBrokerMarginFromConfiguration);
 		
@@ -1745,12 +1753,6 @@ public class ReadExcelCalculation extends TestBase {
 
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 
-			wb.getSheet(sheet_name).getRow(79).getCell(1).setCellValue(0);
-
-			wb.getSheet(sheet_name).getRow(80).getCell(1).setCellValue(0);
-			
-			
-			if (sheet_name.contains("Used_LCV")) {
 				
 				wb.getSheet(sheet_name).getRow(79).getCell(1).setCellValue(
 						Double.parseDouble(prop.getProperty("additional_rfl_per_annum_used_LCV")));
@@ -1758,8 +1760,6 @@ public class ReadExcelCalculation extends TestBase {
 				
 				wb.getSheet(sheet_name).getRow(80).getCell(1).setCellValue(
 						Double.parseDouble(prop.getProperty("additional_rfl_premium_vehicle_over_40k_per_annum_used_LCV")));
-			}
-
 		} else {
 			
 			if (sheet_name.contains("Used")) {
@@ -1851,9 +1851,10 @@ public class ReadExcelCalculation extends TestBase {
 		
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("LCV")) {
 
-			wb.getSheet(sheet_name).getRow(79).getCell(1).setCellValue(0);
+			wb.getSheet(sheet_name).getRow(79).getCell(1).setCellValue(Double.parseDouble(prop.getProperty("additional_rfl_per_annum_LCV")));
 
-			wb.getSheet(sheet_name).getRow(80).getCell(1).setCellValue(0);
+			wb.getSheet(sheet_name).getRow(80).getCell(1).setCellValue(
+					Double.parseDouble(prop.getProperty("additional_rfl_premium_vehicle_over_40k_per_annum_LCV")));
 
 		} else {
 			
@@ -2015,7 +2016,7 @@ public class ReadExcelCalculation extends TestBase {
 			String order_deposit_from_excel, WebElement document_fee, String document_fee_from_excel, String upsell,
 			WebElement customer_quote_monthly_finance_rental, String maintenance_required, String maintenance_margin,
 			String initial_payment, String part_exchange_status, String target_rental, String sheet_name)
-			throws IOException, InterruptedException {
+			throws IOException, InterruptedException, ClassNotFoundException {
 
 		LO.print("************Calculations for Customer Quote Page has been started***********");
 		System.out.println("************Calculations for Customer Quote Page has been started***********");
@@ -2042,12 +2043,31 @@ public class ReadExcelCalculation extends TestBase {
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
 		wb.getSheet(sheet_name).getRow(98).getCell(1).setCellValue(" " + dropdown_option + " ");
-		wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue(Double.parseDouble(document_fee_from_excel));
+		
+		obj_common_class = new CommonClass();
+		
+		double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_hire("Doc Fee and Commission from Con");	
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+		if (className.contains("BCH")|className.contains("BCH_u")|className.contains("FL_w")|className.contains("FL_u")|className.contains("FL_L")) 
+		    {
+			wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue((docValues[0])/1.2);
+			}
+		 else
+		   {
+			wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue(docValues[0]);
+		   }		
+		wb.getSheet(sheet_name).getRow(150).getCell(0).setCellValue(docValues[1]);
+		
+		
 		wb.getSheet(sheet_name).getRow(104).getCell(0).setCellValue(maintenance_required);
 		wb.getSheet(sheet_name).getRow(104).getCell(1).setCellValue(Double.parseDouble(maintenance_margin));
 		wb.getSheet(sheet_name).getRow(104).getCell(3).setCellValue(Double.parseDouble(initial_payment));
 		wb.getSheet(sheet_name).getRow(109).getCell(1).setCellValue("NO");
 		wb.getSheet(sheet_name).getRow(123).getCell(1).setCellValue(Double.parseDouble(target_rental));
+		
+		
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -2095,7 +2115,7 @@ public class ReadExcelCalculation extends TestBase {
 			String order_deposit_from_excel, WebElement document_fee, String document_fee_from_excel, String upsell,
 			WebElement customer_quote_monthly_finance_rental, String maintenance_required, String maintenance_margin,
 			String initial_payment, String part_exchange_status, String target_rental, String sheet_name)
-			throws IOException, InterruptedException {
+			throws IOException, InterruptedException, ClassNotFoundException {
 
 		LO.print("************Calculations for Customer Quote Page has been started***********");
 		System.out.println("************Calculations for Customer Quote Page has been started***********");
@@ -2115,23 +2135,12 @@ public class ReadExcelCalculation extends TestBase {
 		String dropdown_option = list_dropdown_options.get(0).getText();
 
 		Thread.sleep(3000);
+		
+	    obj_common_class = new CommonClass();
+		
+		double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_hire("Doc Fee and Commission from Con");	
+		
 
-//		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
-//	
-//		Click.on(driver, part_exchange_payment, 70);
-//		LO.print("Clicked on Part Exchange panel" );
-//		System.out.println("Clicked on Part Exchange panel" );
-//	
-//		Click.sendKeys(driver, actual_part_exchange_value, actual_part_exchange_value_from_excel, 30);
-//		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-//		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 30);
-//		Click.sendKeys(driver, order_deposit, order_deposit_from_excel, 30);
-//		ExplicitWait.visibleElement(driver, document_fee, 30);
-//		document_fee.clear();
-//		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-//		Actions act = new Actions (driver);
-//		act.sendKeys(Keys.TAB).perform();
-//		
 		LO.print("Writing values to Excel for customer quote calculation -started");
 		System.out.println("Writing values to Excel for customer quote calculation -started");
 
@@ -2139,12 +2148,24 @@ public class ReadExcelCalculation extends TestBase {
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		wb.getSheet(sheet_name).getRow(104).getCell(1).setCellValue(" " + dropdown_option + " ");
 		wb.getSheet(sheet_name).getRow(104).getCell(3).setCellValue(Double.parseDouble(order_deposit_from_excel));
-		wb.getSheet(sheet_name).getRow(107).getCell(0).setCellValue(Double.parseDouble(document_fee_from_excel));
 		wb.getSheet(sheet_name).getRow(110).getCell(0).setCellValue("NO");
 		wb.getSheet(sheet_name).getRow(110).getCell(1).setCellValue(Double.parseDouble(maintenance_margin));
 		wb.getSheet(sheet_name).getRow(110).getCell(3).setCellValue(Double.parseDouble(initial_payment));
 		wb.getSheet(sheet_name).getRow(115).getCell(1).setCellValue("NO");
 		wb.getSheet(sheet_name).getRow(129).getCell(1).setCellValue(Double.parseDouble(target_rental));
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+		if (className.contains("BCH")|className.contains("BCH_u")|className.contains("FL_w")|className.contains("FL_u")|className.contains("FL_L")) 
+	    {
+		wb.getSheet(sheet_name).getRow(107).getCell(0).setCellValue((docValues[0])/1.2);
+		}
+	   else
+	   {
+		wb.getSheet(sheet_name).getRow(107).getCell(0).setCellValue(docValues[0]);
+	   }		
+	    wb.getSheet(sheet_name).getRow(156).getCell(0).setCellValue(docValues[1]);
+
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -2193,7 +2214,7 @@ public class ReadExcelCalculation extends TestBase {
 			String order_deposit_from_excel, WebElement document_fee, String document_fee_from_excel, String upsell,
 			WebElement customer_quote_monthly_finance_rental, WebElement customer_quote_monthly_maintenance_rental,
 			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-			String target_rental, String sheet_name) throws IOException, InterruptedException {
+			String target_rental, String sheet_name) throws IOException, InterruptedException, ClassNotFoundException {
 
 		LO.print("************Calculations for Customer Quote Page has been started***********");
 		System.out.println("************Calculations for Customer Quote Page has been started***********");
@@ -2215,17 +2236,35 @@ public class ReadExcelCalculation extends TestBase {
 
 		LO.print("Writing values to Excel for customer quote calculation -started");
 		System.out.println("Writing values to Excel for customer quote calculation -started");
+		
+		
+		obj_common_class = new CommonClass();
+		
+		double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_hire("Doc Fee and Commission from Con");	
+
 
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		wb.getSheet(sheet_name).getRow(104).getCell(1).setCellValue(" " + dropdown_option + " ");
 		wb.getSheet(sheet_name).getRow(104).getCell(3).setCellValue(Double.parseDouble(order_deposit_from_excel));
-		wb.getSheet(sheet_name).getRow(107).getCell(0).setCellValue(Double.parseDouble(document_fee_from_excel));
 		wb.getSheet(sheet_name).getRow(110).getCell(0).setCellValue("YES");
 		wb.getSheet(sheet_name).getRow(110).getCell(1).setCellValue(Double.parseDouble(maintenance_margin));
 		wb.getSheet(sheet_name).getRow(110).getCell(3).setCellValue(Double.parseDouble(initial_payment));
 		wb.getSheet(sheet_name).getRow(115).getCell(1).setCellValue("NO");
 		wb.getSheet(sheet_name).getRow(129).getCell(1).setCellValue(Double.parseDouble(target_rental));
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+		if (className.contains("BCH")|className.contains("BCH_u")|className.contains("FL_w")|className.contains("FL_u")|className.contains("FL_L")) 
+	    {
+		wb.getSheet(sheet_name).getRow(107).getCell(0).setCellValue((docValues[0])/1.2);
+		}
+	   else
+	   {
+		wb.getSheet(sheet_name).getRow(107).getCell(0).setCellValue(docValues[0]);
+	   }		
+	   wb.getSheet(sheet_name).getRow(156).getCell(0).setCellValue(docValues[1]);
+
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -3915,7 +3954,7 @@ public class ReadExcelCalculation extends TestBase {
 			String order_deposit_from_excel, WebElement document_fee, String document_fee_from_excel, String upsell,
 			WebElement customer_quote_monthly_finance_rental, WebElement customer_quote_monthly_maintenance_rental,
 			String maintenance_required, String maintenance_margin, String initial_payment, String part_exchange_status,
-			String target_rental, String sheet_name) throws IOException, InterruptedException {
+			String target_rental, String sheet_name) throws IOException, InterruptedException, ClassNotFoundException {
 
 		LO.print("************Calculations for Customer Quote Page has been started***********");
 		System.out.println("************Calculations for Customer Quote Page has been started***********");
@@ -3935,12 +3974,33 @@ public class ReadExcelCalculation extends TestBase {
 
 		LO.print("Writing values to Excel for customer quote calculation -started");
 		System.out.println("Writing values to Excel for customer quote calculation -started");
+		
+		
+		obj_common_class = new CommonClass();
+		
+		double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_hire("Doc Fee and Commission from Con");	
+
+		
 
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
 		wb.getSheet(sheet_name).getRow(98).getCell(1).setCellValue(" " + dropdown_option + " ");
-		wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue(Double.parseDouble(document_fee_from_excel));
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+		if (className.contains("BCH")|className.contains("BCH_u")|className.contains("FL_w")|className.contains("FL_u")|className.contains("FL_L")) 
+	    {
+		wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue((docValues[0])/1.2);
+		}
+	 else
+	   {
+		wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue(docValues[0]);
+	   }
+		
+		
+	    wb.getSheet(sheet_name).getRow(150).getCell(0).setCellValue(docValues[1]);
+		
 		wb.getSheet(sheet_name).getRow(104).getCell(0).setCellValue(maintenance_required);
 		wb.getSheet(sheet_name).getRow(104).getCell(1).setCellValue(Double.parseDouble(maintenance_margin));
 		wb.getSheet(sheet_name).getRow(104).getCell(3).setCellValue(Double.parseDouble(initial_payment));

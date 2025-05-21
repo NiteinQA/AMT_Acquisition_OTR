@@ -496,7 +496,7 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		String rebate = acq_contractTypes_rebate.getText().trim().substring(2);
 
 		double manufacture_delivery_charges_converted = Double.parseDouble(manufacture_delivery_charges);
-		double road_tax_first_year_converted = Double.parseDouble(road_tax_first_year);
+		double road_tax_first_year_converted = Double.parseDouble(RemoveComma.of(road_tax_first_year));
 		double first_registration_fee_converted = Double.parseDouble(first_registration_fee);
 		double rebate_converted = Double.parseDouble(rebate);
 
@@ -2252,8 +2252,6 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 				.setCellValue(defaultBrokerMarginFromPercentageConfiguration/100);
 		wb.getSheet(sheet_name).getRow(107).getCell(0)
 				.setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
-		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue(DocFee);
-
 		wb.getSheet(sheet_name).getRow(68).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(69).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(71).getCell(1).setCellValue(0);
@@ -2314,7 +2312,6 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 
 		wb.getSheet(sheet_name).getRow(116).getCell(0)
 				.setCellValue(Double.parseDouble(prop.getProperty("maintenance_margin")));
-		wb.getSheet(sheet_name).getRow(122).getCell(1).setCellValue(DocFee);
 		wb.getSheet(sheet_name).getRow(77).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(78).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(80).getCell(1).setCellValue(0);
@@ -2352,15 +2349,21 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 				"Writing configuration values from property file to Excel for customer quote calculation -completed");
 	}
 
-	public double get_monthly_finanace_payment_from_excel(String maintenance_status, String matrix_credit_type,
+	public double get_monthly_finance_payment_from_excel(String maintenance_status, String matrix_credit_type,
 			String balloon_payment_status, String order_deposit, String finance_deposit, String document_fee,
 			String vehicle_discount_copied, String paint_discount_copied, String options_discount_copied,
 			String vehicle_additional_copied, String paint_additional_copied, String options_additional_copied,
-			String sheet_name) throws IOException {
+			String sheet_name) throws IOException, ClassNotFoundException {
 
 		LO.print("Writing screen values to Excel for customer quote calculation -started");
 		System.out.println("Writing screen values to Excel for customer quote calculation -started");
 
+		obj_common_class = new CommonClass();
+		
+	    double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_purchase("Doc Fee and Commission from Con");	
+
+		
+		
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
@@ -2379,6 +2382,20 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(151).getCell(4).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(151).getCell(6).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(152).getCell(6).setCellValue(0);
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+		
+		if (className.contains("HPNR_HPNR")|className.contains("_CP_w")|className.contains("Outright_HPNR")|className.contains("_CP_u")|className.contains("_CP_L")) 
+	    {
+		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue((docValues[0])/1.2);
+		}
+	  else
+	   {
+		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue(docValues[0]);
+	   }		
+	    wb.getSheet(sheet_name).getRow(190).getCell(0).setCellValue(docValues[1]);
+	
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -2393,11 +2410,16 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 
 	public double get_monthly_finance_payment_from_excel_for_funder_addition(String maintenance_status,
 			String matrix_credit_type, String balloon_payment_status, String order_deposit, String finance_deposit,
-			String document_fee, String sheet_name) throws IOException {
+			String sheet_name) throws IOException, ClassNotFoundException {
 
 		LO.print("Writing screen values to Excel for customer quote calculation -started");
 		System.out.println("Writing screen values to Excel for customer quote calculation -started");
 
+		obj_common_class = new CommonClass();
+		
+	    double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_purchase("Doc Fee and Commission from Con");	
+
+		
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
@@ -2405,6 +2427,21 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(107).getCell(1).setCellValue(matrix_credit_type);
 		wb.getSheet(sheet_name).getRow(110).getCell(0).setCellValue(balloon_payment_status);
 		wb.getSheet(sheet_name).getRow(110).getCell(0).setCellValue("YES");
+	
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+		
+		if (className.contains("HPNR_HPNR")|className.contains("_CP_w")|className.contains("Outright_HPNR")|className.contains("_CP_u")|className.contains("_CP_L")) 
+	    {
+		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue((docValues[0])/1.2);
+		}
+	    else
+	   {
+		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue(docValues[0]);
+	   }		
+	    wb.getSheet(sheet_name).getRow(190).getCell(0).setCellValue(docValues[1]);
+	    
 		wb.getSheet(sheet_name).getRow(110).getCell(1).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(110).getCell(4).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(151).getCell(4).setCellValue(0);
@@ -2430,11 +2467,16 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 
 	public double get_monthly_finance_payment_from_excel_for_funder_addition_for_cp_pcp(String maintenance_status,
 			String matrix_credit_type, String balloon_payment_status, String order_deposit, String finance_deposit,
-			String document_fee, String sheet_name) throws IOException {
+			String document_fee, String sheet_name) throws IOException, ClassNotFoundException {
 
 		LO.print("Writing screen values to Excel for customer quote calculation -started");
 		System.out.println("Writing screen values to Excel for customer quote calculation -started");
 
+		obj_common_class = new CommonClass();
+		
+	    double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_purchase("Doc Fee and Commission from Con");	
+
+		
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
@@ -2446,6 +2488,21 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(160).getCell(4).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(160).getCell(6).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(161).getCell(6).setCellValue(0);
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+		
+		if (className.contains("HPNR_HPNR")|className.contains("_CP_w")|className.contains("Outright_HPNR")|className.contains("_CP_u")|className.contains("_CP_L")) 
+	    {
+		wb.getSheet(sheet_name).getRow(122).getCell(1).setCellValue((docValues[0])/1.2);
+		}
+	   else
+	   {
+		wb.getSheet(sheet_name).getRow(122).getCell(1).setCellValue(docValues[0]);
+	   }
+       
+		wb.getSheet(sheet_name).getRow(199).getCell(0).setCellValue(docValues[1]);
+	
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -2488,8 +2545,13 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 	}
 
 	public double get_monthly_maintenance_payment_from_excel_for_funder_addition_cp_pcp(String maintenance_status,
-			String balloon_payment_status, String sheet_name) throws IOException {
+			String balloon_payment_status, String sheet_name) throws IOException, ClassNotFoundException {
 
+	   obj_common_class = new CommonClass();
+		
+	    double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_purchase("Doc Fee and Commission from Con");	
+
+		
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
@@ -2501,6 +2563,22 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(160).getCell(4).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(160).getCell(6).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(161).getCell(6).setCellValue(0);
+		
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+		
+		if (className.contains("HPNR_HPNR")|className.contains("_CP_w")|className.contains("Outright_HPNR")|className.contains("_CP_u")|className.contains("_CP_L")) 
+	    {
+		wb.getSheet(sheet_name).getRow(122).getCell(1).setCellValue((docValues[0])/1.2);
+		}
+	    else
+	    {
+		wb.getSheet(sheet_name).getRow(122).getCell(1).setCellValue(docValues[0]);
+	    }
+       
+		wb.getSheet(sheet_name).getRow(199).getCell(0).setCellValue(docValues[1]);
+	
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -2564,11 +2642,17 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 			String balloon_payment_status, String order_deposit, String finance_deposit, String document_fee,
 			String vehicle_discount_copied, String paint_discount_copied, String options_discount_copied,
 			String vehicle_additional_copied, String paint_additional_copied, String options_additional_copied,
-			String sheet_name) throws IOException {
+			String sheet_name) throws IOException, ClassNotFoundException {
 
 		LO.print("Writing screen values to Excel for customer quote calculation -started");
 		System.out.println("Writing screen values to Excel for customer quote calculation -started");
 
+		obj_common_class = new CommonClass();
+		
+	    double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_purchase("Doc Fee and Commission from Con");	
+
+		
+		
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
@@ -2587,6 +2671,20 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(151).getCell(4).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(151).getCell(6).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(152).getCell(6).setCellValue(0);
+
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+		
+		if (className.contains("HPNR_HPNR")|className.contains("_CP_w")|className.contains("Outright_HPNR")|className.contains("_CP_u")|className.contains("_CP_L")) 
+	    {
+		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue((docValues[0])/1.2);
+		}
+	  else
+	   {
+		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue(docValues[0]);
+	   }		
+	    wb.getSheet(sheet_name).getRow(190).getCell(0).setCellValue(docValues[1]);
+
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
@@ -2648,9 +2746,15 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 
 	public double[] get_monthly_finance_payment_and_balance_to_finance_payment_after_editing_part_exchange_values(
 			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
-			String order_deposit, String finance_deposit, String document_fee_copied, String sheet_name)
-			throws IOException {
+			String order_deposit, String finance_deposit, String sheet_name)
+			throws IOException, ClassNotFoundException {
 
+		obj_common_class = new CommonClass();
+		
+	   double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_purchase("Doc Fee and Commission from Con");	
+
+
+		
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		wb.getSheet(sheet_name).getRow(151).getCell(4).setCellValue(0);
@@ -2658,8 +2762,22 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(152).getCell(6).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(110).getCell(1).setCellValue(Double.parseDouble(order_deposit));
 		wb.getSheet(sheet_name).getRow(110).getCell(4).setCellValue(Double.parseDouble(finance_deposit));
-		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue(document_fee_copied);
-
+		
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+	  if (className.contains("HPNR_HPNR")|className.contains("_CP_w")|className.contains("Outright_HPNR")|className.contains("_CP_u")|className.contains("_CP_L")) 
+	    {
+		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue((docValues[0])/1.2);
+		}
+	  else
+	   {
+		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue(docValues[0]);
+	   }
+       
+		wb.getSheet(sheet_name).getRow(190).getCell(0).setCellValue(docValues[1]);
+		
+		
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);
 		out.close();
@@ -2672,9 +2790,14 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 
 	public double[] get_monthly_total_payment_and_balance_to_finance_payment_after_editing_part_exchange_values(
 			String part_exchange_actual, String part_exchange_given, String less_finance_settlement,
-			String order_deposit, String finance_deposit, String document_fee_copied, String sheet_name)
-			throws IOException {
+			String order_deposit, String finance_deposit, String sheet_name)
+			throws IOException, ClassNotFoundException {
 
+		obj_common_class = new CommonClass();
+		
+		double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_purchase("Doc Fee and Commission from Con");	
+
+		
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 		wb.getSheet(sheet_name).getRow(151).getCell(4).setCellValue(0);
@@ -2682,7 +2805,21 @@ public class ReadExcelCalculationForPurchaseAgreement extends TestBase {
 		wb.getSheet(sheet_name).getRow(152).getCell(6).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(110).getCell(1).setCellValue(Double.parseDouble(order_deposit));
 		wb.getSheet(sheet_name).getRow(110).getCell(4).setCellValue(Double.parseDouble(finance_deposit));
-		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue(document_fee_copied);
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
+		
+	
+		if (className.contains("HPNR_HPNR")|className.contains("_CP_w")|className.contains("Outright_HPNR")|className.contains("_CP_u")|className.contains("_CP_L")) 
+	    {
+		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue((docValues[0])/1.2);
+		}
+	   else
+	   {
+		wb.getSheet(sheet_name).getRow(113).getCell(1).setCellValue(docValues[0]);
+	   }
+       
+		wb.getSheet(sheet_name).getRow(190).getCell(0).setCellValue(docValues[1]);
+		
 
 		FileOutputStream out = new FileOutputStream(prop.getProperty("formula_excel_path"));
 		wb.write(out);

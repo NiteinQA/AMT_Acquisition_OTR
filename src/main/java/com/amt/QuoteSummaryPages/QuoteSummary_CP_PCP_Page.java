@@ -22,6 +22,7 @@ import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
 import com.amt.testUtil.GetExcelFormulaValue;
+import com.amt.testUtil.JavaScriptExecutor;
 import com.amt.testUtil.ReadExcelCalculationForPurchaseAgreement;
 import com.amt.testUtil.RemoveComma;
 
@@ -457,9 +458,13 @@ public class QuoteSummary_CP_PCP_Page extends TestBase {
 
 		obj_read_excel_calculation_page = new ReadExcelCalculationForPurchaseAgreement();
 
-		Thread.sleep(4000);
-
-		Thread.sleep(5000);Click.on(driver, quote_summary, 60);
+//		Thread.sleep(4000);
+//
+//		Thread.sleep(5000);
+		
+		JavaScriptExecutor.click(driver, quote_summary);
+		
+		//Click.on(driver, quote_summary, 60);
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
@@ -1626,7 +1631,7 @@ public class QuoteSummary_CP_PCP_Page extends TestBase {
 			double balanceToFinance = GetExcelFormulaValue.get_formula_value(229, 4, sheet_name);
 
 			double financeCharges = GetExcelFormulaValue.get_formula_value(232, 0, sheet_name);
-			double documentFee = GetExcelFormulaValue.get_string_value(232, 1, sheet_name);
+			double documentFee = GetExcelFormulaValue.get_formula_value(232, 1, sheet_name);
 			double balancePayable = GetExcelFormulaValue.get_formula_value(232, 4, sheet_name);
 
 			double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(235, 0, sheet_name);
@@ -2111,7 +2116,7 @@ public class QuoteSummary_CP_PCP_Page extends TestBase {
 			double balanceToFinance = GetExcelFormulaValue.get_formula_value(229, 4, sheet_name);
 
 			double financeCharges = GetExcelFormulaValue.get_formula_value(232, 0, sheet_name);
-			double documentFee = GetExcelFormulaValue.get_string_value(232, 1, sheet_name);
+			double documentFee = GetExcelFormulaValue.get_formula_value(232, 1, sheet_name);
 			double balancePayable = GetExcelFormulaValue.get_formula_value(232, 4, sheet_name);
 
 			double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(235, 0, sheet_name);
@@ -2540,7 +2545,7 @@ public class QuoteSummary_CP_PCP_Page extends TestBase {
 					double balanceToFinance = GetExcelFormulaValue.get_formula_value(220, 4, sheet_name);
 
 					double financeCharges = GetExcelFormulaValue.get_formula_value(223, 0, sheet_name);
-					double documentFee = GetExcelFormulaValue.get_string_value(223, 1, sheet_name);
+					double documentFee = GetExcelFormulaValue.get_formula_value(223, 1, sheet_name);
 					double balancePayable = GetExcelFormulaValue.get_formula_value(223, 4, sheet_name);
 
 					double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(226, 0, sheet_name);
@@ -3017,7 +3022,7 @@ public class QuoteSummary_CP_PCP_Page extends TestBase {
 			double balanceToFinance = GetExcelFormulaValue.get_formula_value(220, 4, sheet_name);
 
 			double financeCharges = GetExcelFormulaValue.get_formula_value(223, 0, sheet_name);
-			double documentFee = GetExcelFormulaValue.get_string_value(223, 1, sheet_name);
+			double documentFee = GetExcelFormulaValue.get_formula_value(223, 1, sheet_name);
 			double balancePayable = GetExcelFormulaValue.get_formula_value(223, 4, sheet_name);
 
 			double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(226, 0, sheet_name);

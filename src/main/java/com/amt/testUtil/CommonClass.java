@@ -114,6 +114,31 @@ public class CommonClass extends TestBase {
         
 		return broker_margin;
 	}
+	
+	public double[] get_doc_fee_and_commission_for_hire(String sheet_name) throws IOException
+	{
+		double docFee =  GetExcelFormulaValue.get_formula_value(1, 0, sheet_name);
+		 
+		double docFeeCommission = GetExcelFormulaValue.get_formula_value(1, 1, sheet_name);	
+		
+		
+		double [] values = {docFee , docFeeCommission};
+		
+		return values ;
+		
+	}
+	
+	public double[] get_doc_fee_and_commission_for_purchase(String sheet_name) throws IOException
+	{
+		double docFee =  GetExcelFormulaValue.get_formula_value(4, 0, sheet_name);
+		 
+		double docFeeCommission = GetExcelFormulaValue.get_formula_value(4, 1, sheet_name);	 
+		 
+		double [] values = {docFee , docFeeCommission};
+		
+		return values;
+	}
+
 
 	
 

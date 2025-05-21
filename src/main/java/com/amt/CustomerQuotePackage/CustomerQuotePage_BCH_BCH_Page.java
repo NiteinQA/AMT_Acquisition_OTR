@@ -18,6 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.amt.testBase.TestBase;
 import com.amt.testUtil.Click;
+import com.amt.testUtil.CommonClass;
 import com.amt.testUtil.ConfigConstants;
 import com.amt.testUtil.Difference;
 import com.amt.testUtil.ExplicitWait;
@@ -29,6 +30,8 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 
 	CustomerQuotePage_BCH_BCH_Page obj_cust_quote_BCH_bchPage;
 	ReadExcelCalculation obj_read_excel_calculation_page;
+	
+	CommonClass obj_common_class;
 
 	@FindBy(xpath = "//img[@alt='Loading...']")
 	private List<WebElement> loading_icon;
@@ -162,7 +165,7 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 	public boolean check_monthly_finance_rental_with_part_exchange_with_maintenance(
 			String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
 			String less_finance_settlement_from_excel, String order_deposit_from_excel, String document_fee_from_excel,
-			String sheet_name) throws InterruptedException, IOException {
+			String sheet_name) throws InterruptedException, IOException, ClassNotFoundException {
 
 		
 		LO.print("Entering the deposit values in the part Exchange Section");
@@ -173,56 +176,6 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 		Click.on(driver, part_exchange_and_additional_payment_button, 20);
 		Thread.sleep(4000);
 		
-		
-//		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
-//		Thread.sleep(4000);
-//		Click.on(driver, part_exchange_payment, 70);
-//		LO.print("Clicked on Part Exchange panel");
-//		System.out.println("Clicked on Part Exchange panel");
-//		Actions act = new Actions(driver);
-//
-//		Click.on(driver, given_part_exchange_value, 20);
-//
-//		given_part_exchange_value.clear();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		// Clicking on outstanding finance and suppliersettling finance checkbox
-//
-//		JavascriptExecutor jse = (JavascriptExecutor) driver;
-//
-//		// ExplicitWait.clickableElement(driver, check_box_outstanding_finance, 20);
-//
-//		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-//
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		// ExplicitWait.clickableElement(driver, check_box_supplier_setting_finance,
-//		// 20);
-//
-//	
-//
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, funder_name, "Funder X", 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, agreement_number, "123", 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
-//		less_finance_settlement.clear();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
 		ExplicitWait.visibleElement(driver, order_Deposit, 20);
 		order_Deposit.clear();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
@@ -231,17 +184,6 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 		double monthly_finance_rental_actual_converted = Double
@@ -262,8 +204,26 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 		LO.print("Writing part exchange values to excel");
 		System.out.println("Writing part exchange values to excel");
 
+		obj_common_class = new CommonClass();
+		
+		double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_hire("Doc Fee and Commission from Con");	
+
+		
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName();
+				
+		if (className.contains("BCH_BCH")) 
+		    {
+			wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue((docValues[0])/1.2);
+			}
+		 else
+		   {
+			wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue(docValues[0]);
+		   }		
+		wb.getSheet(sheet_name).getRow(150).getCell(0).setCellValue(docValues[1]);
+	
 
 		wb.getSheet(sheet_name).getRow(111).getCell(3).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(111).getCell(4)
@@ -300,7 +260,7 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 	public boolean check_monthly_finance_rental_with_part_exchange_without_maintenance(
 			String actual_part_exchange_value_from_excel, String given_part_exchange_value_from_excel,
 			String less_finance_settlement_from_excel, String order_deposit_from_excel, String document_fee_from_excel,
-			String sheet_name) throws InterruptedException, IOException {
+			String sheet_name) throws InterruptedException, IOException, ClassNotFoundException {
 		
 		LO.print("Entering the deposit values in the part Exchange Section");
 		System.out.println("Entering the deposit values in the part Exchange Section");
@@ -310,48 +270,6 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 		Click.on(driver, part_exchange_and_additional_payment_button, 20);
 		Thread.sleep(4000);
 
-//		ExplicitWait.clickableElement(driver, part_exchange_payment, 50);
-//		Thread.sleep(4000);
-//		Click.on(driver, part_exchange_payment, 70);
-//		LO.print("Clicked on Part Exchange panel");
-//		System.out.println("Clicked on Part Exchange panel");
-//		Actions act = new Actions(driver);
-//
-//		Click.on(driver, given_part_exchange_value, 20);
-//
-//		given_part_exchange_value.clear();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, given_part_exchange_value, given_part_exchange_value_from_excel, 30);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		JavascriptExecutor jse = (JavascriptExecutor) driver;
-//
-//		jse.executeScript("arguments[0].click();", check_box_outstanding_finance, 20);
-//
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//	
-//
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, funder_name, "Funder X", 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, agreement_number, "123", 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		ExplicitWait.visibleElement(driver, less_finance_settlement, 20);
-//		less_finance_settlement.clear();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-//
-//		Click.sendKeys(driver, less_finance_settlement, less_finance_settlement_from_excel, 20);
-//		act.sendKeys(Keys.TAB).perform();
-//		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
 		ExplicitWait.visibleElement(driver, order_Deposit, 20);
 		order_Deposit.clear();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
@@ -360,19 +278,6 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 		act.sendKeys(Keys.TAB).perform();
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.visibleElement(driver, document_fee, 30);
-		document_fee.clear();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		Click.sendKeys(driver, document_fee, document_fee_from_excel, 30);
-		act.sendKeys(Keys.TAB).perform();
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
-
-		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 200);
 
 		ExplicitWait.visibleElement(driver, customer_quote_monthly_finance_rental, 30);
 		String monthly_finance_rental = customer_quote_monthly_finance_rental.getText().substring(2);
@@ -386,9 +291,28 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 		LO.print("Writing part exchange values to excel");
 		System.out.println("Writing part exchange values to excel");
 
+
+		obj_common_class = new CommonClass();
+		
+		double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_hire("Doc Fee and Commission from Con");	
+
+		
 		FileInputStream in = new FileInputStream(prop.getProperty("formula_excel_path"));
 		XSSFWorkbook wb = new XSSFWorkbook(in);
+		
+		String className = Class.forName(Thread.currentThread().getStackTrace()[2].getClassName()).getName();
+				
+		if (className.contains("BCH_BCH")) 
+		    {
+			wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue((docValues[0])/1.2);
+			}
+		 else
+		   {
+			wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue(docValues[0]);
+		   }		
+		wb.getSheet(sheet_name).getRow(150).getCell(0).setCellValue(docValues[1]);
 
+		
 		wb.getSheet(sheet_name).getRow(111).getCell(3).setCellValue(0);
 		wb.getSheet(sheet_name).getRow(111).getCell(4)
 				.setCellValue(0);
@@ -464,7 +388,7 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 	public boolean customer_quote_part_balance_due_value_verification(String actual_part_exchange_value_from_excel,
 			String given_part_exchange_value_from_excel, String less_finance_settlement_from_excel,
 			String order_deposit_from_excel, String document_fee_from_excel, String upsell, String part_exchange_status,
-			String target_rental, String sheet_name) throws InterruptedException, IOException {
+			String target_rental, String sheet_name) throws InterruptedException, IOException, ClassNotFoundException {
 
 		LO.print("Started verifying Balance Due value");
 		System.out.println("Started verifying Balance Due value");
@@ -484,11 +408,15 @@ public class CustomerQuotePage_BCH_BCH_Page extends TestBase {
 				.parseDouble(RemoveComma.of(balance_due_value.getText().trim().substring(2)));
 
 		double orderDepositeFromExcel = Double.parseDouble(order_deposit_from_excel);
-
-		double documentFeeFromExcel = ((Double.parseDouble(document_fee_from_excel)) * 1.2);
-
-		double balance_due_expected = ((orderDepositeFromExcel + documentFeeFromExcel)
-				- partExchangeAllowanceFromScreen);
+		
+		
+		obj_common_class = new CommonClass();
+		
+		double[] docValues =  obj_common_class.get_doc_fee_and_commission_for_hire("Doc Fee and Commission from Con");	
+		
+		double balance_due_expected = ((orderDepositeFromExcel + (docValues[0]))
+						- partExchangeAllowanceFromScreen);
+			 
 
 		double diff = Difference.of_two_Double_Values(balanceDueFromScreen, balance_due_expected);
 

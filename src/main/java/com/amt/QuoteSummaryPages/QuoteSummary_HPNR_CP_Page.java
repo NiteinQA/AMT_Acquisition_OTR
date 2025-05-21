@@ -1017,7 +1017,7 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 		double balanceToFinance = GetExcelFormulaValue.get_formula_value(220, 4, sheet_name);
 
 		double financeCharges = GetExcelFormulaValue.get_formula_value(223, 0, sheet_name);
-		double documentFee = GetExcelFormulaValue.get_string_value(223, 1, sheet_name);
+		double documentFee = GetExcelFormulaValue.get_formula_value(223, 1, sheet_name);
 		double balancePayable = GetExcelFormulaValue.get_formula_value(223, 4, sheet_name);
 
 		double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(226, 0, sheet_name);
@@ -1482,7 +1482,7 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 			double balanceToFinance = GetExcelFormulaValue.get_formula_value(220, 4, sheet_name);
 
 			double financeCharges = GetExcelFormulaValue.get_formula_value(223, 0, sheet_name);
-			double documentFee = GetExcelFormulaValue.get_string_value(223, 1, sheet_name);
+			double documentFee = GetExcelFormulaValue.get_formula_value(223, 1, sheet_name);
 			double balancePayable = GetExcelFormulaValue.get_formula_value(223, 4, sheet_name);
 
 			double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(226, 0, sheet_name);
@@ -1969,7 +1969,7 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 			double balanceToFinance = GetExcelFormulaValue.get_formula_value(220, 4, sheet_name);
 
 			double financeCharges = GetExcelFormulaValue.get_formula_value(223, 0, sheet_name);
-			double documentFee = GetExcelFormulaValue.get_string_value(223, 1, sheet_name);
+			double documentFee = GetExcelFormulaValue.get_formula_value(223, 1, sheet_name);
 			double balancePayable = GetExcelFormulaValue.get_formula_value(223, 4, sheet_name);
 
 			double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(226, 0, sheet_name);
@@ -2428,7 +2428,7 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 			double balanceToFinance = GetExcelFormulaValue.get_formula_value(220, 4, sheet_name);
 
 			double financeCharges = GetExcelFormulaValue.get_formula_value(223, 0, sheet_name);
-			double documentFee = GetExcelFormulaValue.get_string_value(223, 1, sheet_name);
+			double documentFee = GetExcelFormulaValue.get_formula_value(223, 1, sheet_name);
 			double balancePayable = GetExcelFormulaValue.get_formula_value(223, 4, sheet_name);
 
 			double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(226, 0, sheet_name);
@@ -2903,7 +2903,7 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 			double balanceToFinance = GetExcelFormulaValue.get_formula_value(220, 4, sheet_name);
 
 			double financeCharges = GetExcelFormulaValue.get_formula_value(223, 0, sheet_name);
-			double documentFee = GetExcelFormulaValue.get_string_value(223, 1, sheet_name);
+			double documentFee = GetExcelFormulaValue.get_formula_value(223, 1, sheet_name);
 			double balancePayable = GetExcelFormulaValue.get_formula_value(223, 4, sheet_name);
 
 			double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(226, 0, sheet_name);
@@ -3328,7 +3328,7 @@ public class QuoteSummary_HPNR_CP_Page extends TestBase {
 		double balanceToFinance = GetExcelFormulaValue.get_formula_value(220, 4, sheet_name);
 
 		double financeCharges = GetExcelFormulaValue.get_formula_value(223, 0, sheet_name);
-		double documentFee = GetExcelFormulaValue.get_string_value(223, 1, sheet_name);
+		double documentFee = GetExcelFormulaValue.get_formula_value(223, 1, sheet_name);
 		double balancePayable = GetExcelFormulaValue.get_formula_value(223, 4, sheet_name);
 
 		double optionToPurchaseFee = GetExcelFormulaValue.get_formula_value(226, 0, sheet_name);

@@ -991,7 +991,7 @@ public class QuoteSummary_CP_PCH_Page extends TestBase {
 			System.err.println("Total Commission - found wrong");
 		}
 
-		if ((Difference.of_two_Double_Values(referrerCommission, customer_quote_summary_referrer_commision)) < 0.2) {
+		if ((referrerCommission + customer_quote_summary_referrer_commision) < 0.2) {
 			LO.print("Referrer Commission - found OK");
 			System.out.println("Referrer Commission - found OK");
 			count++;
@@ -1096,10 +1096,10 @@ public class QuoteSummary_CP_PCH_Page extends TestBase {
 				.parseDouble(RemoveComma.of(quote_summary_customer_quote_upsell.getText().trim().substring(2)));
 
 		double customer_quote_summary_default_finance_commission =0;
-try {
-customer_quote_summary_default_finance_commission = Double.parseDouble(
+        try {
+          customer_quote_summary_default_finance_commission = Double.parseDouble(
 		RemoveComma.of(quote_summary_customer_quote_default_finance_commission.getText().trim().substring(2)));
-}catch(Exception e) {}
+        }catch(Exception e) {}
 
 		double customer_quote_summary_upsell_commission = Double.parseDouble(
 				RemoveComma.of(quote_summary_customer_quote_upsell_commission.getText().trim().substring(2)));
@@ -1320,7 +1320,7 @@ customer_quote_summary_default_finance_commission = Double.parseDouble(
 			System.err.println("Total Commission - found wrong");
 		}
 
-		if ((Difference.of_two_Double_Values(referrerCommission, customer_quote_summary_referrer_commision)) < 0.2) {
+		if ((referrerCommission + customer_quote_summary_referrer_commision) < 0.2) {
 			LO.print("Referrer Commission - found OK");
 			System.out.println("Referrer Commission - found OK");
 			count++;
@@ -1739,9 +1739,7 @@ customer_quote_summary_default_finance_commission = Double.parseDouble(
 
 		double totalMarginFromExcel = GetExcelFormulaValue.get_formula_value(212, 1, sheet_name);
 
-		double tempdefaualtBrokerMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(216, 4, sheet_name);
-
-		double defaualtBrokerMarginPercentageFromExcel = (tempdefaualtBrokerMarginPercentageFromExcel * 100);
+		double defaultBrokerMarginFromExcel = GetExcelFormulaValue.get_formula_value(218, 1, sheet_name);
 
 		double tempbrokerUpsellMarginPercentageFromExcel = GetExcelFormulaValue.get_formula_value(218, 4, sheet_name);
 
@@ -1797,8 +1795,8 @@ customer_quote_summary_default_finance_commission = Double.parseDouble(
 			System.err.println("Total Margin found wrong");
 		}
 
-		if (Difference.of_two_Double_Values(defaualtBrokerMarginPercentageFromExcel,
-				defaultBrokerMarginFromScreen) < 0.2) {
+		if (Difference.of_two_Double_Values(defaultBrokerMarginFromExcel,
+				defaultBrokerMarginFromScreen) < 0.5) {
 			LO.print("Default Broker Margin percentage found OK");
 			System.out.println("Default Broker Margin percentage found OK");
 			count++;

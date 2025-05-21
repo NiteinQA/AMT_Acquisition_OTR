@@ -3,6 +3,7 @@ package com.amt.testBase;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Properties;
 
 import javax.mail.MessagingException;
@@ -65,8 +66,15 @@ public class TestBase {
 		
 		
 			options.addArguments("--remote-allow-origins=*");
-			options.addArguments("force-device-scale-factor=0.67");
-			options.addArguments("high-dpi-support=0.67");
+			options.addArguments("--disable-blink-features=AutomationControlled");
+			options.addArguments("disable-infobars");
+			options.setExperimentalOption("prefs", new HashMap<String, Object>() {{
+			    put("credentials_enable_service", false);
+			    put("profile.password_manager_enabled", false);
+			}});
+			options.addArguments("--incognito");
+	//		options.addArguments("force-device-scale-factor=0.67");
+//			options.addArguments("high-dpi-support=0.67");
 //			options.addArguments("--headless=new");
 			
 			driver = new ChromeDriver(options);

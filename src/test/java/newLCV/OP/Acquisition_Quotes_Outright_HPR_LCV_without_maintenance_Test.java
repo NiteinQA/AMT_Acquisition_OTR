@@ -201,7 +201,7 @@ public class Acquisition_Quotes_Outright_HPR_LCV_without_maintenance_Test extend
 			String referrer_commission,                              String part_exchange_actual,
 			String part_exchange_given,                              String less_finance_settlement,
 			String order_deposit,                                    String finance_deposit,
-			String document_fee,                                     String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException {
+			String document_fee,                                     String sheet_name) throws InterruptedException, IOException, UnsupportedFlavorException, ClassNotFoundException {
 
 
 		obj_customer_quote_page = new CustomerQuotePageOutrightHPRPage();

@@ -20,7 +20,7 @@ import com.amt.testBase.TestBase;
 import com.amt.testUtil.ReadExcelData;
 
 @Listeners(com.amt.testUtil.ScreenshotListener.class)
-public class Acquisition_Quotes_HPNR_BCH_with_maintenance_Test extends TestBase {
+public	 class Acquisition_Quotes_HPNR_BCH_with_maintenance_Test extends TestBase {
 
 	LoginPage obj_Login_Page;
 	AcquisitionListingPage obj_acq_listing_page;

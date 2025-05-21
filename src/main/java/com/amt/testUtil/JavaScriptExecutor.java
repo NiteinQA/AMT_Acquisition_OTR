@@ -11,9 +11,9 @@ public class JavaScriptExecutor extends TestBase {
 	public static void click(WebDriver driver, WebElement element) {
 		
 		
-		ExplicitWait.visibleElement(driver, element, 30);
+		ExplicitWait.clickableElement(driver, element, 30);
 
-		HelperClass.highlightElement(driver, element);
+		//HelperClass.highlightElement(driver, element);
 		
 		try {
 			if (element.getText().isBlank()) {
@@ -27,7 +27,7 @@ public class JavaScriptExecutor extends TestBase {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 
-		js.executeScript("arguments[0].click();", element);
+		js.executeScript("arguments[0].scrollIntoView(true); arguments[0].click();", element);
 
 	}
 

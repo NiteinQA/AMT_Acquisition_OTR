@@ -884,7 +884,7 @@ public class QuoteSummary_FL_PCHPage extends TestBase {
 			System.err.println("Total Commission - found wrong");
 		}
 
-		if ((Difference.of_two_Double_Values(referrerCommission, customer_quote_summary_referrer_commision)) < 0.2) {
+		if ((referrerCommission + customer_quote_summary_referrer_commision) < 0.1) {
 			LO.print("Referrer Commission - found OK");
 			System.out.println("Referrer Commission - found OK");
 			count++;

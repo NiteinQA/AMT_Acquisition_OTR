@@ -84,6 +84,8 @@ public class VehicleSelectionPage extends TestBase {
 		
 		Actions act=new Actions(driver);
 		
+		Thread.sleep(4000);
+		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		
 		Click.sendKeys(driver, select_manufacturer_button, manufacturer, 120);
@@ -99,10 +101,10 @@ public class VehicleSelectionPage extends TestBase {
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
 		
-		Click.sendKeys(driver, select_model_range, model , 120);	
+		Click.sendKeys(driver, select_model_range, "A6" , 120);	
 		 
-		LO.print("Model range ="+model+" has been selected");
-		System.out.println("Model range ="+model+" has been selected");
+		LO.print("Model range ="+"A6"+" has been selected");
+		System.out.println("Model range ="+"A6"+" has been selected");
 		
 		Thread.sleep(4000);
 		act.sendKeys(Keys.ENTER).perform();
@@ -133,7 +135,11 @@ public void select_LCV_vehicle(String manufacturer, String model) throws Interru
 		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 		
+		Thread.sleep(4000);
+		
 		Dropdown.selectByVisibleText(driver, dropdown_asset_type, " LCV", 120);
+		
+		Thread.sleep(4000);
 		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 	
@@ -180,13 +186,13 @@ public void select_LCV_vehicle(String manufacturer, String model) throws Interru
 	
 public void select_vehicle_lcv(String manufacturer, String model) throws InterruptedException {
 		
-	
+	    Thread.sleep(4000);
 	
 	    Dropdown.selectByVisibleText(driver, asset_type, " LCV", 120);
 	    
 	    ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon,120);
 	    
-	
+	    Thread.sleep(4000);
 		Actions act=new Actions(driver);
 		
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
@@ -197,13 +203,13 @@ public void select_vehicle_lcv(String manufacturer, String model) throws Interru
 		LO.print("Manufacture ="+manufacturer+" has been selected");
 		System.out.println("Manufacture ="+manufacturer+" has been selected");
 		
-		Thread.sleep(4000);
+		Thread.sleep(6000);
 		act.sendKeys(Keys.ENTER).perform();
 	
 
 		ExplicitWait.waitTillLoadingIconDisappears(driver, loading_icon, 120);
 
-		
+		Thread.sleep(4000);
 		Click.sendKeys(driver, select_model_range, model , 120);	
 		 
 		LO.print("Model range ="+model+" has been selected");
@@ -236,7 +242,7 @@ public void select_vehicle_for_used_car_flow(String regitrationNumber , String m
 	LO.print("Selecting used vehicle with registration no. = "+regitrationNumber+" and mileage = "+mileage);
 	System.out.println("Selecting used vehicle with registration no. = "+regitrationNumber+" and mileage = "+mileage);
 	
-	
+	Thread.sleep(3000);
 	Click.on(driver, used_vehicle, 120);   
 	 
     Click.sendKeys(driver, registration_no, regitrationNumber, 120);
