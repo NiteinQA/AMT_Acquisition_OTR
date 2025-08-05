@@ -1518,9 +1518,14 @@ public class ReadExcelCalculation extends TestBase {
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
 		// rfl values fakt on hotya baki sarv comment hotya
+		
+		wb.getSheet(sheet_name).getRow(14).getCell(9)
+		.setCellValue(Double.parseDouble(prop.getProperty("broker_upsell_margin")));
 
 		wb.getSheet(sheet_name).getRow(61).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));
+		
+		
 	
 		if (Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName().contains("used")) {
 			wb.getSheet(sheet_name).getRow(63).getCell(1).setCellFormula("B60*B63");
@@ -1622,6 +1627,9 @@ public class ReadExcelCalculation extends TestBase {
 		XSSFWorkbook wb = new XSSFWorkbook(in);
 
 		// rfl values fakt on hotya baki sarv comment hotya
+		
+		wb.getSheet(sheet_name).getRow(14).getCell(9)
+		.setCellValue(Double.parseDouble(prop.getProperty("broker_upsell_margin")));
 
 		wb.getSheet(sheet_name).getRow(61).getCell(1)
 				.setCellValue(Double.parseDouble(prop.getProperty("minimum_margin_percentage")));

@@ -844,7 +844,7 @@ public class QuoteSummary_HPNR_HPNRPage extends TestBase {
 	}
 
 	public boolean quote_summary_customer_quote_summary_value_verification_for_funder_with_maintenance(String sheet_name)
-			throws IOException {
+			throws IOException, InterruptedException {
 
 		LO.print("*************Customer Quote Calulation on quote summary page has been started************");
 		System.out.println("*************Customer Quote Calulation on quote summary page has been started************");
@@ -1317,6 +1317,8 @@ public class QuoteSummary_HPNR_HPNRPage extends TestBase {
 		}catch (Exception e) {
 			
           	// waiting for elements
+			
+			Thread.sleep(5000);
 
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_terms, 20);
 			ExplicitWait.visibleElement(driver, quote_summary_customer_quote_summary_miles_per_annum, 20);
