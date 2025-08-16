@@ -2058,7 +2058,7 @@ public class ReadExcelCalculation extends TestBase {
 		
 		String className = Class.forName(Thread.currentThread().getStackTrace()[3].getClassName()).getName();
 		
-		if (className.contains("BCH")|className.contains("BCH_u")|className.contains("FL_w")|className.contains("FL_u")|className.contains("FL_L")) 
+		if (className.contains("BCH")|className.contains("BCH_BCH")|className.contains("BCH_u")|className.contains("FL_w")|className.contains("FL_u")|className.contains("FL_L")) 
 		    {
 			wb.getSheet(sheet_name).getRow(101).getCell(0).setCellValue((docValues[0])/1.2);
 			}
