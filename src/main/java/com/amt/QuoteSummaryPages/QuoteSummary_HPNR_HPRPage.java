@@ -3182,6 +3182,9 @@ public class QuoteSummary_HPNR_HPRPage extends TestBase {
 			System.err.println("Additional Margin found wrong");
 		}
 
+		System.out.println("Additional Margin from screen "+additionalMarginFromScreen);
+		System.out.println("Additional Margin from excel "+additionalMarginFromExcel);
+		
 		// 5
 		if (Difference.of_two_Double_Values(totalMarginFromScreen, totalMarginFromExcel) < 0.2) {
 			LO.print("Total Margin found OK");

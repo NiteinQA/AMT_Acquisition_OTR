@@ -142,7 +142,7 @@ public class TestBase {
 
 
 
-	@AfterClass
+	//@AfterClass
 	public void tearDown() {
 		driver.close();
 		System.out.println("");

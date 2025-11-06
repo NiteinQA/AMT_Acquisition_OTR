@@ -2079,6 +2079,9 @@ public class QuoteSummary_FL_BCHPage extends TestBase {
 			LO.print("Finance Margin found wrong");
 			System.err.println("Finance Margin found wrong");
 		}
+		System.out.println("Finance Margin from screen "+financeMarginFromScreen);
+		System.out.println("Finance Margin from excel "+financeMarginFromExcel);
+		
 
 		if (Difference.of_two_Double_Values(deductionsFromScreen, deductionsFromExcel) < 0.2) {
 			LO.print("Deductions found OK");
